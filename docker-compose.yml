@@ -1,0 +1,106 @@
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:16-alpine
+    container_name: rag-postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-raguser}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-ragpass}
+      POSTGRES_DB: ${POSTGRES_DB:-ragdb}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init_db.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-raguser}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - rag-network
+
+  # Weaviate Vector Database
+  weaviate:
+    image: semitechnologies/weaviate:1.28.2
+    container_name: rag-weaviate
+    environment:
+      QUERY_DEFAULTS_LIMIT: 25
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
+      PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
+      DEFAULT_VECTORIZER_MODULE: 'none'
+      ENABLE_MODULES: ''
+      CLUSTER_HOSTNAME: 'node1'
+    volumes:
+      - weaviate_data:/var/lib/weaviate
+    ports:
+      - "8080:8080"
+      - "50051:50051"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:8080/v1/.well-known/ready"]
+      interval: 5s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+    networks:
+      - rag-network
+
+  # FastAPI Backend
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: rag-backend
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - POSTGRES_URL=postgresql+asyncpg://${POSTGRES_USER:-raguser}:${POSTGRES_PASSWORD:-ragpass}@postgres:5432/${POSTGRES_DB:-ragdb}
+      - WEAVIATE_URL=http://weaviate:8080
+      - ENVIRONMENT=${ENVIRONMENT:-development}
+      # OCR Benchmark
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY:-}
+      - MISTRAL_API_KEY=${MISTRAL_API_KEY:-}
+    volumes:
+      - ./backend/app:/app/app
+      - document_storage:/app/storage
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      weaviate:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - rag-network
+
+  # Streamlit Frontend
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: rag-frontend
+    environment:
+      - BACKEND_URL=http://backend:8000
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+    volumes:
+      - ./frontend:/app
+    ports:
+      - "8501:8501"
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - rag-network
+
+volumes:
+  postgres_data:
+  weaviate_data:
+  document_storage:
+
+networks:
+  rag-network:
+    driver: bridge
