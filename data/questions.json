@@ -1,0 +1,134 @@
+{
+  "version": "1.0",
+  "description": "Batch test questions for RAG evaluation",
+  "questions": [
+    "Na jakou částku si mohu navýšit zálohy?",
+    "Musím nejdřív zaplatit dlužnou zálohu, než mi změníte výši záloh?",
+    "Co když nemám peníze na zaplacení zálohy?",
+    "Co uděláte, když zjistíte, že sazba není správná?",
+    "Může o přepis požádat vlastník nemovitosti, když není vedený jako zákazník?",
+    "Řeší se přepis, když je zákazník ve vězení, nějak speciálně?",
+    "Kdo musí žádat o přepis bez ZD?",
+    "Můžu změnit zálohy zákazníkovi, který zemřel?",
+    "Můžu snížit zálohu, když zákazník má fixaci ceny?",
+    "Co když zákazník nesouhlasí s měsíčními zálohami?",
+    "Co znamená R01, R03, R06, R12?",
+    "Kde najdu přehled distribučních sazeb?"
+  ],
+  "test_cases": [
+    {
+      "id": 130,
+      "question": "Na jakou částku si mohu navýšit zálohy?",
+      "expected_documents": ["02_Změna výše záloh"],
+      "expected_min_results": 1,
+      "category": "Změna výše záloh",
+      "expected_response": "Výši záloh si můžete navýšit na jakoukoli částku, kterou požadujete."
+    },
+    {
+      "id": 172,
+      "question": "Musím nejdřív zaplatit dlužnou zálohu, než mi změníte výši záloh?",
+      "expected_documents": ["02_Změna výše záloh"],
+      "expected_min_results": 1,
+      "category": "Změna výše záloh",
+      "expected_response": "Ne, pro změnu výše záloh nevadí neuhrazená platba. Změnu provedeme i v případě, že máte neuhrazenou zálohu."
+    },
+    {
+      "id": 178,
+      "question": "Co když nemám peníze na zaplacení zálohy?",
+      "expected_documents": ["02_Změna výše záloh"],
+      "expected_min_results": 1,
+      "category": "Změna výše záloh",
+      "expected_response": "Pokud nemáte na zaplacení, můžeme vám doporučit využít příspěvky od státu."
+    },
+    {
+      "id": 186,
+      "question": "Co uděláte, když zjistíte, že sazba není správná?",
+      "expected_documents": ["02a_Optimalizace sazby"],
+      "expected_min_results": 1,
+      "category": "Optimalizace sazby",
+      "expected_response": "Navrhneme vám změnu sazby. Pokud souhlasíte, provedeme úpravu nebo vám poskytneme informace o postupu změny."
+    },
+    {
+      "id": 193,
+      "question": "Může o přepis požádat vlastník nemovitosti, když není vedený jako zákazník?",
+      "expected_documents": ["04b_Přepis měřidla bez změny dodavatele"],
+      "expected_min_results": 1,
+      "category": "Přepis měřidla bez změny dodavatele",
+      "expected_response": "Nelze, musí požádat zákazník."
+    },
+    {
+      "id": 195,
+      "question": "Řeší se přepis, když je zákazník ve vězení, nějak speciálně?",
+      "expected_documents": ["04b_Přepis měřidla bez změny dodavatele"],
+      "expected_min_results": 1,
+      "category": "Přepis měřidla bez změny dodavatele",
+      "expected_response": "Ne, řeší se jako standardní situace."
+    },
+    {
+      "id": 199,
+      "question": "Kdo musí žádat o přepis bez ZD?",
+      "expected_documents": ["04b_Přepis měřidla bez změny dodavatele"],
+      "expected_min_results": 1,
+      "category": "Přepis měřidla bez změny dodavatele",
+      "expected_response": "Musí požádat zákazník."
+    },
+    {
+      "id": 205,
+      "question": "Můžu změnit zálohy zákazníkovi, který zemřel?",
+      "expected_documents": ["02_Změna výše záloh"],
+      "expected_min_results": 1,
+      "category": "Změna výše záloh",
+      "expected_response": "V případě úmrtí zákazníka úpravu záloh neprovádíme. Žadateli navrhneme přepis smlouvy nebo ukončení odběru s demontáží měřidla."
+    },
+    {
+      "id": 209,
+      "question": "Můžu snížit zálohu, když zákazník má fixaci ceny?",
+      "expected_documents": ["02_Změna výše záloh"],
+      "expected_min_results": 1,
+      "category": "Změna výše záloh",
+      "expected_response": "Ano, pokud zákazník má fixaci na delší období a nesouhlasí s novou zálohou, můžeme ji snížit na adekvátní částku propočítanou v kalkulátoru."
+    },
+    {
+      "id": 216,
+      "question": "Co když zákazník nesouhlasí s měsíčními zálohami?",
+      "expected_documents": ["06d_cyklus_plateb_zaloh"],
+      "expected_min_results": 1,
+      "category": "Cyklus plateb záloh",
+      "expected_response": "Pokud zákazník nesouhlasí s měsíčním cyklem záloh, řešíme to individuálně s metodiky."
+    },
+    {
+      "id": 218,
+      "question": "Co znamená R01, R03, R06, R12?",
+      "expected_documents": ["06d_cyklus_plateb_zaloh"],
+      "expected_min_results": 1,
+      "category": "Cyklus plateb záloh",
+      "expected_response": "Tyto kódy označují frekvenci úhrady záloh:\nR01 = měsíční (12 záloh na 12 měsíců)\nR03 = čtvrtletní (4 zálohy na 12 měsíců)\nR06 = pololetní (2 zálohy na 12 měsíců)\nR12 = roční (1 záloha na 12 měsíců)"
+    },
+    {
+      "id": 228,
+      "question": "Kde najdu přehled distribučních sazeb?",
+      "expected_documents": ["02a_Optimalizace sazby"],
+      "expected_min_results": 1,
+      "category": "Optimalizace sazby",
+      "expected_response": "Přehled a porovnání distribučních sazeb je dostupný na webu každého provozovatele distribuční soustavy (PDS)."
+    }
+  ],
+  "categories": {
+    "Změna výše záloh": {
+      "document": "02_Změna výše záloh",
+      "question_count": 5
+    },
+    "Optimalizace sazby": {
+      "document": "02a_Optimalizace sazby",
+      "question_count": 2
+    },
+    "Přepis měřidla bez změny dodavatele": {
+      "document": "04b_Přepis měřidla bez změny dodavatele",
+      "question_count": 3
+    },
+    "Cyklus plateb záloh": {
+      "document": "06d_cyklus_plateb_zaloh",
+      "question_count": 2
+    }
+  }
+}
