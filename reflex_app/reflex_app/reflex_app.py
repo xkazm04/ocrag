@@ -4,7 +4,10 @@ Main entry point for the Reflex app.
 """
 import reflex as rx
 from .pages.investigation_board import investigation_board
-from .state import InvestigationState
+from .pages.investigation_board_v2 import investigation_board_v2
+from .pages.research.dashboard import research_dashboard
+from .state import InvestigationState, PlaybackState
+from .state.research_state import ResearchState
 
 
 # Global styles
@@ -14,11 +17,11 @@ style = {
 
 
 def index() -> rx.Component:
-    """Landing page that redirects to the investigation board."""
+    """Landing page that redirects to the v2 board."""
     return rx.fragment(
         rx.script(
             """
-            window.location.href = '/detective-board';
+            window.location.href = '/board-v2';
             """
         ),
         rx.center(
@@ -40,3 +43,5 @@ app = rx.App(
 # Add pages
 app.add_page(index, route="/")
 app.add_page(investigation_board, route="/detective-board", title="Detective Board")
+app.add_page(investigation_board_v2, route="/board-v2", title="Deep Research Board")
+app.add_page(research_dashboard, route="/research", title="Deep Research")

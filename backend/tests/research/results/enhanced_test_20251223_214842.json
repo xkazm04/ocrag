@@ -1,0 +1,454 @@
+{
+  "query": "Why did the Russia-Ukraine war start? What were the key events and actors?",
+  "template_type": "investigative",
+  "timestamp": "20251223_214842",
+  "duration_seconds": 87,
+  "decomposition": {
+    "needs_decomposition": true,
+    "strategy": "hybrid",
+    "detected_themes": [
+      "Geopolitical causes",
+      "Historical grievances",
+      "Military escalation",
+      "Diplomatic negotiations",
+      "International law"
+    ],
+    "detected_actors": [
+      "Russia",
+      "Ukraine",
+      "NATO",
+      "European Union",
+      "United States",
+      "Donbas Separatists"
+    ],
+    "date_range_years": 0,
+    "sub_queries": [
+      {
+        "id": "sq_1",
+        "query": "What were the historical grievances and geopolitical triggers surrounding the 2014 Maidan Revolution and the subsequent Russian annexation of Crimea?",
+        "focus_theme": "Historical roots and initial territorial conflict",
+        "batch_order": 1,
+        "composition_role": "background"
+      },
+      {
+        "id": "sq_2",
+        "query": "Analyze the failure of the Minsk I and II Agreements and the evolution of the 'frozen conflict' in the Donbas region prior to 2022.",
+        "focus_theme": "Diplomatic negotiations and low-intensity warfare",
+        "batch_order": 2,
+        "composition_role": "background"
+      },
+      {
+        "id": "sq_3",
+        "query": "What were the immediate military catalysts, security demands, and key events leading to the February 2022 full-scale Russian invasion of Ukraine?",
+        "focus_theme": "Immediate catalysts and military escalation",
+        "batch_order": 3,
+        "composition_role": "primary"
+      },
+      {
+        "id": "sq_4",
+        "query": "Compare Vladimir Putin's stated security justifications regarding NATO expansion with Volodymyr Zelenskyy's policy of Western integration and their roles in the conflict's escalation.",
+        "focus_theme": "Analysis of key actors and strategic goals",
+        "batch_order": 4,
+        "composition_role": "synthesis"
+      }
+    ]
+  },
+  "search_queries": [
+    "Timeline of Russia-Ukraine conflict 2022-2024",
+    "Key actors Russia Ukraine war",
+    "Motivations for Russia's invasion of Ukraine",
+    "Media coverage of Russia Ukraine war 2022"
+  ],
+  "sources": [
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFzezfWbc20lZcEx9O2O6nPHuZdeLxiKFRylno2_m1l4TEk6fiVskInyfYmnqagyxSc8qdCUncImmYhXAdpmSHxbQcpLGsL5K31muZVn1nKQYis5MblTil0SldfKFaM5A_ereTSI3OfTJ396aJgsigB3oz0deyexhkhnLkddhsv169Fdm_nFTkiMrJPaPWjEC4OuHs=",
+      "title": "wikipedia.org",
+      "domain": "wikipedia",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLJIpiXcAZeQNkJr2VuaWMfnonJ5gTJpNZNLery3NpW2xL6oWKeRfoTFOX29wU8T1Vr6yX3mAhAtS8FmJFA8edyfMUvmZMXt8DXJcxfQuDu-mggA5qKV3a80KnNSAc4i0DCV2JIqUPgyGOZqsswMx2mhz7GIq8qZmZa98nWPFKHw==",
+      "title": "cfr.org",
+      "domain": "cfr",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbvHVkp4c3dfL6yYD16mTmU5JYbW7z8t03oOxqA7BHQQOM9Gqas2e-cs049vQP3zqnSAEmNbtELiRnU6OcIeyYZkPLvRe8QwKxpW9i6datcCLzbHn4hU_17BNXY-bdmipH8RYCnbp8D8jkGVVYXU7ydR9UCXq6H9G3PvqoQacpTtebuphWsU1IA84pjYR4KoCvDcTvs20_t5sXVBc=",
+      "title": "pbs.org",
+      "domain": "pbs",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJ7e75hKoXVzlN1Yrz_BYFB4j_rZ20u_SPBbNKOgPsvQKza1IjEvtC_C9UVzb8IeEEvbOGsWAMk605I22ss9P6OOwTu1G-JrbjMBXPXwO28odWogHhfx6Wa3XhkX5BHzhfnpHLPAegzJJudq4XCWbM5Evqk04R4A==",
+      "title": "war.gov",
+      "domain": "war.gov",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhbV91hwbbgWzj_2mYPI0H3OWyvXD2LI-ktjr8AT1eozVPrsJY7A1yx4rSyOfo2MGqqFGg9BNQbX2Tu2vWthUSLnmnGMfN0eQHMrFkZz3iN6u5c0I-5q-xBLUdi53DV9LZ3xegSS911zm1J58uYOPMyGO0oFrJ4OiqvSYD20dRKLLCjUm9TiGfOgoJCIx7-P7lPi1kq6UqarNNVBsw_gJgPg==",
+      "title": "wikipedia.org",
+      "domain": "wikipedia",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHxwytKelU4g09Kvcm4lniNv69US2IRBCZRLqJwuN2yLlxq2aSbT27ZGPt8LxF3yrNQFVIjPL-KRJ-4yD6LD1rFheSjJQGbZgEye08CADwS7gxPs7AIipO-vePpisdNTXmnumi092PgbJraJtieGpZW6P4lhLaLkbRqVGe0Kf_aFqz6J7fs",
+      "title": "specialeurasia.com",
+      "domain": "specialeurasia",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFSebN2qAJriqBrqNAdMuh8d5Kc1J1_5OTXGmQPEI-h65lINqQhOIXbOdDUMw2jrU8-KikIXAS3XUIDTW6KFcye4_Xb-ylNaGMyxVRowSet35DbFDzsZe_m6IUeWrI3jT_5NAUQX1WNk49gxWtSomZvMji-s4ndOraBqnOi0kUKlSbNIoArkPNDaVeHGOJnrmOelk1tWYN_C-oenYqe4ybP7VW2QhA2ebXI2A0FFEmXPDkjpWZhZt4bB15qqZA07vYlair",
+      "title": "sky.com",
+      "domain": "sky",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVaQ-pER7Up8YqAKyWGh8KB23KBQEVlyrgqBnvsT5UClOGNvI3h6HMJ0TYT7mdX9vmDgCHY3bUSGfDJT09GNROYhReMZ_5ng08Ww2C48ixgy6hrVVoQ-h-pNobB-q9UChPvEwIyQSb_yh0w-kl0r_V3hsQurlpGjs98GsadogLaE0HX07nhDBOj9YN6NwtcYeFef7AKF3BNSHhMn_O0f2wz3Makg==",
+      "title": "voanews.com",
+      "domain": "voanews",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXFnRTq_HsCSf4Jull9eed6ptLQNXJauGeR43xsHsFefXFjI7kbOveKZUpi-fdhJZQMTwejfDCQiziP5pAQ5SSz_-OOxWaRYMESXrgmROOTwT0FpA-zbbnCwzbrzg8Ki10T58-pt6ihg4r4XA=",
+      "title": "wikipedia.org",
+      "domain": "wikipedia",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMsddj4fmbW_7aEyvwi7izlgpZFjIOuMwzr_jyI6ftYA4Sj-xy77zzteBQFgv5reNs_NmsjjQsuZq9z6TcpHxRNvzWLaCONA6aUwAk3LsD6fsQpeBdKV7xVM281YDi6L2qNdfFjYd9pMMASS4l-OT0ziYQo10C0EypAkLiVC02mx_kp8Tnd5stJ7TVWeJIiYri6VnYqAMY706daTCuIv-8VG2JNuDpNg==",
+      "title": "harvard.edu",
+      "domain": "harvard.edu",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUm5WHk8UhY_voSoDPk33bcw-rL5cLpueb0rUWs3sAgG5avZ0qJGFRSrJ-ROCNc22X1rSDvWeMkq6mS408-himAxm1QFz-4x4ZrSv7KNUR9Eqt0-kzxbXcv63IxoZo0dFv-sTQfNF0GIC9KOnzXE7E8mc8oMK2212_e09gdTOY7jIUZOdhNCc7PWPRau-A-F-5bUq1hUK6vx8anNg-oQ==",
+      "title": "reddit.com",
+      "domain": "reddit",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGp0EE-7JcRIOQ02kZr8ZreOxtEkIDBII4AdK5ScAoepxICe4yEyNsdX-_kp2KjK9DivTaQZFDN5T5IHg1hPLU-6qA6FPhMOZ9Wp4q-Pb5nD9ya0k7o5n9ydZJ13aGsSax1KUKbZdFZaJMSDro55QiwvDDBFWWy_ooL_oWKXiexffj8",
+      "title": "wikipedia.org",
+      "domain": "wikipedia",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1uEOXK23YGhhp5u2oUBSqTgHoYU6o_2RqVkAAkAogW0UyGfvai0YLuxRRrvj1wLbW-f-wS4sHBJ6BpfJLXTSfYmeLIGtMaAUgu7Vahkd5Am4P2TpjANq4-t4jJcV73hUCX9X1ixF5S-vOoGGWXKeFRuwyY76BL3tHjPpmh7Ax9oP_PCn3CyhlbqJ18BVwTDrtsPUmozdD2Ov-1WaGTD8sFxyRZ4ez_cUyTAaW1S8uc1zYxg==",
+      "title": "atlanticcouncil.org",
+      "domain": "atlanticcouncil",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAhZNQL0moFh2IAXftukFGATXmx5Qz_aTGICuCMt7HptQVuP7VhH2siNyBTCZ0q2TOwLhnc-Dk_gax55zoBTWT62FmY1dP5Bne7MCNvXTrVB0wYeUNRHFps1QYIwMe41meaHZCogI_--ty_ICpEX5qFxpg1ZJgo8g5oR7wWMcY0ANMU503P38MGr0Ru68AooCa",
+      "title": "cirsd.org",
+      "domain": "cirsd",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGS37meJ57YAQ0L7LIQa5zCf-RfnEGaiyQ-eWW4yQKKaegLpN3cDZ-gP6Jo2KEiCLSr18rNNVMkyibvJ4B64EkzE_hkIOhET49onczy4Nhm3IM1PGESBiGRPOtKjpHfoQ2rN59NwUL7v1K6KYtFNyzKeKnsmnhTdwKwa3SQuhF5PHW67gpL",
+      "title": "uzh.ch",
+      "domain": "uzh.ch",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6nLdqNpT7iZG5XGwmXUNc0dPtv5LH4z9aLGjBYtmMRZD6QE97qfXQaKMaLIqMEGfv6c-JmWPDkbXY3LfgpOuKgVDkB4rlDgh08cE0z1n-3m4s18hMXP9iXJ_KnAykII0ZdxqtZ3wnW5Nek6n4mYCZIgXI_tRcGO0p98-bWIiroBFG_rqjw2Ghzw5qb0K8wJioqEzcoiqtVzqF2TnuyeFaVAYdve8=",
+      "title": "ox.ac.uk",
+      "domain": "ox.ac.uk",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFPdAWVIt1WZqgmEpX3kAs7w_g9_1Ltjweg43K3dhsKUvuoQ0fQ5aAuVZ9azmKtlBuxYoYcErUV0SKcgeYwFXFhdfm_tkrRImFNZgDhsdRcw_-zvVkGJzHXqdre9MHMlr-7NG3myyDOBMYQErUqNrWEgdz-pWeuzbz1PW9-nbmS42EfJky2VzJBo2HRT_31WV-DUw2ZDlELuVKsGV2e0b5GHLqo",
+      "title": "atlanticcouncil.org",
+      "domain": "atlanticcouncil",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGvDbVao2Yvxc5l3O961cZL7fEcj0zqpjlKbP9mxZDyamdwUuM4JO7rCwqpNObsBhltyO8HgMBZrRzuC90D0oO8qC2Q8Sql95YMXbQehAXIgaeMhyNTb588biis7r7glEFCmclJbYh4hIiy5mXJW9xOH_W7w9haacjnc9Z6NV5hb7k8vQ==",
+      "title": "wikipedia.org",
+      "domain": "wikipedia",
+      "snippet": ""
+    }
+  ],
+  "findings": [],
+  "timeline": [],
+  "perspectives": {
+    "historical": {
+      "analysis": "The Russia-Ukraine war is not a sudden rupture but the latest eruption of a centuries-long tension regarding the 'Borderlands' (the literal meaning of 'Ukraine'). Historically, the Russian Empire and later the Soviet Union viewed Ukraine as the 'Little Russian' core of their identity and a vital strategic buffer against Western powers. The 1991 collapse of the USSR created a 'geopolitical catastrophe' in the eyes of the Kremlin, leaving 25 million ethnic Russians outside the Russian Federation and stripping Moscow of its strategic depth. The current conflict is a revisionist attempt to undo the post-Cold War settlement and re-establish a 19th-century style 'sphere of influence' over former imperial territories.\n\nThe immediate historical roots lie in the 2014 Maidan Revolution, which Moscow interpreted as a Western-backed coup designed to pull Ukraine into the Euro-Atlantic orbit. This triggered the annexation of Crimea and the Donbas insurgency, mirroring the 'frozen conflicts' strategy used by Russia in Transnistria and Georgia. Putin’s justification of 'denazification' and 'demilitarization' draws heavily on the Great Patriotic War (1941–1945) mythology, attempting to frame a war of territorial conquest as a defensive struggle against existential threats. This conflict represents the clash between the 21st-century principle of national sovereignty and the 19th-century logic of Great Power realism.",
+      "data": {
+        "perspective_type": "historical",
+        "analysis": "The Russia-Ukraine war is not a sudden rupture but the latest eruption of a centuries-long tension regarding the 'Borderlands' (the literal meaning of 'Ukraine'). Historically, the Russian Empire and later the Soviet Union viewed Ukraine as the 'Little Russian' core of their identity and a vital strategic buffer against Western powers. The 1991 collapse of the USSR created a 'geopolitical catastrophe' in the eyes of the Kremlin, leaving 25 million ethnic Russians outside the Russian Federation and stripping Moscow of its strategic depth. The current conflict is a revisionist attempt to undo the post-Cold War settlement and re-establish a 19th-century style 'sphere of influence' over former imperial territories.\n\nThe immediate historical roots lie in the 2014 Maidan Revolution, which Moscow interpreted as a Western-backed coup designed to pull Ukraine into the Euro-Atlantic orbit. This triggered the annexation of Crimea and the Donbas insurgency, mirroring the 'frozen conflicts' strategy used by Russia in Transnistria and Georgia. Putin’s justification of 'denazification' and 'demilitarization' draws heavily on the Great Patriotic War (1941–1945) mythology, attempting to frame a war of territorial conquest as a defensive struggle against existential threats. This conflict represents the clash between the 21st-century principle of national sovereignty and the 19th-century logic of Great Power realism.",
+        "implications": [
+          "The erosion of the 'Inviolability of Borders' principle established by the 1975 Helsinki Accords, signaling a return to a world where 'might makes right.'",
+          "A deepening 'Eurasian' pivot for Russia, as it is forced into a junior partnership with China to offset total economic and cultural decoupling from the West."
+        ],
+        "related_finding_ids": [],
+        "historical_parallels": [
+          "The Partitions of Poland (1772–1795): A historical precedent where neighboring empires (including Russia) systematically dismantled a sovereign state to eliminate a perceived threat and expand territory.",
+          "The Winter War (1939–1940): The Soviet invasion of Finland, which saw a smaller neighbor resist a massive power through superior motivation and terrain, leading to a pyrrhic Soviet victory and high casualties.",
+          "The Munich Agreement and the Sudetenland Crisis (1938): The annexation of Crimea in 2014 mirrors the 'salami tactics' of taking territory under the guise of protecting ethnic minorities before launching a full-scale invasion."
+        ],
+        "historical_patterns": [
+          "Strategic Depth and Buffer Zones: Russia’s recurring historical compulsion to push its borders westward to compensate for the lack of natural geographic barriers on the North European Plain.",
+          "The 'Gathering of the Russian Lands': A recurring Muscovite political doctrine used by Ivan III, Catherine the Great, and now Vladimir Putin to justify expansionism based on shared Slavic heritage."
+        ],
+        "likely_consequences": [
+          "Long-term militarization of the European continent, ending the 'peace dividend' era that followed the fall of the Berlin Wall in 1989.",
+          "The transformation of Ukraine into a 'Frontier State' with a permanent, high-readiness military, similar to the historical development of Israel or South Korea."
+        ]
+      }
+    },
+    "financial": {
+      "analysis": "The Russia-Ukraine conflict is fundamentally a struggle over the geoeconomic architecture of Eurasia. From the Russian perspective, the invasion was a preemptive strike to prevent the permanent loss of Ukraine to the Western economic sphere, which would have rendered the $11 billion Nord Stream 2 pipeline and Russia's status as Europe's primary energy provider obsolete. Ukraine represents not just a buffer, but a critical transit hub for natural gas and a competitor in the global agricultural and metallurgical markets. By seizing the Donbas and the 'land bridge' to Crimea, Russia aimed to monopolize the Azov Sea's resource-rich shelf and capture Ukraine’s industrial heartland, which accounted for roughly 15% of its pre-war GDP.\n\nConversely, the Western response is driven by the need to protect the integrity of the Euro-Atlantic financial system and the 'petrodollar' hegemony. The weaponization of the SWIFT messaging system and the freezing of $300 billion in Russian central bank assets represent a paradigm shift in global finance, signaling that access to Western capital markets is contingent on geopolitical alignment. The war has accelerated a massive reallocation of capital, as Europe pivots from cheap Russian piped gas (historically priced at a discount) to expensive American and Qatari LNG, fundamentally altering the trade balance of the Eurozone and creating a windfall for US energy exporters.",
+      "data": {
+        "perspective_type": "financial",
+        "analysis": "The Russia-Ukraine conflict is fundamentally a struggle over the geoeconomic architecture of Eurasia. From the Russian perspective, the invasion was a preemptive strike to prevent the permanent loss of Ukraine to the Western economic sphere, which would have rendered the $11 billion Nord Stream 2 pipeline and Russia's status as Europe's primary energy provider obsolete. Ukraine represents not just a buffer, but a critical transit hub for natural gas and a competitor in the global agricultural and metallurgical markets. By seizing the Donbas and the 'land bridge' to Crimea, Russia aimed to monopolize the Azov Sea's resource-rich shelf and capture Ukraine’s industrial heartland, which accounted for roughly 15% of its pre-war GDP.\n\nConversely, the Western response is driven by the need to protect the integrity of the Euro-Atlantic financial system and the 'petrodollar' hegemony. The weaponization of the SWIFT messaging system and the freezing of $300 billion in Russian central bank assets represent a paradigm shift in global finance, signaling that access to Western capital markets is contingent on geopolitical alignment. The war has accelerated a massive reallocation of capital, as Europe pivots from cheap Russian piped gas (historically priced at a discount) to expensive American and Qatari LNG, fundamentally altering the trade balance of the Eurozone and creating a windfall for US energy exporters.",
+        "implications": [
+          "Permanent decoupling of European industry from low-cost Russian energy, leading to potential de-industrialization in Germany.",
+          "Bifurcation of the global financial system into Western (SWIFT-based) and Eastern (CIPS/BRICS-based) clearing zones.",
+          "Global food insecurity risks as the 'breadbasket of Europe' remains a combat zone, impacting MENA region stability.",
+          "Accelerated transition to green energy in the EU as a national security imperative rather than just a climate goal."
+        ],
+        "related_finding_ids": [],
+        "cui_bono": [
+          "US Liquefied Natural Gas (LNG) exporters: Captured the European market share previously held by Gazprom, with US exports to the EU increasing by over 140% in 2022.",
+          "Global Defense Contractors: Firms like Lockheed Martin, Raytheon, and Rheinmetall have seen record order backlogs as NATO countries commit to increasing defense spending to 2% of GDP.",
+          "Commodity Traders: Firms like Glencore and Trafigura benefited from extreme volatility in grain and energy prices following the invasion.",
+          "China and India: Benefited from 'Urals' crude oil trading at a $20-$30 discount per barrel compared to Brent, providing a massive input-cost advantage for their industrial sectors."
+        ],
+        "financial_mechanisms": [
+          "Sovereign Asset Seizure: The freezing of $300bn in Russian FX reserves as a tool of financial warfare.",
+          "Energy Arbitrage: The 'shadow fleet' mechanism used by Russia to bypass the G7 $60 price cap on oil.",
+          "Lend-Lease and Military Aid: Massive capital transfers from Western treasuries to defense firms to replenish stockpiles sent to Ukraine.",
+          "Commodity Futures Hedging: Extreme price fluctuations in wheat and neon gas (critical for semiconductor lithography) driving speculative flows."
+        ],
+        "money_flows": [
+          {
+            "from": "European Union",
+            "to": "Russia",
+            "mechanism": "Residual energy payments (approx. $1bn/month in 2023 for LNG and pipeline gas via Ukraine/TurkStream)"
+          },
+          {
+            "from": "United States Government",
+            "to": "US Defense Industry",
+            "mechanism": "Congressional appropriations for Ukraine Security Assistance Initiative (over $44bn in direct military aid)"
+          },
+          {
+            "from": "Russia",
+            "to": "China/Iran/North Korea",
+            "mechanism": "Barter trade and Yuan-denominated payments for military hardware and dual-use technology"
+          },
+          {
+            "from": "International Monetary Fund (IMF)",
+            "to": "Ukraine",
+            "mechanism": "Extended Fund Facility (EFF) loans totaling $15.6bn to maintain macroeconomic stability"
+          }
+        ],
+        "sanctions_relevance": "Sanctions have failed to collapse the Russian economy due to 'leakage' through third-party intermediaries (Turkey, UAE, Kazakhstan) and the continued global demand for Russian hydrocarbons. However, they have successfully 'de-dollarized' Russian trade, forcing a reliance on the Chinese Yuan and increasing the cost of capital for Russian infrastructure projects by an estimated 3-5%."
+      }
+    },
+    "journalist": {
+      "analysis": "The provided timeline offers a Western-centric chronological framework but suffers from significant 'omission bias' regarding the historical context prior to 2022. By starting the narrative in January 2022, the summary frames the conflict as a spontaneous event rather than the culmination of an eight-year armed struggle. It fails to mention the 2014 Maidan Revolution, the subsequent annexation of Crimea, or the failure of the Minsk I and II agreements. This lack of context makes it difficult for a reader to evaluate the legitimacy of the 'security guarantees' demanded by Russia or the 'sovereignty' claims emphasized by Ukraine and NATO.\n\nFrom an investigative standpoint, the summary relies heavily on official state narratives from both sides without interrogating the underlying evidence. For example, it lists Putin's stated goals ('denazification' and 'ending genocide') without noting that international monitors (OSCE) and historians have found no evidence to support the genocide claim. Conversely, it mentions the Kakhovka Dam explosion as a Russian-controlled event but fails to note that a definitive independent forensic investigation into the exact mechanism of the breach remains a subject of intense geopolitical debate. The narrative is a 'sanitized' version of a highly complex information war where both kinetic and psychological operations are intertwined.",
+      "data": {
+        "perspective_type": "journalist",
+        "analysis": "The provided timeline offers a Western-centric chronological framework but suffers from significant 'omission bias' regarding the historical context prior to 2022. By starting the narrative in January 2022, the summary frames the conflict as a spontaneous event rather than the culmination of an eight-year armed struggle. It fails to mention the 2014 Maidan Revolution, the subsequent annexation of Crimea, or the failure of the Minsk I and II agreements. This lack of context makes it difficult for a reader to evaluate the legitimacy of the 'security guarantees' demanded by Russia or the 'sovereignty' claims emphasized by Ukraine and NATO.\n\nFrom an investigative standpoint, the summary relies heavily on official state narratives from both sides without interrogating the underlying evidence. For example, it lists Putin's stated goals ('denazification' and 'ending genocide') without noting that international monitors (OSCE) and historians have found no evidence to support the genocide claim. Conversely, it mentions the Kakhovka Dam explosion as a Russian-controlled event but fails to note that a definitive independent forensic investigation into the exact mechanism of the breach remains a subject of intense geopolitical debate. The narrative is a 'sanitized' version of a highly complex information war where both kinetic and psychological operations are intertwined.",
+        "implications": [
+          "Without addressing the 2014 origins, the public cannot accurately assess the prospects for a negotiated peace.",
+          "The reliance on state-issued goals (denazification vs. sovereignty) obscures the underlying economic and energy security interests (Black Sea gas reserves, pipelines).",
+          "The 'stalemate' narrative may be used by different actors to either argue for more weapons or for a forced ceasefire."
+        ],
+        "related_finding_ids": [],
+        "contradictions_found": [
+          {
+            "claim1": "The operation's goals were to 'denazify' Ukraine and end 'genocide' of Russians.",
+            "claim2": "The invasion is an unprovoked war of territorial conquest and imperial expansion.",
+            "source1": "Vladimir Putin / Kremlin Official Statements",
+            "source2": "United Nations General Assembly / Ukrainian Government",
+            "significance": "This is the central ideological divide; one side claims a humanitarian/security necessity, while the other claims a violation of the UN Charter."
+          },
+          {
+            "claim1": "Russian troops arrived in Belarus 'ostensibly for military exercises'.",
+            "claim2": "The buildup was a planned preparation for a multi-axis invasion of Kyiv.",
+            "source1": "Russian Ministry of Defense (Jan 2022)",
+            "source2": "US Intelligence / NATO Satellite Imagery",
+            "significance": "Highlights the use of 'maskirovka' (military deception) and the breakdown of diplomatic trust."
+          }
+        ],
+        "propaganda_indicators": [
+          "Loaded terminology: Use of 'denazification' to delegitimize a sovereign government.",
+          "Omission of context: Ignoring the 2014–2021 Donbas conflict to simplify the 2022 invasion narrative.",
+          "Passive voice in sensitive events: 'The Kakhovka Dam exploded' avoids direct attribution while implying control, reflecting the fog of war.",
+          "False Equivalency: Listing 'military exercises' as a neutral prelude without noting the unprecedented scale and posture."
+        ],
+        "unanswered_questions": [
+          "What were the specific terms discussed in the March 2022 Istanbul peace negotiations and why did they collapse?",
+          "To what extent did Western intelligence influence the timing of the 2022 and 2023 counteroffensives?",
+          "What is the verified casualty count for both sides, given that both Russia and Ukraine treat this as a state secret?"
+        ],
+        "verification_status": "disputed",
+        "source_bias_notes": [
+          "The summary reflects a pro-Western/Ukrainian chronological bias by focusing on 'illegal annexation' and 'reclaiming' territory.",
+          "Russian state media (RT, TASS) would frame the same events as 'liberation' and 'preemptive defense' against NATO expansion.",
+          "Military analysts (e.g., ISW) provide more tactical detail but often rely on open-source data that may be curated by the Ukrainian MoD."
+        ]
+      }
+    },
+    "conspirator": {
+      "analysis": "From an intelligence perspective, the 2022 invasion was not a sudden escalation but the culmination of a decade-long Russian strategy to prevent the 'strategic decoupling' of Ukraine from the Russian sphere of influence. While the public narrative focused on 'denazification,' the operational pattern—specifically the early push for Kyiv and the subsequent annexation of the land bridge to Crimea—suggests a primary objective of ensuring long-term Russian naval dominance in the Black Sea and securing critical energy infrastructure. The timing in early 2022 likely exploited a perceived window of Western weakness following the U.S. withdrawal from Afghanistan and the transition of leadership in Germany.\n\nThe conflict's evolution into a war of attrition reveals a secondary strategic layer: the 'buffer zone' doctrine. By annexing regions it does not fully control, Moscow created a legal and domestic political framework that makes any future Ukrainian NATO membership a de facto declaration of war against Russia. This 'frozen conflict' mechanism is a standard Russian intelligence playbook (similar to Transnistria and Georgia) designed to permanently disqualify a neighbor from Western integration by ensuring they have unresolved territorial disputes.",
+      "data": {
+        "perspective_type": "conspirator",
+        "analysis": "From an intelligence perspective, the 2022 invasion was not a sudden escalation but the culmination of a decade-long Russian strategy to prevent the 'strategic decoupling' of Ukraine from the Russian sphere of influence. While the public narrative focused on 'denazification,' the operational pattern—specifically the early push for Kyiv and the subsequent annexation of the land bridge to Crimea—suggests a primary objective of ensuring long-term Russian naval dominance in the Black Sea and securing critical energy infrastructure. The timing in early 2022 likely exploited a perceived window of Western weakness following the U.S. withdrawal from Afghanistan and the transition of leadership in Germany.\n\nThe conflict's evolution into a war of attrition reveals a secondary strategic layer: the 'buffer zone' doctrine. By annexing regions it does not fully control, Moscow created a legal and domestic political framework that makes any future Ukrainian NATO membership a de facto declaration of war against Russia. This 'frozen conflict' mechanism is a standard Russian intelligence playbook (similar to Transnistria and Georgia) designed to permanently disqualify a neighbor from Western integration by ensuring they have unresolved territorial disputes.",
+        "implications": [
+          "The war is less about 'liberating' people and more about the permanent geographic neutering of Ukraine as a sovereign economic and military competitor."
+        ],
+        "related_finding_ids": [],
+        "theory": "The 'Geopolitical Anchor' Strategy: The invasion was a preemptive strike to prevent Ukraine from becoming a 'NATO aircraft carrier' on Russia's border and to secure the Sevastopol naval base's viability by seizing a land bridge and controlling Ukraine's offshore energy resources.",
+        "theory_probability": "likely",
+        "supporting_evidence": [
+          {
+            "finding_id": "September 30, 2022 Annexations",
+            "how_it_supports": "The illegal annexation of Kherson and Zaporizhzhia, even without full military control, proves the priority was securing the land bridge to Crimea and the water supply (Kakhovka) rather than just protecting Donbas separatists."
+          },
+          {
+            "finding_id": "February 24, 2022 Full-scale invasion",
+            "how_it_supports": "The multi-pronged attack on Kyiv indicates the goal was regime change to install a puppet government, which would have permanently ended Ukraine's westward trajectory."
+          }
+        ],
+        "counter_evidence": [
+          {
+            "finding_id": "2022 Ukrainian Counteroffensives",
+            "how_it_contradicts": ""
+          }
+        ],
+        "hidden_motivations": [
+          "Securing the Kerch Strait and the Sea of Azov as an internal Russian lake to project power into the Mediterranean.",
+          "Preventing Ukraine from developing its own vast natural gas reserves in the Black Sea, which would have threatened Russia's energy monopoly in Europe.",
+          "Testing the limits of Article 5 and NATO's 'red lines' without engaging in direct kinetic conflict with a nuclear power."
+        ],
+        "implications_if_true": [
+          "Russia will never voluntarily withdraw from the 'land bridge' (Mariupol to Crimea) as it is viewed as an existential security requirement.",
+          "Any peace treaty that doesn't address Black Sea naval rights will be viewed by Moscow as merely a tactical pause for rearmament."
+        ]
+      }
+    },
+    "network": {
+      "analysis": "The Russia-Ukraine conflict is structured as a clash between a centralized, autocratic hierarchy and a decentralized, multi-lateral alliance. At the core of the Russian network is a rigid 'vertical of power' centered on Vladimir Putin, where the military and intelligence apparatus (Siloviki) operate under strict top-down command. This network relies on Belarus as a strategic staging ground and the separatist proxies in the Donbas to provide a veneer of local legitimacy. The Russian strategy utilizes these dependencies to create a buffer zone against Western influence, viewing Ukrainian sovereignty as a direct threat to its regional hegemony.\n\nConversely, the Ukrainian network is characterized by a high degree of external dependency and internal resilience. President Volodymyr Zelenskyy serves as the primary node connecting domestic defense forces with a complex web of NATO and EU supporters. This network is not a single hierarchy but a coalition of 'sovereign interests' tied together by the goal of maintaining the liberal international order. The power dynamics here are fluid; while Ukraine provides the kinetic force on the ground, its strategic autonomy is moderated by the flow of Western military hardware and intelligence, creating a symbiotic but asymmetric relationship between Kyiv and Washington/Brussels.",
+      "data": {
+        "perspective_type": "network",
+        "analysis": "The Russia-Ukraine conflict is structured as a clash between a centralized, autocratic hierarchy and a decentralized, multi-lateral alliance. At the core of the Russian network is a rigid 'vertical of power' centered on Vladimir Putin, where the military and intelligence apparatus (Siloviki) operate under strict top-down command. This network relies on Belarus as a strategic staging ground and the separatist proxies in the Donbas to provide a veneer of local legitimacy. The Russian strategy utilizes these dependencies to create a buffer zone against Western influence, viewing Ukrainian sovereignty as a direct threat to its regional hegemony.\n\nConversely, the Ukrainian network is characterized by a high degree of external dependency and internal resilience. President Volodymyr Zelenskyy serves as the primary node connecting domestic defense forces with a complex web of NATO and EU supporters. This network is not a single hierarchy but a coalition of 'sovereign interests' tied together by the goal of maintaining the liberal international order. The power dynamics here are fluid; while Ukraine provides the kinetic force on the ground, its strategic autonomy is moderated by the flow of Western military hardware and intelligence, creating a symbiotic but asymmetric relationship between Kyiv and Washington/Brussels.",
+        "implications": [
+          "The conflict is unlikely to end through local negotiation alone because the primary power brokers (Moscow and Washington) have global interests at stake.",
+          "The annexation of territories creates a 'legal' trap for Russia, making territorial compromise domestically difficult for the Kremlin.",
+          "Ukraine's shift from Soviet-era equipment to NATO standards creates a long-term structural dependency on the West."
+        ],
+        "related_finding_ids": [],
+        "relationships_revealed": [
+          {
+            "actor1": "Vladimir Putin",
+            "actor2": "Alexander Lukashenko",
+            "relationship_type": "dependent",
+            "evidence": "Russian troops used Belarus as a launchpad for the February 2022 invasion and conducted joint maneuvers."
+          },
+          {
+            "actor1": "Volodymyr Zelenskyy",
+            "actor2": "NATO",
+            "relationship_type": "ally",
+            "evidence": "NATO put troops on standby in Jan 2022 and provided the intelligence/arms necessary for the 2022 counteroffensives."
+          },
+          {
+            "actor1": "Russia",
+            "actor2": "DPR/LPR Separatists",
+            "relationship_type": "ally",
+            "evidence": "Putin officially ordered forces into these regions on Feb 21, 2022, and later annexed them."
+          },
+          {
+            "actor1": "Russia",
+            "actor2": "Ukraine",
+            "relationship_type": "enemy",
+            "evidence": "Full-scale land, sea, and air invasion launched on Feb 24, 2022."
+          }
+        ],
+        "intermediaries": [
+          "Belarus (acting as a bridge for Russian logistics)",
+          "Turkey (frequently acting as a diplomatic mediator for grain deals and prisoner swaps)",
+          "The European Union (bridging economic sanctions with military aid)"
+        ],
+        "network_patterns": [
+          "Asymmetric Dependency: Ukraine's military survival is tied to Western supply chains.",
+          "Proxy Integration: Russia absorbs local separatist structures into its national military hierarchy.",
+          "Hub-and-Spoke: Putin acts as the singular hub for all Russian strategic decisions, creating a single point of failure."
+        ],
+        "hidden_connections": [
+          "The role of private military companies (like Wagner Group) acting as deniable extensions of the Russian state.",
+          "The intersection of energy infrastructure (pipelines) and military targeting, where economic dependencies influence combat zones.",
+          "Intelligence sharing between non-combatant NATO members and the Ukrainian General Staff."
+        ]
+      }
+    }
+  },
+  "relationship_graph": {
+    "relationships": [],
+    "contradictions": [],
+    "gaps": [
+      {
+        "type": "temporal",
+        "description": "The provided findings are empty. There is a total lack of chronological data covering the 2014 annexation of Crimea, the Donbas conflict (2014-2021), and the immediate lead-up to the 2022 invasion.",
+        "priority": "high",
+        "suggested_queries": [
+          "timeline of key events leading to Russia-Ukraine war 2014-2022"
+        ]
+      },
+      {
+        "type": "actor",
+        "description": "Key decision-makers and institutions are not identified, including Vladimir Putin, Volodymyr Zelenskyy, NATO leadership, and the role of the European Union.",
+        "priority": "high",
+        "suggested_queries": [
+          "key political actors and their roles in the Russia-Ukraine conflict"
+        ]
+      },
+      {
+        "type": "topic",
+        "description": "Geopolitical and ideological motivations, such as NATO expansionism, the 'Euromaidan' protests, and Russian security architecture demands, are missing.",
+        "priority": "high",
+        "suggested_queries": [
+          "geopolitical causes of Russia-Ukraine war NATO expansion vs Russian security concerns"
+        ]
+      },
+      {
+        "type": "evidence",
+        "description": "The failure of diplomatic frameworks, specifically the Minsk I and II agreements, is not explored as a cause for the escalation to full-scale war.",
+        "priority": "medium",
+        "suggested_queries": [
+          "failure of Minsk agreements and its impact on Russia-Ukraine escalation"
+        ]
+      },
+      {
+        "type": "topic",
+        "description": "The research lacks a balanced representation of internal Ukrainian domestic politics versus the Kremlin's stated 'denazification' and 'demilitarization' narratives.",
+        "priority": "medium",
+        "suggested_queries": [
+          "Russian vs Ukrainian official narratives on the causes of the 2022 invasion"
+        ]
+      },
+      {
+        "type": "topic",
+        "description": "Economic factors, including energy dependency (Nord Stream 2) and the impact of sanctions post-2014, are not addressed.",
+        "priority": "medium",
+        "suggested_queries": [
+          "economic factors and energy politics in the Russia-Ukraine war"
+        ]
+      }
+    ],
+    "causal_chains": []
+  },
+  "metrics": {
+    "total_tokens": 14262,
+    "input_tokens": 3460,
+    "output_tokens": 10802,
+    "total_cost_usd": 0.0035001,
+    "tokens_search": 2902,
+    "tokens_extraction": 11360,
+    "tokens_perspectives": 0,
+    "tokens_relationships": 0
+  },
+  "errors": []
+}

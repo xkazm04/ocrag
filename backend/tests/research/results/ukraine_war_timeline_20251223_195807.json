@@ -1,0 +1,478 @@
+{
+  "test_case_id": "ukraine_war_timeline",
+  "query": "Create a timeline of major events in the Russia-Ukraine conflict from 2014 to present",
+  "timestamp": "20251223_195807",
+  "evaluation": {
+    "passed": true,
+    "overall_score": 0.8333333333333334,
+    "metrics": [
+      {
+        "name": "Finding Count",
+        "passed": true,
+        "score": 1.0,
+        "details": "Found 21 findings, expected at least 10"
+      },
+      {
+        "name": "Finding Types",
+        "passed": true,
+        "score": 1.0,
+        "details": "All required types found"
+      },
+      {
+        "name": "Average Confidence",
+        "passed": true,
+        "score": 1.0,
+        "details": "Average confidence 0.905, threshold 0.5"
+      },
+      {
+        "name": "Perspective Coverage",
+        "passed": true,
+        "score": 1.0,
+        "details": "All perspectives covered"
+      },
+      {
+        "name": "Event Coverage",
+        "passed": false,
+        "score": 0.16666666666666666,
+        "details": "Found 1/6 expected events"
+      },
+      {
+        "name": "Error Count",
+        "passed": true,
+        "score": 1.0,
+        "details": "No errors"
+      }
+    ],
+    "actors_found": [],
+    "events_found": [
+      "Minsk agreements"
+    ],
+    "themes_found": []
+  },
+  "results": {
+    "search_queries": [
+      "Timeline of Russia-Ukraine conflict events 2014-present: key dates, locations, and actors",
+      "Russia-Ukraine conflict: motivations and underlying interests of key actors",
+      "Financial connections and transactions related to the Russia-Ukraine conflict: money trail investigation",
+      "Official records and government filings related to the Russia-Ukraine conflict: investigation of documents",
+      "Media coverage of the Russia-Ukraine conflict 2014-present: analysis of news reports and public statements",
+      "Mechanisms and methods used in the Russia-Ukraine conflict: investigation of strategies and tactics"
+    ],
+    "source_count": 63,
+    "sources": [
+      {
+        "title": "Conflict in Ukraine",
+        "url": "https://www.cfr.org/global-conflict-tracker/conflict/conflict-ukraine",
+        "domain": "cfr.org",
+        "snippet": "A detailed overview of the conflict in Ukraine from the Council on Foreign Relations, including background, key events, and analysis."
+      },
+      {
+        "title": "Ukraine crisis: Timeline",
+        "url": "https://www.bbc.com/news/world-europe-26007957",
+        "domain": "bbc.com",
+        "snippet": "A timeline of the key events in the Ukraine crisis from the BBC News."
+      },
+      {
+        "title": "Ukraine Conflict Updates",
+        "url": "https://www.understandingwar.org/backgrounder/ukraine-conflict-updates",
+        "domain": "understandingwar.org",
+        "snippet": "Daily updates and analysis of the conflict in Ukraine from the Institute for the Study of War."
+      },
+      {
+        "title": "Key events in the Ukraine crisis",
+        "url": "https://www.reuters.com/world/europe/key-events-ukraine-crisis-2022-02-08/",
+        "domain": "reuters.com",
+        "snippet": "A timeline of key events in the Ukraine crisis from Reuters."
+      },
+      {
+        "title": "Situation in Ukraine",
+        "url": "https://www.un.org/ukraine/situation-ukraine",
+        "domain": "un.org",
+        "snippet": "Information and updates on the situation in Ukraine from the United Nations."
+      },
+      {
+        "title": "NATO's relations with Ukraine",
+        "url": "https://www.nato.int/cps/en/natohq/topics_37750.htm",
+        "domain": "nato.int",
+        "snippet": "Information on NATO's relations with Ukraine."
+      },
+      {
+        "title": "Ukraine",
+        "url": "https://www.europarl.europa.eu/factsheets/en/sheet/157/ukraine",
+        "domain": "europarl.europa.eu",
+        "snippet": "Fact sheet about Ukraine from the European Parliament."
+      },
+      {
+        "title": "Russo-Ukrainian War",
+        "url": "https://en.wikipedia.org/wiki/Russo-Ukrainian_War",
+        "domain": "wikipedia.org",
+        "snippet": "Wikipedia article on the Russo-Ukrainian War, providing a comprehensive overview of the conflict."
+      },
+      {
+        "title": "Ukraine | Human Rights Watch",
+        "url": "https://www.hrw.org/europe/central-asia/ukraine",
+        "domain": "hrw.org",
+        "snippet": "Human Rights Watch reports and analysis on the human rights situation in Ukraine."
+      },
+      {
+        "title": "Ukraine: News and Publications",
+        "url": "https://www.amnesty.org/en/location/europe-and-central-asia/ukraine/",
+        "domain": "amnesty.org",
+        "snippet": "Amnesty International's reporting on human rights issues in Ukraine."
+      },
+      {
+        "title": "Conflict in Ukraine",
+        "url": "https://www.cfr.org/global-conflict-tracker/conflict/conflict-ukraine",
+        "domain": "cfr.org",
+        "snippet": "The Council on Foreign Relations provides a comprehensive overview of the conflict in Ukraine, including its origins, key actors, and potential outcomes."
+      },
+      {
+        "title": "Ukraine Conflict Updates",
+        "url": "https://www.understandingwar.org/backgrounder/ukraine-conflict-updates",
+        "domain": "understandingwar.org",
+        "snippet": "The Institute for the Study of War offers daily updates and analysis of the military situation in Ukraine."
+      },
+      {
+        "title": "Why is Russia invading Ukraine? The conflict explained",
+        "url": "https://www.bbc.com/news/world-europe-60506682",
+        "domain": "bbc.com",
+        "snippet": "BBC News provides an explanation of the reasons behind Russia's invasion of Ukraine."
+      },
+      {
+        "title": "What are Russia's goals in Ukraine?",
+        "url": "https://www.reuters.com/world/europe/what-are-russias-goals-ukraine-2022-03-02/",
+        "domain": "reuters.com",
+        "snippet": "Reuters examines Russia's stated and potential goals in Ukraine."
+      },
+      {
+        "title": "NATO's relations with Ukraine",
+        "url": "https://www.nato.int/cps/en/natohq/topics_37752.htm",
+        "domain": "nato.int",
+        "snippet": "NATO's official website outlines its relationship with Ukraine and its stance on the conflict."
+      },
+      {
+        "title": "Ukraine",
+        "url": "https://www.state.gov/countries-areas/ukraine/",
+        "domain": "state.gov",
+        "snippet": "The U.S. Department of State provides information on U.S. policy towards Ukraine."
+      },
+      {
+        "title": "Ukraine",
+        "url": "https://www.economist.com/ukraine",
+        "domain": "economist.com",
+        "snippet": "The Economist offers in-depth analysis of the political and economic situation in Ukraine."
+      },
+      {
+        "title": "Ukraine war in maps: Key developments explained",
+        "url": "https://www.aljazeera.com/news/2023/10/26/ukraine-war-in-maps-key-developments-explained",
+        "domain": "aljazeera.com",
+        "snippet": "Al Jazeera provides maps and analysis of the key developments in the Ukraine war."
+      },
+      {
+        "title": "Europe, Russia, and Ukraine",
+        "url": "https://www.brookings.edu/regions/europe-russia-ukraine/",
+        "domain": "brookings.edu",
+        "snippet": "The Brookings Institution offers analysis and commentary on the conflict in Ukraine and its implications for Europe and Russia."
+      },
+      {
+        "title": "Ukraine News",
+        "url": "https://www.un.org/ukraine/news",
+        "domain": "un.org",
+        "snippet": "The United Nations provides news and updates on the humanitarian situation and diplomatic efforts related to the conflict in Ukraine."
+      }
+    ],
+    "finding_count": 21,
+    "findings": [
+      {
+        "type": "actor",
+        "content": "Viktor Yanukovych: Pro-Russian President of Ukraine ousted during the Euromaidan Revolution. His ousting was viewed by Russia as a Western-backed coup.",
+        "summary": "Viktor Yanukovych was the pro-Russian president of Ukraine whose ousting in 2014 triggered Russian intervention.",
+        "confidence": 0.9,
+        "date_text": null,
+        "date": null
+      },
+      {
+        "type": "event",
+        "content": "Euromaidan Revolution: Occurred in February-March 2014 in Kyiv, Ukraine. It led to the ousting of pro-Russian President Viktor Yanukovych.",
+        "summary": "The Euromaidan Revolution in February-March 2014 led to the ousting of Ukraine's pro-Russian president.",
+        "confidence": 1.0,
+        "date_text": "February-March 2014",
+        "date": "2014-03-01"
+      },
+      {
+        "type": "event",
+        "content": "Annexation of Crimea: Russia annexed Crimea in March 2014 following a disputed referendum.",
+        "summary": "Russia annexed Crimea in March 2014 after a contested referendum.",
+        "confidence": 1.0,
+        "date_text": "March 2014",
+        "date": "2014-03-01"
+      },
+      {
+        "type": "event",
+        "content": "Armed Insurgency in Donbas: Pro-Russian separatists, allegedly backed by Russia, began an armed insurgency in the Donbas region of eastern Ukraine in April 2014.",
+        "summary": "In April 2014, pro-Russian separatists initiated an armed insurgency in eastern Ukraine's Donbas region.",
+        "confidence": 0.9,
+        "date_text": "April 2014",
+        "date": "2014-04-01"
+      },
+      {
+        "type": "event",
+        "content": "Downing of MH17: Malaysia Airlines Flight MH17 was shot down over eastern Ukraine in May 2014, killing all 298 people on board. International investigators concluded it was shot down by a Russian-made missile launched from separatist-controlled territory.",
+        "summary": "In May 2014, Malaysia Airlines Flight MH17 was shot down over eastern Ukraine by a Russian-made missile.",
+        "confidence": 0.9,
+        "date_text": "May 2014",
+        "date": "2014-05-01"
+      },
+      {
+        "type": "event",
+        "content": "Minsk II Agreement: Signed in February 2015, aiming to establish a ceasefire and a framework for a political settlement in Donbas. The agreement was never fully implemented, and sporadic fighting continued.",
+        "summary": "The Minsk II agreement, signed in February 2015, failed to fully resolve the conflict in Donbas.",
+        "confidence": 0.9,
+        "date_text": "February 2015",
+        "date": "2015-02-01"
+      },
+      {
+        "type": "pattern",
+        "content": "Low-intensity conflict persisted in Donbas from 2015-2021, with frequent ceasefire violations. Russia provided political, economic, and military support to the separatist regions.",
+        "summary": "From 2015 to 2021, a low-intensity conflict continued in Donbas, supported by Russia.",
+        "confidence": 0.8,
+        "date_text": "2015-2021",
+        "date": "2015-01-01"
+      },
+      {
+        "type": "event",
+        "content": "Russian Military Buildup: Russia began a massive military buildup along its border with Ukraine in late 2021, raising concerns about a potential invasion.",
+        "summary": "In late 2021, Russia amassed troops along the Ukrainian border, signaling a potential invasion.",
+        "confidence": 0.9,
+        "date_text": "Late 2021",
+        "date": "2021-06-15"
+      },
+      {
+        "type": "event",
+        "content": "Recognition of DPR and LPR: Russia recognized the independence of the self-proclaimed Donetsk People's Republic (DPR) and Luhansk People's Republic (LPR) in February 2022.",
+        "summary": "Russia recognized the independence of DPR and LPR in February 2022.",
+        "confidence": 1.0,
+        "date_text": "February 2022",
+        "date": "2022-02-01"
+      },
+      {
+        "type": "event",
+        "content": "Full-Scale Invasion: Russia launched a full-scale invasion of Ukraine on February 24, 2022.",
+        "summary": "Russia launched a full-scale invasion of Ukraine on February 24, 2022.",
+        "confidence": 1.0,
+        "date_text": "February 24, 2022",
+        "date": "2022-02-24"
+      },
+      {
+        "type": "event",
+        "content": "Russian Withdrawal from Kyiv: Russian forces advanced on multiple fronts, including Kyiv, but faced strong resistance from Ukrainian forces. Russia withdrew from the Kyiv region in April 2022.",
+        "summary": "Russia withdrew from the Kyiv region in April 2022 after facing strong Ukrainian resistance.",
+        "confidence": 0.9,
+        "date_text": "February-April 2022",
+        "date": "2022-04-01"
+      },
+      {
+        "type": "event",
+        "content": "Bucha War Crimes Allegations: Reports and investigations emerged detailing alleged war crimes committed by Russian forces in occupied territories, particularly in Bucha in March 2022.",
+        "summary": "Allegations of war crimes by Russian forces in Bucha surfaced in March 2022.",
+        "confidence": 0.9,
+        "date_text": "March 2022",
+        "date": "2022-03-01"
+      },
+      {
+        "type": "event",
+        "content": "Annexation of Ukrainian Regions: Russia annexed four Ukrainian regions (Donetsk, Luhansk, Kherson, and Zaporizhzhia) in September 2022 following staged referendums widely condemned by the international community.",
+        "summary": "Russia annexed four Ukrainian regions in September 2022 after internationally condemned referendums.",
+        "confidence": 0.9,
+        "date_text": "September 2022",
+        "date": "2022-09-01"
+      },
+      {
+        "type": "pattern",
+        "content": "Intense fighting continues in eastern and southern Ukraine. Russia focuses on consolidating its control over occupied territories. Western countries provide military and financial aid to Ukraine.",
+        "summary": "Ongoing intense fighting in eastern and southern Ukraine is accompanied by Western aid to Ukraine.",
+        "confidence": 0.9,
+        "date_text": null,
+        "date": null
+      },
+      {
+        "type": "actor",
+        "content": "Russia: Views the conflict as a response to NATO expansion and a threat to its security interests. Accuses Ukraine of discriminating against Russian speakers and harboring neo-Nazi elements. Claims its actions are aimed at protecting the Russian-speaking population and \"denazifying\" Ukraine.",
+        "summary": "Russia views the conflict as a response to NATO expansion and aims to protect Russian speakers and \"denazify\" Ukraine.",
+        "confidence": 0.9,
+        "date_text": null,
+        "date": null
+      },
+      {
+        "type": "actor",
+        "content": "Ukraine: Views the conflict as an unprovoked act of aggression and a violation of its sovereignty and territorial integrity. Seeks to defend its independence and integrate with the West.",
+        "summary": "Ukraine views the conflict as an act of aggression and seeks to defend its sovereignty and integrate with the West.",
+        "confidence": 0.9,
+        "date_text": null,
+        "date": null
+      },
+      {
+        "type": "actor",
+        "content": "Western Countries: Condemn Russia's actions and support Ukraine's right to self-defense. Impose sanctions on Russia and provide military and financial assistance to Ukraine. View the conflict as a threat to the international rules-based order.",
+        "summary": "Western countries condemn Russia's actions, support Ukraine, and impose sanctions on Russia.",
+        "confidence": 0.9,
+        "date_text": null,
+        "date": null
+      },
+      {
+        "type": "pattern",
+        "content": "Continued fighting in eastern Ukraine, particularly around Bakhmut and Avdiivka. Ongoing Western military and financial aid to Ukraine. Diplomatic efforts to find a peaceful resolution to the conflict remain stalled. Allegations of war crimes continue to be investigated.",
+        "summary": "The conflict continues with fighting in eastern Ukraine, stalled diplomacy, and ongoing war crime investigations.",
+        "confidence": 0.8,
+        "date_text": null,
+        "date": null
+      },
+      {
+        "type": "actor",
+        "content": "International Criminal Court (ICC): Has issued arrest warrants for Russian officials, including President Putin, for alleged war crimes in Ukraine.",
+        "summary": "The ICC has issued arrest warrants for Russian officials, including President Putin, for alleged war crimes.",
+        "confidence": 0.9,
+        "date_text": null,
+        "date": null
+      },
+      {
+        "type": "pattern",
+        "content": "Russia seeks to circumvent sanctions through cryptocurrency, shell companies, and alternative payment systems.",
+        "summary": "Russia is attempting to bypass sanctions using various methods including cryptocurrency.",
+        "confidence": 0.8,
+        "date_text": null,
+        "date": null
+      },
+      {
+        "type": "evidence",
+        "content": "Official records and government filings document alleged war crimes committed by Russian forces, detailed accounts of the humanitarian crisis, and the economic impact of the conflict.",
+        "summary": "Official records document war crimes, the humanitarian crisis, and the economic impact of the conflict.",
+        "confidence": 0.9,
+        "date_text": null,
+        "date": null
+      }
+    ],
+    "timeline": [
+      {
+        "date": "March 2014",
+        "date_sortable": "2014-03-01",
+        "precision": "month",
+        "summary": "The Euromaidan Revolution in February-March 2014 led to the ousting of Ukraine's pro-Russian president.",
+        "content": "Euromaidan Revolution: Occurred in February-March 2014 in Kyiv, Ukraine. It led to the ousting of pro-Russian President Viktor Yanukovych.",
+        "confidence": 1.0
+      },
+      {
+        "date": "March 2014",
+        "date_sortable": "2014-03-01",
+        "precision": "month",
+        "summary": "Russia annexed Crimea in March 2014 after a contested referendum.",
+        "content": "Annexation of Crimea: Russia annexed Crimea in March 2014 following a disputed referendum.",
+        "confidence": 1.0
+      },
+      {
+        "date": "April 2014",
+        "date_sortable": "2014-04-01",
+        "precision": "month",
+        "summary": "In April 2014, pro-Russian separatists initiated an armed insurgency in eastern Ukraine's Donbas region.",
+        "content": "Armed Insurgency in Donbas: Pro-Russian separatists, allegedly backed by Russia, began an armed insurgency in the Donbas region of eastern Ukraine in April 2014.",
+        "confidence": 0.9
+      },
+      {
+        "date": "May 2014",
+        "date_sortable": "2014-05-01",
+        "precision": "month",
+        "summary": "In May 2014, Malaysia Airlines Flight MH17 was shot down over eastern Ukraine by a Russian-made missile.",
+        "content": "Downing of MH17: Malaysia Airlines Flight MH17 was shot down over eastern Ukraine in May 2014, killing all 298 people on board. International investigators concluded it was shot down by a Russian-made missile launched from separatist-controlled territory.",
+        "confidence": 0.9
+      },
+      {
+        "date": "February 2015",
+        "date_sortable": "2015-02-01",
+        "precision": "month",
+        "summary": "The Minsk II agreement, signed in February 2015, failed to fully resolve the conflict in Donbas.",
+        "content": "Minsk II Agreement: Signed in February 2015, aiming to establish a ceasefire and a framework for a political settlement in Donbas. The agreement was never fully implemented, and sporadic fighting continued.",
+        "confidence": 0.9
+      },
+      {
+        "date": "2021",
+        "date_sortable": "2021-06-15",
+        "precision": "year",
+        "summary": "In late 2021, Russia amassed troops along the Ukrainian border, signaling a potential invasion.",
+        "content": "Russian Military Buildup: Russia began a massive military buildup along its border with Ukraine in late 2021, raising concerns about a potential invasion.",
+        "confidence": 0.9
+      },
+      {
+        "date": "February 2022",
+        "date_sortable": "2022-02-01",
+        "precision": "month",
+        "summary": "Russia recognized the independence of DPR and LPR in February 2022.",
+        "content": "Recognition of DPR and LPR: Russia recognized the independence of the self-proclaimed Donetsk People's Republic (DPR) and Luhansk People's Republic (LPR) in February 2022.",
+        "confidence": 1.0
+      },
+      {
+        "date": "February 24, 2022",
+        "date_sortable": "2022-02-24",
+        "precision": "exact",
+        "summary": "Russia launched a full-scale invasion of Ukraine on February 24, 2022.",
+        "content": "Full-Scale Invasion: Russia launched a full-scale invasion of Ukraine on February 24, 2022.",
+        "confidence": 1.0
+      },
+      {
+        "date": "March 2022",
+        "date_sortable": "2022-03-01",
+        "precision": "month",
+        "summary": "Allegations of war crimes by Russian forces in Bucha surfaced in March 2022.",
+        "content": "Bucha War Crimes Allegations: Reports and investigations emerged detailing alleged war crimes committed by Russian forces in occupied territories, particularly in Bucha in March 2022.",
+        "confidence": 0.9
+      },
+      {
+        "date": "April 2022",
+        "date_sortable": "2022-04-01",
+        "precision": "month",
+        "summary": "Russia withdrew from the Kyiv region in April 2022 after facing strong Ukrainian resistance.",
+        "content": "Russian Withdrawal from Kyiv: Russian forces advanced on multiple fronts, including Kyiv, but faced strong resistance from Ukrainian forces. Russia withdrew from the Kyiv region in April 2022.",
+        "confidence": 0.9
+      },
+      {
+        "date": "September 2022",
+        "date_sortable": "2022-09-01",
+        "precision": "month",
+        "summary": "Russia annexed four Ukrainian regions in September 2022 after internationally condemned referendums.",
+        "content": "Annexation of Ukrainian Regions: Russia annexed four Ukrainian regions (Donetsk, Luhansk, Kherson, and Zaporizhzhia) in September 2022 following staged referendums widely condemned by the international community.",
+        "confidence": 0.9
+      }
+    ],
+    "perspectives": [
+      {
+        "type": "historical",
+        "analysis": "The Russia-Ukraine conflict, as outlined in the provided timeline, is not a new phenomenon but rather the culmination of long-simmering tensions with deep historical roots. The 2014 events, triggered by the Euromaidan Revolution and the subsequent ousting of Yanukovych, represent a critical inflection point. Russia's annexation of Crimea and support for separatists in Donbas can be interpreted as a continuation of historical patterns of Russian expansionism and influence-seeking in its 'near abroad,' reminiscent of Tsarist and Soviet-era policies. The conflict echoes historical power struggles over territory and resources, particularly in regions with mixed ethnic and cultural identities. The persistent low-intensity conflict from 2015-2021 resembles frozen conflicts in other post-Soviet states, such as Transnistria or Nagorno-Karabakh, where Russia has historically played a role in maintaining instability to exert influence. The full-scale invasion in 2022 marks a significant escalation, comparable to major European conflicts of the 20th century in its scale and impact. The allegations of war crimes in Bucha and elsewhere are particularly disturbing, evoking memories of atrocities committed during past conflicts in the region. Russia's justification for the invasion, citing NATO expansion and the protection of Russian speakers, is a familiar narrative used to legitimize its actions in neighboring countries. The annexation of Ukrainian regions in 2022 mirrors historical instances of territorial expansion through staged referendums and military force. The ongoing conflict is reshaping the geopolitical landscape of Europe and has significant implications for international security.",
+        "insights": [
+          "The conflict is not solely about NATO expansion, but also about Russia's perception of its sphere of influence and its resistance to the spread of Western democratic values in its neighborhood.",
+          "The conflict has exposed the limitations of international institutions and agreements, such as the Minsk II agreement, in resolving complex geopolitical disputes.",
+          "The information war surrounding the conflict is a crucial element, with both sides employing propaganda and disinformation to shape public opinion and justify their actions.",
+          "The conflict has highlighted the complex and often contradictory identities within Ukraine, with some regions historically more aligned with Russia than others.",
+          "The long-term consequences of the conflict will extend far beyond the immediate territorial disputes, impacting regional security, energy markets, and global political alliances."
+        ],
+        "recommendations": [
+          "Investigate the historical narratives and grievances that fuel the conflict, including the role of nationalism, identity politics, and historical memory.",
+          "Analyze the economic factors that contribute to the conflict, such as control over resources, trade routes, and industrial assets.",
+          "Examine the role of external actors, including the United States, the European Union, and other countries, in shaping the conflict's trajectory.",
+          "Study the impact of the conflict on civilian populations, including displacement, human rights abuses, and psychological trauma.",
+          "Research the effectiveness of different conflict resolution mechanisms, such as diplomacy, sanctions, and peacekeeping operations, in addressing the conflict."
+        ],
+        "warnings": [
+          "The conflict has the potential to escalate further, potentially involving NATO or other external actors, leading to a wider regional or global war.",
+          "The use of nuclear weapons, while unlikely, remains a possibility, with catastrophic consequences for all involved.",
+          "The conflict could lead to the fragmentation of Ukraine, with long-term instability and humanitarian crises.",
+          "The conflict could exacerbate existing ethnic and political tensions within Russia, potentially leading to internal unrest.",
+          "The conflict could undermine international law and the rules-based international order, emboldening other states to pursue aggressive foreign policies."
+        ]
+      }
+    ]
+  },
+  "metrics": {
+    "total_tokens": 19762,
+    "total_cost_usd": 0.0062554,
+    "execution_time_seconds": 100.65663
+  }
+}

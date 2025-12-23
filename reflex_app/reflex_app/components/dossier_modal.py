@@ -23,7 +23,7 @@ def _build_events_dict() -> dict:
         events_dict[event.id] = {
             "id": event.id,
             "title": event.title,
-            "date": event.date,
+            "date": event.date.strftime("%Y-%m-%d") if hasattr(event.date, 'strftime') else str(event.date),
             "description": event.description,
             "type": event.type,
             "severity": event.severity,

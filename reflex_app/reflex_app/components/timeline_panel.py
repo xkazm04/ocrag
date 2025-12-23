@@ -43,7 +43,7 @@ def _build_events_data() -> list:
         {
             "id": e.id,
             "title": e.title,
-            "date": e.date,
+            "date": e.date.strftime("%Y-%m-%d") if hasattr(e.date, 'strftime') else str(e.date),
             "severity": e.severity,
             "is_key_event": e.is_key_event or False,
             "color": _get_severity_color(e.severity),

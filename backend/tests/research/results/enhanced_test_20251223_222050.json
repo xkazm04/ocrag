@@ -1,0 +1,1113 @@
+{
+  "query": "Why did the Russia-Ukraine war start? What were the key events and actors?",
+  "template_type": "investigative",
+  "timestamp": "20251223_222050",
+  "duration_seconds": 79,
+  "decomposition": {
+    "needs_decomposition": true,
+    "strategy": "hybrid",
+    "detected_themes": [
+      "Geopolitical origins",
+      "Historical grievances",
+      "Military escalation",
+      "International diplomacy",
+      "Security alliances (NATO/EU)"
+    ],
+    "detected_actors": [
+      "Russia",
+      "Ukraine",
+      "NATO",
+      "United States",
+      "European Union",
+      "Separatist forces (DPR/LPR)",
+      "Vladimir Putin",
+      "Volodymyr Zelenskyy"
+    ],
+    "date_range_years": 0,
+    "sub_queries": [
+      {
+        "id": "sq_1",
+        "query": "What were the primary geopolitical drivers of the 2014 Maidan Revolution and the subsequent Russian annexation of Crimea?",
+        "focus_theme": "Root causes and historical grievances",
+        "batch_order": 1,
+        "composition_role": "background"
+      },
+      {
+        "id": "sq_2",
+        "query": "Analyze the evolution of the Donbas conflict and the specific reasons for the diplomatic failure of the Minsk I and II Agreements.",
+        "focus_theme": "The Donbas conflict and failed diplomacy",
+        "batch_order": 2,
+        "composition_role": "background"
+      },
+      {
+        "id": "sq_3",
+        "query": "What were the immediate military and diplomatic catalysts, including NATO expansion concerns, that led to the February 2022 full-scale invasion?",
+        "focus_theme": "Immediate catalysts and key actors",
+        "batch_order": 3,
+        "composition_role": "primary"
+      },
+      {
+        "id": "sq_4",
+        "query": "How have major military milestones and the shifting diplomatic stances of the EU and US shaped the trajectory of the war since February 2022?",
+        "focus_theme": "Military milestones and international response",
+        "batch_order": 4,
+        "composition_role": "synthesis"
+      }
+    ]
+  },
+  "search_queries": [
+    "What were the primary geopolitical drivers of the 2014 Maidan Revolution and the subsequent Russian annexation of Crimea?",
+    "Analyze the evolution of the Donbas conflict and the specific reasons for the diplomatic failure of the Minsk I and II Agreements.",
+    "What were the immediate military and diplomatic catalysts, including NATO expansion concerns, that led to the February 2022 full-scale invasion?",
+    "How have major military milestones and the shifting diplomatic stances of the EU and US shaped the trajectory of the war since February 2022?"
+  ],
+  "sources": [
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_S3pWfMxSnTTH64Ktz-sQ1k_JDaQ1ngmoqgkmoOWggRqqHcY8lmFrKQOWAnldylDAu1cIy35HW_df241oFdGKSQV1sLmpvJr5bCibeKg3wARFOnF-pMD9UwQJrccpfkudToU=",
+      "title": "wikipedia.org",
+      "domain": "wikipedia",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFsMcTlRbM6IER1DpiNYLYyFKyZEk5rhDDzPSFbbEC26-KrLxhpjwR59vsTq7625gHtJnpGVnguO0i1dsx5G3B9J22DG-QmjhyibXn3VN-mjVC06mBI-Eps1JL-7lV1KfNx36G2u86CM56hhTbRdQ==",
+      "title": "wikipedia.org",
+      "domain": "wikipedia",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8UQMw4rMnwPTl1qVyCNtOF4aRGDuxGNvWufP2yy_hMJAlZ9Zq_dHG65xYpWNDSkF1pY6OxgVjYwaTJX1rz69JrbsCQE7rTxD_q22IPRVgW2utNFurITukH3NGYiVPHsQxmPdSIVkSu8o6LoAb0BzQ3K-Tum5g-5wWZdyr67AUjHbylQ==",
+      "title": "jacobin.com",
+      "domain": "jacobin",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7ySopevL0BUo4NZb8lTk7cBEkQLy7pM8CMBDAqijkwbEZqCjBbpG2mwvHC52UxbgSgPqo4n-p6nzxSqvuHlNyjN9i8fgSdYAf7Dqa9Kt22cr7Rp5zgpAaIXxqZA8j9lrhWHQ6nNnXbJid_D_8K61EAjfnNC9ygZtLhlnMD2NQG7jg4jN1mgrl",
+      "title": "razomforukraine.org",
+      "domain": "razomforukraine",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKhtCMJx8j9ljdLnsmOHb2PIGrbehXyzl-vB8GNTiBo_iP3O-vbczrk6GrjeNQJGaAlpOLi3bnIticQ7wc4YpYxNs5-drvX-35C5GHo25GihW_FrV2rrlBpVgMrRk3je9JVRpZe_4z9jtAa0gWNbfKJgBSbz7Z3XtH9n_EF3nS1TL9aFzIFnjmHhOggrvKjrLU6EnV1zCx",
+      "title": "opensocietyfoundations.org",
+      "domain": "opensocietyfoundations",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFROEvdZUYvam8E5As1mRXeI5X5n0wzCaeBm8vdCvYhCbzebWeFAyts_S2DRMB9swvlm2PpH74Rxlh-tJuk42UmVlRaQqI6ok_26UBYGJKJH2Q3U-O0AUFwtcB3fQdbKnRsGzgY1DfK-SdfWqLcTtQIyH5sLzcOcQ==",
+      "title": "indusedu.org",
+      "domain": "indusedu",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmHkJLlm72wHojkJumj3FERhefDipSuJyWTUrRUBJE2xEut3iF85XQwRtS5LDk53QUcvAe8LF4nYDW_31oBlBLxJBQO8nrZYhX7xj5IJ5Cd5qQayf2L-ijsqklbSph9FxtKpuroLkbxrZ_6rgYvgHr",
+      "title": "redalyc.org",
+      "domain": "redalyc",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIqdjK1tJ8saJ2DKBOErNFpeaYIiGc9vpKpsMFfZR9fJqqb6s59u_i-ep8RQK6ZsyCamhogGcvEfS5FP6nnQufy4GG9LMLeH2NLK94HKoV6MkLkyJt5kkjEU_0ho5qSjBVmsfkRi1TmS7kchrjVugg8DcejnfJYNywUGugDMBvlBnMFH-_FHYbVJDI1h1bZvhbufJz4Jd7xnd11EmejVF1tZO_O2Z5dIh6AfT_NgvIf2s39RTVVuWzhyqcKVF0nto_QiSg3NnU",
+      "title": "researchgate.net",
+      "domain": "researchgate.net",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQElun8hBXmRMjv0Wapv0wk_pQvOxToz1rf6IMFnISxEix0TSiRZoL-gVqtRmSVNBaKGMNxy0EsWzwHhiEdZj7DJw1K40Uhb6kw0eU0Kip_yb5PYthL4EEb836v2SOvZFoXnaYprMtH1yFARjFJkZQgAgxWSBeKzAMGH4yFzB7lQYwQqVeK0",
+      "title": "scielo.br",
+      "domain": "scielo.br",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFohyM3EUuip0kJuOPBoFJ5s0IyK0WfmT9qluMMzWAqBZxnmGQMU5ry6qDFlbtNYtEJ5YP-5e9IQ9Q8lhKVLy_cyOqtzmWVVVav85r4dwqwP_K1rgaS6QfCyR6SVjBRFUH-XlrCbumtVwwsN6W1726NTHTRqEUHCFhXIQPU8rM6ZUb562ypWOl0XeL4ihXqeSw9AA==",
+      "title": "osw.waw.pl",
+      "domain": "osw.waw.pl",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKNLfS56I2GhRBvpgfEXMQqljg25jomvXmvYnAdZU-9savbPLLMHCpSUjWVPZ3TNA8AoOIJDgth1kpk1cIJFgw9fe9_ZzzP1_Hjz9vYeBpX3dl0vt8Do3tmmZkBzi1h1PldTYmPZQ=",
+      "title": "wikipedia.org",
+      "domain": "wikipedia",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkIMy9BXr_EsBE2kZpdfmEfoScFRpXlXM_l78sKXgkznDm1yTlTBm-03yFygTSGXMvkCWM899h54CBeoM065ySJHNf05aFzHpjTm6Ur4BSa1GJUmpK4jIjhV__ljRuOAZW0sdittPjXSK4a3qaawry4NrOFymwMIz7CQk9AAY8838kewdheUMjDo0f4A==",
+      "title": "mid.ru",
+      "domain": "mid.ru",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGGUAEvo7Ad2eJvI9BmP3M2ZRIn_7ItiKC2fF5qym-YMDR_hxBqj8-2GmYYipZBLS_so8BT1RoPTnktTcM6HQSfr6FiTi0AO8ZUUD34K_zxaNAUTdzBoA40wlfo3AWQWlki__4HbBkuU_GifiEhDhplpN54STMj_-N8HK2pgb2R-Z_ipK_rCwaGAMOsm7NMy_KdQ==",
+      "title": "crisisgroup.org",
+      "domain": "crisisgroup",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBnm916DkdDgEJ_XFV8FkUqPJy-GPNZbv8BKxuMEHrpmJKfWoTc_Rd8m0qaYU5UK4_VHzYiw082S6Oh2QzBOZQ23F_3VsCvdiKIlGCTN63k3j8qwNqCCK2bxQbZ04BrZYw3dynRjlAP590Fyra66nYDrMkB3JOkkfhWM94mULVPd9sfdsvQSg31O9lQi8f6nzDsyIsH9THHz1YiSsEWBdhcBFDujhHNvztaYZD82TnwwlLP_cblg==",
+      "title": "publicinternationallawandpolicygroup.org",
+      "domain": "publicinternationallawandpolicygroup",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnCMpt_WbJXm4eCnIwIkuyGkZf6JjhOo-HqN0Dh2GHkZ7LqhVHN4B6BvpXk9bVCRJZTEv83i9C5E7ipx7_2fJ67CG6saKF7C8klNgGjqwf6sPFCoK0ftsxghJ6sT-Q84XVnuHL9lDs3mOEMl6F6kqLGdUmCKEy9AW5XBjgZZsX-DGUKn03Phuyn9xID_tOR1_ro1Jv7CDu4cLofWGXMdG6uGg=",
+      "title": "ffi.no",
+      "domain": "ffi.no",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQElGg8-1X7hsqGzCs7RQKmD96cfx1GQ-IMZJP5_hLe-9Qy68kafPOPFC9zVtHPHG_8GvpWJPV4e84Y2oSNPZFPJ0_Awb8-QBTr__9KTKGFhvE8mqUCYqDdih9oGwqjVlGLEbuRPkJvZzoZzNodOhYs_Z6YutvrOarFxfDeC4RlaBMevIXGHTG4_Nh2BWI7C0nWedIn6FRnOgJbA3JN7cPRliDt6lzcGDp33njztUVOzU3YNulduKcBXiGmcRw==",
+      "title": "quora.com",
+      "domain": "quora",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMREdZqO76fNgVKZBYjseBp7HkFUyyDlTDTq_FUCd9DElvdxdnY4EUbpMn1LuVaUB36KTsx_gLuiQtM3leGAJriPCMPPkfB7MR1SiLHVG30JWcHRnmvtB3M31UF-wKBQxcKu3L1b5dCq6NpGlKHwCrfDrQd75JkOtz6ejStriuQsDAVJQWtWWTa7Dz7t_Jzqdj1k5Lp0hImA==",
+      "title": "jacobin.com",
+      "domain": "jacobin",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGj3ubK210i6wtuUlSPXB8PqSndYG_96QJb9wkkBBlUJ3oU7tW5EHnEs4dv1ldLMVrmcj_8jYgm1xUUCuDwzpnPsedqU8u1-s0XcAluseWjQ9nK6KoB_8Kj8MpLcmZCFX2kUwpboQ9OynoxNSuoKkg4R3Z8QbCqxDHStB5Nd4y4rNQt",
+      "title": "harvard.edu",
+      "domain": "harvard.edu",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLTRCeyqimpF48vD9uIs3CLsU5PQCsPcTiCKnTQF2sdnSYTSQwhQKi3pxZ3ZlTVQi5pKHEIy325iKx4Y0ZNxVaVv9WaaTNEIYD48KNk3SbiUaVaQ9fMBGJaYxp0w6EPewOrkrulcW9mgGa8Qz0QftsRNEq-FtZf482dTI=",
+      "title": "afsa.org",
+      "domain": "afsa",
+      "snippet": ""
+    },
+    {
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2ydYsByycd8ORQUEqy_usWFXH6POKM5OwoOfB5WpylasTpu3zvQ1oO7QEm1v6SSIhE24n56biqweJQPwljse1uyxT0zyIuP5MKj5TRglN9vLdHJgxKm68URKnMuwaAxoJDogpSpCi0BAa5n6Dx7nZ84bpRGcjSS643wsLwreDLNK13CfcyhykEbKZTN0dVPiQFAc5eiE0xQeOyJum2eZ68uzlXOGxu3qcbLZw",
+      "title": "internationalaffairs.org.au",
+      "domain": "internationalaffairs.au",
+      "snippet": ""
+    }
+  ],
+  "findings": [
+    {
+      "type": "event",
+      "content": "In November 2013, President Viktor Yanukovych decided not to sign the European Union–Ukraine Association Agreement, choosing closer ties with Russia, which triggered the Euromaidan protests.",
+      "summary": "Yanukovych's decision sparked protests.",
+      "date_text": "November 2013",
+      "temporal_context": "past"
+    },
+    {
+      "type": "actor",
+      "content": "Viktor Yanukovych, the former President of Ukraine, played a central role by rejecting the EU-Ukraine Association Agreement in favor of closer ties with Russia, sparking the Maidan Revolution.",
+      "summary": "Yanukovych rejected EU agreement.",
+      "date_text": null,
+      "temporal_context": "past"
+    },
+    {
+      "type": "actor",
+      "content": "Russia, under the leadership of Vladimir Putin, annexed Crimea following the Maidan Revolution, citing the need to protect ethnic Russians and its strategic interests in the Black Sea.",
+      "summary": "Russia annexed Crimea.",
+      "date_text": null,
+      "temporal_context": "past"
+    },
+    {
+      "type": "event",
+      "content": "The Maidan Revolution, also known as Euromaidan, took place in 2014 as a result of widespread protests against government corruption, abuse of power, and President Yanukovych's decision to reject closer ties with the EU.",
+      "summary": "Maidan Revolution occurred in 2014.",
+      "date_text": "2014",
+      "temporal_context": "past"
+    },
+    {
+      "type": "event",
+      "content": "Following the Maidan Revolution, Russia annexed Crimea in March 2014, citing the protection of ethnic Russians and its strategic interests, particularly the naval base at Sevastopol.",
+      "summary": "Russia annexed Crimea in March 2014.",
+      "date_text": "March 2014",
+      "temporal_context": "past"
+    },
+    {
+      "type": "relationship",
+      "content": "Ukraine's geopolitical position is characterized by competing influences from the West (EU, NATO) and Russia, leading to internal divisions and external pressures.",
+      "summary": "Ukraine is caught between West and Russia.",
+      "date_text": null,
+      "temporal_context": "past"
+    },
+    {
+      "type": "actor",
+      "content": "The United States and other Western governments supported the integration of parts of the former Soviet Union into European and Atlantic institutions, which Russia viewed as a threat to its sphere of influence.",
+      "summary": "Western governments supported EU integration.",
+      "date_text": null,
+      "temporal_context": "past"
+    },
+    {
+      "type": "pattern",
+      "content": "Russia has consistently sought to maintain control over its 'near abroad' and prevent the expansion of Western influence in the region, as evidenced by its actions in Crimea and Ukraine.",
+      "summary": "Russia seeks to control its near abroad.",
+      "date_text": null,
+      "temporal_context": "past"
+    },
+    {
+      "type": "evidence",
+      "content": "Russia justified its annexation of Crimea by claiming the need to protect ethnic Russians from 'fascists' following the ousting of Yanukovych, appealing to historical ties and shared identity.",
+      "summary": "Russia justified annexation by protecting Russians.",
+      "date_text": null,
+      "temporal_context": "past"
+    },
+    {
+      "type": "actor",
+      "content": "Vladimir Putin's government used the annexation of Crimea as a propaganda success to reinforce his image as a strong leader defending Russian interests.",
+      "summary": "Putin used annexation for propaganda.",
+      "date_text": null,
+      "temporal_context": "past"
+    },
+    {
+      "type": "relationship",
+      "content": "Russia's annexation of Crimea provided it with control over significant maritime territory, including energy resources in the Black Sea, impacting Ukraine's economic potential.",
+      "summary": "Annexation gave Russia energy control.",
+      "date_text": null,
+      "temporal_context": "past"
+    },
+    {
+      "type": "actor",
+      "content": "The EU offered an Association Agreement to Ukraine, which was rejected by Yanukovych in November 2013, leading to the Euromaidan protests.",
+      "summary": "EU offered Association Agreement.",
+      "date_text": "November 2013",
+      "temporal_context": "past"
+    },
+    {
+      "type": "event",
+      "content": "The Donbas conflict began in April 2014 when Russian paramilitaries seized towns in eastern Ukraine.",
+      "summary": "The Donbas conflict started with Russian paramilitaries seizing towns in April 2014.",
+      "date_text": "April 2014",
+      "temporal_context": "past"
+    },
+    {
+      "type": "actor",
+      "content": "Russia employed a 'hybrid approach,' using disinformation, irregular fighters, regular troops, and military support to destabilize the Donbas region.",
+      "summary": "Russia used a hybrid warfare approach in Donbas.",
+      "date_text": null,
+      "temporal_context": "past"
+    },
+    {
+      "type": "event",
+      "content": "The Minsk I agreement was signed in September 2014.",
+      "summary": "Minsk I agreement was signed in September 2014.",
+      "date_text": "September 2014",
+      "temporal_context": "past"
+    },
+    {
+      "type": "event",
+      "content": "The Minsk II agreement was signed in February 2015.",
+      "summary": "Minsk II agreement was signed in February 2015.",
+      "date_text": "February 2015",
+      "temporal_context": "past"
+    },
+    {
+      "type": "actor",
+      "content": "France and Germany mediated the Minsk I and II agreements under the auspices of the OSCE.",
+      "summary": "France and Germany mediated Minsk agreements.",
+      "date_text": null,
+      "temporal_context": "past"
+    },
+    {
+      "type": "pattern",
+      "content": "Both Minsk agreements required Ukraine to hold local elections and implement constitutional reforms *before* regaining control of its borders, creating a sequencing flaw.",
+      "summary": "Minsk agreements' sequencing of obligations was a flaw.",
+      "date_text": null,
+      "temporal_context": "past"
+    },
+    {
+      "type": "actor",
+      "content": "Russia claimed it was not a party to the conflict, undermining the Minsk protocols' credibility.",
+      "summary": "Russia denied being a party to the conflict.",
+      "date_text": null,
+      "temporal_context": "past"
+    },
+    {
+      "type": "pattern",
+      "content": "The Minsk Protocols included a 'special status' provision for Donetsk and Luhansk, creating a pathway for Russian influence.",
+      "summary": "Minsk agreements' special status provision enabled Russian influence.",
+      "date_text": null,
+      "temporal_context": "past"
+    },
+    {
+      "type": "pattern",
+      "content": "The Minsk agreements lacked a robust enforcement mechanism and third-party guarantees, making compliance difficult.",
+      "summary": "Minsk agreements lacked enforcement mechanisms.",
+      "date_text": null,
+      "temporal_context": "past"
+    },
+    {
+      "type": "pattern",
+      "content": "The Minsk agreements did not address Russia's desire to exert influence over Ukraine's domestic and foreign policy.",
+      "summary": "Minsk agreements failed to address the root cause of the conflict.",
+      "date_text": null,
+      "temporal_context": "past"
+    },
+    {
+      "type": "pattern",
+      "content": "The provisions of the Minsk agreements were too general and vague, allowing parties to interpret them freely, leading to further conflict escalation.",
+      "summary": "Vague provisions in Minsk agreements led to conflict escalation.",
+      "date_text": null,
+      "temporal_context": "past"
+    },
+    {
+      "type": "pattern",
+      "content": "Despite the Minsk agreements, armed actions continued, with both sides blaming each other for non-compliance.",
+      "summary": "Ceasefire violations continued despite Minsk agreements.",
+      "date_text": null,
+      "temporal_context": "past"
+    },
+    {
+      "type": "event",
+      "content": "The COVID-19 pandemic disrupted in-person meetings, hindering trust-building and de-escalation efforts related to the Minsk agreements.",
+      "summary": "COVID-19 pandemic disrupted Minsk agreement negotiations.",
+      "date_text": null,
+      "temporal_context": "past"
+    },
+    {
+      "type": "event",
+      "content": "Russia launched a full-scale invasion of Ukraine in 2022, following the failure of the Minsk agreements.",
+      "summary": "Russia invaded Ukraine in 2022 after Minsk agreements failed.",
+      "date_text": "2022",
+      "temporal_context": "past"
+    },
+    {
+      "type": "actor",
+      "content": "Vladimir Putin: President of Russia, viewed NATO's eastward expansion and Ukraine's potential membership as a primary reason for the invasion, and aimed to weaken the West.",
+      "summary": "Putin's motivations included NATO concerns and weakening the West.",
+      "date_text": null,
+      "temporal_context": "past"
+    },
+    {
+      "type": "event",
+      "content": "Russia amassed troops near Ukraine's borders in March and April 2021, and again from October 2021 onward, with over 100,000 troops massed around Ukraine by December 2021.",
+      "summary": "Russia built up troops near Ukraine's border.",
+      "date_text": "March-April 2021, October-December 2021",
+      "temporal_context": "past"
+    },
+    {
+      "type": "event",
+      "content": "On February 21, 2022, Russia officially recognized the Donetsk and Luhansk People's Republics as independent states and deployed troops to Donbas.",
+      "summary": "Russia recognized breakaway republics and deployed troops.",
+      "date_text": "February 21, 2022",
+      "temporal_context": "past"
+    },
+    {
+      "type": "event",
+      "content": "The full-scale invasion of Ukraine began in February 2022, following a failure of diplomatic negotiations between the United States, Russia, and European powers.",
+      "summary": "Diplomacy failed, leading to the February 2022 invasion.",
+      "date_text": "February 2022",
+      "temporal_context": "past"
+    },
+    {
+      "type": "relationship",
+      "content": "Russia's relationship with Ukraine is characterized by Russia viewing Ukraine as a buffer state and indispensable to the security of the region.",
+      "summary": "Russia sees Ukraine as a crucial buffer state.",
+      "date_text": null,
+      "temporal_context": "present"
+    },
+    {
+      "type": "evidence",
+      "content": "The Budapest Memorandum on Security Assurances in 1994, where Russia pledged not to threaten or use military force against Ukraine in return for Ukraine surrendering its nuclear weapons, was violated by Russia.",
+      "summary": "Russia violated the Budapest Memorandum.",
+      "date_text": "1994",
+      "temporal_context": "past"
+    },
+    {
+      "type": "pattern",
+      "content": "Russia has consistently opposed NATO expansion, viewing it as a threat to its national security and a means for the West to control Ukraine.",
+      "summary": "Russia consistently opposes NATO expansion.",
+      "date_text": null,
+      "temporal_context": "past"
+    },
+    {
+      "type": "actor",
+      "content": "NATO: Russia viewed NATO's eastward expansion as a direct threat to its national security, with Ukraine's potential membership being a principal reason for the invasion.",
+      "summary": "NATO expansion was a key concern for Russia.",
+      "date_text": null,
+      "temporal_context": "past"
+    },
+    {
+      "type": "actor",
+      "content": "Donetsk and Luhansk People's Republics: Russia officially recognized these breakaway republics as independent states on February 21, 2022, and deployed troops to Donbas.",
+      "summary": "Russia recognized the breakaway republics.",
+      "date_text": "February 21, 2022",
+      "temporal_context": "past"
+    },
+    {
+      "type": "event",
+      "content": "In March and April 2021, Russia began amassing troops near Ukraine's borders, escalating tensions and signaling potential military action.",
+      "summary": "Initial troop build-up in Spring 2021.",
+      "date_text": "March-April 2021",
+      "temporal_context": "past"
+    },
+    {
+      "type": "event",
+      "content": "Russia launched a full-scale invasion of Ukraine on February 2022 from the north, east, and south.",
+      "summary": "Russia initiated a large-scale invasion of Ukraine.",
+      "date_text": "February 2022",
+      "temporal_context": "past"
+    },
+    {
+      "type": "event",
+      "content": "Ukrainian forces reclaimed significant territory in the Kharkiv, Mykolaiv, and Kherson regions between August and November 2022.",
+      "summary": "Ukraine launched successful counteroffensives.",
+      "date_text": "August - November 2022",
+      "temporal_context": "past"
+    },
+    {
+      "type": "event",
+      "content": "Russia claimed control of Bakhmut in May 2023 after months of fighting.",
+      "summary": "Russia gained control of Bakhmut.",
+      "date_text": "May 2023",
+      "temporal_context": "past"
+    },
+    {
+      "type": "event",
+      "content": "The Kakhovka Dam was destroyed in June 2023, impacting Ukrainian battle plans.",
+      "summary": "Destruction of Kakhovka Dam affected Ukraine's military strategy.",
+      "date_text": "June 2023",
+      "temporal_context": "past"
+    },
+    {
+      "type": "event",
+      "content": "Russia focused military efforts on the Donetsk region in 2025, capturing Chasiv Yar and pushing towards Pokrovsk.",
+      "summary": "Russia concentrated its military efforts on the Donetsk region.",
+      "date_text": "2025",
+      "temporal_context": "past"
+    },
+    {
+      "type": "event",
+      "content": "US and Ukrainian envoys held talks in Miami in December 2025, focusing on a '20-point plan' and security guarantee frameworks.",
+      "summary": "US and Ukraine discussed security guarantees in Miami.",
+      "date_text": "December 2025",
+      "temporal_context": "past"
+    },
+    {
+      "type": "actor",
+      "content": "The US has committed over $118 billion in assistance to Ukraine, including military aid, and increased its troop presence in Europe.",
+      "summary": "The US has provided significant financial and military aid to Ukraine.",
+      "date_text": null,
+      "temporal_context": "ongoing"
+    },
+    {
+      "type": "actor",
+      "content": "The EU has provided substantial aid to Ukraine and offered the prospect of EU membership.",
+      "summary": "The EU has supported Ukraine with aid and membership prospects.",
+      "date_text": null,
+      "temporal_context": "ongoing"
+    },
+    {
+      "type": "actor",
+      "content": "Donald Trump's election as US President in January 2025 raised uncertainty about continued US support for Ukraine.",
+      "summary": "Trump's election created uncertainty about US aid to Ukraine.",
+      "date_text": "January 2025",
+      "temporal_context": "past"
+    },
+    {
+      "type": "relationship",
+      "content": "Kyiv may be expected to surrender some territory in exchange for US security guarantees.",
+      "summary": "Territorial concessions may be linked to US security guarantees.",
+      "date_text": null,
+      "temporal_context": "prediction"
+    },
+    {
+      "type": "pattern",
+      "content": "Russia's territorial gains are seen as strategic messaging to bolster its negotiating position.",
+      "summary": "Territorial gains are used by Russia to strengthen its negotiation stance.",
+      "date_text": null,
+      "temporal_context": "ongoing"
+    },
+    {
+      "type": "evidence",
+      "content": "Russia views Europe as 'pro-war' and believes its participation hinders peace talks (source: multiple news outlets).",
+      "summary": "Russia perceives Europe as hindering peace talks.",
+      "date_text": null,
+      "temporal_context": "present"
+    },
+    {
+      "type": "gap",
+      "content": "The specific details of the '20-point plan' discussed in Miami in December 2025 are not publicly available.",
+      "summary": "Details of the '20-point plan' remain undisclosed.",
+      "date_text": "December 2025",
+      "temporal_context": "present"
+    },
+    {
+      "type": "event",
+      "content": "Both Russia and Ukraine increased drone strikes deep into each other's territory during the summer of 2025.",
+      "summary": "Drone warfare intensified between Russia and Ukraine.",
+      "date_text": "Summer 2025",
+      "temporal_context": "past"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "November 2013",
+      "summary": "Yanukovych's decision sparked protests.",
+      "content": "In November 2013, President Viktor Yanukovych decided not to sign the European Union–Ukraine Association Agreement, choosing closer ties with Russia, which triggered the Euromaidan protests."
+    },
+    {
+      "date": "March 2014",
+      "summary": "Russia annexed Crimea in March 2014.",
+      "content": "Following the Maidan Revolution, Russia annexed Crimea in March 2014, citing the protection of ethnic Russians and its strategic interests, particularly the naval base at Sevastopol."
+    },
+    {
+      "date": "April 2014",
+      "summary": "The Donbas conflict started with Russian paramilitaries seizing towns in April 2014.",
+      "content": "The Donbas conflict began in April 2014 when Russian paramilitaries seized towns in eastern Ukraine."
+    },
+    {
+      "date": "2014",
+      "summary": "Maidan Revolution occurred in 2014.",
+      "content": "The Maidan Revolution, also known as Euromaidan, took place in 2014 as a result of widespread protests against government corruption, abuse of power, and President Yanukovych's decision to reject clos"
+    },
+    {
+      "date": "September 2014",
+      "summary": "Minsk I agreement was signed in September 2014.",
+      "content": "The Minsk I agreement was signed in September 2014."
+    },
+    {
+      "date": "February 2015",
+      "summary": "Minsk II agreement was signed in February 2015.",
+      "content": "The Minsk II agreement was signed in February 2015."
+    },
+    {
+      "date": "April 2021",
+      "summary": "Russia built up troops near Ukraine's border.",
+      "content": "Russia amassed troops near Ukraine's borders in March and April 2021, and again from October 2021 onward, with over 100,000 troops massed around Ukraine by December 2021."
+    },
+    {
+      "date": "April 2021",
+      "summary": "Initial troop build-up in Spring 2021.",
+      "content": "In March and April 2021, Russia began amassing troops near Ukraine's borders, escalating tensions and signaling potential military action."
+    },
+    {
+      "date": "February 2022",
+      "summary": "Diplomacy failed, leading to the February 2022 invasion.",
+      "content": "The full-scale invasion of Ukraine began in February 2022, following a failure of diplomatic negotiations between the United States, Russia, and European powers."
+    },
+    {
+      "date": "February 2022",
+      "summary": "Russia initiated a large-scale invasion of Ukraine.",
+      "content": "Russia launched a full-scale invasion of Ukraine on February 2022 from the north, east, and south."
+    },
+    {
+      "date": "February 21, 2022",
+      "summary": "Russia recognized breakaway republics and deployed troops.",
+      "content": "On February 21, 2022, Russia officially recognized the Donetsk and Luhansk People's Republics as independent states and deployed troops to Donbas."
+    },
+    {
+      "date": "2022",
+      "summary": "Russia invaded Ukraine in 2022 after Minsk agreements failed.",
+      "content": "Russia launched a full-scale invasion of Ukraine in 2022, following the failure of the Minsk agreements."
+    },
+    {
+      "date": "November 2022",
+      "summary": "Ukraine launched successful counteroffensives.",
+      "content": "Ukrainian forces reclaimed significant territory in the Kharkiv, Mykolaiv, and Kherson regions between August and November 2022."
+    },
+    {
+      "date": "May 2023",
+      "summary": "Russia gained control of Bakhmut.",
+      "content": "Russia claimed control of Bakhmut in May 2023 after months of fighting."
+    },
+    {
+      "date": "June 2023",
+      "summary": "Destruction of Kakhovka Dam affected Ukraine's military strategy.",
+      "content": "The Kakhovka Dam was destroyed in June 2023, impacting Ukrainian battle plans."
+    },
+    {
+      "date": "2025",
+      "summary": "Russia concentrated its military efforts on the Donetsk region.",
+      "content": "Russia focused military efforts on the Donetsk region in 2025, capturing Chasiv Yar and pushing towards Pokrovsk."
+    },
+    {
+      "date": "2025",
+      "summary": "Drone warfare intensified between Russia and Ukraine.",
+      "content": "Both Russia and Ukraine increased drone strikes deep into each other's territory during the summer of 2025."
+    },
+    {
+      "date": "December 2025",
+      "summary": "US and Ukraine discussed security guarantees in Miami.",
+      "content": "US and Ukrainian envoys held talks in Miami in December 2025, focusing on a '20-point plan' and security guarantee frameworks."
+    },
+    {
+      "date": "Unknown date",
+      "summary": "COVID-19 pandemic disrupted Minsk agreement negotiations.",
+      "content": "The COVID-19 pandemic disrupted in-person meetings, hindering trust-building and de-escalation efforts related to the Minsk agreements."
+    }
+  ],
+  "perspectives": {
+    "historical": {
+      "analysis": "To understand the Russia-Ukraine war, one must look beyond 2014 to the long-term collapse of the Russian Empire and the Soviet Union. For centuries, Ukraine was central to Russian imperial identity, often referred to as 'Little Russia.' The 1654 Treaty of Pereyaslav is frequently cited by Moscow as the foundational moment of Russian-Ukrainian unity, though Ukrainians historically viewed it as a temporary military alliance. Following the 1991 dissolution of the USSR, Ukraine inherited the world's third-largest nuclear arsenal, which it relinquished under the 1994 Budapest Memorandum in exchange for security assurances and the respect of its existing borders—a pivotal moment that set the stage for modern grievances when those borders were violated.\n\nThe conflict is driven by the 'Gathering of the Russian Lands' ideology, a revanchist concept that seeks to restore the sphere of influence lost after the Cold War. Vladimir Putin’s 2021 essay, 'On the Historical Unity of Russians and Ukrainians,' serves as a modern manifesto for this centuries-old imperial logic. The 2014 Maidan Revolution was not merely a protest against Viktor Yanukovych, but a rejection of the 'Finlandization' or vassalage that Moscow demanded. By annexing Crimea and instigating the Donbas conflict, Russia attempted to create a 'frozen conflict'—a standard Kremlin tactic used in Moldova (Transnistria) and Georgia (Abkhazia/South Ossetia) to prevent neighboring states from joining Western institutions like NATO and the EU.",
+      "data": {
+        "perspective_type": "historical",
+        "analysis": "To understand the Russia-Ukraine war, one must look beyond 2014 to the long-term collapse of the Russian Empire and the Soviet Union. For centuries, Ukraine was central to Russian imperial identity, often referred to as 'Little Russia.' The 1654 Treaty of Pereyaslav is frequently cited by Moscow as the foundational moment of Russian-Ukrainian unity, though Ukrainians historically viewed it as a temporary military alliance. Following the 1991 dissolution of the USSR, Ukraine inherited the world's third-largest nuclear arsenal, which it relinquished under the 1994 Budapest Memorandum in exchange for security assurances and the respect of its existing borders—a pivotal moment that set the stage for modern grievances when those borders were violated.\n\nThe conflict is driven by the 'Gathering of the Russian Lands' ideology, a revanchist concept that seeks to restore the sphere of influence lost after the Cold War. Vladimir Putin’s 2021 essay, 'On the Historical Unity of Russians and Ukrainians,' serves as a modern manifesto for this centuries-old imperial logic. The 2014 Maidan Revolution was not merely a protest against Viktor Yanukovych, but a rejection of the 'Finlandization' or vassalage that Moscow demanded. By annexing Crimea and instigating the Donbas conflict, Russia attempted to create a 'frozen conflict'—a standard Kremlin tactic used in Moldova (Transnistria) and Georgia (Abkhazia/South Ossetia) to prevent neighboring states from joining Western institutions like NATO and the EU.",
+        "implications": [
+          "The erosion of the post-WWII international order: The failure of the Budapest Memorandum suggests that international security guarantees are insufficient without hard military deterrence.",
+          "The 'Ukrainianization' of Identity: Historically, Russian aggression has inadvertently accelerated the solidification of a distinct, anti-Russian Ukrainian national identity, much like the 19th-century Polish uprisings against the Tsar."
+        ],
+        "related_finding_ids": [],
+        "historical_parallels": [
+          "The Partitions of Poland (1772–1795): Where imperial powers (Russia, Prussia, Austria) erased a sovereign state based on the logic of 'spheres of influence' and ethnic protection.",
+          "The Sudetenland Crisis (1938): Where a revisionist power used the pretext of protecting 'oppressed' ethnic minorities in a neighboring state to justify annexation and territorial expansion.",
+          "The Winter War (1939–1940): Where the Soviet Union invaded Finland to create a 'buffer zone' and protect its strategic interests in the Baltic, underestimating the smaller nation's resolve."
+        ],
+        "historical_patterns": [
+          "The 'Near Abroad' Doctrine: Russia’s recurring historical tendency to view neighboring sovereign states as buffer zones rather than independent actors.",
+          "Irredentism as State Policy: The use of shared language and religion (Orthodoxy) as a justification for territorial revisionism when central imperial power wanes and then seeks to reassert itself.",
+          "The Cycle of Western Integration vs. Eurasianism: The centuries-long internal Russian struggle between 'Westernizers' (Peter the Great) and 'Slavophiles,' which manifests today in the clash between European integration and the Eurasian Economic Union."
+        ],
+        "likely_consequences": [
+          "The 'Fortress Russia' Economy: A long-term shift toward a command economy and total decoupling from Western markets, mirroring the isolation of the Soviet era.",
+          "The Permanent Militarization of Eastern Europe: A return to a 'Cold War' posture along the NATO-Russia border, ending the 'Peace Dividend' era that followed the fall of the Berlin Wall."
+        ]
+      }
+    },
+    "financial": {
+      "analysis": "The conflict is fundamentally a struggle over Ukraine’s role as a strategic 'transit corridor' and a massive emerging market. From a Russian perspective, the 2013 rejection of the EU Association Agreement was driven by a $15 billion bailout offer from Moscow, intended to keep Ukraine within the Eurasian Economic Union (EAEU) and preserve Gazprom’s control over the Trans-Gas pipeline network, which at the time carried roughly 50% of Russian gas exports to Europe. The annexation of Crimea was not merely territorial; it secured Russia’s $2 billion annual 'rent' savings for the Sevastopol naval base and seized an estimated $1 trillion in offshore energy resources in the Black Sea's Exclusive Economic Zone (EEZ), effectively neutralizing Ukraine as a potential competitor in the European natural gas market.\n\nFollowing 2014, the economic motivation shifted toward 'strategic autonomy' for Russia and 'market integration' for the West. Ukraine’s pivot toward the EU opened a market of 40 million consumers to Western goods, while Russia focused on building the $11 billion Nord Stream 2 pipeline to bypass Ukrainian transit fees (valued at $2-3 billion annually). The 2022 escalation can be viewed as a desperate move to prevent Ukraine from becoming a major energy and agricultural hub that could permanently displace Russian market share in the EU. The conflict is a high-stakes battle over the 'energy bridge' between the East and West and the control of the 'breadbasket of Europe,' which accounts for 10% of global wheat and 15% of global corn exports.",
+      "data": {
+        "perspective_type": "financial",
+        "analysis": "The conflict is fundamentally a struggle over Ukraine’s role as a strategic 'transit corridor' and a massive emerging market. From a Russian perspective, the 2013 rejection of the EU Association Agreement was driven by a $15 billion bailout offer from Moscow, intended to keep Ukraine within the Eurasian Economic Union (EAEU) and preserve Gazprom’s control over the Trans-Gas pipeline network, which at the time carried roughly 50% of Russian gas exports to Europe. The annexation of Crimea was not merely territorial; it secured Russia’s $2 billion annual 'rent' savings for the Sevastopol naval base and seized an estimated $1 trillion in offshore energy resources in the Black Sea's Exclusive Economic Zone (EEZ), effectively neutralizing Ukraine as a potential competitor in the European natural gas market.\n\nFollowing 2014, the economic motivation shifted toward 'strategic autonomy' for Russia and 'market integration' for the West. Ukraine’s pivot toward the EU opened a market of 40 million consumers to Western goods, while Russia focused on building the $11 billion Nord Stream 2 pipeline to bypass Ukrainian transit fees (valued at $2-3 billion annually). The 2022 escalation can be viewed as a desperate move to prevent Ukraine from becoming a major energy and agricultural hub that could permanently displace Russian market share in the EU. The conflict is a high-stakes battle over the 'energy bridge' between the East and West and the control of the 'breadbasket of Europe,' which accounts for 10% of global wheat and 15% of global corn exports.",
+        "implications": [
+          "Permanent decoupling of the European energy market from Russian supply, leading to higher baseline energy costs in the EU.",
+          "Acceleration of 'friend-shoring' and the bifurcation of global supply chains into Western and Sino-Russian blocs.",
+          "Ukraine's transition into a heavily indebted state, with reconstruction costs estimated by the World Bank at $411 billion+.",
+          "Global food insecurity risks due to the weaponization of Black Sea trade routes."
+        ],
+        "related_finding_ids": [],
+        "cui_bono": [
+          "Russian State Energy Giants (Gazprom/Rosneft): Seeking to eliminate Ukrainian transit competition and seize Black Sea gas reserves.",
+          "Western Defense Contractors: Massive revenue increases from NATO rearmament and US/EU military aid packages (exceeding $170 billion).",
+          "Global Commodity Traders: Profiting from extreme volatility in wheat, neon gas, and fertilizer markets.",
+          "US LNG Producers: Capturing the European energy market share previously held by Russian pipeline gas."
+        ],
+        "financial_mechanisms": [
+          "Sovereign Debt Leveraging: Russia's $15 billion 'Yanukovych loan' used as political blackmail.",
+          "Transit Fee Arbitrage: The manipulation of gas flow volumes to influence European spot prices.",
+          "Offshore Resource Seizure: Nationalization of Chornomornaftogaz assets in Crimea.",
+          "Sanctions-Proofing: Russia's 'Fortress Russia' strategy, accumulating $600B+ in FX reserves prior to 2022."
+        ],
+        "money_flows": [
+          {
+            "from": "European Union",
+            "to": "Russia (Gazprom)",
+            "mechanism": "Energy payments totaling approx. $1 billion per day in early 2022."
+          },
+          {
+            "from": "Russia",
+            "to": "Ukraine",
+            "mechanism": "Gas transit fees (approx. $2-3 billion annually) used as a geopolitical tether."
+          },
+          {
+            "from": "IMF/Western Donors",
+            "to": "Ukraine",
+            "mechanism": "Macro-financial assistance and structural adjustment loans to prevent sovereign default."
+          },
+          {
+            "from": "Russian Oligarchs",
+            "to": "Western Real Estate/Offshore Hubs",
+            "mechanism": "Capital flight (estimated $1 trillion+ over two decades) to hedge against domestic instability."
+          }
+        ],
+        "sanctions_relevance": "Sanctions act as a 'financial blockade' designed to raise Russia's cost of capital and degrade its industrial-military complex. The freezing of $300 billion in Russian central bank assets and the removal from SWIFT represent the 'weaponization of finance.' However, the 'shadow fleet' of oil tankers and the redirection of trade to China and India (with trade turnover exceeding $240 billion) demonstrate the limitations of Western financial hegemony in a multipolar economy."
+      }
+    },
+    "journalist": {
+      "analysis": "The provided summary offers a foundational overview of the conflict's origins but leans heavily on a geopolitical 'realist' framework that often equates state-level interests with grassroots movements. While it correctly identifies the immediate trigger (the EU Association Agreement), it risks oversimplifying the Maidan Revolution as a mere tug-of-war between the West and Russia, potentially obscuring the agency of Ukrainian civil society. The narrative correctly identifies the 'hybrid' nature of the 2014 Donbas conflict, yet it lacks a deep dive into the specific legal violations of the Budapest Memorandum and the UN Charter, which are central to the international legal consensus against Russia's actions.\n\nFrom an investigative standpoint, the summary glosses over the 'active measures' and disinformation campaigns that preceded the 2022 invasion. It treats the Minsk Agreements as a failed diplomatic effort without fully exploring the 'Minsk Conundrum'—the inherent contradiction between Russia's demand for Ukrainian constitutional change and Ukraine's demand for border control. Furthermore, the mention of COVID-19 as a primary disruptor of negotiations is a significant oversimplification; the breakdown was driven more by irreconcilable interpretations of sovereignty than by public health logistics.",
+      "data": {
+        "perspective_type": "journalist",
+        "analysis": "The provided summary offers a foundational overview of the conflict's origins but leans heavily on a geopolitical 'realist' framework that often equates state-level interests with grassroots movements. While it correctly identifies the immediate trigger (the EU Association Agreement), it risks oversimplifying the Maidan Revolution as a mere tug-of-war between the West and Russia, potentially obscuring the agency of Ukrainian civil society. The narrative correctly identifies the 'hybrid' nature of the 2014 Donbas conflict, yet it lacks a deep dive into the specific legal violations of the Budapest Memorandum and the UN Charter, which are central to the international legal consensus against Russia's actions.\n\nFrom an investigative standpoint, the summary glosses over the 'active measures' and disinformation campaigns that preceded the 2022 invasion. It treats the Minsk Agreements as a failed diplomatic effort without fully exploring the 'Minsk Conundrum'—the inherent contradiction between Russia's demand for Ukrainian constitutional change and Ukraine's demand for border control. Furthermore, the mention of COVID-19 as a primary disruptor of negotiations is a significant oversimplification; the breakdown was driven more by irreconcilable interpretations of sovereignty than by public health logistics.",
+        "implications": [
+          "Accepting the 'Western encroachment' narrative without scrutiny validates the 'spheres of influence' doctrine, which undermines the principle of national sovereignty.",
+          "Failure to distinguish between 'Russian-speaking' and 'Pro-Russian' populations leads to a misunderstanding of the internal dynamics in Eastern Ukraine.",
+          "Treating the Minsk Agreements as a good-faith effort by all parties ignores the tactical use of 'frozen conflicts' to prevent NATO/EU integration."
+        ],
+        "related_finding_ids": [],
+        "contradictions_found": [
+          {
+            "claim1": "The Maidan Revolution was a grassroots movement against corruption and for European integration.",
+            "claim2": "The protests were rooted in a push by Western governments to isolate Russia.",
+            "source1": "Ukrainian Civil Society/Pro-Western Analysts",
+            "source2": "Russian State Media/Geopolitical Realists",
+            "significance": "This is the 'Agency vs. Proxy' debate. If it was purely a Western plot, the subsequent government lacks domestic legitimacy; if it was grassroots, Russia's 'coup' narrative is delegitimized."
+          },
+          {
+            "claim1": "Russia was not a party to the conflict in Donbas (2014-2021).",
+            "claim2": "The conflict started with Russian paramilitaries seizing towns and used a 'hybrid approach'.",
+            "source1": "Official Kremlin Statements",
+            "source2": "OSCE Reports/Bellingcat/NATO Intelligence",
+            "significance": "This highlights the 'deniability' strategy used by Russia to avoid sanctions and international legal accountability while maintaining operational control."
+          }
+        ],
+        "propaganda_indicators": [
+          "Use of the term 'coup' to describe the Maidan Revolution (ignores the parliamentary vote to remove Yanukovych).",
+          "The 'Protection of Ethnic Russians' narrative as a pretext for territorial expansion.",
+          "Framing NATO expansion as an 'encroachment' rather than a voluntary application process by sovereign Eastern European states.",
+          "Equating the 2014 annexation of Crimea with 'historical justice' to obscure the violation of international treaties."
+        ],
+        "unanswered_questions": [
+          "To what extent did Russian intelligence services (FSB/GRU) infiltrate Ukrainian security forces prior to the 2014 sniper fire on Maidan?",
+          "What were the specific financial flows from the Kremlin to pro-Russian parties in Ukraine leading up to 2014?",
+          "Why did the Ukrainian military offer minimal resistance during the initial 'Little Green Men' occupation of Crimea?",
+          "What specific security guarantees were discussed behind closed doors during the 2021-2022 troop buildup?"
+        ],
+        "verification_status": "disputed",
+        "source_bias_notes": [
+          "The summary attempts a 'both-sides' approach which can create a false equivalence between an aggressor state and a sovereign state's internal policy shifts.",
+          "The mention of Transparency International adds credibility regarding Yanukovych’s corruption, providing a factual basis for domestic unrest.",
+          "The focus on 'Black Sea dominance' reflects a realist military bias, potentially ignoring the ideological and 'Greater Russia' motivations of the current Russian leadership."
+        ]
+      }
+    },
+    "conspirator": {
+      "analysis": "From an intelligence perspective, the conflict in Ukraine is not merely a localized territorial dispute but a calculated preemptive strike by the Kremlin to prevent a 'strategic decoupling' that would have permanently neutralized Russia's leverage over Europe. While the official narrative focuses on NATO expansion, the timing of the 2014 and 2022 escalations suggests a deeper anxiety regarding Ukraine’s transition from a 'buffer state' to a 'competitor state.' The discovery of massive natural gas reserves in Ukraine's Exclusive Economic Zone (EEZ) around Crimea and the Donbas region created a scenario where Ukraine could have replaced Russia as the primary energy provider to the EU, fundamentally breaking Moscow’s primary tool of geopolitical coercion.\n\nFurthermore, the Kremlin likely viewed the 2014 Maidan Revolution as a successful 'proof of concept' for Western-backed regime change that could eventually be exported to Moscow. By initiating a frozen conflict in the Donbas and annexing Crimea, Russia effectively utilized a 'poison pill' strategy. Under NATO’s own entry requirements, countries with active territorial disputes are generally ineligible for membership. Thus, the invasion was a kinetic solution to a diplomatic problem: ensuring Ukraine remained 'un-integratable' into Western security and economic architectures, thereby preserving Russia’s status as the indispensable regional hegemon.",
+      "data": {
+        "perspective_type": "conspirator",
+        "analysis": "From an intelligence perspective, the conflict in Ukraine is not merely a localized territorial dispute but a calculated preemptive strike by the Kremlin to prevent a 'strategic decoupling' that would have permanently neutralized Russia's leverage over Europe. While the official narrative focuses on NATO expansion, the timing of the 2014 and 2022 escalations suggests a deeper anxiety regarding Ukraine’s transition from a 'buffer state' to a 'competitor state.' The discovery of massive natural gas reserves in Ukraine's Exclusive Economic Zone (EEZ) around Crimea and the Donbas region created a scenario where Ukraine could have replaced Russia as the primary energy provider to the EU, fundamentally breaking Moscow’s primary tool of geopolitical coercion.\n\nFurthermore, the Kremlin likely viewed the 2014 Maidan Revolution as a successful 'proof of concept' for Western-backed regime change that could eventually be exported to Moscow. By initiating a frozen conflict in the Donbas and annexing Crimea, Russia effectively utilized a 'poison pill' strategy. Under NATO’s own entry requirements, countries with active territorial disputes are generally ineligible for membership. Thus, the invasion was a kinetic solution to a diplomatic problem: ensuring Ukraine remained 'un-integratable' into Western security and economic architectures, thereby preserving Russia’s status as the indispensable regional hegemon.",
+        "implications": [
+          "The war is a structural necessity for the current Russian regime to maintain its regional monopoly and internal stability."
+        ],
+        "related_finding_ids": [],
+        "theory": "The 'Energy and Sovereignty Denial' Strategy: Russia's primary motivation was to prevent Ukraine from becoming a rival energy hub to Europe while simultaneously creating a permanent state of instability that renders Ukraine ineligible for NATO and EU membership.",
+        "theory_probability": "likely",
+        "supporting_evidence": [
+          {
+            "finding_id": "Annexation gave Russia energy control",
+            "how_it_supports": "The annexation of Crimea allowed Russia to seize Ukraine's maritime EEZ, which contains significant untapped subsea natural gas reserves that could have competed with Gazprom."
+          },
+          {
+            "finding_id": "Russia used a hybrid warfare approach in Donbas",
+            "how_it_supports": "By maintaining a low-intensity conflict, Russia ensured Ukraine remained in a 'gray zone' of instability, making it a high-risk candidate for any Western institutional integration."
+          },
+          {
+            "finding_id": "Russia viewed NATO's eastward expansion as a threat",
+            "how_it_supports": "This supports the 'Sovereignty Denial' aspect; the invasion was a hard-power veto against Ukraine's right to choose its own security alliances."
+          }
+        ],
+        "counter_evidence": [
+          {
+            "finding_id": "Internal Factors: Protesters opposed government corruption",
+            "how_it_contradicts": "Suggests the revolution was a genuine grassroots movement rather than a purely geopolitical event that Russia needed to 'counter.'"
+          },
+          {
+            "finding_id": "Minsk I and II agreements",
+            "how_it_contradicts": ""
+          }
+        ],
+        "hidden_motivations": [
+          "Elimination of Ukraine as a potential energy competitor to Gazprom in the European market.",
+          "The creation of a 'frozen conflict' to trigger NATO's internal aversion to admitting members with active border disputes.",
+          "Demonstrating the 'cost of defiance' to other post-Soviet states considering a Western pivot."
+        ],
+        "implications_if_true": [
+          "Russia will never voluntarily return Crimea or the Donbas because doing so would restore Ukraine's energy independence and NATO eligibility.",
+          "The conflict is less about 'denazification' and more about the long-term economic survival of the Russian rentier state."
+        ]
+      }
+    },
+    "network": {
+      "analysis": "The network surrounding the Russia-Ukraine conflict is defined by a rigid, zero-sum competition between two primary power blocs: the Euro-Atlantic integrationist network (EU, NATO, US, and post-Maidan Ukrainian leadership) and the Kremlin-centric Eurasian network. The conflict was triggered by a rupture in the 'bridge' role previously held by Viktor Yanukovych, whose attempt to pivot back to Russia's sphere of influence collapsed under pressure from a pro-Western domestic civil society. This created a power vacuum that Russia filled through hybrid warfare, transforming a domestic political crisis into a systemic geopolitical confrontation.\n\nPower in this network is asymmetrical. Russia operates through a centralized, hierarchical structure where Vladimir Putin exerts direct control over military and paramilitary assets, using 'deniable' actors in the Donbas to maintain strategic ambiguity. In contrast, the Western network is a decentralized coalition of sovereign states and international organizations, relying on diplomatic mediation (Normandy Format) and economic dependencies. The structural tension arises from Ukraine's position as a 'shatterbelt' state, where the overlapping interests of NATO's expansion and Russia's 'near abroad' doctrine make neutral status functionally impossible, leading to a cycle of escalation and military intervention.",
+      "data": {
+        "perspective_type": "network",
+        "analysis": "The network surrounding the Russia-Ukraine conflict is defined by a rigid, zero-sum competition between two primary power blocs: the Euro-Atlantic integrationist network (EU, NATO, US, and post-Maidan Ukrainian leadership) and the Kremlin-centric Eurasian network. The conflict was triggered by a rupture in the 'bridge' role previously held by Viktor Yanukovych, whose attempt to pivot back to Russia's sphere of influence collapsed under pressure from a pro-Western domestic civil society. This created a power vacuum that Russia filled through hybrid warfare, transforming a domestic political crisis into a systemic geopolitical confrontation.\n\nPower in this network is asymmetrical. Russia operates through a centralized, hierarchical structure where Vladimir Putin exerts direct control over military and paramilitary assets, using 'deniable' actors in the Donbas to maintain strategic ambiguity. In contrast, the Western network is a decentralized coalition of sovereign states and international organizations, relying on diplomatic mediation (Normandy Format) and economic dependencies. The structural tension arises from Ukraine's position as a 'shatterbelt' state, where the overlapping interests of NATO's expansion and Russia's 'near abroad' doctrine make neutral status functionally impossible, leading to a cycle of escalation and military intervention.",
+        "implications": [
+          "The failure of the Minsk agreements suggests that diplomatic intermediaries lack the leverage to bridge the gap between territorial integrity and 'sphere of influence' demands.",
+          "Ukraine's shift toward the Western network makes it a permanent frontline state, necessitating long-term military dependency on the US and NATO."
+        ],
+        "related_finding_ids": [],
+        "relationships_revealed": [
+          {
+            "actor1": "Viktor Yanukovych",
+            "actor2": "Vladimir Putin",
+            "relationship_type": "dependent",
+            "evidence": "Yanukovych's rejection of the EU agreement in favor of a Russian bailout and his subsequent flight to Russia."
+          },
+          {
+            "actor1": "Russia",
+            "actor2": "Donbas Separatists/Paramilitaries",
+            "relationship_type": "proxy",
+            "evidence": "Russia provided 'hybrid' support, disinformation, and military hardware while officially denying direct involvement."
+          },
+          {
+            "actor1": "France and Germany",
+            "actor2": "Ukraine",
+            "relationship_type": "ally/mediator",
+            "evidence": "Negotiated the Minsk I and II agreements to stabilize the front lines and prevent total state collapse."
+          },
+          {
+            "actor1": "Ukraine",
+            "actor2": "European Union",
+            "relationship_type": "aspirational ally",
+            "evidence": "The Euromaidan protests were explicitly driven by a desire for the EU Association Agreement."
+          },
+          {
+            "actor1": "NATO",
+            "actor2": "Russia",
+            "relationship_type": "enemy",
+            "evidence": "Russia views NATO's eastward expansion as an existential threat to its sphere of influence."
+          }
+        ],
+        "intermediaries": [
+          "France and Germany (Normandy Format)",
+          "OSCE (Organization for Security and Co-operation in Europe)",
+          "Viktor Yanukovych (formerly, as a bridge between East/West)"
+        ],
+        "network_patterns": [
+          "Bipolarity: The network is polarized into two distinct camps with decreasing neutral space.",
+          "Hybridity: Use of non-state actors (paramilitaries, oligarchs) to obscure state-to-state conflict.",
+          "Shatterbelt Dynamics: A region where internal factions are linked to opposing external global powers."
+        ],
+        "hidden_connections": [
+          "The role of Ukrainian oligarchs who funded both pro-Western and pro-Russian political factions to protect their assets.",
+          "Russian energy infrastructure (pipelines) creating a dependency loop between the EU and Russia despite political hostility."
+        ]
+      }
+    }
+  },
+  "relationship_graph": {
+    "relationships": [
+      {
+        "source": "f1",
+        "target": "f4",
+        "type": "causes",
+        "description": "Yanukovych's rejection of the EU agreement directly triggered the Euromaidan protests/Maidan Revolution.",
+        "strength": 1.0
+      },
+      {
+        "source": "f4",
+        "target": "f5",
+        "type": "precedes",
+        "description": "The Maidan Revolution occurred immediately prior to the Russian annexation of Crimea.",
+        "strength": 0.9
+      },
+      {
+        "source": "f5",
+        "target": "f9",
+        "type": "expands",
+        "description": "Finding 9 provides specific details on the 'fascist' narrative used to justify the annexation mentioned in Finding 5.",
+        "strength": 0.8
+      },
+      {
+        "source": "f7",
+        "target": "f8",
+        "type": "supports",
+        "description": "Western integration efforts (f7) provide the context for Russia's pattern of seeking to maintain control over its 'near abroad' (f8).",
+        "strength": 0.85
+      },
+      {
+        "source": "f5",
+        "target": "f11",
+        "type": "causes",
+        "description": "The annexation of Crimea led to Russian control over maritime territory and energy resources.",
+        "strength": 0.9
+      },
+      {
+        "source": "f5",
+        "target": "f13",
+        "type": "precedes",
+        "description": "The annexation of Crimea (March 2014) preceded the start of the Donbas conflict (April 2014).",
+        "strength": 0.9
+      },
+      {
+        "source": "f13",
+        "target": "f14",
+        "type": "involves",
+        "description": "Both findings describe the start of the Donbas conflict and the specific 'hybrid' methods used by Russia.",
+        "strength": 0.8
+      },
+      {
+        "source": "f15",
+        "target": "f16",
+        "type": "precedes",
+        "description": "Minsk I was the first attempt at a ceasefire, followed later by Minsk II.",
+        "strength": 1.0
+      },
+      {
+        "source": "f18",
+        "target": "f20",
+        "type": "expands",
+        "description": "Both findings detail the structural flaws and specific provisions (sequencing and special status) of the Minsk agreements.",
+        "strength": 0.85
+      },
+      {
+        "source": "f14",
+        "target": "f19",
+        "type": "contradicts",
+        "description": "Russia's use of troops and paramilitaries (f14) contradicts its official claim that it was not a party to the conflict (f19).",
+        "strength": 0.9
+      },
+      {
+        "source": "f3",
+        "target": "f10",
+        "type": "involves",
+        "description": "Both findings focus on Vladimir Putin's direct role and political motivations regarding the annexation.",
+        "strength": 0.8
+      },
+      {
+        "source": "f6",
+        "target": "f1",
+        "type": "supports",
+        "description": "The general geopolitical tension between the West and Russia (f6) explains the gravity of Yanukovych's decision (f1).",
+        "strength": 0.75
+      },
+      {
+        "source": "f17",
+        "target": "f15",
+        "type": "involves",
+        "description": "France and Germany acted as the primary mediators for the Minsk I and II agreements.",
+        "strength": 0.9
+      },
+      {
+        "source": "f12",
+        "target": "f1",
+        "type": "expands",
+        "description": "Finding 12 specifies the EU's role as the actor offering the agreement that sparked the crisis.",
+        "strength": 0.9
+      },
+      {
+        "source": "f8",
+        "target": "f13",
+        "type": "supports",
+        "description": "Russia's pattern of preventing Western influence (f8) is evidenced by its destabilization of the Donbas (f13).",
+        "strength": 0.8
+      }
+    ],
+    "contradictions": [
+      {
+        "finding_1": "f13",
+        "finding_2": "f19",
+        "claim_1": "The Donbas conflict began in April 2014 when Russian paramilitaries seized towns in eastern Ukraine.",
+        "claim_2": "Russia claimed it was not a party to the conflict.",
+        "significance": "These findings present a direct factual contradiction regarding Russia's involvement. Finding [f13] identifies Russian paramilitaries as the initiators of the conflict, while [f19] notes Russia's official denial of being a participant in that same conflict.",
+        "resolution_hint": "This reflects the difference between observed/reported military actions (hybrid warfare) and official diplomatic denials (plausible deniability) used by the Russian government."
+      },
+      {
+        "finding_1": "f14",
+        "finding_2": "f19",
+        "claim_1": "Russia employed a 'hybrid approach,' using irregular fighters, regular troops, and military support to destabilize the Donbas region.",
+        "claim_2": "Russia claimed it was not a party to the conflict.",
+        "significance": "Finding [f14] asserts that Russian regular and irregular troops were active participants in the destabilization of Donbas, which logically undermines the claim in [f19] that Russia was not a party to the conflict.",
+        "resolution_hint": "Finding [f14] describes the 'hybrid' nature of the war where involvement is obscured, while [f19] describes the legal/diplomatic stance Russia took during the Minsk negotiations."
+      }
+    ],
+    "gaps": [
+      {
+        "type": "temporal",
+        "description": "The 'Pre-Maidan' era (1994–2012) is almost entirely unaddressed despite the 1994 start date. Key events like the Budapest Memorandum, the Orange Revolution (2004), and the 2008 NATO Bucharest Summit are missing.",
+        "priority": "high",
+        "suggested_queries": [
+          "Key events in Ukraine-Russia relations 1994-2012 including Budapest Memorandum and Orange Revolution"
+        ]
+      },
+      {
+        "type": "temporal",
+        "description": "The 'Frozen Conflict' and Escalation period (2016–2021) is missing. There is no data on the transition from the Minsk agreements to the 2022 full-scale invasion.",
+        "priority": "high",
+        "suggested_queries": [
+          "Timeline of Russia-Ukraine relations 2016 to February 2022 buildup"
+        ]
+      },
+      {
+        "type": "evidence",
+        "description": "The immediate triggers for the February 2022 full-scale invasion are not identified. The findings stop at the 2015 Minsk II agreement, leaving the 'why now' of 2022 unanswered.",
+        "priority": "high",
+        "suggested_queries": [
+          "Why did Russia invade Ukraine in 2022? Key triggers and ultimatums"
+        ]
+      },
+      {
+        "type": "actor",
+        "description": "Volodymyr Zelenskyy is not mentioned. As a primary actor from 2019–2025, his policies and shift in stance toward Russia are critical to the war's progression.",
+        "priority": "high",
+        "suggested_queries": [
+          "Role of Volodymyr Zelenskyy in Ukraine-Russia conflict and 2019 peace efforts"
+        ]
+      },
+      {
+        "type": "topic",
+        "description": "NATO expansion and the 'Red Lines' debate are only vaguely implied. The specific role of NATO's 'Open Door' policy as a Russian casus belli is not explicitly detailed.",
+        "priority": "medium",
+        "suggested_queries": [
+          "Impact of NATO expansion on Russia's decision to invade Ukraine"
+        ]
+      },
+      {
+        "type": "topic",
+        "description": "Internal Ukrainian demographics and public opinion shifts are missing. The findings don't address how Ukrainian national identity evolved between 2014 and 2022.",
+        "priority": "medium",
+        "suggested_queries": [
+          "Evolution of Ukrainian public opinion on EU and NATO 2014-2022"
+        ]
+      },
+      {
+        "type": "topic",
+        "description": "The role of energy security beyond 'control' (f11) is missing, specifically the impact of Nord Stream 2 and gas transit through Ukraine as a geopolitical lever.",
+        "priority": "medium",
+        "suggested_queries": [
+          "Role of Nord Stream 2 and energy pipelines in Russia-Ukraine conflict"
+        ]
+      },
+      {
+        "type": "temporal",
+        "description": "The 2022–2025 period is completely blank despite the research scope extending to Summer 2025. Key events of the full-scale war and current status are missing.",
+        "priority": "high",
+        "suggested_queries": [
+          "Major phases and events of Russia-Ukraine war 2022-2025"
+        ]
+      }
+    ],
+    "causal_chains": [
+      {
+        "finding_ids": [
+          "f12",
+          "f1",
+          "f4",
+          "f9"
+        ],
+        "descriptions": [
+          "The EU offers an Association Agreement to integrate Ukraine into Western economic spheres.",
+          "President Yanukovych rejects the deal in favor of Russian ties, acting as the primary trigger.",
+          "The rejection sparks the Maidan Revolution (Euromaidan) against corruption and pro-Russian policy.",
+          "The ousting of Yanukovych creates a power vacuum and a pretext for Russian intervention."
+        ]
+      },
+      {
+        "finding_ids": [
+          "f8",
+          "f5",
+          "f11",
+          "f10"
+        ],
+        "descriptions": [
+          "Russia's long-term goal is to maintain control over its 'near abroad' and block NATO/EU expansion.",
+          "Russia annexes Crimea in March 2014, citing the need to protect ethnic Russians after the revolution.",
+          "The annexation secures maritime territory and energy resources in the Black Sea for Russia.",
+          "The move is used domestically by Putin to reinforce his image as a strong defender of Russian interests."
+        ]
+      },
+      {
+        "finding_ids": [
+          "f13",
+          "f14",
+          "f16",
+          "f18",
+          "f19"
+        ],
+        "descriptions": [
+          "Russian paramilitaries seize towns in eastern Ukraine, initiating the Donbas conflict in April 2014.",
+          "Russia employs 'hybrid warfare' (disinformation and irregular troops) to destabilize the region.",
+          "The Minsk II agreement is signed to stop the fighting, mediated by France and Germany.",
+          "The agreement's sequencing (elections before border control) and 'special status' provisions create a deadlock.",
+          "Russia denies being a party to the conflict, undermining the credibility and enforcement of the peace process."
+        ]
+      }
+    ]
+  },
+  "metrics": {
+    "total_tokens": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_cost_usd": 0.0,
+    "tokens_search": 12213,
+    "tokens_extraction": 0,
+    "tokens_perspectives": 0,
+    "tokens_relationships": 0
+  },
+  "errors": []
+}

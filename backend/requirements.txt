@@ -11,6 +11,9 @@ alembic==1.14.0
 # Weaviate
 weaviate-client==4.9.6
 
+# Supabase (for research data persistence)
+supabase>=2.0.0
+
 # Gemini
 google-genai==1.0.0
 

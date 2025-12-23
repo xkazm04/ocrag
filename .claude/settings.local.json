@@ -21,7 +21,18 @@
       "Bash(docker --version:*)",
       "WebFetch(domain:openrouter.ai)",
       "Bash(backend.venvScriptspython.exe test_traditional_ocr.py)",
-      "Bash(backend/.venv/Scripts/python.exe:*)"
+      "Bash(backend/.venv/Scripts/python.exe:*)",
+      "Bash(tree:*)",
+      "WebFetch(domain:ai.google.dev)",
+      "Bash(del \"C:\\\\Users\\\\kazim\\\\dac\\\\rag\\\\backend\\\\app\\\\research\\\\schemas.py\")",
+      "Bash(del \"C:\\\\Users\\\\kazim\\\\dac\\\\rag\\\\backend\\\\app\\\\research\\\\db\\\\supabase.py\")",
+      "Bash(findstr:*)",
+      "Bash(python -m tests.research.run_test:*)",
+      "Bash(python test_search_modes.py:*)",
+      "Bash(python:*)",
+      "Bash(del \"C:\\\\Users\\\\kazim\\\\dac\\\\rag\\\\reflex_app\\\\reflex_app\\\\state\\\\playback_state.py\")",
+      "Bash(pip install:*)",
+      "Bash(cat:*)"
     ]
   }
 }

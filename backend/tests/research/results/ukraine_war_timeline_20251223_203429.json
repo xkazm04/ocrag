@@ -1,0 +1,842 @@
+{
+  "test_case_id": "ukraine_war_timeline",
+  "query": "Create a timeline of major events in the Russia-Ukraine conflict from 2014 to present",
+  "timestamp": "20251223_203429",
+  "evaluation": {
+    "passed": true,
+    "overall_score": 0.8333333333333334,
+    "metrics": [
+      {
+        "name": "Finding Count",
+        "passed": true,
+        "score": 1.0,
+        "details": "Found 46 findings, expected at least 10"
+      },
+      {
+        "name": "Finding Types",
+        "passed": true,
+        "score": 1.0,
+        "details": "All required types found"
+      },
+      {
+        "name": "Average Confidence",
+        "passed": true,
+        "score": 1.0,
+        "details": "Average confidence 1.000, threshold 0.5"
+      },
+      {
+        "name": "Perspective Coverage",
+        "passed": true,
+        "score": 1.0,
+        "details": "All perspectives covered"
+      },
+      {
+        "name": "Event Coverage",
+        "passed": false,
+        "score": 0.3333333333333333,
+        "details": "Found 2/6 expected events"
+      },
+      {
+        "name": "Error Count",
+        "passed": true,
+        "score": 1.0,
+        "details": "No errors"
+      }
+    ],
+    "actors_found": [],
+    "events_found": [
+      "Minsk agreements",
+      "2022 invasion"
+    ],
+    "themes_found": []
+  },
+  "results": {
+    "search_queries": [
+      "Timeline of Russia-Ukraine conflict 2014-present: key events, dates, locations",
+      "Russia-Ukraine conflict: motivations, geopolitical interests, historical context",
+      "Russia-Ukraine conflict: financial flows, sanctions evasion, offshore accounts",
+      "Russia-Ukraine conflict: media coverage analysis, propaganda, disinformation campaigns",
+      "Russia-Ukraine conflict: key actors, organizations, individuals involved",
+      "Russia-Ukraine conflict: international treaties, agreements, legal proceedings"
+    ],
+    "source_count": 60,
+    "sources": [
+      {
+        "title": "wikipedia.org",
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjLe3qmAvXUQbx8msH1QqRk44DcGDgLPU23gXgS0UZmW0HuvfVaicZGOSdvulZU1IsRkyTiodaUpp-BVVhQ38Q1RLY8JNxqNmP0tENaA1o6m-ELG9NCiNq_fn3nuuyFSI98hFD7sHuMYbcX7E=",
+        "domain": "wikipedia",
+        "snippet": ""
+      },
+      {
+        "title": "parliament.uk",
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBnWtyoRwMuriqOcpt48Tb82GBqpSP67CgEcrvJF-4u-fCIiEc7Z47XuaN1dCq6AugwfjONfONPE2SSkNhHGacttnZw4jwmkMEXMiqMe7G0ecJdvl_2f7cbc_okKNwfmDWR8oi1k01zBY1QTApelbRsDH_B3jq6pDP0ZOn",
+        "domain": "parliament.uk",
+        "snippet": ""
+      },
+      {
+        "title": "parliament.uk",
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHfNtykwoRvyaVBOC3HVpmfT_naahC2o3015B7c3GoQIMvHzfZIW6SMRtFO5WoLmlmzqdAnsZTLMCuUV7_Y3VJjdvzvdh3fNOf6H7N5TNXD7YL6NGuKRu51aaPHvOwbWuR383A0xOpvOqM4RYi7PW6JHDIBo2l_7Uv-QAhE-McHEjk2H8YIM-Xm",
+        "domain": "parliament.uk",
+        "snippet": ""
+      },
+      {
+        "title": "cfr.org",
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHfBsrOIr5pv4rfVDLkLY2JULUFoGio80le4IkaxwBfCTPpdN7i6WF9sEGhiNW1QocSr53XaLSdecd0FsDA_x8poUVEU0lh5PP74kLp6Xwkzfy-OKA4kOh1GuXV3rmAug_zq4bzDjqs321oybvaOCdrR_-v4At5fxxHvgTjPg3aNQ==",
+        "domain": "cfr",
+        "snippet": ""
+      },
+      {
+        "title": "ukraine.ua",
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8ggMj8rW9ndARO9fq-P-aKVb2ExTuxEMYFj7jIBPCRmfurxiYrxknOyXcwLhFfB23d2h3DesZPWIpt9hsph0UTD0jnCnG3mQbI7GxLTJ6frIq2vz_QoUsDCC3IvWAYk5SZB_pSFTqlBVdLMdp",
+        "domain": "ukraine.ua",
+        "snippet": ""
+      },
+      {
+        "title": "diplomatie.gouv.fr",
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIiuPVdBn1my32g1w0-K3KtNQ4RB6rqYguQAFIXDf8njbtdnSeuTubypyV7gJX4F-R3qnMyOchQ-ar-8d2gqrsOKHUwxf9GyQuFPXH4oT8VmJJIDMsk9OvSyp_3IfLlxMywk0InitlOtzLfH_8VYLWUN0Fcz4HC8q2remSL_fH9BYwwpkR3QOGayVAIwX3FzU-ADLD7Rs97DTbO7QUosNa0pZaCuZM6BFcCjf-LJDK4_aVeFhZF9KiAl1UWTs7eruclFGR5VYcOk_HO-NBUlnxoJAA1gJf",
+        "domain": "diplomatie.gouv.fr",
+        "snippet": ""
+      },
+      {
+        "title": "wikipedia.org",
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHs-ZKrgifooJr_9XVMrByT0hlnSYfeb8Loto5ot8-KyKmIGF6dQ1XnorOz0UC-hSnyamt_mbvhX1f5w5BFtnFZmUeiLIoCt8zWaZdVS4ZAJM2ouye2NYs_8Xzbko6th7QRmDdLmzvFsuzwSHtO563FBT-8egBixsWsdzxGEoSJtA==",
+        "domain": "wikipedia",
+        "snippet": ""
+      },
+      {
+        "title": "aspi.org.au",
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqAZ2-d95-XS-If14N-FcLKlY-53Q9THCP72xK0a1zImNbgGrma5aozKWR0qM6gsZsDBMWJWpIjJHH3z8TBz33LIxV8CatySRI_CTeWlc-5QNh6Kjz3eaICnnpNEggCU3SFjDtxDrIUdrKN3myyttUUc9_RTiN6OLpmaPoYIA8UAxrKRWJQen8n00GWSU=",
+        "domain": "aspi.au",
+        "snippet": ""
+      },
+      {
+        "title": "northeastern.edu",
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGzEtxwuhwX-q0dT_xO4MiBdwpQRw-hCENEaadwMLsmbAoU2n8Y_3c_3CsOKIsqChXFhMH58GQKgc46CRYlsoYJEnfioqL8-FuWTXld2sAxwEDapc2DrWDEWDe3WzChysPfs7QUGedVVJKGD_GM4GkhU3-WiNhlXmWilgT-EtcR7192Fb5cpYTkm8aEoyz8_mjCWtnDg6GZUk48t0xjBvCrzM2S5zCBmaBqjklYwpoxxU8eLlCHf2oT4yDM14EHHQ==",
+        "domain": "northeastern.edu",
+        "snippet": ""
+      },
+      {
+        "title": "britannica.com",
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEulT6ATRIuWUtOxTrE9Em_DSJCjgatiZeOE-srZpT3LmD0w2OeMD6DPJYED1aCi40sCC9OZo1OGBKp_jWawqRzafHQZ8y1Jdc84KP6eWrh7ZIpGK-2HgkahqV-JC1QalFgyy0rR3LJOxKggOoAbfJ1CnwpN_g41TTz1xVp",
+        "domain": "britannica",
+        "snippet": ""
+      },
+      {
+        "title": "ebsco.com",
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZmdBRizRU-wST9Jsxrcd_whvZwwaCFPOTdQfpbEVuO4cfrm5aQ0fRcUFpfcpuaXH-VjXIrsTb02wwyttcI9qNotMgYhviSUM43XUuT37CUOtM0aUeP4_cvEZOzS-4yaDC6xRKYKJDtOaOoJAJePznJ5p7K_6xFYgt-QPYvOXcy8cT5klasjUrncGDJeCt62MGew4=",
+        "domain": "ebsco",
+        "snippet": ""
+      },
+      {
+        "title": "wikipedia.org",
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkAjDQKH9yxGetz_ICgO3zBgGHuRjnrqeqwddlQh0wySaVTBrpfx96j540hBjqGaiuEhQFbmF0fbz8lr4uKDIZ5EdjgEBi_-lSj1jIyFJ0u3qziXzAI_TBPMBc3zuIi7iQY-X4g4-faFoVyug=",
+        "domain": "wikipedia",
+        "snippet": ""
+      },
+      {
+        "title": "cam.ac.uk",
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQGkYTm-TswRaWAeh34rIJgoj5OYZDslYtKyvteBJ_Dza3OQabr_JEJig3oZvu8irU7iJQoYOm9ZJTcTtZN8iD-fTznlnL1b_I-wRWwSk2JI-pu0mX9M8qPYpM7FuoF0Nmre8JWo6HjhOKQyLSRmgO_P5KrqPYxHW7-KpOM5-kgr3Y1YFl7vB2th_lsa6pFHPdeCgwv4wlfPIOtQz_oa-fRQBiDQNPSpOo6lERRgSqJeogUxv7YHzI71-8txME8f1ThOdmlYfAjqKfGenu8aMoRNGqGR3QT--XaZ0F",
+        "domain": "cam.ac.uk",
+        "snippet": ""
+      },
+      {
+        "title": "ej-develop.org",
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGEojRHKs2gkGGFPtSAMMgDsBRNKmI-fFvyzX_V-ZwO2SNVRIdizBavwfuIMVS_BkNqy0CDCrXQ1Cgp3BMYOBh_ItobSzO3QyaZ-Mxmxj1wVinMN1qQfb6B1Y9Fq-dXQ_JVXgeLS6UETzaEZiDM_06JumzLBdQT",
+        "domain": "ej-develop",
+        "snippet": ""
+      },
+      {
+        "title": "rand.org",
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpJKcJGqXPG8eWrYexSCs30lTjWK1hmSMeH7tZHe52FXjZHGFmpRMYK-ylcznGTf3L5VBsl6FB7uppt5QItFSAzVA6rGgkZigAs_NTxLk25-_337lry01_OU4DIeT8d944WJS3pA01ZDBHSWKTuJGCR85O",
+        "domain": "rand",
+        "snippet": ""
+      },
+      {
+        "title": "fpc.org.uk",
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCdxh7FZQ18kL5IqV5bP1Pw95EVkvkR0a98cygiwHiXYCbyOV2lxzRsl4UqnGZyrrnobrdG2Qi744CBXyCPE5PiwqKiMM01obOm--NCI4TE-_KWgc-_y8TdF1mGMAirH9gQKumPi1MzFoqPhLLZaK-WiNL-E_WtvJwF-XyhBlFrlC1UahHtF8CTU0DQjopEblwrRlDQnfe7_g9Ia72nRRWaDEsKtBIu4ISyh1uvxKdmEsF5New",
+        "domain": "fpc.uk",
+        "snippet": ""
+      },
+      {
+        "title": "parliament.uk",
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPyrH0r3Wt6UyW8jlg5BPK9KCqP9aBwLodPaEI-b7O_xAPkpUeJ8z2JfI8pTVKy6CF2qgGOGPEdDkCAK-P_0nRG5386-sO22AFcOi6T4wsskuxigiaCiRFBQ7w3-hgHB0KAS4YeLP1e1ArTkuw4SJmFa45jlbB7ZEflpmd",
+        "domain": "parliament.uk",
+        "snippet": ""
+      },
+      {
+        "title": "jpmorgan.com",
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6_VIfefL2jsYoZX5OQd08FAoUAnaIPfgi6uWyAW0daZ9snoXJgumCljPkc2M3nxDmQP_idqxSzws97Am1m-mTEBTHLDx4dajfQhrRq5zZSM_-cKEfKkeTMr8886UD8ZMoRqWC7d8Mp13ePYDfyxRCD9MmLL4btiKzV995q3sWBKBR9NVGOmfT1bxlA1ResZRrGK6e-ctYj8jg3ZY2EA==",
+        "domain": "jpmorgan",
+        "snippet": ""
+      },
+      {
+        "title": "economicsobservatory.com",
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhAcGhMeVMaWTUOmEcPdxlPt5kl_b74gcJpKwdSLIn--kYjwOZ0xvkUlLpvD_m7xdNQ2hsvIFK2DXQfOXoyV53yt75XmTSl1ytRVrCtGhgSXd5GiUTTIZ4ZnAesNQhWPb4Sd3asY5ezt_Yz9wEBGEVarcvl2LWnLvd-uB53oRiWOgsBTie9ETtxUeRAfJGqyIXI1dq4i3cQClkSqhuCKGy8QNiHGHyfas=",
+        "domain": "economicsobservatory",
+        "snippet": ""
+      },
+      {
+        "title": "netwealth.com",
+        "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExw5gtBsSlRgZ2f_psLwkbn3Vcfui2n9nDgvbR6CjAW_0kJhQ1tiCJ5YouJ38jA85O_SK1nojuZm3hXWhOZRhfE_xrqUshf5GZDTNOT7oJETYgV9lK9oUQ1My2lyvdiorzxYd6mXOABbSnQcvjNCBEYlf0zIYg8_8KCyac19t-flsXuQbOUC_oJ33jYZo1usCB76rq4EkMxuZzJ4ZRWYhjmfo_SEfL22A=",
+        "domain": "netwealth",
+        "snippet": ""
+      }
+    ],
+    "finding_count": 46,
+    "findings": [
+      {
+        "type": "event",
+        "content": "On November 21, 2013, Ukrainian President Viktor Yanukovych suspended trade and association talks with the European Union, choosing to revive economic ties with Russia, leading to protests in Kyiv's Independence Square (Maidan).",
+        "summary": "In November 2013, President Yanukovych's suspension of EU trade talks triggered the Euromaidan protests.",
+        "confidence": 1.0,
+        "date_text": "November 21, 2013",
+        "date": "2013-11-21"
+      },
+      {
+        "type": "event",
+        "content": "In February 2014, the Euromaidan protests led to the Revolution of Dignity, ousting pro-Russian President Viktor Yanukovych.",
+        "summary": "In February 2014, the Euromaidan protests resulted in the removal of President Yanukovych.",
+        "confidence": 1.0,
+        "date_text": "February 2014",
+        "date": "2014-02-01"
+      },
+      {
+        "type": "event",
+        "content": "On February 20, 2014, Russia put plans to occupy the Crimean peninsula into motion.",
+        "summary": "Russia initiated plans to occupy Crimea on February 20, 2014.",
+        "confidence": 1.0,
+        "date_text": "February 20, 2014",
+        "date": "2014-02-20"
+      },
+      {
+        "type": "event",
+        "content": "On February 27, 2014, pro-Russian gunmen seized government buildings in Crimea and raised the Russian flag, with masked Russian soldiers taking control of strategic points in the region.",
+        "summary": "Pro-Russian forces seized Crimean government buildings on February 27, 2014.",
+        "confidence": 1.0,
+        "date_text": "February 27, 2014",
+        "date": "2014-02-27"
+      },
+      {
+        "type": "event",
+        "content": "In March 2014, Russian forces occupied Crimea, and the Crimean autonomous assembly declared independence and held a referendum on union with Russia.",
+        "summary": "In March 2014, Russia occupied Crimea, leading to a declaration of independence and a referendum.",
+        "confidence": 1.0,
+        "date_text": "March 2014",
+        "date": "2014-03-01"
+      },
+      {
+        "type": "event",
+        "content": "On March 16, 2014, a disputed referendum in Crimea resulted in favor of joining Russia.",
+        "summary": "A disputed referendum on March 16, 2014, showed Crimean support for joining Russia.",
+        "confidence": 1.0,
+        "date_text": "March 16, 2014",
+        "date": "2014-03-16"
+      },
+      {
+        "type": "event",
+        "content": "On March 18, 2014, Russia annexed Crimea.",
+        "summary": "Russia annexed Crimea on March 18, 2014.",
+        "confidence": 1.0,
+        "date_text": "March 18, 2014",
+        "date": "2014-03-18"
+      },
+      {
+        "type": "event",
+        "content": "On March 21, 2014, President Putin signed a law formalizing Russia's takeover of Crimea from Ukraine.",
+        "summary": "President Putin formalized Russia's annexation of Crimea on March 21, 2014.",
+        "confidence": 1.0,
+        "date_text": "March 21, 2014",
+        "date": "2014-03-21"
+      },
+      {
+        "type": "event",
+        "content": "In April 2014, pro-Russian protests occurred in eastern and southern Ukraine, particularly in the Donbas region, with Russian-backed militants seizing towns and cities and proclaiming the Donetsk People's Republic (DPR) and Luhansk People's Republic (LPR) as independent states, starting the Donbas war.",
+        "summary": "Pro-Russian protests in eastern Ukraine in April 2014 escalated into the Donbas war.",
+        "confidence": 1.0,
+        "date_text": "April 2014",
+        "date": "2014-04-01"
+      },
+      {
+        "type": "event",
+        "content": "On April 7, 2014, pro-Russian protestors seized regional government buildings in Donetsk, Luhansk and Kharkiv.",
+        "summary": "Pro-Russian protestors seized regional government buildings in Donetsk, Luhansk and Kharkiv on April 7, 2014.",
+        "confidence": 1.0,
+        "date_text": "April 7, 2014",
+        "date": "2014-04-07"
+      },
+      {
+        "type": "event",
+        "content": "On April 15, 2014, Ukraine's acting president announced the start of an \"anti-terrorist operation\" against pro-Russian separatists.",
+        "summary": "Ukraine launched an \"anti-terrorist operation\" against pro-Russian separatists on April 15, 2014.",
+        "confidence": 1.0,
+        "date_text": "April 15, 2014",
+        "date": "2014-04-15"
+      },
+      {
+        "type": "event",
+        "content": "On May 2, 2014, three people were killed when Ukrainian security forces fend off a raid on a base in Mariupol.",
+        "summary": "Three people were killed in Mariupol on May 2, 2014, during a raid on a base.",
+        "confidence": 1.0,
+        "date_text": "May 2, 2014",
+        "date": "2014-05-02"
+      },
+      {
+        "type": "event",
+        "content": "On May 12, 2014, Pro-Russia separatists in Donetsk and Luhansk announce landslide victories in referendums on “self-rule\".",
+        "summary": "Pro-Russia separatists in Donetsk and Luhansk announce landslide victories in referendums on “self-rule\" on May 12, 2014.",
+        "confidence": 1.0,
+        "date_text": "May 12, 2014",
+        "date": "2014-05-12"
+      },
+      {
+        "type": "event",
+        "content": "On May 25, 2014, Petro Poroshenko is elected president of Ukraine.",
+        "summary": "Petro Poroshenko was elected president of Ukraine on May 25, 2014.",
+        "confidence": 1.0,
+        "date_text": "May 25, 2014",
+        "date": "2014-05-25"
+      },
+      {
+        "type": "event",
+        "content": "On June 14, 2014, pro-Russia separatists shot down a military transport plane in eastern Ukraine, killing all 49 Ukrainian service personnel on board.",
+        "summary": "Pro-Russia separatists shot down a Ukrainian military plane on June 14, 2014, killing 49.",
+        "confidence": 1.0,
+        "date_text": "June 14, 2014",
+        "date": "2014-06-14"
+      },
+      {
+        "type": "event",
+        "content": "On July 5, 2014, Ukrainian forces retook Sloviansk, and pro-Russian forces retreated to Donetsk city.",
+        "summary": "Ukrainian forces retook Sloviansk on July 5, 2014, causing pro-Russian forces to retreat.",
+        "confidence": 1.0,
+        "date_text": "July 5, 2014",
+        "date": "2014-07-05"
+      },
+      {
+        "type": "event",
+        "content": "On July 17, 2014, Russian-controlled forces shot down Malaysia Airlines Flight 17 over eastern Ukraine, killing all 298 civilians on board.",
+        "summary": "Malaysia Airlines Flight 17 was shot down over eastern Ukraine on July 17, 2014, killing 298.",
+        "confidence": 1.0,
+        "date_text": "July 17, 2014",
+        "date": "2014-07-17"
+      },
+      {
+        "type": "event",
+        "content": "On September 5, 2014, the first Minsk Agreement was signed in Minsk to end fighting, but the ceasefire collapsed within days.",
+        "summary": "The first Minsk Agreement was signed on September 5, 2014, but the ceasefire quickly failed.",
+        "confidence": 1.0,
+        "date_text": "September 5, 2014",
+        "date": "2014-09-05"
+      },
+      {
+        "type": "event",
+        "content": "On October 31, 2014, Russia agreed to resume gas supplies to Ukraine over the winter in a deal brokered by the EU.",
+        "summary": "Russia agreed to resume gas supplies to Ukraine on October 31, 2014, in a deal brokered by the EU.",
+        "confidence": 1.0,
+        "date_text": "October 31, 2014",
+        "date": "2014-10-31"
+      },
+      {
+        "type": "event",
+        "content": "On November 2, 2014, pro-Russia separatists held elections in the self-proclaimed people's republics in the Donetsk and Luhansk regions.",
+        "summary": "Pro-Russia separatists held elections in Donetsk and Luhansk on November 2, 2014.",
+        "confidence": 1.0,
+        "date_text": "November 2, 2014",
+        "date": "2014-11-02"
+      },
+      {
+        "type": "event",
+        "content": "In February 2015, Russia and Ukraine signed the Minsk II agreement, but it was never fully implemented.",
+        "summary": "The Minsk II agreement was signed in February 2015 but was never fully implemented.",
+        "confidence": 1.0,
+        "date_text": "February 2015",
+        "date": "2015-02-01"
+      },
+      {
+        "type": "event",
+        "content": "In February 2015, Ukrainian forces retreated from Debaltseve.",
+        "summary": "Ukrainian forces retreated from Debaltseve in February 2015.",
+        "confidence": 1.0,
+        "date_text": "February 2015",
+        "date": "2015-02-01"
+      },
+      {
+        "type": "event",
+        "content": "In November 25, 2018, a serious naval incident occurs in the Kerch Strait, leading to the capture of 24 Ukrainian sailors.",
+        "summary": "A naval incident in the Kerch Strait on November 25, 2018, resulted in the capture of 24 Ukrainian sailors.",
+        "confidence": 1.0,
+        "date_text": "November 25, 2018",
+        "date": "2018-11-25"
+      },
+      {
+        "type": "event",
+        "content": "On February 24, 2022, Russia launched a full-scale invasion of Ukraine, targeting military assets and cities across the country.",
+        "summary": "Russia launched a full-scale invasion of Ukraine on February 24, 2022.",
+        "confidence": 1.0,
+        "date_text": "February 24, 2022",
+        "date": "2022-02-24"
+      },
+      {
+        "type": "event",
+        "content": "In March 2022, Russian forces retreated from northern Ukraine.",
+        "summary": "Russian forces retreated from northern Ukraine in March 2022.",
+        "confidence": 1.0,
+        "date_text": "March 2022",
+        "date": "2022-03-01"
+      },
+      {
+        "type": "event",
+        "content": "In September 2022, Ukrainian forces launched the Kharkiv counteroffensive and liberated most of the Kharkiv Oblast.",
+        "summary": "Ukrainian forces launched the Kharkiv counteroffensive in September 2022.",
+        "confidence": 1.0,
+        "date_text": "September 2022",
+        "date": "2022-09-01"
+      },
+      {
+        "type": "event",
+        "content": "In November 2022, Ukrainian forces liberated Kherson.",
+        "summary": "Ukrainian forces liberated Kherson in November 2022.",
+        "confidence": 1.0,
+        "date_text": "November 2022",
+        "date": "2022-11-01"
+      },
+      {
+        "type": "event",
+        "content": "In 2023, Russia blows up the Kakhovka HPP dam, causing a large-scale humanitarian and environmental disaster.",
+        "summary": "In 2023, Russia destroyed the Kakhovka HPP dam.",
+        "confidence": 1.0,
+        "date_text": "2023",
+        "date": "2023-06-15"
+      },
+      {
+        "type": "event",
+        "content": "In early August 2024, Ukraine launches the Kursk Offensive, a surprise incursion into Russia's Kursk Oblast.",
+        "summary": "Ukraine launched the Kursk Offensive in early August 2024.",
+        "confidence": 1.0,
+        "date_text": "2024",
+        "date": "2024-06-15"
+      },
+      {
+        "type": "event",
+        "content": "In January 2025, Ukraine launches a second incursion into Kursk Oblast, though progress remains limited.",
+        "summary": "Ukraine launched a second incursion into Kursk Oblast in January 2025.",
+        "confidence": 1.0,
+        "date_text": "2025",
+        "date": "2025-06-15"
+      },
+      {
+        "type": "event",
+        "content": "On December 11, 2025, Ukraine presents revised peace proposals as talks reach a \"critical moment\".",
+        "summary": "Ukraine presented revised peace proposals on December 11, 2025.",
+        "confidence": 1.0,
+        "date_text": "December 11, 2025",
+        "date": "2025-12-11"
+      },
+      {
+        "type": "actor",
+        "content": "Viktor Yanukovych was the pro-Russian President of Ukraine whose ousting in 2014 led to increased Russian intervention.",
+        "summary": "Viktor Yanukovych's ousting as President of Ukraine in 2014 was a key event leading to Russian intervention.",
+        "confidence": 1.0,
+        "date_text": null,
+        "date": "2014-06-15"
+      },
+      {
+        "type": "actor",
+        "content": "Petro Poroshenko was elected president of Ukraine on May 25, 2014.",
+        "summary": "Petro Poroshenko was elected president of Ukraine in 2014.",
+        "confidence": 1.0,
+        "date_text": "May 25, 2014",
+        "date": "2014-05-25"
+      },
+      {
+        "type": "actor",
+        "content": "Vladimir Putin, as President of Russia, has played a central role in the conflict, including annexing Crimea and launching the full-scale invasion in 2022.",
+        "summary": "Vladimir Putin has been central to the conflict as President of Russia.",
+        "confidence": 1.0,
+        "date_text": null,
+        "date": "2022-06-15"
+      },
+      {
+        "type": "actor",
+        "content": "Russian-backed militants in the Donbas region seized towns and cities, proclaiming the Donetsk People's Republic (DPR) and Luhansk People's Republic (LPR) as independent states.",
+        "summary": "Russian-backed militants in Donbas proclaimed the DPR and LPR as independent states.",
+        "confidence": 1.0,
+        "date_text": null,
+        "date": null
+      },
+      {
+        "type": "relationship",
+        "content": "Russia aims to regain control over Ukraine and transform it into a puppet regime, indicating a desire for political dominance.",
+        "summary": "Russia aims to establish political dominance over Ukraine.",
+        "confidence": 1.0,
+        "date_text": null,
+        "date": null
+      },
+      {
+        "type": "relationship",
+        "content": "The conflict has strained relationships between Europe and Russia, and to a lesser extent, between Europe and China.",
+        "summary": "The conflict has strained relationships between Europe and Russia and, to a lesser extent, between Europe and China.",
+        "confidence": 1.0,
+        "date_text": null,
+        "date": null
+      },
+      {
+        "type": "relationship",
+        "content": "The conflict has provided an opportunity to strengthen relationships between the United States and its European allies.",
+        "summary": "The conflict has strengthened the relationship between the US and its European allies.",
+        "confidence": 1.0,
+        "date_text": null,
+        "date": null
+      },
+      {
+        "type": "relationship",
+        "content": "Closer cooperation between Russia and China raises concerns for the United States.",
+        "summary": "Increased cooperation between Russia and China is a concern for the US.",
+        "confidence": 1.0,
+        "date_text": null,
+        "date": null
+      },
+      {
+        "type": "relationship",
+        "content": "Russia is building partnerships with countries like Iran, India, Turkey, the UAE, and China.",
+        "summary": "Russia is forming partnerships with Iran, India, Turkey, the UAE, and China.",
+        "confidence": 1.0,
+        "date_text": null,
+        "date": null
+      },
+      {
+        "type": "pattern",
+        "content": "Russia has been using obfuscated corporate ownership structures and illicit financial flows for purposes such as bribery, corruption, and lobbying.",
+        "summary": "Russia uses obfuscated corporate structures and illicit financial flows for bribery, corruption, and lobbying.",
+        "confidence": 1.0,
+        "date_text": null,
+        "date": null
+      },
+      {
+        "type": "pattern",
+        "content": "As Western sanctions against Russia have intensified, so have Russia's efforts to evade them, including the use of a \"shadow fleet\" to export oil.",
+        "summary": "Russia is actively evading Western sanctions, including using a \"shadow fleet\" for oil exports.",
+        "confidence": 1.0,
+        "date_text": null,
+        "date": null
+      },
+      {
+        "type": "pattern",
+        "content": "Russia is coordinating with other sanctioned countries like Cuba, Iran, North Korea, Syria, and Venezuela, emulating their techniques to avoid restrictions.",
+        "summary": "Russia is coordinating with other sanctioned countries to evade restrictions.",
+        "confidence": 1.0,
+        "date_text": null,
+        "date": null
+      },
+      {
+        "type": "evidence",
+        "content": "According to the Central Bank of Russia, the country's net financial claims on other economies rose from close to $500 billion in 2021 to over $850 billion at the end of 2023.",
+        "summary": "Russia's net financial claims on other economies significantly increased between 2021 and 2023.",
+        "confidence": 1.0,
+        "date_text": "2021-2023",
+        "date": "2021-01-01"
+      },
+      {
+        "type": "evidence",
+        "content": "In 2020, the outward stock of foreign direct investment from the UK into Russia was £11.2 billion.",
+        "summary": "In 2020, the UK's foreign direct investment in Russia was £11.2 billion.",
+        "confidence": 1.0,
+        "date_text": "2020",
+        "date": "2020-06-15"
+      },
+      {
+        "type": "gap",
+        "content": "The specific details of the revised peace proposals presented by Ukraine on December 11, 2025, are not provided.",
+        "summary": "Details of Ukraine's revised peace proposals in December 2025 are missing.",
+        "confidence": 1.0,
+        "date_text": "December 11, 2025",
+        "date": "2025-12-11"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "November 21, 2013",
+        "date_sortable": "2013-11-21",
+        "precision": "exact",
+        "summary": "In November 2013, President Yanukovych's suspension of EU trade talks triggered the Euromaidan protests.",
+        "content": "On November 21, 2013, Ukrainian President Viktor Yanukovych suspended trade and association talks with the European Union, choosing to revive economic ties with Russia, leading to protests in Kyiv's Independence Square (Maidan).",
+        "confidence": 1.0
+      },
+      {
+        "date": "February 2014",
+        "date_sortable": "2014-02-01",
+        "precision": "month",
+        "summary": "In February 2014, the Euromaidan protests resulted in the removal of President Yanukovych.",
+        "content": "In February 2014, the Euromaidan protests led to the Revolution of Dignity, ousting pro-Russian President Viktor Yanukovych.",
+        "confidence": 1.0
+      },
+      {
+        "date": "February 20, 2014",
+        "date_sortable": "2014-02-20",
+        "precision": "exact",
+        "summary": "Russia initiated plans to occupy Crimea on February 20, 2014.",
+        "content": "On February 20, 2014, Russia put plans to occupy the Crimean peninsula into motion.",
+        "confidence": 1.0
+      },
+      {
+        "date": "February 27, 2014",
+        "date_sortable": "2014-02-27",
+        "precision": "exact",
+        "summary": "Pro-Russian forces seized Crimean government buildings on February 27, 2014.",
+        "content": "On February 27, 2014, pro-Russian gunmen seized government buildings in Crimea and raised the Russian flag, with masked Russian soldiers taking control of strategic points in the region.",
+        "confidence": 1.0
+      },
+      {
+        "date": "March 2014",
+        "date_sortable": "2014-03-01",
+        "precision": "month",
+        "summary": "In March 2014, Russia occupied Crimea, leading to a declaration of independence and a referendum.",
+        "content": "In March 2014, Russian forces occupied Crimea, and the Crimean autonomous assembly declared independence and held a referendum on union with Russia.",
+        "confidence": 1.0
+      },
+      {
+        "date": "March 16, 2014",
+        "date_sortable": "2014-03-16",
+        "precision": "exact",
+        "summary": "A disputed referendum on March 16, 2014, showed Crimean support for joining Russia.",
+        "content": "On March 16, 2014, a disputed referendum in Crimea resulted in favor of joining Russia.",
+        "confidence": 1.0
+      },
+      {
+        "date": "March 18, 2014",
+        "date_sortable": "2014-03-18",
+        "precision": "exact",
+        "summary": "Russia annexed Crimea on March 18, 2014.",
+        "content": "On March 18, 2014, Russia annexed Crimea.",
+        "confidence": 1.0
+      },
+      {
+        "date": "March 21, 2014",
+        "date_sortable": "2014-03-21",
+        "precision": "exact",
+        "summary": "President Putin formalized Russia's annexation of Crimea on March 21, 2014.",
+        "content": "On March 21, 2014, President Putin signed a law formalizing Russia's takeover of Crimea from Ukraine.",
+        "confidence": 1.0
+      },
+      {
+        "date": "April 2014",
+        "date_sortable": "2014-04-01",
+        "precision": "month",
+        "summary": "Pro-Russian protests in eastern Ukraine in April 2014 escalated into the Donbas war.",
+        "content": "In April 2014, pro-Russian protests occurred in eastern and southern Ukraine, particularly in the Donbas region, with Russian-backed militants seizing towns and cities and proclaiming the Donetsk People's Republic (DPR) and Luhansk People's Republic (LPR) as independent states, starting the Donbas war.",
+        "confidence": 1.0
+      },
+      {
+        "date": "April 07, 2014",
+        "date_sortable": "2014-04-07",
+        "precision": "exact",
+        "summary": "Pro-Russian protestors seized regional government buildings in Donetsk, Luhansk and Kharkiv on April 7, 2014.",
+        "content": "On April 7, 2014, pro-Russian protestors seized regional government buildings in Donetsk, Luhansk and Kharkiv.",
+        "confidence": 1.0
+      },
+      {
+        "date": "April 15, 2014",
+        "date_sortable": "2014-04-15",
+        "precision": "exact",
+        "summary": "Ukraine launched an \"anti-terrorist operation\" against pro-Russian separatists on April 15, 2014.",
+        "content": "On April 15, 2014, Ukraine's acting president announced the start of an \"anti-terrorist operation\" against pro-Russian separatists.",
+        "confidence": 1.0
+      },
+      {
+        "date": "May 02, 2014",
+        "date_sortable": "2014-05-02",
+        "precision": "exact",
+        "summary": "Three people were killed in Mariupol on May 2, 2014, during a raid on a base.",
+        "content": "On May 2, 2014, three people were killed when Ukrainian security forces fend off a raid on a base in Mariupol.",
+        "confidence": 1.0
+      },
+      {
+        "date": "May 12, 2014",
+        "date_sortable": "2014-05-12",
+        "precision": "exact",
+        "summary": "Pro-Russia separatists in Donetsk and Luhansk announce landslide victories in referendums on “self-rule\" on May 12, 2014.",
+        "content": "On May 12, 2014, Pro-Russia separatists in Donetsk and Luhansk announce landslide victories in referendums on “self-rule\".",
+        "confidence": 1.0
+      },
+      {
+        "date": "May 25, 2014",
+        "date_sortable": "2014-05-25",
+        "precision": "exact",
+        "summary": "Petro Poroshenko was elected president of Ukraine on May 25, 2014.",
+        "content": "On May 25, 2014, Petro Poroshenko is elected president of Ukraine.",
+        "confidence": 1.0
+      },
+      {
+        "date": "June 14, 2014",
+        "date_sortable": "2014-06-14",
+        "precision": "exact",
+        "summary": "Pro-Russia separatists shot down a Ukrainian military plane on June 14, 2014, killing 49.",
+        "content": "On June 14, 2014, pro-Russia separatists shot down a military transport plane in eastern Ukraine, killing all 49 Ukrainian service personnel on board.",
+        "confidence": 1.0
+      },
+      {
+        "date": "July 05, 2014",
+        "date_sortable": "2014-07-05",
+        "precision": "exact",
+        "summary": "Ukrainian forces retook Sloviansk on July 5, 2014, causing pro-Russian forces to retreat.",
+        "content": "On July 5, 2014, Ukrainian forces retook Sloviansk, and pro-Russian forces retreated to Donetsk city.",
+        "confidence": 1.0
+      },
+      {
+        "date": "July 17, 2014",
+        "date_sortable": "2014-07-17",
+        "precision": "exact",
+        "summary": "Malaysia Airlines Flight 17 was shot down over eastern Ukraine on July 17, 2014, killing 298.",
+        "content": "On July 17, 2014, Russian-controlled forces shot down Malaysia Airlines Flight 17 over eastern Ukraine, killing all 298 civilians on board.",
+        "confidence": 1.0
+      },
+      {
+        "date": "September 05, 2014",
+        "date_sortable": "2014-09-05",
+        "precision": "exact",
+        "summary": "The first Minsk Agreement was signed on September 5, 2014, but the ceasefire quickly failed.",
+        "content": "On September 5, 2014, the first Minsk Agreement was signed in Minsk to end fighting, but the ceasefire collapsed within days.",
+        "confidence": 1.0
+      },
+      {
+        "date": "October 31, 2014",
+        "date_sortable": "2014-10-31",
+        "precision": "exact",
+        "summary": "Russia agreed to resume gas supplies to Ukraine on October 31, 2014, in a deal brokered by the EU.",
+        "content": "On October 31, 2014, Russia agreed to resume gas supplies to Ukraine over the winter in a deal brokered by the EU.",
+        "confidence": 1.0
+      },
+      {
+        "date": "November 02, 2014",
+        "date_sortable": "2014-11-02",
+        "precision": "exact",
+        "summary": "Pro-Russia separatists held elections in Donetsk and Luhansk on November 2, 2014.",
+        "content": "On November 2, 2014, pro-Russia separatists held elections in the self-proclaimed people's republics in the Donetsk and Luhansk regions.",
+        "confidence": 1.0
+      },
+      {
+        "date": "February 2015",
+        "date_sortable": "2015-02-01",
+        "precision": "month",
+        "summary": "The Minsk II agreement was signed in February 2015 but was never fully implemented.",
+        "content": "In February 2015, Russia and Ukraine signed the Minsk II agreement, but it was never fully implemented.",
+        "confidence": 1.0
+      },
+      {
+        "date": "February 2015",
+        "date_sortable": "2015-02-01",
+        "precision": "month",
+        "summary": "Ukrainian forces retreated from Debaltseve in February 2015.",
+        "content": "In February 2015, Ukrainian forces retreated from Debaltseve.",
+        "confidence": 1.0
+      },
+      {
+        "date": "November 25, 2018",
+        "date_sortable": "2018-11-25",
+        "precision": "exact",
+        "summary": "A naval incident in the Kerch Strait on November 25, 2018, resulted in the capture of 24 Ukrainian sailors.",
+        "content": "In November 25, 2018, a serious naval incident occurs in the Kerch Strait, leading to the capture of 24 Ukrainian sailors.",
+        "confidence": 1.0
+      },
+      {
+        "date": "February 24, 2022",
+        "date_sortable": "2022-02-24",
+        "precision": "exact",
+        "summary": "Russia launched a full-scale invasion of Ukraine on February 24, 2022.",
+        "content": "On February 24, 2022, Russia launched a full-scale invasion of Ukraine, targeting military assets and cities across the country.",
+        "confidence": 1.0
+      },
+      {
+        "date": "March 2022",
+        "date_sortable": "2022-03-01",
+        "precision": "month",
+        "summary": "Russian forces retreated from northern Ukraine in March 2022.",
+        "content": "In March 2022, Russian forces retreated from northern Ukraine.",
+        "confidence": 1.0
+      },
+      {
+        "date": "September 2022",
+        "date_sortable": "2022-09-01",
+        "precision": "month",
+        "summary": "Ukrainian forces launched the Kharkiv counteroffensive in September 2022.",
+        "content": "In September 2022, Ukrainian forces launched the Kharkiv counteroffensive and liberated most of the Kharkiv Oblast.",
+        "confidence": 1.0
+      },
+      {
+        "date": "November 2022",
+        "date_sortable": "2022-11-01",
+        "precision": "month",
+        "summary": "Ukrainian forces liberated Kherson in November 2022.",
+        "content": "In November 2022, Ukrainian forces liberated Kherson.",
+        "confidence": 1.0
+      },
+      {
+        "date": "2023",
+        "date_sortable": "2023-06-15",
+        "precision": "year",
+        "summary": "In 2023, Russia destroyed the Kakhovka HPP dam.",
+        "content": "In 2023, Russia blows up the Kakhovka HPP dam, causing a large-scale humanitarian and environmental disaster.",
+        "confidence": 1.0
+      },
+      {
+        "date": "August 2024",
+        "date_sortable": "2024-08-01",
+        "precision": "month",
+        "summary": "Ukraine launched the Kursk Offensive in early August 2024.",
+        "content": "In early August 2024, Ukraine launches the Kursk Offensive, a surprise incursion into Russia's Kursk Oblast.",
+        "confidence": 1.0
+      },
+      {
+        "date": "January 2025",
+        "date_sortable": "2025-01-01",
+        "precision": "month",
+        "summary": "Ukraine launched a second incursion into Kursk Oblast in January 2025.",
+        "content": "In January 2025, Ukraine launches a second incursion into Kursk Oblast, though progress remains limited.",
+        "confidence": 1.0
+      },
+      {
+        "date": "December 11, 2025",
+        "date_sortable": "2025-12-11",
+        "precision": "exact",
+        "summary": "Ukraine presented revised peace proposals on December 11, 2025.",
+        "content": "On December 11, 2025, Ukraine presents revised peace proposals as talks reach a \"critical moment\".",
+        "confidence": 1.0
+      }
+    ],
+    "perspectives": [
+      {
+        "type": "historical",
+        "analysis": "The provided timeline reveals a rapid escalation of tensions between Russia and Ukraine, beginning with Ukraine's pivot away from Russia and towards the EU in late 2013. The Euromaidan Revolution and the ousting of Yanukovych provided Russia with a pretext to intervene, citing the need to protect Russian-speaking populations and perceived threats to its security interests. The annexation of Crimea in March 2014 represents a significant violation of international law and a clear assertion of Russian power. The subsequent unrest in eastern Ukraine, fueled by pro-Russian separatists and supported by Russia, mirrors historical patterns of Russian influence in its near abroad. The events echo situations in Transnistria, Abkhazia, and South Ossetia, where Russia has supported separatist movements to maintain leverage and influence over neighboring states. The 'anti-terrorist operation' launched by Ukraine highlights the internal conflict and the government's struggle to maintain territorial integrity. The downing of the military transport plane marks a significant escalation in the conflict, indicating a higher level of involvement and casualties. This period represents a critical juncture in post-Soviet relations, demonstrating the fragility of the international order and the resurgence of geopolitical competition in the region.",
+        "insights": [
+          "The speed of the events in early 2014 suggests a pre-planned Russian strategy for intervention in Crimea.",
+          "The referendums held in Crimea and Donbas lack international legitimacy due to the presence of Russian forces and the lack of independent observation.",
+          "The conflict is not simply a civil war but a hybrid war, involving conventional military force, information warfare, and economic pressure.",
+          "The international community's response, while condemning Russia's actions, has been limited in its effectiveness, highlighting the challenges of deterring aggression by a major power."
+        ],
+        "recommendations": [
+          "Investigate the extent of Russian military and financial support for the separatist movements in eastern Ukraine.",
+          "Analyze the role of propaganda and disinformation in shaping public opinion both within Ukraine and internationally.",
+          "Examine the economic impact of the conflict on both Ukraine and Russia, including the effects of sanctions.",
+          "Research the experiences of civilians affected by the conflict, including internally displaced persons and those living in conflict zones.",
+          "Study the legal justifications (or lack thereof) used by Russia to legitimize its actions in Crimea and eastern Ukraine."
+        ],
+        "warnings": [
+          "The conflict has the potential to escalate further, potentially involving direct military confrontation between Russia and NATO.",
+          "The humanitarian crisis in eastern Ukraine could worsen, leading to further displacement and suffering.",
+          "The conflict could destabilize the wider region, potentially affecting neighboring countries such as Moldova and Belarus.",
+          "The rise of nationalism and extremism on both sides of the conflict could make a peaceful resolution more difficult.",
+          "The use of cyber warfare and disinformation could undermine democratic processes and institutions in Ukraine and elsewhere."
+        ]
+      }
+    ]
+  },
+  "metrics": {
+    "token_usage": {
+      "input_tokens": 4417,
+      "output_tokens": 12196,
+      "total_tokens": 16613
+    },
+    "total_cost_usd": 0.003990074999999999,
+    "execution_time_seconds": 91.030919
+  }
+}

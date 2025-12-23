@@ -1,0 +1,25 @@
+"""Research templates module."""
+
+from .base import BaseResearchTemplate
+from .investigative import InvestigativeTemplate
+
+# Template registry
+TEMPLATE_REGISTRY = {
+    "investigative": InvestigativeTemplate(),
+}
+
+
+def get_template(template_type: str) -> BaseResearchTemplate:
+    """Get a research template by type."""
+    template = TEMPLATE_REGISTRY.get(template_type)
+    if not template:
+        raise ValueError(f"Unknown template type: {template_type}")
+    return template
+
+
+__all__ = [
+    "BaseResearchTemplate",
+    "InvestigativeTemplate",
+    "TEMPLATE_REGISTRY",
+    "get_template",
+]

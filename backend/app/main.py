@@ -6,6 +6,7 @@ from contextlib import asynccontextmanager
 from app.config import get_settings
 from app.api.routes import health, documents, chat, agentic_chat
 from app.ocr import ocr_router
+from app.research.router import router as research_router
 
 
 @asynccontextmanager
@@ -72,3 +73,4 @@ app.include_router(documents.router, prefix="/api/documents", tags=["Documents"]
 app.include_router(chat.router, prefix="/api/chat", tags=["Document Map RAG"])
 app.include_router(agentic_chat.router, prefix="/api/agentic", tags=["Agentic SQL RAG"])
 app.include_router(ocr_router, prefix="/api", tags=["OCR Benchmark"])
+app.include_router(research_router, prefix="/api/research", tags=["Deep Research"])
