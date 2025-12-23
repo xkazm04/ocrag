@@ -14,14 +14,14 @@ class OCRSettings(BaseSettings):
     # Mistral API (for Mistral OCR)
     mistral_api_key: str = ""
 
-    # Model IDs
+    # Model IDs (OpenRouter format)
     gpt_model: str = "openai/gpt-5.2"
-    gemini_model: str = "google/gemini-3-flash"
-    qwen_model: str = "qwen/qwen-2-vl-72b-instruct"  # Using available model
+    gemini_model: str = "google/gemini-3-flash-preview"
+    qwen_model: str = "qwen/qwen-2.5-vl-7b-instruct:free"
     mistral_ocr_model: str = "mistral-ocr-latest"
 
     # Evaluation
-    eval_model: str = "openai/gpt-4o"
+    eval_model: str = "google/gemini-3-flash-preview"
     eval_temperature: float = 0.1
 
     # Processing
@@ -38,6 +38,7 @@ class OCRSettings(BaseSettings):
     traditional_ocr_enabled: bool = True
 
     class Config:
+        env_file = "../.env"
         env_prefix = ""
         extra = "ignore"
 

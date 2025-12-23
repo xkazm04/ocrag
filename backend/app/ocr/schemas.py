@@ -68,7 +68,7 @@ class OCRProcessResponse(BaseModel):
     document_id: str
     filename: str
     results: dict[str, OCRResult] = Field(default_factory=dict)
-    evaluation: Optional[dict[str, EvaluationResult]] = None
+    evaluation: Optional["ComparativeEvaluation"] = None
     total_time_ms: float = 0
 
 
@@ -86,3 +86,27 @@ class OCRInfoResponse(BaseModel):
     """Response with available OCR engines."""
     engines: list[EngineInfo]
     categories: list[str] = ["llm", "open_llm", "traditional"]
+
+
+class EngineScore(BaseModel):
+    """Score breakdown for a single engine."""
+    engine_id: str
+    engine_name: str
+    category: str
+    accuracy_score: float = 0  # Text accuracy percentage
+    completeness_score: float = 0  # How complete the extraction is
+    formatting_score: float = 0  # Structure/formatting preservation
+    overall_score: float = 0  # Weighted average
+    rank: int = 0
+    strengths: list[str] = Field(default_factory=list)
+    weaknesses: list[str] = Field(default_factory=list)
+
+
+class ComparativeEvaluation(BaseModel):
+    """Comparative evaluation of all OCR results."""
+    engines: list[EngineScore] = Field(default_factory=list)
+    best_overall: Optional[str] = None
+    best_accuracy: Optional[str] = None
+    best_formatting: Optional[str] = None
+    summary: str = ""
+    methodology: str = ""

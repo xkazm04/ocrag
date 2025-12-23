@@ -65,20 +65,36 @@ class EasyOCRService(BaseOCRService):
 
     async def _run_ocr(self, image: bytes, languages: list[str] = None) -> str:
         """Run EasyOCR on image."""
-        import io
         import numpy as np
-        from PIL import Image
+        import sys
+        import io
 
-        img = Image.open(io.BytesIO(image))
-        img_array = np.array(img)
+        # Suppress EasyOCR progress output on Windows to avoid encoding issues
+        old_stdout = sys.stdout
+        old_stderr = sys.stderr
+        sys.stdout = io.StringIO()
+        sys.stderr = io.StringIO()
 
-        reader = self._get_reader(languages)
-        results = reader.readtext(img_array)
+        try:
+            # Convert bytes to PIL images (handles PDFs)
+            images = self.bytes_to_pil_images(image)
+            reader = self._get_reader(languages)
 
-        # Extract text preserving order
-        lines = []
-        for detection in results:
-            text = detection[1]
-            lines.append(text)
+            all_lines = []
+            for img in images:
+                # Convert to RGB if necessary
+                if img.mode != 'RGB':
+                    img = img.convert('RGB')
+                img_array = np.array(img)
 
-        return "\n".join(lines)
+                results = reader.readtext(img_array)
+
+                # Extract text preserving order
+                for detection in results:
+                    text = detection[1]
+                    all_lines.append(text)
+
+            return "\n".join(all_lines)
+        finally:
+            sys.stdout = old_stdout
+            sys.stderr = old_stderr

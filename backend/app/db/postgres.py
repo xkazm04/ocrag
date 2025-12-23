@@ -21,6 +21,9 @@ async def init_db():
 
     settings = get_settings()
 
+    if not settings.postgres_url:
+        raise RuntimeError("POSTGRES_URL not configured")
+
     engine = create_async_engine(
         settings.postgres_url,
         echo=settings.environment == "development",

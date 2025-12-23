@@ -17,7 +17,11 @@
       "Bash(powershell:*)",
       "Bash(dir:*)",
       "WebFetch(domain:reflex.dev)",
-      "Bash(reflex run)"
+      "Bash(reflex run)",
+      "Bash(docker --version:*)",
+      "WebFetch(domain:openrouter.ai)",
+      "Bash(backend.venvScriptspython.exe test_traditional_ocr.py)",
+      "Bash(backend/.venv/Scripts/python.exe:*)"
     ]
   }
 }

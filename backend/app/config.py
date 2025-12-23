@@ -7,11 +7,11 @@ class Settings(BaseSettings):
     """Application settings loaded from environment variables."""
 
     # API Keys
-    gemini_api_key: str
+    gemini_api_key: str = ""
 
-    # Database
-    postgres_url: str
-    weaviate_url: str = "http://weaviate:8080"
+    # Database (optional - can run without DBs for OCR benchmark)
+    postgres_url: str | None = None
+    weaviate_url: str | None = "http://localhost:8080"
 
     # Document processing
     small_doc_threshold_tokens: int = 50000  # ~35-40 pages
@@ -29,7 +29,8 @@ class Settings(BaseSettings):
     environment: str = "development"
 
     class Config:
-        env_file = ".env"
+        env_file = "../.env"
+        extra = "ignore"
 
 
 @lru_cache()

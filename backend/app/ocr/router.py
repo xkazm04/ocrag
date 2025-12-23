@@ -7,11 +7,12 @@ from fastapi import APIRouter, UploadFile, File, HTTPException, Query
 
 from app.ocr.schemas import (
     OCREngine, OCRProcessResponse, OCRResult,
-    OCRInfoResponse, EngineInfo, OCRCategory, EvaluationResult
+    OCRInfoResponse, EngineInfo, OCRCategory, EvaluationResult,
+    ComparativeEvaluation
 )
 from app.ocr.services import (
     OpenRouterOCR, MistralOCR, QwenOCR,
-    PaddleOCR, EasyOCRService, SuryaOCR, OCREvaluator
+    PaddleOCR, EasyOCRService, SuryaOCR, OCREvaluator, ComparativeEvaluator
 )
 
 router = APIRouter(prefix="/ocr", tags=["OCR Benchmark"])
@@ -29,9 +30,9 @@ SERVICES = {
 
 ENGINE_INFO = {
     "gpt": ("GPT-5.2", OCRCategory.LLM, "Best for complex documents", "$5-10"),
-    "gemini": ("Gemini 3 Flash", OCRCategory.LLM, "Fast and accurate", "$1-2"),
+    "gemini": ("Gemini 3 Flash", OCRCategory.LLM, "Fast and accurate", "$0.15"),
     "mistral": ("Mistral OCR", OCRCategory.LLM, "Dedicated OCR model", "$1-2"),
-    "qwen": ("Qwen2 VL 72B", OCRCategory.OPEN_LLM, "Strong multilingual", "$0.50"),
+    "qwen": ("Qwen2 VL 72B", OCRCategory.OPEN_LLM, "Strong multilingual", "$0.40"),
     "paddle": ("PaddleOCR", OCRCategory.TRADITIONAL, "Asian language support", "Free"),
     "easy": ("EasyOCR", OCRCategory.TRADITIONAL, "Easy multilingual", "Free"),
     "surya": ("Surya OCR", OCRCategory.TRADITIONAL, "90+ languages", "Free"),
@@ -139,26 +140,64 @@ async def process_single_engine(
     return await service.process(image_bytes, file.filename, lang_list)
 
 
-async def _process_with_engine(service, image: bytes, filename: str, langs: list):
-    """Process image with a single engine."""
-    return await service.process(image, filename, langs)
+from pydantic import BaseModel
+
+
+class EvaluationRequest(BaseModel):
+    """Request for comparative evaluation."""
+    results: dict[str, dict]  # engine_id -> {text, success, category, ...}
+    language: str = "en"
+
+
+@router.post("/evaluate", response_model=ComparativeEvaluation)
+async def evaluate_results(request: EvaluationRequest):
+    """Run comparative evaluation on OCR results."""
+    evaluator = ComparativeEvaluator()
+    if not evaluator.is_available():
+        raise HTTPException(503, "Evaluation service not available (OpenRouter API key required)")
+
+    # Convert dict results to OCRResult objects
+    ocr_results = {}
+    for engine_id, data in request.results.items():
+        if data.get("success") and data.get("text"):
+            ocr_results[engine_id] = OCRResult(
+                engine=engine_id,
+                category=OCRCategory(data.get("category", "traditional")),
+                text=data.get("text", ""),
+                success=data.get("success", False),
+                processing_time_ms=data.get("processing_time_ms", 0)
+            )
+
+    if not ocr_results:
+        raise HTTPException(400, "No successful OCR results to evaluate")
+
+    return await evaluator.evaluate(ocr_results, request.language)
+
+
+async def _process_with_engine(service, image: bytes, filename: str, langs: list, timeout: float = 120.0):
+    """Process image with a single engine with timeout."""
+    try:
+        result = await asyncio.wait_for(
+            service.process(image, filename, langs),
+            timeout=timeout
+        )
+        return result
+    except asyncio.TimeoutError:
+        return OCRResult(
+            engine=service.engine_id,
+            category=service.category,
+            success=False,
+            error=f"Timeout after {timeout}s"
+        )
 
 
 async def _evaluate_results(
     results: dict[str, OCRResult],
     language: str
-) -> dict[str, EvaluationResult]:
-    """Evaluate all successful OCR results."""
-    evaluator = OCREvaluator()
+) -> ComparativeEvaluation:
+    """Comparative evaluation of all successful OCR results."""
+    evaluator = ComparativeEvaluator()
     if not evaluator.is_available():
         return None
 
-    evaluation = {}
-    for engine_id, result in results.items():
-        if result.success and result.text:
-            eval_result = await evaluator.evaluate(
-                result.text, engine_id, language
-            )
-            evaluation[engine_id] = eval_result
-
-    return evaluation
+    return await evaluator.evaluate(results, language)

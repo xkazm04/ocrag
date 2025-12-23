@@ -31,9 +31,8 @@ class PaddleOCR(BaseOCRService):
         """Lazy load PaddleOCR engine."""
         if self._engine is None and PADDLE_AVAILABLE:
             self._engine = PaddleOCREngine(
-                use_angle_cls=True,
-                lang=self.lang,
-                show_log=False
+                use_textline_orientation=True,
+                lang=self.lang
             )
         return self._engine
 
@@ -68,22 +67,29 @@ class PaddleOCR(BaseOCRService):
 
     async def _run_ocr(self, image: bytes) -> str:
         """Run PaddleOCR on image."""
-        import io
         import numpy as np
-        from PIL import Image
 
-        img = Image.open(io.BytesIO(image))
-        img_array = np.array(img)
-
+        # Convert bytes to PIL images (handles PDFs)
+        images = self.bytes_to_pil_images(image)
         engine = self._get_engine()
-        result = engine.ocr(img_array, cls=True)
 
-        # Extract text from results
-        lines = []
-        if result and result[0]:
-            for line in result[0]:
-                if line and len(line) > 1:
-                    text = line[1][0] if isinstance(line[1], tuple) else line[1]
-                    lines.append(text)
+        all_lines = []
+        for img in images:
+            # Convert to RGB if necessary
+            if img.mode != 'RGB':
+                img = img.convert('RGB')
+            img_array = np.array(img)
 
-        return "\n".join(lines)
+            # Use predict() method (new PaddleOCR v3+ API)
+            result = engine.predict(img_array)
+
+            # New API returns OCRResult objects with rec_texts attribute
+            if result and len(result) > 0:
+                ocr_result = result[0]
+                if hasattr(ocr_result, 'get') and 'rec_texts' in ocr_result:
+                    texts = ocr_result['rec_texts']
+                    all_lines.extend(texts)
+                elif hasattr(ocr_result, 'rec_texts'):
+                    all_lines.extend(ocr_result.rec_texts)
+
+        return "\n".join(all_lines)

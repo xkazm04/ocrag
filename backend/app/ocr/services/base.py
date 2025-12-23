@@ -2,7 +2,7 @@
 import base64
 import time
 from abc import ABC, abstractmethod
-from typing import Optional
+from typing import Optional, List
 from PIL import Image
 import io
 
@@ -87,6 +87,40 @@ class BaseOCRService(ABC):
             img.save(buffer, format="PNG")
             return buffer.getvalue()
         return image_bytes
+
+    @staticmethod
+    def bytes_to_pil_images(file_bytes: bytes) -> List[Image.Image]:
+        """Convert file bytes to PIL Image(s). Handles both images and PDFs."""
+        mime_type = BaseOCRService.get_image_mime_type(file_bytes)
+
+        if mime_type == "application/pdf":
+            # Convert PDF to images using PyMuPDF
+            try:
+                import fitz  # PyMuPDF
+                images = []
+                pdf = fitz.open(stream=file_bytes, filetype="pdf")
+                for page_num in range(len(pdf)):
+                    page = pdf[page_num]
+                    # Render at 2x for better OCR quality
+                    mat = fitz.Matrix(2.0, 2.0)
+                    pix = page.get_pixmap(matrix=mat)
+                    img_bytes = pix.tobytes("png")
+                    img = Image.open(io.BytesIO(img_bytes))
+                    images.append(img)
+                pdf.close()
+                return images
+            except ImportError:
+                raise RuntimeError("PyMuPDF (fitz) required for PDF processing")
+        else:
+            # Regular image
+            img = Image.open(io.BytesIO(file_bytes))
+            return [img]
+
+    @staticmethod
+    def bytes_to_single_image(file_bytes: bytes) -> Image.Image:
+        """Convert file bytes to a single PIL Image. For PDFs, returns first page."""
+        images = BaseOCRService.bytes_to_pil_images(file_bytes)
+        return images[0] if images else None
 
 
 class TimedExecution:

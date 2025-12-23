@@ -13,6 +13,9 @@ async def init_weaviate():
 
     settings = get_settings()
 
+    if not settings.weaviate_url:
+        raise RuntimeError("WEAVIATE_URL not configured")
+
     # Parse host from URL
     weaviate_host = settings.weaviate_url.replace("http://", "").replace("https://", "")
     if ":" in weaviate_host:

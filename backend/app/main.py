@@ -18,8 +18,24 @@ async def lifespan(app: FastAPI):
     from app.db.postgres import init_db
     from app.db.weaviate import init_weaviate
 
-    await init_db()
-    await init_weaviate()
+    # Initialize databases if configured (optional)
+    if settings.postgres_url:
+        try:
+            await init_db()
+            print("[OK] PostgreSQL connected")
+        except Exception as e:
+            print(f"[WARN] PostgreSQL unavailable: {e}")
+    else:
+        print("[WARN] PostgreSQL not configured (POSTGRES_URL not set)")
+
+    if settings.weaviate_url:
+        try:
+            await init_weaviate()
+            print("[OK] Weaviate connected")
+        except Exception as e:
+            print(f"[WARN] Weaviate unavailable: {e}")
+    else:
+        print("[WARN] Weaviate not configured")
 
     yield
 

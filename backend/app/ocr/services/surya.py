@@ -3,11 +3,10 @@ from app.ocr.services.base import BaseOCRService, TimedExecution
 from app.ocr.schemas import OCRResult, OCRCategory
 from app.ocr.config import get_ocr_settings
 
-# Optional import - may not be installed
+# Optional import - may not be installed (API changed in v0.17+)
 try:
-    from surya.ocr import run_ocr
-    from surya.model.detection.model import load_model as load_det_model
-    from surya.model.recognition.model import load_model as load_rec_model
+    from surya.recognition import RecognitionPredictor, FoundationPredictor
+    from surya.detection import DetectionPredictor
     SURYA_AVAILABLE = True
 except ImportError:
     SURYA_AVAILABLE = False
@@ -23,19 +22,21 @@ class SuryaOCR(BaseOCRService):
     def __init__(self):
         settings = get_ocr_settings()
         self.langs = settings.surya_langs.split(",")
-        self._det_model = None
-        self._rec_model = None
+        self._det_predictor = None
+        self._rec_predictor = None
+        self._foundation_predictor = None
 
     def is_available(self) -> bool:
         """Check if Surya OCR is installed."""
         return SURYA_AVAILABLE
 
     def _load_models(self):
-        """Lazy load Surya models."""
-        if self._det_model is None and SURYA_AVAILABLE:
-            self._det_model = load_det_model()
-            self._rec_model = load_rec_model()
-        return self._det_model, self._rec_model
+        """Lazy load Surya predictors."""
+        if self._det_predictor is None and SURYA_AVAILABLE:
+            self._det_predictor = DetectionPredictor()
+            self._foundation_predictor = FoundationPredictor()
+            self._rec_predictor = RecognitionPredictor(self._foundation_predictor)
+        return self._det_predictor, self._rec_predictor
 
     async def process(
         self,
@@ -68,24 +69,23 @@ class SuryaOCR(BaseOCRService):
 
     async def _run_ocr(self, image: bytes, languages: list[str] = None) -> str:
         """Run Surya OCR on image."""
-        import io
-        from PIL import Image
+        # Convert bytes to PIL images (handles PDFs)
+        images = self.bytes_to_pil_images(image)
+        det_predictor, rec_predictor = self._load_models()
 
-        img = Image.open(io.BytesIO(image))
-        det_model, rec_model = self._load_models()
-        langs = languages or self.langs
+        all_lines = []
+        for img in images:
+            # Convert to RGB if necessary
+            if img.mode != 'RGB':
+                img = img.convert('RGB')
 
-        results = run_ocr(
-            [img],
-            [langs],
-            det_model,
-            rec_model
-        )
+            # New API: pass det_predictor as keyword arg (not the detection results)
+            # task_names are now task types, not language codes
+            rec_results = rec_predictor([img], det_predictor=det_predictor)
 
-        # Extract text from results
-        lines = []
-        if results and results[0]:
-            for text_line in results[0].text_lines:
-                lines.append(text_line.text)
+            # Extract text from results
+            if rec_results and rec_results[0]:
+                for text_line in rec_results[0].text_lines:
+                    all_lines.append(text_line.text)
 
-        return "\n".join(lines)
+        return "\n".join(all_lines)
