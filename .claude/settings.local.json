@@ -13,7 +13,11 @@
       "WebSearch",
       "Bash(file:*)",
       "WebFetch(domain:platform.openai.com)",
-      "Bash(dir /s /b \"C:\\\\Users\\\\kazda\\\\kiro\\\\knowledge-base-indexer\")"
+      "Bash(dir /s /b \"C:\\\\Users\\\\kazda\\\\kiro\\\\knowledge-base-indexer\")",
+      "Bash(powershell:*)",
+      "Bash(dir:*)",
+      "WebFetch(domain:reflex.dev)",
+      "Bash(reflex run)"
     ]
   }
 }

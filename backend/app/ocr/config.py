@@ -15,8 +15,8 @@ class OCRSettings(BaseSettings):
     mistral_api_key: str = ""
 
     # Model IDs
-    gpt_model: str = "openai/gpt-4o"  # Using available model
-    gemini_model: str = "google/gemini-2.0-flash-001"  # Using available model
+    gpt_model: str = "openai/gpt-5.2"
+    gemini_model: str = "google/gemini-3-flash"
     qwen_model: str = "qwen/qwen-2-vl-72b-instruct"  # Using available model
     mistral_ocr_model: str = "mistral-ocr-latest"
 

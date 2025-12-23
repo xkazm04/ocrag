@@ -166,54 +166,71 @@ with col_results:
     if not results:
         st.info("Upload a document and click Process to see results")
     else:
-        # Group by category
-        categories = {"llm": [], "open_llm": [], "traditional": []}
-        for eid, res in results.items():
-            cat = res.get("category", "traditional")
-            categories[cat].append((eid, res))
+        # Create one tab per technique
+        engine_names = {
+            "gpt": "GPT-5.2",
+            "gemini": "Gemini 3 Flash",
+            "mistral": "Mistral OCR",
+            "qwen": "Qwen2 VL",
+            "paddle": "PaddleOCR",
+            "easy": "EasyOCR",
+            "surya": "Surya OCR"
+        }
 
-        # Tabs
-        tab_llm, tab_open, tab_trad = st.tabs([
-            f"🤖 LLM ({len(categories['llm'])})",
-            f"🔓 Open ({len(categories['open_llm'])})",
-            f"📝 Traditional ({len(categories['traditional'])})"
-        ])
+        # Get ordered list of engines that have results
+        engine_order = ["gpt", "gemini", "mistral", "qwen", "paddle", "easy", "surya"]
+        available_engines = [e for e in engine_order if e in results]
 
-        def render_results(items):
-            if not items:
-                st.markdown("*No results*")
-                return
-            for eid, res in items:
-                success = res.get("success", False)
-                time_ms = res.get("processing_time_ms", 0)
-                cost = res.get("cost_usd")
+        if available_engines:
+            # Create tabs for each technique
+            tab_labels = [engine_names.get(e, e.upper()) for e in available_engines]
+            tabs = st.tabs(tab_labels)
 
-                stats = f"⏱️ {time_ms:.0f}ms"
-                if cost:
-                    stats += f" | 💰 ${cost:.4f}"
+            for i, engine_id in enumerate(available_engines):
+                with tabs[i]:
+                    res = results[engine_id]
+                    success = res.get("success", False)
+                    time_ms = res.get("processing_time_ms", 0)
+                    cost = res.get("cost_usd")
+                    category = res.get("category", "traditional")
 
-                score_html = ""
-                if evaluation and eid in evaluation:
-                    score = evaluation[eid].get("composite_score", 0)
-                    cls = "score-high" if score >= 80 else "score-medium" if score >= 60 else "score-low"
-                    score_html = f"<span class='score-badge {cls}'>{score}/100</span>"
+                    # Category badge
+                    cat_colors = {
+                        "llm": ("#3b82f6", "LLM"),
+                        "open_llm": ("#8b5cf6", "Open LLM"),
+                        "traditional": ("#10b981", "Traditional")
+                    }
+                    cat_color, cat_label = cat_colors.get(category, ("#6b7280", "Other"))
 
-                st.markdown(f"""
-                <div class="result-card">
-                    <b>{eid.upper()}</b> {score_html}<br>
-                    <small style="color:#94a3b8;">{stats}</small>
-                </div>
-                """, unsafe_allow_html=True)
+                    # Stats line
+                    stats_parts = [f"⏱️ {time_ms:.0f}ms"]
+                    if cost is not None:
+                        stats_parts.append(f"💰 ${cost:.4f}")
 
-                if success and res.get("text"):
-                    with st.expander("View text"):
-                        st.text_area("", res["text"], height=150, key=f"txt_{eid}", label_visibility="collapsed")
-                elif not success:
-                    st.error(res.get("error", "Failed"))
+                    # Score if available
+                    score_html = ""
+                    if evaluation and engine_id in evaluation:
+                        score = evaluation[engine_id].get("composite_score", 0)
+                        cls = "score-high" if score >= 80 else "score-medium" if score >= 60 else "score-low"
+                        score_html = f"<span class='score-badge {cls}'>{score}/100</span>"
 
-        with tab_llm:
-            render_results(categories["llm"])
-        with tab_open:
-            render_results(categories["open_llm"])
-        with tab_trad:
-            render_results(categories["traditional"])
+                    st.markdown(f"""
+                    <div class="result-card">
+                        <span style="background:{cat_color};color:white;padding:2px 8px;border-radius:4px;font-size:0.7rem;">{cat_label}</span>
+                        {score_html}
+                        <br><small style="color:#94a3b8;">{' | '.join(stats_parts)}</small>
+                    </div>
+                    """, unsafe_allow_html=True)
+
+                    if success and res.get("text"):
+                        st.text_area(
+                            "Extracted Text",
+                            res["text"],
+                            height=400,
+                            key=f"txt_{engine_id}",
+                            label_visibility="collapsed"
+                        )
+                    elif not success:
+                        st.error(res.get("error", "Processing failed"))
+        else:
+            st.warning("No results available")

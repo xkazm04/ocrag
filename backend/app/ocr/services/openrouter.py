@@ -29,11 +29,11 @@ class OpenRouterOCR(BaseOCRService):
 
         if model_type == "gpt":
             self.engine_id = "gpt"
-            self.engine_name = "GPT-4o"
+            self.engine_name = "GPT-5.2"
             self.model = settings.gpt_model
         else:
             self.engine_id = "gemini"
-            self.engine_name = "Gemini 2.0 Flash"
+            self.engine_name = "Gemini 3 Flash"
             self.model = settings.gemini_model
 
         self.api_key = settings.openrouter_api_key

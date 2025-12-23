@@ -28,8 +28,8 @@ SERVICES = {
 }
 
 ENGINE_INFO = {
-    "gpt": ("GPT-4o", OCRCategory.LLM, "Best for complex documents", "$5-10"),
-    "gemini": ("Gemini 2.0 Flash", OCRCategory.LLM, "Fast and accurate", "$1-2"),
+    "gpt": ("GPT-5.2", OCRCategory.LLM, "Best for complex documents", "$5-10"),
+    "gemini": ("Gemini 3 Flash", OCRCategory.LLM, "Fast and accurate", "$1-2"),
     "mistral": ("Mistral OCR", OCRCategory.LLM, "Dedicated OCR model", "$1-2"),
     "qwen": ("Qwen2 VL 72B", OCRCategory.OPEN_LLM, "Strong multilingual", "$0.50"),
     "paddle": ("PaddleOCR", OCRCategory.TRADITIONAL, "Asian language support", "Free"),
