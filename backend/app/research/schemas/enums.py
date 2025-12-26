@@ -15,10 +15,15 @@ class ResearchStatus(str, Enum):
 
 class TemplateType(str, Enum):
     """Available research templates."""
+    # Core templates
     INVESTIGATIVE = "investigative"
     MARKET = "market"
     HISTORICAL = "historical"
     DETECTIVE = "detective"
+    # Domain-specific templates
+    COMPETITIVE = "competitive"      # Competitive intelligence
+    FINANCIAL = "financial"          # Financial/stock analysis
+    LEGAL = "legal"                  # Legal/regulatory research
 
 
 class FindingType(str, Enum):
@@ -35,6 +40,7 @@ class FindingType(str, Enum):
 
 class SourceType(str, Enum):
     """Types of web sources."""
+    # General sources
     NEWS = "news"
     ACADEMIC = "academic"
     GOVERNMENT = "government"
@@ -43,10 +49,22 @@ class SourceType(str, Enum):
     SOCIAL = "social"
     WIKI = "wiki"
     UNKNOWN = "unknown"
+    # Financial sources
+    SEC_FILING = "sec_filing"
+    EARNINGS_REPORT = "earnings_report"
+    ANALYST_REPORT = "analyst_report"
+    FINANCIAL_NEWS = "financial_news"
+    PRESS_RELEASE = "press_release"
+    # Legal sources
+    COURT_RULING = "court_ruling"
+    STATUTE = "statute"
+    REGULATION = "regulation"
+    LEGAL_COMMENTARY = "legal_commentary"
 
 
 class PerspectiveType(str, Enum):
     """Expert perspective types."""
+    # Investigative perspectives
     HISTORICAL = "historical"
     POLITICAL = "political"
     ECONOMIC = "economic"
@@ -54,6 +72,21 @@ class PerspectiveType(str, Enum):
     MILITARY = "military"
     SOCIAL = "social"
     TECHNOLOGICAL = "technological"
+    # Competitive intelligence perspectives
+    MARKET_POSITION = "market_position"
+    COMPETITIVE_ADVANTAGE = "competitive_advantage"
+    SWOT = "swot"
+    PRICING_STRATEGY = "pricing_strategy"
+    # Financial analysis perspectives
+    VALUATION = "valuation"
+    RISK = "risk"
+    SENTIMENT = "sentiment"
+    FUNDAMENTAL = "fundamental"
+    # Legal research perspectives
+    COMPLIANCE = "compliance"
+    PRECEDENT = "precedent"
+    REGULATORY_RISK = "regulatory_risk"
+    JURISDICTION = "jurisdiction"
 
 
 class TemporalContext(str, Enum):
@@ -74,11 +107,25 @@ class TopicType(str, Enum):
 
 class EntityType(str, Enum):
     """Types of knowledge entities."""
+    # General entities
     PERSON = "person"
     ORGANIZATION = "organization"
     LOCATION = "location"
     PRODUCT = "product"
     CONCEPT = "concept"
+    # Competitive entities
+    COMPETITOR = "competitor"
+    MARKET_SEGMENT = "market_segment"
+    PRODUCT_LINE = "product_line"
+    # Financial entities
+    PUBLICLY_TRADED_COMPANY = "publicly_traded_company"
+    SECURITY = "security"
+    FUND = "fund"
+    # Legal entities
+    COURT = "court"
+    JUDGE = "judge"
+    LEGAL_CASE = "legal_case"
+    REGULATORY_BODY = "regulatory_body"
 
 
 class ClaimType(str, Enum):
@@ -88,10 +135,13 @@ class ClaimType(str, Enum):
     RELATIONSHIP = "relationship"
     PATTERN = "pattern"
     PREDICTION = "prediction"
+    FINANCIAL = "financial"  # Money transfers, payments, transactions
+    EVIDENCE = "evidence"    # Documentary evidence
 
 
 class RelationshipType(str, Enum):
     """Types of claim relationships."""
+    # General relationships
     CAUSES = "causes"
     SUPPORTS = "supports"
     CONTRADICTS = "contradicts"
@@ -103,6 +153,14 @@ class RelationshipType(str, Enum):
     DERIVED_FROM = "derived_from"
     CORROBORATES = "corroborates"
     REFUTES = "refutes"
+    # Competitive relationships
+    COMPETES_WITH = "competes_with"
+    PARTNERS_WITH = "partners_with"
+    # Legal relationships
+    OVERRULES = "overrules"
+    DISTINGUISHES = "distinguishes"
+    EXTENDS_PRECEDENT = "extends_precedent"
+    CITES = "cites"
 
 
 class VerificationStatus(str, Enum):

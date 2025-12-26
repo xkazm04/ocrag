@@ -1,0 +1,15 @@
+{
+  "transactions": [],
+  "total_count": 0,
+  "aggregations": {
+    "total_amount": 0,
+    "by_type": {},
+    "by_year": {}
+  },
+  "query_params": {
+    "workspace_id": "default",
+    "min_amount": null,
+    "max_amount": null,
+    "date_range": null
+  }
+}

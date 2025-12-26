@@ -29,12 +29,12 @@ class LLMResponse:
 class OpenRouterClient:
     """OpenRouter client for Gemini Flash."""
 
-    DEFAULT_MODEL = "google/gemini-2.0-flash-001"
+    DEFAULT_MODEL = "gemini-3-flash-preview"
     BASE_URL = "https://openrouter.ai/api/v1"
 
     # Cost per 1M tokens (approximate)
     COST_RATES = {
-        "google/gemini-2.0-flash-001": {"input": 0.1, "output": 0.4},
+        "gemini-3-flash-preview": {"input": 0.075, "output": 0.30},
         "google/gemini-2.5-flash-preview": {"input": 0.15, "output": 0.6},
     }
 

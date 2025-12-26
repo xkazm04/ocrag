@@ -1,0 +1,90 @@
+{
+  "entity": {
+    "id": "f9a5703f-3b0b-4568-98ab-c40ca8e82bec",
+    "name": "Jeffrey Epstein",
+    "type": "person",
+    "aliases": [],
+    "description": null
+  },
+  "connections": [],
+  "claims_count": 12,
+  "key_claims": [
+    {
+      "id": "348c45d0-0037-4a6f-96d9-6532d079c672",
+      "content": "Document HOUSE_OVERSIGHT_010477: The shocking true story of Jeffrey Epstein",
+      "type": "fact",
+      "confidence": 1,
+      "date": null
+    },
+    {
+      "id": "8f227ba4-ec18-4ac6-8149-c3abdf6701f6",
+      "content": "Jeffrey Epstein documented at New York City (1995)",
+      "type": "event",
+      "confidence": 0.837,
+      "date": null
+    },
+    {
+      "id": "c8658c59-89eb-48f3-b262-30be9bfba413",
+      "content": "Jeffrey Epstein documented at Little Saint James island (2015-01-01)",
+      "type": "event",
+      "confidence": 0.873,
+      "date": null
+    },
+    {
+      "id": "143dda15-f519-44b4-b1a6-d54f83d96b8c",
+      "content": "Epstein documented at New York City (2005-03-15)",
+      "type": "event",
+      "confidence": 0.873,
+      "date": null
+    },
+    {
+      "id": "2b3354c4-3a46-4c18-8ebd-469e3f9e74be",
+      "content": "Jeffrey Epstein documented at New York City (2005-03-15)",
+      "type": "event",
+      "confidence": 0.9,
+      "date": null
+    },
+    {
+      "id": "7abdbda1-6d3c-4b7b-bc79-eea278ef2d4f",
+      "content": "Jeffrey Epstein documented at Hotel QT, New York City (2005-05-01)",
+      "type": "event",
+      "confidence": 0.837,
+      "date": null
+    },
+    {
+      "id": "5f15b3e5-c6d3-41b1-ac98-be533309a38c",
+      "content": "Jeffrey Epstein documented at Hotel QT, New York City (2005-05)",
+      "type": "event",
+      "confidence": 0.864,
+      "date": null
+    },
+    {
+      "id": "ab14c914-094b-4800-97b6-fc7951c665d9",
+      "content": "Epstein documented at Little Saint James island (2015-01)",
+      "type": "event",
+      "confidence": 0.873,
+      "date": null
+    },
+    {
+      "id": "40b07ec4-fbe1-4b7f-94ca-d1a0d573404c",
+      "content": "Jeffrey Epstein documented at 358 El Brillo Way (1969)",
+      "type": "event",
+      "confidence": 0.864,
+      "date": null
+    },
+    {
+      "id": "81f693b5-456f-4432-ac23-5a8e1ebbe3c0",
+      "content": "Jeffrey Epstein documented at 358 El Brillo Way (1969)",
+      "type": "event",
+      "confidence": 0.864,
+      "date": null
+    }
+  ],
+  "roles_played": {
+    "subject": 12
+  },
+  "timeline_summary": {
+    "earliest_mention": null,
+    "latest_mention": null
+  }
+}

@@ -842,3 +842,9 @@ $$ LANGUAGE SQL STABLE;
 --         visibility = 'workspace'
 --         AND workspace_id = current_setting('app.workspace_id', true)
 --     );
+
+-- ============================================
+-- ADDITIONAL TABLES
+-- See migration files for:
+-- - 004_add_profile_research.sql: entity_research_pairs, entity_profile_research
+-- ============================================

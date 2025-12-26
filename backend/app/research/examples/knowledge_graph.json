@@ -1,0 +1,565 @@
+{
+  "graph": {
+    "nodes": [
+      {
+        "id": "64d5f279-8a80-4dc6-ad46-30899381eb0d",
+        "label": "Corbis",
+        "type": "organization",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "193f4769-6fe4-4912-bad1-76edc2c6d5fb",
+        "label": "Larry Visoski",
+        "type": "person",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "0f49fde4-5ce4-419c-9198-eb7cb2690453",
+        "label": "Fort Lauderdale",
+        "type": "location",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "b13ffc81-1016-479f-ad93-342c28f697e8",
+        "label": "Prince Andrew",
+        "type": "person",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "39826be2-0010-4a43-94f0-9a6254dffba0",
+        "label": "Radar magazine",
+        "type": "organization",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "3f706d55-fc66-40e9-a450-8e235ea61fb5",
+        "label": "News of the World",
+        "type": "organization",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "f308dca3-4097-4a0e-b88e-f3c8720d7866",
+        "label": "Michael Reiter",
+        "type": "person",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "6b656648-6c00-4f43-b6fd-7804f5d65396",
+        "label": "David Levy",
+        "type": "person",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "b54fb823-af15-4705-9c4e-304f1070c966",
+        "label": "Splash News",
+        "type": "organization",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "d0d13646-db8a-4f6c-961e-f13d2126d0f4",
+        "label": "US District Southern Court of Florida",
+        "type": "organization",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "312e0f76-97a0-4984-ab4c-3c0a7093b684",
+        "label": "New York City",
+        "type": "location",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "50c331e2-3b97-456f-ab60-3dd7d7a8b602",
+        "label": "Chris Bott",
+        "type": "person",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "1a61c267-6ede-4e79-ac6a-cd180d0eac36",
+        "label": "London",
+        "type": "location",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "da57fbf6-a908-4c2a-a292-07d3f8daa7c1",
+        "label": "Cipriani",
+        "type": "organization",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "41271cd0-c29f-4618-b4c5-923ed60c4935",
+        "label": "Plaza Hotel",
+        "type": "location",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "ac7d02f3-a885-4be5-8a6d-12e7f93398c7",
+        "label": "Sarah Kellen",
+        "type": "person",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "0690a50e-7244-45cd-88ac-ef95b815765d",
+        "label": "PLO",
+        "type": "organization",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "23c02556-99ad-451a-87fc-9dc5a9af19ad",
+        "label": "Wall Street Rising",
+        "type": "organization",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "0cc0e1f6-414f-40ff-bc84-7d92572f3685",
+        "label": "Mr. Gerry",
+        "type": "person",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "ab93f96f-70b6-45bf-bcc6-63987d64b79e",
+        "label": "Teterboro Airport",
+        "type": "location",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "cd74511d-7d0a-4058-8852-eb1ac5d880d5",
+        "label": "Brian Vickers",
+        "type": "person",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "4a169e09-043a-4d95-a9cb-02afe768227e",
+        "label": "2270 E. Ibis Isle Road",
+        "type": "location",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "f2a67b29-ad02-4c80-8298-ceed539a9c8e",
+        "label": "Jeff Moreland",
+        "type": "person",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "af1b98d6-963f-43f4-aac8-756c736efdf6",
+        "label": "Charlie Crist",
+        "type": "person",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "54a93993-41e1-4851-8416-7c1f207cd668",
+        "label": "358 El Brillo Way",
+        "type": "location",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "f278f3a4-b957-42e4-988c-b6a7f7819846",
+        "label": "Mar-a-Lago",
+        "type": "location",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "7f47f5f9-6936-48d1-963c-8e2c7be25301",
+        "label": "Trump Model",
+        "type": "organization",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "f72b5b1e-e7e5-4e6e-b5c5-ad4fbaa9350b",
+        "label": "None explicitly mentioned",
+        "type": "person",
+        "size": 10,
+        "metadata": {
+          "description": "N/A",
+          "aliases": []
+        }
+      },
+      {
+        "id": "7b4acb3c-a308-4823-ab55-4871a42310e9",
+        "label": "673 Fairgrounds Road, West Palm Beach, Florida",
+        "type": "location",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "e540072b-bee0-42dd-bc9b-9c3c464ffca6",
+        "label": "Leslie Wexner",
+        "type": "person",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "669a4d88-b2a9-4647-a534-382f319499a6",
+        "label": "YIVO Institute",
+        "type": "organization",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "d53dade2-bfa9-46f5-8bdb-fe8d425b695e",
+        "label": "Jerusalem",
+        "type": "location",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "f0c26369-ed10-4fcf-a0e4-4534ebf65f40",
+        "label": "Caliroh W",
+        "type": "person",
+        "size": 10,
+        "metadata": {
+          "description": "Visitor",
+          "aliases": []
+        }
+      },
+      {
+        "id": "1189cd69-1efc-4f07-a55b-8786f98b7c52",
+        "label": "Davidoff Studios",
+        "type": "organization",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "1d20a27c-3fd0-438a-b62a-0b783ed1751b",
+        "label": "Little Saint James island",
+        "type": "location",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "94858413-856e-4d41-aab8-fd812471e06c",
+        "label": "Churchill Downs",
+        "type": "location",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "9b71315f-5a0b-411f-bfa2-a91e22fa6b8e",
+        "label": "Assad",
+        "type": "person",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "dbab680d-1269-4a6b-8850-576015bc8c2a",
+        "label": "U.S. Virgin Islands",
+        "type": "location",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "98e0459e-c6d2-4556-a72e-1e4012096ba1",
+        "label": "Palm Beach Police Foundation",
+        "type": "organization",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "86908f29-a483-42e8-a9aa-9491604c0212",
+        "label": "Victoria's Secret",
+        "type": "organization",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "472cf9bf-4149-440a-a8a2-5863138bae60",
+        "label": "Virginia Roberts",
+        "type": "person",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "ae858c5b-ecc2-49cd-a930-82240a57a33b",
+        "label": "James Patterson",
+        "type": "person",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "e678d8ba-493e-478a-a140-d62190802ff1",
+        "label": "Louisville",
+        "type": "location",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "c9f7534e-db4e-48a5-bbc3-50548c03e7fb",
+        "label": "Kentucky Derby",
+        "type": "organization",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "7052d46c-23da-49e7-b1e7-17a9a8e39fe9",
+        "label": "Vegas",
+        "type": "location",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "8eb69b25-442f-4529-9d1f-bfd0124a027d",
+        "label": "Lynn Goldsmith",
+        "type": "person",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "4a51d580-e88f-4702-80ca-d18f8b0934ba",
+        "label": "AP Images",
+        "type": "organization",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "40ac61ca-9888-478a-b4c2-59f9dfedd2a6",
+        "label": "Venice",
+        "type": "location",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      },
+      {
+        "id": "fde4e5ea-6c4d-4b23-ad08-4da838a5b870",
+        "label": "Savell Clifford",
+        "type": "person",
+        "size": 10,
+        "metadata": {
+          "description": "Inmate or handler",
+          "aliases": []
+        }
+      },
+      {
+        "id": "b80ea505-cbd9-4a10-b763-bda39bbbcfe6",
+        "label": "Begin",
+        "type": "person",
+        "size": 10,
+        "metadata": {
+          "description": null,
+          "aliases": []
+        }
+      }
+    ],
+    "edges": [
+      {
+        "source": "45462f64-6675-4dde-a286-6d3c7afc7a86",
+        "target": "45462f64-6675-4dde-a286-6d3c7afc7a86",
+        "label": "related_to",
+        "weight": 0.5,
+        "type": "related_to"
+      },
+      {
+        "source": "4400ab38-cbcb-456b-96dd-ebb4a60322de",
+        "target": "4400ab38-cbcb-456b-96dd-ebb4a60322de",
+        "label": "related_to",
+        "weight": 0.5,
+        "type": "related_to"
+      },
+      {
+        "source": "aa5a9a92-c5b9-46cc-bdb0-c005ab9dec0b",
+        "target": "aa5a9a92-c5b9-46cc-bdb0-c005ab9dec0b",
+        "label": "related_to",
+        "weight": 0.5,
+        "type": "related_to"
+      },
+      {
+        "source": "5624f32d-8023-4c51-bfc4-aa92f5bc6124",
+        "target": "5624f32d-8023-4c51-bfc4-aa92f5bc6124",
+        "label": "related_to",
+        "weight": 0.5,
+        "type": "related_to"
+      },
+      {
+        "source": "680678b0-c0e3-4b31-a8f0-ab76c7ad7a44",
+        "target": "680678b0-c0e3-4b31-a8f0-ab76c7ad7a44",
+        "label": "related_to",
+        "weight": 0.5,
+        "type": "related_to"
+      },
+      {
+        "source": "8074a794-5da4-4e79-ac8e-8bac35b854c6",
+        "target": "8074a794-5da4-4e79-ac8e-8bac35b854c6",
+        "label": "related_to",
+        "weight": 0.5,
+        "type": "related_to"
+      },
+      {
+        "source": "64b561cd-58ac-473d-9b29-3add57e20851",
+        "target": "64b561cd-58ac-473d-9b29-3add57e20851",
+        "label": "related_to",
+        "weight": 0.5,
+        "type": "related_to"
+      }
+    ]
+  },
+  "stats": {
+    "total_nodes": 50,
+    "total_edges": 7,
+    "organization": 15,
+    "person": 19,
+    "location": 16
+  },
+  "clusters": []
+}

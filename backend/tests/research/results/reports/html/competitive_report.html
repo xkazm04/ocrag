@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Code Assistant Market Analysis</title>
+  <style>
+/* === DESIGN SYSTEM === */
+/* A curated set of reusable CSS patterns for professional reports */
+
+:root {
+  /* Theme Colors - Will be overridden per template */
+  --ds-primary: #1a365d;
+  --ds-accent: #3182ce;
+  --ds-success: #38a169;
+  --ds-warning: #d69e2e;
+  --ds-danger: #e53e3e;
+  --ds-bg: #ffffff;
+  --ds-bg-subtle: #f7fafc;
+  --ds-bg-card: #ffffff;
+  --ds-border: #e2e8f0;
+  --ds-text: #2d3748;
+  --ds-text-muted: #718096;
+  --ds-radius: 8px;
+  --ds-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+  --ds-shadow-lg: 0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: var(--ds-text);
+  background: var(--ds-bg);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* === TYPOGRAPHY === */
+h1, h2, h3, h4 { color: var(--ds-primary); margin-top: 1.5rem; margin-bottom: 0.75rem; font-weight: 600; }
+h1 { font-size: 2.25rem; border-bottom: 3px solid var(--ds-accent); padding-bottom: 0.5rem; }
+h2 { font-size: 1.75rem; border-bottom: 1px solid var(--ds-border); padding-bottom: 0.25rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1.1rem; }
+p { margin-bottom: 1rem; }
+a { color: var(--ds-accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* === CARDS === */
+.ds-card {
+  background: var(--ds-bg-card);
+  border-radius: var(--ds-radius);
+  box-shadow: var(--ds-shadow);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.ds-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--ds-border);
+}
+
+/* === METRIC CARDS === */
+.ds-metric-card {
+  background: var(--ds-bg-card);
+  border-radius: var(--ds-radius);
+  box-shadow: var(--ds-shadow);
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  display: inline-block;
+  min-width: 160px;
+}
+.ds-metric-card .value {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--ds-accent);
+  line-height: 1.2;
+}
+.ds-metric-card .label {
+  font-size: 0.875rem;
+  color: var(--ds-text-muted);
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.ds-metric-card .change {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+.ds-metric-card .change.positive { color: var(--ds-success); }
+.ds-metric-card .change.negative { color: var(--ds-danger); }
+
+/* === BADGES & TAGS === */
+.ds-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.ds-badge.success { background: #c6f6d5; color: #22543d; }
+.ds-badge.warning { background: #fefcbf; color: #744210; }
+.ds-badge.danger { background: #fed7d7; color: #822727; }
+.ds-badge.info { background: #bee3f8; color: #2a4365; }
+.ds-badge.neutral { background: var(--ds-bg-subtle); color: var(--ds-text-muted); }
+
+.ds-tag {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  background: var(--ds-bg-subtle);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: var(--ds-text-muted);
+  margin-right: 0.25rem;
+}
+
+/* === CONFIDENCE INDICATORS === */
+.ds-confidence {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+.ds-confidence .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ds-border);
+}
+.ds-confidence .dot.filled { background: var(--ds-accent); }
+.ds-confidence-bar {
+  height: 6px;
+  background: var(--ds-border);
+  border-radius: 3px;
+  overflow: hidden;
+  width: 100px;
+}
+.ds-confidence-bar .fill {
+  height: 100%;
+  background: var(--ds-accent);
+  border-radius: 3px;
+}
+
+/* === CALLOUTS & ALERTS === */
+.ds-callout {
+  padding: 1rem 1.25rem;
+  border-radius: var(--ds-radius);
+  border-left: 4px solid var(--ds-accent);
+  background: var(--ds-bg-subtle);
+  margin: 1rem 0;
+}
+.ds-callout.info { border-left-color: var(--ds-accent); background: #ebf8ff; }
+.ds-callout.success { border-left-color: var(--ds-success); background: #f0fff4; }
+.ds-callout.warning { border-left-color: var(--ds-warning); background: #fffaf0; }
+.ds-callout.danger { border-left-color: var(--ds-danger); background: #fff5f5; }
+.ds-callout-title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--ds-primary);
+}
+
+/* === TABLES === */
+.ds-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--ds-radius);
+  overflow: hidden;
+  box-shadow: var(--ds-shadow);
+  margin: 1rem 0;
+}
+.ds-table th {
+  background: var(--ds-primary);
+  color: white;
+  font-weight: 600;
+  padding: 0.875rem 1rem;
+  text-align: left;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.ds-table td {
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid var(--ds-border);
+  background: var(--ds-bg-card);
+}
+.ds-table tr:last-child td { border-bottom: none; }
+.ds-table tr:hover td { background: var(--ds-bg-subtle); }
+
+/* === TIMELINE === */
+.ds-timeline {
+  position: relative;
+  padding-left: 2.5rem;
+  margin: 1.5rem 0;
+}
+.ds-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--ds-accent), var(--ds-border));
+}
+.ds-timeline-item {
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+.ds-timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2.15rem;
+  top: 0.35rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--ds-accent);
+  border: 3px solid var(--ds-bg);
+  box-shadow: 0 0 0 2px var(--ds-accent);
+}
+.ds-timeline-date {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ds-accent);
+  margin-bottom: 0.25rem;
+}
+.ds-timeline-title {
+  font-weight: 600;
+  color: var(--ds-primary);
+}
+.ds-timeline-content {
+  color: var(--ds-text-muted);
+  font-size: 0.9375rem;
+  margin-top: 0.25rem;
+}
+
+/* === PROFILE/ACTOR CARDS === */
+.ds-profile {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.ds-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--ds-accent);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+.ds-profile-info { flex: 1; }
+.ds-profile-name {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--ds-primary);
+}
+.ds-profile-role {
+  color: var(--ds-text-muted);
+  font-size: 0.875rem;
+}
+
+/* === GRID LAYOUTS === */
+.ds-grid { display: grid; gap: 1.5rem; margin: 1rem 0; }
+.ds-grid-2 { grid-template-columns: repeat(2, 1fr); }
+.ds-grid-3 { grid-template-columns: repeat(3, 1fr); }
+.ds-grid-4 { grid-template-columns: repeat(4, 1fr); }
+.ds-flex { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* === SECTION DIVIDERS === */
+.ds-divider {
+  border: none;
+  height: 1px;
+  background: var(--ds-border);
+  margin: 2rem 0;
+}
+
+/* === STATS ROW === */
+.ds-stats-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+
+/* === PRINT STYLES === */
+@media print {
+  body { max-width: 100%; padding: 1rem; background: white; }
+  .ds-card, .ds-metric-card { box-shadow: none; border: 1px solid #ddd; }
+  .no-print { display: none; }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .ds-grid-2, .ds-grid-3, .ds-grid-4 { grid-template-columns: 1fr; }
+  .ds-stats-row { flex-direction: column; }
+  body { padding: 1rem; }
+}
+
+
+
+/* COMPETITIVE THEME: Modern SaaS dashboard, analytical */
+:root {
+  --ds-primary: #1e3a5f;
+  --ds-accent: #4299e1;
+  --ds-success: #48bb78;
+  --ds-warning: #ed8936;
+  --ds-danger: #fc8181;
+  --ds-bg: #f8fafc;
+  --ds-bg-subtle: #edf2f7;
+  --ds-bg-card: #ffffff;
+  --ds-border: #e2e8f0;
+  --ds-text: #2d3748;
+  --ds-text-muted: #718096;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AI Code Assistant Market: Comprehensive Competitive Analysis 2024</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Session Overview</h2>
+      <div class="ds-stats-row">
+        <div class="ds-metric-card">
+          <div class="value">38 min</div>
+          <div class="label">Duration</div>
+        </div>
+        <div class="ds-metric-card">
+          <div class="value">89</div>
+          <div class="label">Sources Analyzed</div>
+        </div>
+        <div class="ds-metric-card">
+          <div class="value">Dec 24, 2025</div>
+          <div class="label">Generated</div>
+        </div>
+        <div class="ds-metric-card">
+          <div class="label">Status</div>
+          <span class="ds-badge success">Completed</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Market Overview</h2>
+      <div class="ds-stats-row">
+        <div class="ds-metric-card">
+          <div class="value">$3.2B</div>
+          <div class="label">Current Size</div>
+        </div>
+        <div class="ds-metric-card">
+          <div class="value">$13.5B</div>
+          <div class="label">Projected (2028)</div>
+        </div>
+        <div class="ds-metric-card">
+          <div class="value">33.2%</div>
+          <div class="label">CAGR</div>
+        </div>
+      </div>
+      <div class="ds-card">
+        <h3>Key Drivers</h3>
+        <p>Developer productivity demands, AI model improvements, Enterprise adoption, Cloud IDE shift</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Competitive Landscape</h2>
+      <table class="ds-table">
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Position</th>
+            <th>Market Share</th>
+            <th>Users</th>
+            <th>Key Differentiator</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>GitHub Copilot</td>
+            <td>Market Leader</td>
+            <td>45-55%</td>
+            <td>1.8M+ paid subscribers (Feb 2024)</td>
+            <td>Native GitHub/VS Code integration</td>
+          </tr>
+          <tr>
+            <td>Cursor</td>
+            <td>Fast-Growing Challenger</td>
+            <td>8-12%</td>
+            <td>Unknown (private), 100K+ estimated</td>
+            <td>AI-first IDE (VSCode fork)</td>
+          </tr>
+          <tr>
+            <td>Claude Code (Anthropic)</td>
+            <td>Emerging Disruptor</td>
+            <td>3-5%</td>
+            <td>Bundled with Claude Pro (unknown)</td>
+            <td>Terminal-based agentic coding</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Competitor Details</h2>
+      <div class="ds-grid ds-grid-3">
+        <div class="ds-card">
+          <h3>GitHub Copilot</h3>
+          <p><strong>Parent:</strong> Microsoft/GitHub</p>
+          <p><strong>Strengths:</strong> Deepest IDE integration, Largest training dataset (GitHub repos), Microsoft enterprise relationships</p>
+          <p><strong>Weaknesses:</strong> Limited to code completion paradigm, Less effective for large refactors</p>
+          <p><strong>Pricing:</strong> individual: $10/month or $100/year, business: $19/user/month, enterprise: $39/user/month</p>
+        </div>
+        <div class="ds-card">
+          <h3>Cursor</h3>
+          <p><strong>Parent:</strong> Anysphere</p>
+          <p><strong>Strengths:</strong> Purpose-built AI IDE experience, Multi-file edit capabilities, Fast iteration on AI features</p>
+          <p><strong>Weaknesses:</strong> VSCode fork may lag updates, Smaller company resources</p>
+          <p><strong>Pricing:</strong> hobby: Free (limited), pro: $20/month, business: $40/user/month</p>
+        </div>
+        <div class="ds-card">
+          <h3>Claude Code (Anthropic)</h3>
+          <p><strong>Parent:</strong> Anthropic</p>
+          <p><strong>Strengths:</strong> True agentic capabilities, Best for complex/novel problems, Safety-focused approach</p>
+          <p><strong>Weaknesses:</strong> CLI-only (no GUI IDE), Newer, less proven at scale</p>
+          <p><strong>Pricing:</strong> included: With Claude Pro $20/month, api: Pay per token usage</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Research Findings</h2>
+      <div class="ds-callout info">
+        <div class="ds-callout-title">Key Finding</div>
+        All major players are converging on 'agentic' capabilities - the ability to perform multi-step coding tasks autonomously. This represents a shift from completion-based to task-based assistance. <span class="ds-badge info">Confidence: 92%</span>
+      </div>
+      <div class="ds-callout success">
+        <div class="ds-callout-title">Fact</div>
+        GitHub Copilot has 1.8M+ paid subscribers as of February 2024, with GitHub reporting it as their fastest-growing product ever. <span class="ds-badge success">Confidence: 96%</span>
+      </div>
+      <div class="ds-callout success">
+        <div class="ds-callout-title">Fact</div>
+        Developer productivity studies show 55% faster task completion with AI assistants, though quality impact varies by task type. <span class="ds-badge success">Confidence: 84%</span>
+      </div>
+      <div class="ds-callout info">
+        <div class="ds-callout-title">Key Finding</div>
+        Enterprise adoption is accelerating, with 50,000+ organizations using Copilot Business/Enterprise. Security and privacy controls are now table stakes. <span class="ds-badge info">Confidence: 89%</span>
+      </div>
+      <div class="ds-callout warning">
+        <div class="ds-callout-title">Gap</div>
+        Long-term impact on developer skills and code quality remains under-studied. Some evidence suggests over-reliance may affect learning. <span class="ds-badge warning">Confidence: 68%</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Expert Perspectives</h2>
+      <div class="ds-card">
+        <div class="ds-card-header">
+          <h3>Market Position Analysis</h3>
+          <span class="ds-badge neutral">Confidence: 87%</span>
+        </div>
+        <p>The AI code assistant market is entering a critical phase where the paradigm is shifting from 'code completion' to 'agentic coding'. While GitHub Copilot leads in users and integration, Cursor and Claude Code are pioneering the next generation of AI-native development experiences.</p>
+        <h4>Key Insights:</h4>
+        <ul>
+          <li>First-mover advantage (Copilot) is being challenged by innovation (Cursor, Claude)</li>
+          <li>The IDE itself is being reimagined around AI capabilities</li>
+          <li>Terminal/CLI-based tools (Claude Code) appeal to power users</li>
+          <li>Multi-model flexibility is becoming a competitive advantage</li>
+        </ul>
+        <h4>Recommendations:</h4>
+        <ul>
+          <li>Evaluate tools based on workflow fit, not just features</li>
+          <li>Consider multi-tool strategies for different task types</li>
+          <li>Monitor agentic capability development closely</li>
+        </ul>
+        <h4>Warnings:</h4>
+        <ul>
+          <li>Market leadership could shift rapidly with model improvements</li>
+        </ul>
+      </div>
+
+      <div class="ds-card">
+        <div class="ds-card-header">
+          <h3>SWOT Analysis</h3>
+          <span class="ds-badge neutral">Confidence: 82%</span>
+        </div>
+        <p>Strategic analysis reveals distinct positioning for each player, with opportunities and threats varying by target segment.</p>
+        <h4>Key Insights:</h4>
+        <ul>
+          <li>Copilot's strength (integration) could become weakness (lock-in resistance)</li>
+          <li>Cursor's opportunity (AI-native IDE) requires execution at scale</li>
+          <li>Claude Code's threat (niche CLI) could become strength (power user loyalty)</li>
+        </ul>
+        <h4>Recommendations:</h4>
+        <ul>
+          <li>Watch for Copilot's agentic feature releases in 2024-2025</li>
+          <li>Cursor's Series A runway enables aggressive R&D</li>
+          <li>Anthropic's model improvements directly benefit Claude Code</li>
+        </ul>
+        <h4>Warnings:</h4>
+        <ul>
+          <li>New entrants (Amazon, Google) could reshape dynamics</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Sources</h2>
+      <table class="ds-table">
+        <thead>
+          <tr>
+            <th>Source</th>
+            <th>Type</th>
+            <th>Credibility</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="https://github.blog/2024-02-22-copilot-anniversary/">GitHub Copilot Anniversary Report</a> - github.blog</td>
+            <td>Corporate</td>
+            <td><span class="ds-badge success">94%</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://www.cursor.com/pricing">Cursor Pricing Page</a> - cursor.com</td>
+            <td>Corporate</td>
+            <td><span class="ds-badge success">90%</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://www.anthropic.com/claude-code">Claude Code Documentation</a> - anthropic.com</td>
+            <td>Corporate</td>
+            <td><span class="ds-badge success">95%</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://www.gartner.com/en/documents/ai-code-assistants">Gartner AI Code Assistant Report</a> - gartner.com</td>
+            <td>Research Report</td>
+            <td><span class="ds-badge success">92%</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

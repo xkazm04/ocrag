@@ -1,17 +1,41 @@
 """Source credibility assessment service."""
 
-from typing import List, Dict
-from urllib.parse import urlparse
+import logging
+from functools import lru_cache
+from pathlib import Path
+from typing import List, Dict, Any
 
+import yaml
 from google import genai
 from google.genai import types
 
 from app.config import get_settings
 from ..schemas import Source
 
+logger = logging.getLogger(__name__)
 
-# Domain authority scores for known domains
-DOMAIN_AUTHORITY = {
+
+@lru_cache()
+def _load_credibility_config() -> Dict[str, Any]:
+    """Load credibility config from YAML file.
+
+    Returns cached config dict, or empty dict if file not found.
+    Hardcoded defaults in the class will be used as fallback.
+    """
+    config_path = Path(__file__).parent.parent / "config" / "credibility.yaml"
+    if config_path.exists():
+        try:
+            with open(config_path, encoding="utf-8") as f:
+                config = yaml.safe_load(f)
+                logger.debug("Loaded credibility config from %s", config_path)
+                return config or {}
+        except Exception:
+            logger.warning("Failed to load credibility config from %s", config_path, exc_info=True)
+    return {}
+
+
+# Default domain authority scores (used as fallback if YAML not found)
+DEFAULT_DOMAIN_AUTHORITY = {
     # Government
     ".gov": 0.95,
     ".gov.uk": 0.95,
@@ -54,8 +78,8 @@ DOMAIN_AUTHORITY = {
     "reddit.com": 0.45,
 }
 
-# Source type patterns
-SOURCE_TYPE_PATTERNS = {
+# Default source type patterns (used as fallback if YAML not found)
+DEFAULT_SOURCE_TYPE_PATTERNS = {
     "government": [".gov", ".mil", "parliament", "congress", "senate"],
     "academic": [".edu", ".ac.", "university", "journal", "research"],
     "news": ["news", "times", "post", "herald", "tribune", "reuters", "ap", "bbc"],
@@ -74,12 +98,50 @@ class CredibilityAssessor:
     - Domain authority scores
     - Source type classification
     - LLM-based content assessment (optional)
+
+    Configuration is loaded from config/credibility.yaml if available,
+    with hardcoded defaults as fallback.
     """
 
     def __init__(self):
         settings = get_settings()
         self.client = genai.Client(api_key=settings.gemini_api_key)
         self.model = settings.gemini_research_model
+
+        # Load config from YAML with fallbacks
+        config = _load_credibility_config()
+        self.domain_authority = config.get("domain_authority", DEFAULT_DOMAIN_AUTHORITY)
+        self.source_type_patterns = config.get("source_type_patterns", DEFAULT_SOURCE_TYPE_PATTERNS)
+        self.source_type_scores = config.get("source_type_scores", {
+            "government": 0.90,
+            "academic": 0.85,
+            "news": 0.75,
+            "corporate": 0.65,
+            "wiki": 0.60,
+            "blog": 0.50,
+            "social": 0.40,
+            "unknown": 0.50,
+        })
+        self.scoring_weights = config.get("scoring_weights", {
+            "domain_authority": 0.5,
+            "source_type_score": 0.3,
+            "title_quality": 0.2,
+        })
+        self.tld_defaults = config.get("tld_defaults", {
+            ".org": 0.65,
+            ".com": 0.55,
+            ".net": 0.50,
+            "default": 0.50,
+        })
+        self.clickbait_phrases = config.get("clickbait_phrases", [
+            "you won't believe",
+            "shocking",
+            "!!!!",
+            "???",
+            "click here",
+            "this is why",
+            "what happened next",
+        ])
 
     async def assess_batch(self, sources: List[Source]) -> List[Source]:
         """
@@ -125,15 +187,9 @@ class CredibilityAssessor:
         else:
             factors["title_quality"] = 0.5
 
-        # Calculate composite score
-        weights = {
-            "domain_authority": 0.5,
-            "source_type_score": 0.3,
-            "title_quality": 0.2,
-        }
-
+        # Calculate composite score using configured weights
         composite_score = sum(
-            factors[k] * weights[k] for k in weights if k in factors
+            factors[k] * self.scoring_weights[k] for k in self.scoring_weights if k in factors
         )
 
         source.credibility_score = round(composite_score, 3)
@@ -146,35 +202,32 @@ class CredibilityAssessor:
         domain = domain.lower()
 
         # Check exact match
-        if domain in DOMAIN_AUTHORITY:
-            return DOMAIN_AUTHORITY[domain]
+        if domain in self.domain_authority:
+            return self.domain_authority[domain]
 
         # Check TLD patterns
-        for pattern, score in DOMAIN_AUTHORITY.items():
+        for pattern, score in self.domain_authority.items():
             if pattern.startswith(".") and domain.endswith(pattern):
                 return score
 
         # Check subdomain of known domain
-        for known_domain, score in DOMAIN_AUTHORITY.items():
+        for known_domain, score in self.domain_authority.items():
             if not known_domain.startswith(".") and domain.endswith(known_domain):
                 return score
 
-        # Default based on TLD
-        if domain.endswith(".org"):
-            return 0.65
-        elif domain.endswith(".com"):
-            return 0.55
-        elif domain.endswith(".net"):
-            return 0.50
+        # Default based on TLD from config
+        for tld, score in self.tld_defaults.items():
+            if tld != "default" and domain.endswith(tld):
+                return score
 
-        return 0.50  # Unknown
+        return self.tld_defaults.get("default", 0.50)
 
     def _classify_source_type(self, url: str, domain: str) -> str:
         """Classify the type of source."""
         url_lower = url.lower()
         domain_lower = domain.lower()
 
-        for source_type, patterns in SOURCE_TYPE_PATTERNS.items():
+        for source_type, patterns in self.source_type_patterns.items():
             for pattern in patterns:
                 if pattern in url_lower or pattern in domain_lower:
                     return source_type
@@ -183,33 +236,14 @@ class CredibilityAssessor:
 
     def _get_source_type_score(self, source_type: str) -> float:
         """Get credibility score for source type."""
-        scores = {
-            "government": 0.90,
-            "academic": 0.85,
-            "news": 0.75,
-            "corporate": 0.65,
-            "wiki": 0.60,
-            "blog": 0.50,
-            "social": 0.40,
-            "unknown": 0.50,
-        }
-        return scores.get(source_type, 0.50)
+        return self.source_type_scores.get(source_type, 0.50)
 
     def _assess_title_quality(self, title: str) -> float:
         """Basic title quality assessment."""
         score = 0.5
 
-        # Penalize clickbait indicators
-        clickbait_phrases = [
-            "you won't believe",
-            "shocking",
-            "!!!!",
-            "???",
-            "click here",
-            "this is why",
-            "what happened next",
-        ]
-        for phrase in clickbait_phrases:
+        # Penalize clickbait indicators from config
+        for phrase in self.clickbait_phrases:
             if phrase.lower() in title.lower():
                 score -= 0.1
 
@@ -278,6 +312,6 @@ Return JSON:
             }
 
         except Exception:
-            pass  # Fall back to heuristic assessment
+            logger.debug("LLM credibility assessment failed for %s, using heuristic", source.url)
 
         return source

@@ -24,8 +24,8 @@ class Settings(BaseSettings):
     chunk_overlap_tokens: int = 500
 
     # Gemini settings
-    gemini_model: str = "gemini-2.0-flash"
-    gemini_research_model: str = "gemini-2.0-flash"
+    gemini_model: str = "gemini-3-flash-preview"
+    gemini_research_model: str = "gemini-3-flash-preview"
     default_thinking_level: str = "medium"
 
     # Research settings
@@ -41,7 +41,7 @@ class Settings(BaseSettings):
     environment: str = "development"
 
     class Config:
-        env_file = "../.env"
+        env_file = ".env"
         extra = "ignore"
 
 

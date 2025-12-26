@@ -90,6 +90,92 @@ from .responses import (
     CacheStats,
 )
 
+# Job schemas (async API)
+from .jobs import (
+    JobStatus,
+    JobStage,
+    SubmitResearchRequest,
+    SubmitResearchResponse,
+    JobStats,
+    DedupStats,
+    JobStatusResponse,
+    TopicMatchResult,
+    DeduplicationAction,
+    MergeStrategy,
+    DeduplicationDecision,
+    TopicContext,
+    ResearchJob,
+    STAGE_PROGRESS,
+)
+
+# Verification schemas
+from .verification import (
+    VerificationVerdict,
+    EvidenceItem,
+    RelatedClaimSummary,
+    VerifyStatementRequest,
+    VerifyStatementResponse,
+    FindingQuality,
+    ExtractedFinding,
+    ExtractionStats,
+    ExtractEvidenceRequest,
+    ExtractEvidenceResponse,
+    VerificationResultDB,
+    DocumentExtractionDB,
+)
+
+# Knowledge Explorer schemas
+from .knowledge_explorer import (
+    # Graph
+    GraphNode,
+    GraphEdge,
+    GraphData,
+    NetworkGraphRequest,
+    NetworkGraphResponse,
+    # Timeline
+    TimelineEvent,
+    TimelineRequest,
+    TimelineResponse,
+    # Corroboration
+    SourceEvidence,
+    CorroborationResult,
+    CorroborationRequest,
+    CorroborationResponse,
+    # Pattern Mining
+    PatternType,
+    DetectedPattern,
+    PatternMiningRequest,
+    PatternMiningResponse,
+    # Q&A
+    Citation,
+    InvestigativeQuestion,
+    InvestigativeAnswer,
+    # Entity Profile
+    EntityProfile,
+    EntityProfileRequest,
+)
+
+# Build namespace for forward reference resolution
+# All types must be available for Pydantic to resolve string annotations
+_types_namespace = {
+    "KnowledgeTopic": KnowledgeTopic,
+    "KnowledgeEntity": KnowledgeEntity,
+    "KnowledgeClaim": KnowledgeClaim,
+    "ClaimRelationship": ClaimRelationship,
+    "ClaimEntity": ClaimEntity,
+    "ClaimSource": ClaimSource,
+    "Source": Source,
+    "SimilarityCandidate": SimilarityCandidate,
+}
+
+# Rebuild models with forward references using the complete namespace
+KnowledgeTopic.model_rebuild(_types_namespace=_types_namespace)
+KnowledgeClaim.model_rebuild(_types_namespace=_types_namespace)
+ClaimRelationship.model_rebuild(_types_namespace=_types_namespace)
+ClaimEntity.model_rebuild(_types_namespace=_types_namespace)
+ClaimSource.model_rebuild(_types_namespace=_types_namespace)
+SimilarityCandidate.model_rebuild(_types_namespace=_types_namespace)
+
 __all__ = [
     # Enums
     "ResearchStatus",
@@ -160,4 +246,54 @@ __all__ = [
     "MergeClaimsRequest",
     "TemplateInfo",
     "CacheStats",
+    # Jobs (async API)
+    "JobStatus",
+    "JobStage",
+    "SubmitResearchRequest",
+    "SubmitResearchResponse",
+    "JobStats",
+    "DedupStats",
+    "JobStatusResponse",
+    "TopicMatchResult",
+    "DeduplicationAction",
+    "MergeStrategy",
+    "DeduplicationDecision",
+    "TopicContext",
+    "ResearchJob",
+    "STAGE_PROGRESS",
+    # Verification
+    "VerificationVerdict",
+    "EvidenceItem",
+    "RelatedClaimSummary",
+    "VerifyStatementRequest",
+    "VerifyStatementResponse",
+    "FindingQuality",
+    "ExtractedFinding",
+    "ExtractionStats",
+    "ExtractEvidenceRequest",
+    "ExtractEvidenceResponse",
+    "VerificationResultDB",
+    "DocumentExtractionDB",
+    # Knowledge Explorer
+    "GraphNode",
+    "GraphEdge",
+    "GraphData",
+    "NetworkGraphRequest",
+    "NetworkGraphResponse",
+    "TimelineEvent",
+    "TimelineRequest",
+    "TimelineResponse",
+    "SourceEvidence",
+    "CorroborationResult",
+    "CorroborationRequest",
+    "CorroborationResponse",
+    "PatternType",
+    "DetectedPattern",
+    "PatternMiningRequest",
+    "PatternMiningResponse",
+    "Citation",
+    "InvestigativeQuestion",
+    "InvestigativeAnswer",
+    "EntityProfile",
+    "EntityProfileRequest",
 ]

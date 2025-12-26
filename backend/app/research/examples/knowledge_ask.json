@@ -1,0 +1,83 @@
+{
+  "question": "What was the relationship between Jeffrey Epstein and Les Wexner?",
+  "answer": "Based on the available evidence, Jeffrey Epstein had an extensive financial and personal relationship with Les Wexner spanning from the late 1980s until 2007. Wexner granted Epstein broad power of attorney over his financial affairs, and Epstein managed significant portions of Wexner's wealth. Epstein received his Manhattan townhouse from Wexner, and served as a trustee for Wexner's charitable foundation. The relationship appears to have ended around 2007 following Epstein's initial legal troubles in Florida.",
+  "confidence": 0.85,
+  "citations": [
+    {
+      "claim_id": "348c45d0-0037-4a6f-96d9-6532d079c672",
+      "content_snippet": "Document HOUSE_OVERSIGHT_010477: The shocking true story of Jeffrey Epstein",
+      "confidence": 1,
+      "source_documents": [],
+      "entities_mentioned": []
+    },
+    {
+      "claim_id": "488ffc59-6a9a-4fa5-96c8-ccfa5b2c2473",
+      "content_snippet": "Assad associated with PLO",
+      "confidence": 0.8,
+      "source_documents": [],
+      "entities_mentioned": []
+    },
+    {
+      "claim_id": "8f227ba4-ec18-4ac6-8149-c3abdf6701f6",
+      "content_snippet": "Jeffrey Epstein documented at New York City (1995)",
+      "confidence": 0.837,
+      "source_documents": [],
+      "entities_mentioned": []
+    },
+    {
+      "claim_id": "bd1cd4f6-552a-473e-a961-0a5de8b9f5a0",
+      "content_snippet": "Virginia Roberts documented at New York City (1995)",
+      "confidence": 0.873,
+      "source_documents": [],
+      "entities_mentioned": []
+    },
+    {
+      "claim_id": "cbe35757-5b02-43e7-95f4-7fd4dfee0cf1",
+      "content_snippet": "Leslie Wexner documented at New York City (1989)",
+      "confidence": 0.873,
+      "source_documents": [],
+      "entities_mentioned": []
+    }
+  ],
+  "citation_coverage": 0.75,
+  "key_entities": [
+    {
+      "id": "64d5f279-8a80-4dc6-ad46-30899381eb0d",
+      "name": "Corbis",
+      "type": "organization"
+    },
+    {
+      "id": "193f4769-6fe4-4912-bad1-76edc2c6d5fb",
+      "name": "Larry Visoski",
+      "type": "person"
+    },
+    {
+      "id": "b13ffc81-1016-479f-ad93-342c28f697e8",
+      "name": "Prince Andrew",
+      "type": "person"
+    },
+    {
+      "id": "39826be2-0010-4a43-94f0-9a6254dffba0",
+      "name": "Radar magazine",
+      "type": "organization"
+    },
+    {
+      "id": "3f706d55-fc66-40e9-a450-8e235ea61fb5",
+      "name": "News of the World",
+      "type": "organization"
+    }
+  ],
+  "timeline_context": "The relationship began in the late 1980s and continued through 2007.",
+  "gaps_identified": [
+    "Exact terms of the power of attorney arrangement",
+    "Complete list of financial transactions between the two",
+    "Details of their initial introduction"
+  ],
+  "follow_up_questions": [
+    "What specific financial transactions occurred between Epstein and Wexner?",
+    "Who introduced Epstein to Wexner?",
+    "What was the total value of assets Epstein managed for Wexner?"
+  ],
+  "claims_searched": 150,
+  "processing_time_ms": 1250
+}

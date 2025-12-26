@@ -1,0 +1,31 @@
+{
+  "events": [
+    {
+      "id": "0604b2d4-558f-49ae-9db4-03b7f1f9651f",
+      "date": "2005-09-04",
+      "date_range_start": null,
+      "date_range_end": null,
+      "title": "$68.83 payment",
+      "description": "$68.83 payment from Jeffrey Epstein to Amazon for Purchase of three books on 2005-09-04",
+      "claim_type": "financial",
+      "confidence": 0.95,
+      "entities": [],
+      "sources_count": 0,
+      "tags": [
+        "financial-transaction",
+        "payment",
+        "doj-document"
+      ]
+    }
+  ],
+  "total": 1,
+  "date_range": {
+    "start": "2005-09-04",
+    "end": "2005-09-04"
+  },
+  "entity_activity": {
+    "financial-transaction": 1,
+    "payment": 1,
+    "doj-document": 1
+  }
+}

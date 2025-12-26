@@ -1,0 +1,120 @@
+[
+  {
+    "name": "causal_analysis",
+    "query": "Why did Russia invade Ukraine in 2022? What were the key motivations and triggers?",
+    "success": true,
+    "duration": 65.601336,
+    "findings_count": 38,
+    "sources_count": 37,
+    "perspectives_count": 5,
+    "relationships_count": 0,
+    "coverage": {
+      "coverage": 1.0,
+      "covered_aspects": [
+        "NATO expansion concerns",
+        "Historical claims to Ukraine",
+        "Domestic political factors",
+        "Security concerns",
+        "2014 Crimea annexation context"
+      ],
+      "missing_aspects": []
+    },
+    "perspective_depth": {
+      "depth_score": 0.775,
+      "perspectives_found": [
+        "journalist",
+        "historical",
+        "network",
+        "conspirator",
+        "financial"
+      ],
+      "total_insights": 11,
+      "total_recommendations": 0,
+      "total_warnings": 0
+    },
+    "relationships": {
+      "total_relationships": 0,
+      "causal_chains": 0,
+      "relationship_types": []
+    }
+  },
+  {
+    "name": "stakeholder_analysis",
+    "query": "Why are Western countries providing military aid to Ukraine? What are their strategic interests?",
+    "success": true,
+    "duration": 80.787894,
+    "findings_count": 50,
+    "sources_count": 46,
+    "perspectives_count": 5,
+    "relationships_count": 0,
+    "coverage": {
+      "coverage": 0.8,
+      "covered_aspects": [
+        "Security interests",
+        "NATO solidarity",
+        "Democratic values",
+        "Economic considerations"
+      ],
+      "missing_aspects": [
+        "Geopolitical balance"
+      ]
+    },
+    "perspective_depth": {
+      "depth_score": 0.8,
+      "perspectives_found": [
+        "journalist",
+        "historical",
+        "network",
+        "conspirator",
+        "financial"
+      ],
+      "total_insights": 12,
+      "total_recommendations": 0,
+      "total_warnings": 0
+    },
+    "relationships": {
+      "total_relationships": 0,
+      "causal_chains": 0,
+      "relationship_types": []
+    }
+  },
+  {
+    "name": "fact_check",
+    "query": "Verify: Russia claimed the invasion was to 'denazify' Ukraine. What evidence supports or contradicts this claim?",
+    "success": true,
+    "duration": 86.571564,
+    "findings_count": 53,
+    "sources_count": 56,
+    "perspectives_count": 5,
+    "relationships_count": 0,
+    "coverage": {
+      "coverage": 1.0,
+      "covered_aspects": [
+        "Official Russian statements",
+        "Ukraine's political composition",
+        "Azov Battalion context",
+        "International assessments",
+        "Historical context of claim"
+      ],
+      "missing_aspects": []
+    },
+    "perspective_depth": {
+      "depth_score": 0.825,
+      "perspectives_found": [
+        "journalist",
+        "historical",
+        "network",
+        "conspirator",
+        "financial"
+      ],
+      "total_insights": 13,
+      "total_recommendations": 0,
+      "total_warnings": 0
+    },
+    "relationships": {
+      "total_relationships": 0,
+      "causal_chains": 0,
+      "relationship_types": []
+    }
+  }
+]

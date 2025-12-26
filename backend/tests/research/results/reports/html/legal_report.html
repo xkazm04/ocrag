@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GDPR Compliance for AI Systems: Legal Requirements and Risks</title>
+  <style>
+/* === DESIGN SYSTEM === */
+/* A curated set of reusable CSS patterns for professional reports */
+
+:root {
+  /* Theme Colors - Will be overridden per template */
+  --ds-primary: #1a365d;
+  --ds-accent: #3182ce;
+  --ds-success: #38a169;
+  --ds-warning: #d69e2e;
+  --ds-danger: #e53e3e;
+  --ds-bg: #ffffff;
+  --ds-bg-subtle: #f7fafc;
+  --ds-bg-card: #ffffff;
+  --ds-border: #e2e8f0;
+  --ds-text: #2d3748;
+  --ds-text-muted: #718096;
+  --ds-radius: 8px;
+  --ds-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+  --ds-shadow-lg: 0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: var(--ds-text);
+  background: var(--ds-bg);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* === TYPOGRAPHY === */
+h1, h2, h3, h4 { color: var(--ds-primary); margin-top: 1.5rem; margin-bottom: 0.75rem; font-weight: 600; }
+h1 { font-size: 2.25rem; border-bottom: 3px solid var(--ds-accent); padding-bottom: 0.5rem; }
+h2 { font-size: 1.75rem; border-bottom: 1px solid var(--ds-border); padding-bottom: 0.25rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1.1rem; }
+p { margin-bottom: 1rem; }
+a { color: var(--ds-accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* === CARDS === */
+.ds-card {
+  background: var(--ds-bg-card);
+  border-radius: var(--ds-radius);
+  box-shadow: var(--ds-shadow);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.ds-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--ds-border);
+}
+
+/* === METRIC CARDS === */
+.ds-metric-card {
+  background: var(--ds-bg-card);
+  border-radius: var(--ds-radius);
+  box-shadow: var(--ds-shadow);
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  display: inline-block;
+  min-width: 160px;
+}
+.ds-metric-card .value {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--ds-accent);
+  line-height: 1.2;
+}
+.ds-metric-card .label {
+  font-size: 0.875rem;
+  color: var(--ds-text-muted);
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.ds-metric-card .change {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+.ds-metric-card .change.positive { color: var(--ds-success); }
+.ds-metric-card .change.negative { color: var(--ds-danger); }
+
+/* === BADGES & TAGS === */
+.ds-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.ds-badge.success { background: #c6f6d5; color: #22543d; }
+.ds-badge.warning { background: #fefcbf; color: #744210; }
+.ds-badge.danger { background: #fed7d7; color: #822727; }
+.ds-badge.info { background: #bee3f8; color: #2a4365; }
+.ds-badge.neutral { background: var(--ds-bg-subtle); color: var(--ds-text-muted); }
+
+.ds-tag {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  background: var(--ds-bg-subtle);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: var(--ds-text-muted);
+  margin-right: 0.25rem;
+}
+
+/* === CONFIDENCE INDICATORS === */
+.ds-confidence {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+.ds-confidence .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ds-border);
+}
+.ds-confidence .dot.filled { background: var(--ds-accent); }
+.ds-confidence-bar {
+  height: 6px;
+  background: var(--ds-border);
+  border-radius: 3px;
+  overflow: hidden;
+  width: 100px;
+}
+.ds-confidence-bar .fill {
+  height: 100%;
+  background: var(--ds-accent);
+  border-radius: 3px;
+}
+
+/* === CALLOUTS & ALERTS === */
+.ds-callout {
+  padding: 1rem 1.25rem;
+  border-radius: var(--ds-radius);
+  border-left: 4px solid var(--ds-accent);
+  background: var(--ds-bg-subtle);
+  margin: 1rem 0;
+}
+.ds-callout.info { border-left-color: var(--ds-accent); background: #ebf8ff; }
+.ds-callout.success { border-left-color: var(--ds-success); background: #f0fff4; }
+.ds-callout.warning { border-left-color: var(--ds-warning); background: #fffaf0; }
+.ds-callout.danger { border-left-color: var(--ds-danger); background: #fff5f5; }
+.ds-callout-title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--ds-primary);
+}
+
+/* === TABLES === */
+.ds-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--ds-radius);
+  overflow: hidden;
+  box-shadow: var(--ds-shadow);
+  margin: 1rem 0;
+}
+.ds-table th {
+  background: var(--ds-primary);
+  color: white;
+  font-weight: 600;
+  padding: 0.875rem 1rem;
+  text-align: left;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.ds-table td {
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid var(--ds-border);
+  background: var(--ds-bg-card);
+}
+.ds-table tr:last-child td { border-bottom: none; }
+.ds-table tr:hover td { background: var(--ds-bg-subtle); }
+
+/* === TIMELINE === */
+.ds-timeline {
+  position: relative;
+  padding-left: 2.5rem;
+  margin: 1.5rem 0;
+}
+.ds-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--ds-accent), var(--ds-border));
+}
+.ds-timeline-item {
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+.ds-timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2.15rem;
+  top: 0.35rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--ds-accent);
+  border: 3px solid var(--ds-bg);
+  box-shadow: 0 0 0 2px var(--ds-accent);
+}
+.ds-timeline-date {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ds-accent);
+  margin-bottom: 0.25rem;
+}
+.ds-timeline-title {
+  font-weight: 600;
+  color: var(--ds-primary);
+}
+.ds-timeline-content {
+  color: var(--ds-text-muted);
+  font-size: 0.9375rem;
+  margin-top: 0.25rem;
+}
+
+/* === PROFILE/ACTOR CARDS === */
+.ds-profile {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.ds-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--ds-accent);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+.ds-profile-info { flex: 1; }
+.ds-profile-name {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--ds-primary);
+}
+.ds-profile-role {
+  color: var(--ds-text-muted);
+  font-size: 0.875rem;
+}
+
+/* === GRID LAYOUTS === */
+.ds-grid { display: grid; gap: 1.5rem; margin: 1rem 0; }
+.ds-grid-2 { grid-template-columns: repeat(2, 1fr); }
+.ds-grid-3 { grid-template-columns: repeat(3, 1fr); }
+.ds-grid-4 { grid-template-columns: repeat(4, 1fr); }
+.ds-flex { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* === SECTION DIVIDERS === */
+.ds-divider {
+  border: none;
+  height: 1px;
+  background: var(--ds-border);
+  margin: 2rem 0;
+}
+
+/* === STATS ROW === */
+.ds-stats-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+
+/* === PRINT STYLES === */
+@media print {
+  body { max-width: 100%; padding: 1rem; background: white; }
+  .ds-card, .ds-metric-card { box-shadow: none; border: 1px solid #ddd; }
+  .no-print { display: none; }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .ds-grid-2, .ds-grid-3, .ds-grid-4 { grid-template-columns: 1fr; }
+  .ds-stats-row { flex-direction: column; }
+  body { padding: 1rem; }
+}
+
+
+
+/* LEGAL THEME: Traditional, authoritative, minimal */
+:root {
+  --ds-primary: #1a1a1a;
+  --ds-accent: #8b0000;
+  --ds-success: #2f855a;
+  --ds-warning: #c05621;
+  --ds-danger: #9b2c2c;
+  --ds-bg: #ffffff;
+  --ds-bg-subtle: #f9f9f9;
+  --ds-bg-card: #ffffff;
+  --ds-border: #d1d1d1;
+  --ds-text: #1a1a1a;
+  --ds-text-muted: #4a4a4a;
+  --ds-radius: 2px;
+  --ds-shadow: none;
+}
+body { font-family: 'Georgia', 'Times New Roman', serif; max-width: 900px; }
+h1, h2, h3, h4 { font-family: 'Georgia', serif; }
+.ds-card { border: 1px solid var(--ds-border); box-shadow: none; }
+.ds-table { box-shadow: none; border: 1px solid var(--ds-border); }
+.ds-table th { background: #f5f5f5; color: var(--ds-text); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>RESEARCH SESSION DATA</h1>
+  </header>
+
+  <main>
+    <section class="ds-card">
+      <div class="ds-card-header">
+        <h3>Session Overview</h3>
+      </div>
+      <p><strong>Title:</strong> GDPR Compliance for AI Systems: Legal Requirements and Risks</p>
+      <p><strong>Query:</strong> What are the comprehensive GDPR compliance requirements for AI companies operating in the EU, including the intersection with the EU AI Act?</p>
+      <p><strong>Template Type:</strong> Legal Research</p>
+      <p><strong>Status:</strong> <span class="ds-badge success">Completed</span></p>
+
+      <div class="ds-stats-row">
+        <div class="ds-metric-card">
+          <div class="value">61</div>
+          <div class="label">Duration</div>
+        </div>
+        <div class="ds-metric-card">
+          <div class="value">94</div>
+          <div class="label">Sources Analyzed</div>
+        </div>
+      </div>
+
+      <p><strong>Generated:</strong> December 24, 2025 at 15:23</p>
+    </section>
+
+    <section class="ds-card">
+      <div class="ds-card-header">
+        <h3>Regulatory Framework</h3>
+      </div>
+      <p><strong>Primary Regulation:</strong> General Data Protection Regulation (GDPR) - Regulation (EU) 2016/679</p>
+      <p><strong>Effective Date:</strong> May 25, 2018</p>
+      <p><strong>Key Principles:</strong> Lawfulness, fairness, transparency, Purpose limitation, Data minimization, Accuracy, Storage limitation, Integrity and confidentiality, Accountability</p>
+    </section>
+
+    <section class="ds-card">
+      <div class="ds-card-header">
+        <h3>AI-Specific Legal Requirements</h3>
+      </div>
+
+      <div class="ds-card">
+        <h4>Article 22: Automated Individual Decision-Making, Including Profiling</h4>
+        <p><strong>Requirement:</strong> Data subjects have the right not to be subject to a decision based solely on automated processing which produces legal or similarly significant effects</p>
+        <p><strong>AI Implications:</strong> AI systems making consequential decisions must incorporate human oversight or fall within exceptions</p>
+        <p><strong>Risk Level:</strong> <span class="ds-badge danger">High</span></p>
+        <p><strong>Compliance Steps:</strong> Identify automated decisions with legal/significant effects, Implement human review processes</p>
+      </div>
+
+      <div class="ds-card">
+        <h4>Article 25: Data Protection by Design and Default</h4>
+        <p><strong>Requirement:</strong> Implement appropriate technical and organizational measures designed to implement data protection principles</p>
+        <p><strong>AI Implications:</strong> AI systems must be designed with privacy as a core principle from inception</p>
+        <p><strong>Risk Level:</strong> <span class="ds-badge warning">Medium</span></p>
+        <p><strong>Compliance Steps:</strong> Conduct privacy impact assessment at design stage, Minimize data collection to what's necessary</p>
+      </div>
+
+      <div class="ds-card">
+        <h4>Article 35: Data Protection Impact Assessment (DPIA)</h4>
+        <p><strong>Requirement:</strong> DPIA mandatory when processing likely to result in high risk to rights and freedoms</p>
+        <p><strong>AI Implications:</strong> Most AI systems processing personal data will require DPIA, especially those involving profiling, large-scale processing, or systematic monitoring</p>
+        <p><strong>Risk Level:</strong> <span class="ds-badge danger">High</span></p>
+        <p><strong>Compliance Steps:</strong> Document processing operations, Assess necessity and proportionality</p>
+      </div>
+
+      <div class="ds-card">
+        <h4>Articles 13-14: Right to Information/Transparency</h4>
+        <p><strong>Requirement:</strong> Provide meaningful information about the existence of automated decision-making including logic involved, significance, and envisaged consequences</p>
+        <p><strong>AI Implications:</strong> AI explainability is required - must be able to explain how AI reaches decisions</p>
+        <p><strong>Risk Level:</strong> <span class="ds-badge warning">Medium</span></p>
+        <p><strong>Compliance Steps:</strong> Document AI decision logic, Create understandable explanations for data subjects</p>
+      </div>
+    </section>
+
+    <section class="ds-card">
+      <div class="ds-card-header">
+        <h3>Compliance Checklist</h3>
+      </div>
+      <table class="ds-table">
+        <thead>
+          <tr>
+            <th>Requirement</th>
+            <th>Status</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lawful basis for AI training data</td>
+            <td><span class="ds-badge danger">Critical</span></td>
+            <td>Consent, legitimate interest assessment, or other ...</td>
+          </tr>
+          <tr>
+            <td>Data Protection Impact Assessment</td>
+            <td><span class="ds-badge required">Required</span></td>
+            <td>Mandatory for high-risk AI processing...</td>
+          </tr>
+          <tr>
+            <td>Privacy by Design implementation</td>
+            <td><span class="ds-badge required">Required</span></td>
+            <td>Build privacy into AI system architecture...</td>
+          </tr>
+          <tr>
+            <td>Transparency and explainability</td>
+            <td><span class="ds-badge required">Required</span></td>
+            <td>Meaningful information about AI decision logic...</td>
+          </tr>
+          <tr>
+            <td>Human oversight for automated decisions</td>
+            <td><span class="ds-badge required">Required</span></td>
+            <td>Human review for decisions with legal/significant ...</td>
+          </tr>
+          <tr>
+            <td>Data subject rights mechanisms</td>
+            <td><span class="ds-badge required">Required</span></td>
+            <td>Access, rectification, erasure, objection procedur...</td>
+          </tr>
+          <tr>
+            <td>Cross-border transfer safeguards</td>
+            <td><span class="ds-badge info">If applicable</span></td>
+            <td>SCCs, adequacy decisions for non-EU transfers...</td>
+          </tr>
+          <tr>
+            <td>Records of processing activities</td>
+            <td><span class="ds-badge required">Required</span></td>
+            <td>Document all AI processing operations...</td>
+          </tr>
+          <tr>
+            <td>DPO appointment</td>
+            <td><span class="ds-badge info">If applicable</span></td>
+            <td>Required for large-scale systematic monitoring...</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="ds-card">
+      <div class="ds-card-header">
+        <h3>Research Findings</h3>
+      </div>
+      <div class="ds-callout info">
+        <div class="ds-callout-title">[FACT]</div>
+        Article 22 of GDPR establishes a right not to be subject to automated decisions with legal or similarly significant effects, with limited exceptions requiring explicit consent, contract necessity, or ... <span class="ds-badge success">Confidence: 99%</span>
+      </div>
+      <div class="ds-callout info">
+        <div class="ds-callout-title">[FACT]</div>
+        A Data Protection Impact Assessment (DPIA) under Article 35 is mandatory before processing likely to result in high risk, which includes most AI systems performing profiling or large-scale data proces... <span class="ds-badge success">Confidence: 98%</span>
+      </div>
+      <div class="ds-callout info">
+        <div class="ds-callout-title">[PATTERN]</div>
+        European data protection authorities are increasingly focusing enforcement on AI companies, with the Italian Garante leading actions against ChatGPT and subsequent DPAs following similar investigation... <span class="ds-badge warning">Confidence: 89%</span>
+      </div>
+      <div class="ds-callout info">
+        <div class="ds-callout-title">[FACT]</div>
+        Maximum GDPR fines are €20 million or 4% of global annual turnover, whichever is higher. The largest fine to date is €1.2 billion against Meta for data transfer violations.... <span class="ds-badge success">Confidence: 100%</span>
+      </div>
+      <div class="ds-callout info">
+        <div class="ds-callout-title">[PATTERN]</div>
+        Courts and DPAs are interpreting 'human oversight' requirements strictly - rubber-stamping AI decisions does not satisfy Article 22 requirements.... <span class="ds-badge warning">Confidence: 87%</span>
+      </div>
+      <div class="ds-callout warning">
+        <div class="ds-callout-title">[GAP]</div>
+        The intersection between GDPR and the EU AI Act creates some regulatory uncertainty during the transition period, particularly regarding which requirements take precedence in overlapping areas.... <span class="ds-badge warning">Confidence: 78%</span>
+      </div>
+    </section>
+
+    <section class="ds-card">
+      <div class="ds-card-header">
+        <h3>Expert Perspectives</h3>
+      </div>
+
+      <div class="ds-card">
+        <h4>Compliance Analysis</h4>
+        <p>GDPR compliance for AI systems requires a comprehensive approach addressing data collection, training, deployment, and ongoing operation. The key challenge is balancing AI development needs with data minimization principles. Organizations should adopt a 'privacy-first' AI development methodology.</p>
+
+        <h5>Key Insights:</h5>
+        <ul>
+          <li>Lawful basis must be established before collecting ANY training data</li>
+          <li>The 'right to explanation' under GDPR requires AI systems to be somewhat interpretable</li>
+          <li>Synthetic data and privacy-preserving techniques can reduce compliance burden</li>
+          <li>Cross-border transfers for AI processing require careful safeguards</li>
+        </ul>
+
+        <h5>Recommendations:</h5>
+        <ul>
+          <li>Conduct comprehensive DPIA before any AI deployment</li>
+          <li>Implement genuine human oversight for consequential decisions</li>
+          <li>Document lawful basis for all training data</li>
+        </ul>
+
+        <h5>Warnings:</h5>
+        <ul>
+          <li>Using personal data for AI training without proper legal basis is high-risk</li>
+          <li>Cross-border data transfers (especially to US) require additional safeguards post-Schrems II</li>
+        </ul>
+
+        <p><span class="ds-badge success">Confidence: 90%</span></p>
+      </div>
+
+      <div class="ds-card">
+        <h4>Regulatory Risk Analysis</h4>
+        <p>Regulatory risk for AI companies in the EU is elevated and increasing. The combination of GDPR enforcement, the new EU AI Act, and national initiatives creates a complex compliance landscape. First-mover enforcement actions set precedents that affect the entire industry.</p>
+
+        <h5>Key Insights:</h5>
+        <ul>
+          <li>Irish DPC and Italian Garante are most active on AI enforcement</li>
+          <li>French CNIL has issued comprehensive AI training guidance</li>
+          <li>Coordination between DPAs increasing for cross-border AI cases</li>
+          <li>EU AI Act will layer additional requirements starting 2025</li>
+        </ul>
+
+        <h5>Recommendations:</h5>
+        <ul>
+          <li>Monitor enforcement actions closely for compliance guidance</li>
+          <li>Consider appointing EU representative if not established in EU</li>
+          <li>Prepare for AI Act compliance timeline now</li>
+        </ul>
+
+        <h5>Warnings:</h5>
+        <ul>
+          <li>Enforcement appetite is high - regulators are making examples</li>
+        </ul>
+
+        <p><span class="ds-badge warning">Confidence: 86%</span></p>
+      </div>
+    </section>
+
+    <section class="ds-card">
+      <div class="ds-card-header">
+        <h3>Sources</h3>
+      </div>
+      <table class="ds-table">
+        <thead>
+          <tr>
+            <th>Source</th>
+            <th>Type</th>
+            <th>Credibility</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj">General Data Protection Regulation (GDPR) Official Text</a></td>
+            <td>regulation</td>
+            <td><span class="ds-badge success">100%</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_en">EDPB Guidelines on AI and Automated Decision-Making</a></td>
+            <td>regulatory_guidance</td>
+            <td><span class="ds-badge success">99%</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://www.cnil.fr/en/artificial-intelligence">CNIL AI Position and Guidance</a></td>
+            <td>regulatory_guidance</td>
+            <td><span class="ds-badge success">97%</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689">EU AI Act Official Text</a></td>
+            <td>regulation</td>
+            <td><span class="ds-badge success">100%</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://www.garanteprivacy.it/">Italian Garante Decisions on AI</a></td>
+            <td>regulatory_decision</td>
+            <td><span class="ds-badge success">98%</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

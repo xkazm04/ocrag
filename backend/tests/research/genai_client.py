@@ -50,7 +50,7 @@ class GroundedResponse:
 class GeminiGroundedClient:
     """Native Gemini client with web search grounding."""
 
-    DEFAULT_MODEL = "gemini-2.0-flash"
+    DEFAULT_MODEL = "gemini-3-flash-preview"
 
     def __init__(
         self,

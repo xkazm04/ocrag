@@ -1,0 +1,136 @@
+# Domain Credibility Configuration
+# Scores range from 0.0 (untrusted) to 1.0 (highly trusted)
+#
+# This file can be customized per deployment to adjust credibility scoring
+# for domain authority, source type classification, and scoring weights.
+
+# Domain authority scores for known domains
+# TLD patterns start with "." and match any domain ending with that suffix
+# Specific domains are matched exactly or as suffix (for subdomains)
+domain_authority:
+  # Government - highest trust
+  ".gov": 0.95
+  ".gov.uk": 0.95
+  ".gov.au": 0.95
+  ".mil": 0.90
+
+  # Academic institutions
+  ".edu": 0.90
+  ".ac.uk": 0.90
+
+  # Wire services - primary news sources
+  "reuters.com": 0.90
+  "apnews.com": 0.90
+  "afp.com": 0.90
+  "dpa.com": 0.88
+
+  # Major news organizations
+  "bbc.com": 0.85
+  "bbc.co.uk": 0.85
+  "nytimes.com": 0.85
+  "washingtonpost.com": 0.85
+  "wsj.com": 0.85
+  "ft.com": 0.85
+  "economist.com": 0.85
+  "bloomberg.com": 0.85
+  "theguardian.com": 0.80
+
+  # Scientific publications
+  "nature.com": 0.95
+  "science.org": 0.95
+  "sciencedirect.com": 0.90
+  "springer.com": 0.90
+  "arxiv.org": 0.85
+
+  # Reference sources
+  "britannica.com": 0.85
+  "wikipedia.org": 0.70
+
+  # Corporate/professional
+  "linkedin.com": 0.60
+  "medium.com": 0.50
+
+  # Social media - lower trust
+  "reddit.com": 0.45
+  "twitter.com": 0.40
+  "x.com": 0.40
+  "facebook.com": 0.35
+
+# Patterns used to classify source types
+# Each key is a source type, values are substrings to match in URL or domain
+source_type_patterns:
+  government:
+    - ".gov"
+    - ".mil"
+    - "parliament"
+    - "congress"
+    - "senate"
+  academic:
+    - ".edu"
+    - ".ac."
+    - "university"
+    - "journal"
+    - "research"
+  news:
+    - "news"
+    - "times"
+    - "post"
+    - "herald"
+    - "tribune"
+    - "reuters"
+    - "ap"
+    - "bbc"
+  corporate:
+    - "investor"
+    - "earnings"
+    - "sec.gov"
+    - "annual report"
+  blog:
+    - "blog"
+    - "medium.com"
+    - "substack"
+    - "wordpress"
+  social:
+    - "twitter"
+    - "x.com"
+    - "facebook"
+    - "linkedin"
+    - "reddit"
+  wiki:
+    - "wikipedia"
+    - "wiki"
+
+# Base credibility scores by source type
+source_type_scores:
+  government: 0.90
+  academic: 0.85
+  news: 0.75
+  corporate: 0.65
+  wiki: 0.60
+  blog: 0.50
+  social: 0.40
+  unknown: 0.50
+
+# Weights for composite score calculation
+scoring_weights:
+  domain_authority: 0.5
+  source_type_score: 0.3
+  title_quality: 0.2
+
+# Default scores by TLD for unknown domains
+tld_defaults:
+  ".org": 0.65
+  ".com": 0.55
+  ".net": 0.50
+  default: 0.50
+
+# Clickbait indicators that reduce title quality score
+# Each match reduces score by 0.1
+clickbait_phrases:
+  - "you won't believe"
+  - "shocking"
+  - "!!!!"
+  - "???"
+  - "click here"
+  - "this is why"
+  - "what happened next"

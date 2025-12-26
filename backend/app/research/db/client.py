@@ -5,7 +5,6 @@ from functools import lru_cache
 from typing import Optional
 
 from supabase import create_client, Client
-from supabase.lib.client_options import ClientOptions
 
 from app.config import get_settings
 
@@ -31,10 +30,8 @@ def get_supabase_client() -> Client:
     if not settings.supabase_url or not settings.supabase_key:
         raise ValueError("Supabase URL and key must be configured")
 
-    options = ClientOptions(
-        postgrest_client_timeout=30,
-    )
-    return create_client(settings.supabase_url, settings.supabase_key, options)
+    # supabase-py v2.x simplified API
+    return create_client(settings.supabase_url, settings.supabase_key)
 
 
 def get_workspace_client(workspace_id: str = "default") -> Client:

@@ -1,0 +1,117 @@
+{
+  "sessions": [
+    {
+      "id": "96ab55a1-9ac3-4a5d-941b-fdec95bf34a3",
+      "workspace_id": "default",
+      "title": "Research: Jeffrey Epstein Deutsche Bank account closure 2013...",
+      "query": "Jeffrey Epstein Deutsche Bank account closure 2013 suspicious activity reports",
+      "template_type": "investigative",
+      "status": "active",
+      "created_at": "2025-12-25T09:44:56.617966+00:00",
+      "updated_at": "2025-12-25T09:44:56.617966+00:00",
+      "completed_at": null
+    },
+    {
+      "id": "b900ca8a-e00d-4baf-bda6-eb38529c23cc",
+      "workspace_id": "default",
+      "title": "Research: Jeffrey Epstein Bill Clinton flights Lolita Expres...",
+      "query": "Jeffrey Epstein Bill Clinton flights Lolita Express 1990s 2000s passenger logs",
+      "template_type": "investigative",
+      "status": "active",
+      "created_at": "2025-12-25T09:41:30.968858+00:00",
+      "updated_at": "2025-12-25T09:41:30.968858+00:00",
+      "completed_at": null
+    },
+    {
+      "id": "ca3059e4-08e2-485c-9b87-112f9e0bfe10",
+      "workspace_id": "default",
+      "title": "Research: Jeffrey Epstein Harvard donations MIT Media Lab fu...",
+      "query": "Jeffrey Epstein Harvard donations MIT Media Lab funding 1990s 2000s",
+      "template_type": "investigative",
+      "status": "active",
+      "created_at": "2025-12-25T09:28:17.791378+00:00",
+      "updated_at": "2025-12-25T09:28:17.791378+00:00",
+      "completed_at": null
+    },
+    {
+      "id": "eab442da-e2c3-4614-b277-0e65f6a8dce6",
+      "workspace_id": "default",
+      "title": "Research: Jeffrey Epstein New Mexico ranch Zorro Ranch prope...",
+      "query": "Jeffrey Epstein New Mexico ranch Zorro Ranch property purchase price 1990s",
+      "template_type": "investigative",
+      "status": "active",
+      "created_at": "2025-12-25T09:23:31.304165+00:00",
+      "updated_at": "2025-12-25T09:23:31.304165+00:00",
+      "completed_at": null
+    },
+    {
+      "id": "92c1f7e6-d8e6-4c83-8cbe-4c53b8bd918d",
+      "workspace_id": "default",
+      "title": "Research: Jeffrey Epstein JPMorgan Chase Deutsche Bank accou...",
+      "query": "Jeffrey Epstein JPMorgan Chase Deutsche Bank accounts transactions 1998-2010 banking relationships",
+      "template_type": "investigative",
+      "status": "active",
+      "created_at": "2025-12-25T08:41:33.87116+00:00",
+      "updated_at": "2025-12-25T08:41:33.87116+00:00",
+      "completed_at": null
+    },
+    {
+      "id": "67107a76-5579-4b99-b3fa-b699e348b9e3",
+      "workspace_id": "default",
+      "title": "Research: Jeffrey Epstein Virgin Islands Little Saint James ...",
+      "query": "Jeffrey Epstein Virgin Islands Little Saint James island purchase 1998 offshore entities financial shell companies",
+      "template_type": "investigative",
+      "status": "active",
+      "created_at": "2025-12-25T08:41:32.479878+00:00",
+      "updated_at": "2025-12-25T08:41:32.479878+00:00",
+      "completed_at": null
+    },
+    {
+      "id": "893fd5db-0677-4918-8a7b-5f219c485cfd",
+      "workspace_id": "default",
+      "title": "Research: Jeffrey Epstein Towers Financial Steven Hoffenberg...",
+      "query": "Jeffrey Epstein Towers Financial Steven Hoffenberg Ponzi scheme 1987-1993 financial fraud indictment",
+      "template_type": "investigative",
+      "status": "active",
+      "created_at": "2025-12-25T08:41:14.906383+00:00",
+      "updated_at": "2025-12-25T08:41:14.906383+00:00",
+      "completed_at": null
+    },
+    {
+      "id": "596a5930-9f6b-4396-9e7b-dc5fa2ecb4db",
+      "workspace_id": "default",
+      "title": "Research: Jeffrey Epstein Manhattan townhouse 9 East 71st St...",
+      "query": "Jeffrey Epstein Manhattan townhouse 9 East 71st Street purchase price Les Wexner transfer 1990s",
+      "template_type": "investigative",
+      "status": "active",
+      "created_at": "2025-12-25T08:39:49.738519+00:00",
+      "updated_at": "2025-12-25T08:39:49.738519+00:00",
+      "completed_at": null
+    },
+    {
+      "id": "4d26fea7-a50f-46ba-b613-ba93d162eb19",
+      "workspace_id": "default",
+      "title": "Research: Jeffrey Epstein Les Wexner financial relationship ...",
+      "query": "Jeffrey Epstein Les Wexner financial relationship power of attorney money management 1991-2007",
+      "template_type": "investigative",
+      "status": "active",
+      "created_at": "2025-12-25T08:39:49.133485+00:00",
+      "updated_at": "2025-12-25T08:39:49.133485+00:00",
+      "completed_at": null
+    },
+    {
+      "id": "2dc602bc-0fb0-4612-9e1b-e8cb3ff86624",
+      "workspace_id": "epstein-investigation",
+      "title": "Research: Jeffrey Epstein L.S.B. Leasing LSB Leasing 1980s S...",
+      "query": "Jeffrey Epstein L.S.B. Leasing LSB Leasing 1980s Steven Hoffenberg involvement aircraft leasing business",
+      "template_type": "investigative",
+      "status": "active",
+      "created_at": "2025-12-24T17:09:46.538365+00:00",
+      "updated_at": "2025-12-24T17:09:46.538365+00:00",
+      "completed_at": null
+    }
+  ],
+  "total": 10,
+  "offset": 0,
+  "limit": 10
+}

@@ -33,7 +33,7 @@ async def test_openrouter_with_search():
 
     # Try OpenRouter's web search plugin approach
     payload = {
-        "model": "google/gemini-2.0-flash-001",
+        "model": "google/gemini-3-flash-preview",
         "messages": [
             {
                 "role": "user",
@@ -81,7 +81,7 @@ async def test_openrouter_with_search():
     print("\nTest 2: Using 'tools' parameter (OpenAI format)...")
 
     payload2 = {
-        "model": "google/gemini-2.0-flash-001",
+        "model": "google/gemini-3-flash-preview",
         "messages": [
             {
                 "role": "user",

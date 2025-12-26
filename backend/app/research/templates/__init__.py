@@ -2,10 +2,16 @@
 
 from .base import BaseResearchTemplate
 from .investigative import InvestigativeTemplate
+from .competitive import CompetitiveIntelligenceTemplate
+from .financial import FinancialAnalysisTemplate
+from .legal import LegalResearchTemplate
 
 # Template registry
 TEMPLATE_REGISTRY = {
     "investigative": InvestigativeTemplate(),
+    "competitive": CompetitiveIntelligenceTemplate(),
+    "financial": FinancialAnalysisTemplate(),
+    "legal": LegalResearchTemplate(),
 }
 
 
@@ -20,6 +26,9 @@ def get_template(template_type: str) -> BaseResearchTemplate:
 __all__ = [
     "BaseResearchTemplate",
     "InvestigativeTemplate",
+    "CompetitiveIntelligenceTemplate",
+    "FinancialAnalysisTemplate",
+    "LegalResearchTemplate",
     "TEMPLATE_REGISTRY",
     "get_template",
 ]

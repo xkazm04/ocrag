@@ -32,7 +32,29 @@
       "Bash(python:*)",
       "Bash(del \"C:\\\\Users\\\\kazim\\\\dac\\\\rag\\\\reflex_app\\\\reflex_app\\\\state\\\\playback_state.py\")",
       "Bash(pip install:*)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(find:*)",
+      "Bash(xargs:*)",
+      "Bash(pip show:*)",
+      "Bash(ls:*)",
+      "Bash(for i in 1 2 3 4 5 6 7 8 9 10)",
+      "Bash(do sleep 15)",
+      "Bash(done)",
+      "Bash(for job_id in \"ce2942fb-1e63-47aa-bbef-0125f8c01231\" \"d7abff42-3616-4d4c-9b3b-5db7466ac1c9\" \"70a3f05f-3653-4217-ae37-75ab5abc871a\" \"a6f179a9-f0fa-480b-957a-d2de409cb84d\" \"ca7a4152-0194-43a2-8624-223df8e269eb\" \"5c7a5b1e-4237-4b6f-ae88-02ca9992c43f\")",
+      "Bash(do curl -s \"http://localhost:8000/api/research/status/$job_id\")",
+      "Bash(head:*)",
+      "Bash(taskkill:*)",
+      "Bash(netstat:*)",
+      "Bash(.venv/Scripts/python.exe:*)",
+      "Bash(C:/Users/kazim/dac/rag/backend/.venv/Scripts/python.exe -c:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npm install:*)",
+      "Bash(tasklist:*)",
+      "Bash(C:\\\\Users\\\\kazim\\\\dac\\\\rag\\\\backend\\\\.venv\\\\Scripts\\\\python.exe -m uvicorn:*)",
+      "Bash(C:/Users/kazim/dac/rag/backend/.venv/Scripts/python.exe -m uvicorn:*)",
+      "Bash(\"/c/Program Files/Python311/python.exe\" -c \"import fastapi; print\\(''FastAPI available''\\)\")",
+      "Bash(# Merge Jeffrey Pagliuca duplicates curl -s -X POST \"\"http://localhost:8000/api/research/knowledge/entities/merge\"\" -H \"\"Content-Type: application/json\"\" -d ''{ \"\"target_id\"\": \"\"c32b65fc-2286-469e-a95a-d772ae4f8511\"\", \"\"source_ids\"\": [\"\"2d10d9d3-2b3e-4d0d-9b3f-3f3f3f3f3f3f\"\"] }'' || echo \"\"Skip Jeffrey P\"\" # Need full IDs - let me get them first curl -s \"\"http://localhost:8000/api/research/knowledge/entities?search=pagliuca&limit=10\"\")",
+      "Bash(__NEW_LINE__ curl -s \"http://localhost:8000/api/research/knowledge/entities?workspace_id=default&limit=1\")"
     ]
   }
 }

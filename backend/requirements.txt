@@ -40,6 +40,9 @@ langchain-community==0.3.14
 # SQL utilities
 sqlparse==0.5.3
 
+# PDF generation for reports
+weasyprint>=60.0
+
 # Traditional OCR engines (optional - heavy dependencies)
 # Install locally for development:
 # pip install paddleocr paddlepaddle easyocr surya-ocr

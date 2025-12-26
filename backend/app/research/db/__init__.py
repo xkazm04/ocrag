@@ -24,6 +24,7 @@ from .relationships import (
     ClaimSourceOperations,
 )
 from .similarity import SimilarityOperations, FindingClaimOperations
+from .jobs import JobOperations
 
 from ..schemas import (
     ResearchSession,
@@ -43,6 +44,8 @@ from ..schemas import (
     ClaimSource,
     FindingClaim,
     SimilarityCandidate,
+    JobStatus,
+    ResearchJob,
 )
 
 
@@ -68,6 +71,7 @@ class SupabaseResearchDB:
         self._claim_sources = ClaimSourceOperations(client, workspace_id)
         self._similarity = SimilarityOperations(client, workspace_id)
         self._finding_claims = FindingClaimOperations(client, workspace_id)
+        self._jobs = JobOperations(client, workspace_id)
 
     # Session Operations
     async def create_session(self, *args, **kwargs) -> ResearchSession:
@@ -246,6 +250,31 @@ class SupabaseResearchDB:
     async def link_finding_to_claim(self, *args, **kwargs) -> FindingClaim:
         return await self._finding_claims.link_finding_to_claim(*args, **kwargs)
 
+    # Job Operations
+    async def create_job(self, *args, **kwargs) -> ResearchJob:
+        return await self._jobs.create_job(*args, **kwargs)
+
+    async def get_job(self, job_id: UUID) -> Optional[ResearchJob]:
+        return await self._jobs.get_job(job_id)
+
+    async def update_job_status(self, *args, **kwargs) -> None:
+        return await self._jobs.update_job_status(*args, **kwargs)
+
+    async def update_job_progress(self, *args, **kwargs) -> None:
+        return await self._jobs.update_job_progress(*args, **kwargs)
+
+    async def complete_job(self, *args, **kwargs) -> None:
+        return await self._jobs.complete_job(*args, **kwargs)
+
+    async def fail_job(self, *args, **kwargs) -> None:
+        return await self._jobs.fail_job(*args, **kwargs)
+
+    async def cancel_job(self, job_id: UUID) -> None:
+        return await self._jobs.cancel_job(job_id)
+
+    async def list_jobs(self, *args, **kwargs) -> List[ResearchJob]:
+        return await self._jobs.list_jobs(*args, **kwargs)
+
 
 def get_supabase_db(workspace_id: str = "default") -> SupabaseResearchDB:
     """Get Supabase research database instance."""
@@ -257,4 +286,5 @@ __all__ = [
     "SupabaseResearchDB",
     "get_supabase_client",
     "get_supabase_db",
+    "JobOperations",
 ]

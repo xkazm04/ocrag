@@ -1,12 +1,11 @@
 """Knowledge base core schemas: topics, entities, claims."""
 
+from __future__ import annotations
+
 from datetime import datetime, date
-from typing import Optional, List, Dict, Any, TYPE_CHECKING
+from typing import Optional, List, Dict, Any
 from uuid import UUID
 from pydantic import BaseModel, Field
-
-if TYPE_CHECKING:
-    from .relationships import ClaimRelationship, ClaimSource
 
 
 # ============================================
@@ -120,5 +119,4 @@ class KnowledgeClaim(KnowledgeClaimBase):
     related_claims: Optional[List["ClaimRelationship"]] = None
 
 
-# Rebuild models for forward references
-KnowledgeTopic.model_rebuild()
+# Note: model_rebuild() is called in __init__.py after all types are imported

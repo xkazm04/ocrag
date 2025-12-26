@@ -50,7 +50,7 @@ class ResearchQuery(BaseModel):
     executed_at: Optional[datetime] = None
     execution_time_ms: Optional[int] = None
     result_count: int = 0
-    model_used: str = "gemini-2.0-flash"
+    model_used: str = "gemini-3-flash-preview"
     grounding_metadata: Optional[Dict[str, Any]] = None
 
 

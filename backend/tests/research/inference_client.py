@@ -60,7 +60,7 @@ class InferenceClient:
     # Cost per 1M tokens (approximate for Gemini 3 Flash)
     COST_RATES = {
         "google/gemini-3-flash-preview": {"input": 0.10, "output": 0.40},
-        "google/gemini-2.0-flash-001": {"input": 0.10, "output": 0.40},
+        "google/gemini-2.0-flash": {"input": 0.10, "output": 0.40},
     }
 
     def __init__(

@@ -1,13 +1,11 @@
 """Relationship schemas: claim relations, entity links, sources."""
 
+from __future__ import annotations
+
 from datetime import datetime
-from typing import Optional, List, TYPE_CHECKING
+from typing import Optional, List
 from uuid import UUID
 from pydantic import BaseModel, Field
-
-if TYPE_CHECKING:
-    from .knowledge import KnowledgeClaim, KnowledgeEntity
-    from .sources import Source
 
 
 # ============================================

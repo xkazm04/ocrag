@@ -1,0 +1,20 @@
+[
+  {
+    "name": "causal_analysis",
+    "query": "Why did Russia invade Ukraine in 2022? What were the key motivations and triggers?",
+    "success": false,
+    "error": "'total_relationships'"
+  },
+  {
+    "name": "stakeholder_analysis",
+    "query": "Why are Western countries providing military aid to Ukraine? What are their strategic interests?",
+    "success": false,
+    "error": "'total_relationships'"
+  },
+  {
+    "name": "fact_check",
+    "query": "Verify: Russia claimed the invasion was to 'denazify' Ukraine. What evidence supports or contradicts this claim?",
+    "success": false,
+    "error": "'total_relationships'"
+  }
+]

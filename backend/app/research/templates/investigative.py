@@ -111,32 +111,48 @@ Extract findings in these investigative categories:
 
 3. RELATIONSHIPS (finding_type: "relationship")
    - Connections between actors
-   - Types: financial, personal, professional, political, criminal
+   - Types: personal, professional, political, criminal
    - Include strength of evidence
 
-4. EVIDENCE (finding_type: "evidence")
+4. FINANCIAL TRANSACTIONS (finding_type: "financial")
+   - ANY money movement: payments, gifts, loans, wire transfers, settlements
+   - Property purchases, sales, or transfers
+   - Investments, donations, or funding
+   - Include in extracted_data:
+     * "amount": dollar amount (number)
+     * "currency": "USD", "GBP", etc.
+     * "payer": who paid/gave the money
+     * "payee": who received the money
+     * "transaction_date": date if known (YYYY-MM-DD)
+     * "transaction_type": payment/gift/loan/wire_transfer/property/settlement/investment
+     * "institution": bank or financial institution if mentioned
+     * "purpose": reason or context for the transaction
+   - This is CRITICAL - extract ALL financial amounts mentioned
+
+5. EVIDENCE (finding_type: "evidence")
    - Documents, statements, data points
    - Include: type, source, significance
    - Note verification status
 
-5. PATTERNS (finding_type: "pattern")
+6. PATTERNS (finding_type: "pattern")
    - Recurring behaviors, methods, structures
    - Include: description, frequency, participants
 
-6. GAPS (finding_type: "gap")
+7. GAPS (finding_type: "gap")
    - Missing information, unanswered questions
    - What we don't know and why it matters
    - Suggested follow-up
 
 For each finding, return:
-- finding_type: One of 'actor', 'event', 'relationship', 'evidence', 'pattern', 'gap'
+- finding_type: One of 'actor', 'event', 'relationship', 'financial', 'evidence', 'pattern', 'gap'
 - content: Detailed finding with specific facts
 - summary: One sentence
 - confidence_score: 0.0-1.0 (based on source quality and corroboration)
 - temporal_context: 'past', 'present', 'ongoing', or 'prediction'
-- extracted_data: Optional JSON object with structured data specific to the finding type
+- extracted_data: JSON object with structured data specific to the finding type
+  - For 'financial': MUST include amount, payer, payee, transaction_type
 
-Return as JSON array.
+Return as JSON array. Prioritize extracting ALL financial transactions with specific dollar amounts.
 """
 
         result = await self._call_gemini_json(prompt)

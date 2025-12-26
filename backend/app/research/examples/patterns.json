@@ -1,0 +1,61 @@
+{
+  "entity_clusters": [
+    {
+      "cluster_id": "financial-network",
+      "label": "Financial Network",
+      "entities": [
+        "Les Wexner",
+        "Bear Stearns",
+        "Deutsche Bank",
+        "JPMorgan"
+      ],
+      "connection_strength": 0.82
+    },
+    {
+      "cluster_id": "social-circle",
+      "label": "Social Circle",
+      "entities": [
+        "Ghislaine Maxwell",
+        "Prince Andrew",
+        "Bill Clinton"
+      ],
+      "connection_strength": 0.75
+    }
+  ],
+  "temporal_bursts": [
+    {
+      "period": "1995-1998",
+      "claim_count": 0,
+      "primary_topics": [
+        "Towers Financial",
+        "fraud"
+      ]
+    },
+    {
+      "period": "2006-2008",
+      "claim_count": 0,
+      "primary_topics": [
+        "investigation",
+        "plea deal"
+      ]
+    }
+  ],
+  "entity_type_distribution": {
+    "organization": 34,
+    "person": 941,
+    "location": 25
+  },
+  "claim_type_distribution": {
+    "fact": 26,
+    "relationship": 192,
+    "event": 282
+  },
+  "yearly_activity": {},
+  "anomalies": [
+    {
+      "type": "unusual_connection",
+      "description": "High-frequency transfers to offshore accounts",
+      "confidence": 0.7
+    }
+  ]
+}

@@ -124,6 +124,78 @@ class EntityOperations(BaseSupabaseDB):
             },
         ).execute()
 
+    async def delete_entity(self, entity_id: UUID) -> bool:
+        """Delete an entity and update related claims to remove references."""
+        # First, remove claim_entities references
+        self.client.table("claim_entities").delete().eq(
+            "entity_id", str(entity_id)
+        ).execute()
+
+        # Delete the entity
+        result = self.client.table("knowledge_entities").delete().eq(
+            "id", str(entity_id)
+        ).execute()
+
+        return len(result.data) > 0
+
+    async def merge_entities(
+        self, target_id: UUID, source_ids: List[UUID]
+    ) -> KnowledgeEntity:
+        """Merge multiple entities into one. Collects aliases and deletes sources."""
+        # Get target entity
+        target = await self.get_entity(target_id)
+        if not target:
+            raise Exception(f"Target entity {target_id} not found")
+
+        # Collect aliases from source entities
+        all_aliases = set(target.aliases or [])
+
+        for source_id in source_ids:
+            source = await self.get_entity(source_id)
+            if source:
+                # Add source name and aliases to target aliases
+                all_aliases.add(source.canonical_name)
+                all_aliases.update(source.aliases or [])
+
+                # Delete all claim_entities for this source
+                # (claims retain via target entity reference)
+                self.client.table("claim_entities").delete().eq(
+                    "entity_id", str(source_id)
+                ).execute()
+
+                # Delete source entity
+                self.client.table("knowledge_entities").delete().eq(
+                    "id", str(source_id)
+                ).execute()
+
+        # Update target with merged aliases
+        all_aliases.discard(target.canonical_name)  # Don't include canonical name in aliases
+        updated = await self.update_entity(target_id, {"aliases": list(all_aliases)})
+
+        return updated
+
+    async def list_entities(
+        self,
+        entity_type: Optional[str] = None,
+        limit: int = 100,
+        offset: int = 0,
+        order_by: str = "mention_count",
+        order_desc: bool = True,
+    ) -> Tuple[List[KnowledgeEntity], int]:
+        """List entities with pagination. Returns (entities, total_count)."""
+        query = self.client.table("knowledge_entities").select("*", count="exact")
+
+        if entity_type:
+            query = query.eq("entity_type", entity_type)
+
+        query = query.order(order_by, desc=order_desc).range(offset, offset + limit - 1)
+        result = query.execute()
+
+        entities = [self._row_to_entity(row) for row in result.data]
+        total = result.count or len(result.data)
+
+        return entities, total
+
     def _row_to_entity(self, row: Dict[str, Any]) -> KnowledgeEntity:
         """Convert database row to KnowledgeEntity."""
         return KnowledgeEntity(

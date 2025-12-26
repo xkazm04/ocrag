@@ -1,11 +1,14 @@
 """Response schemas for knowledge base API."""
 
-from typing import Optional, List, Dict, Any
+from __future__ import annotations
+
+from typing import Optional, List, Dict, Any, TYPE_CHECKING
 from uuid import UUID
 from pydantic import BaseModel, Field
 
-from .knowledge import KnowledgeTopic, KnowledgeEntity, KnowledgeClaim
-from .relationships import ClaimRelationship
+if TYPE_CHECKING:
+    from .knowledge import KnowledgeTopic, KnowledgeEntity, KnowledgeClaim
+    from .relationships import ClaimRelationship
 
 
 class TopicTreeResponse(BaseModel):

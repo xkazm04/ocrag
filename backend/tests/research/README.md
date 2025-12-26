@@ -42,7 +42,7 @@ Deep investigative research system with multi-perspective analysis, relationship
 
 | Client | Model | Purpose |
 |--------|-------|---------|
-| **Gemini Native** | `gemini-2.0-flash` | Web search with Google Search grounding |
+| **Gemini Native** | `gemini-3-flash-preview` | Web search with Google Search grounding |
 | **OpenRouter** | `google/gemini-3-flash-preview` | Inference for perspectives, decomposition, relationships |
 
 ## Components

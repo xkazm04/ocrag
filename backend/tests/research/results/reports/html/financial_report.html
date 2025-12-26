@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NVIDIA Investment Analysis: Q3 FY2025 Deep Dive</title>
+  <style>
+/* === DESIGN SYSTEM === */
+/* A curated set of reusable CSS patterns for professional reports */
+
+:root {
+  /* Theme Colors - Will be overridden per template */
+  --ds-primary: #1a365d;
+  --ds-accent: #3182ce;
+  --ds-success: #38a169;
+  --ds-warning: #d69e2e;
+  --ds-danger: #e53e3e;
+  --ds-bg: #ffffff;
+  --ds-bg-subtle: #f7fafc;
+  --ds-bg-card: #ffffff;
+  --ds-border: #e2e8f0;
+  --ds-text: #2d3748;
+  --ds-text-muted: #718096;
+  --ds-radius: 8px;
+  --ds-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+  --ds-shadow-lg: 0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: var(--ds-text);
+  background: var(--ds-bg);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* === TYPOGRAPHY === */
+h1, h2, h3, h4 { color: var(--ds-primary); margin-top: 1.5rem; margin-bottom: 0.75rem; font-weight: 600; }
+h1 { font-size: 2.25rem; border-bottom: 3px solid var(--ds-accent); padding-bottom: 0.5rem; }
+h2 { font-size: 1.75rem; border-bottom: 1px solid var(--ds-border); padding-bottom: 0.25rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1.1rem; }
+p { margin-bottom: 1rem; }
+a { color: var(--ds-accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* === CARDS === */
+.ds-card {
+  background: var(--ds-bg-card);
+  border-radius: var(--ds-radius);
+  box-shadow: var(--ds-shadow);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.ds-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--ds-border);
+}
+
+/* === METRIC CARDS === */
+.ds-metric-card {
+  background: var(--ds-bg-card);
+  border-radius: var(--ds-radius);
+  box-shadow: var(--ds-shadow);
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  display: inline-block;
+  min-width: 160px;
+}
+.ds-metric-card .value {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--ds-accent);
+  line-height: 1.2;
+}
+.ds-metric-card .label {
+  font-size: 0.875rem;
+  color: var(--ds-text-muted);
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.ds-metric-card .change {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+.ds-metric-card .change.positive { color: var(--ds-success); }
+.ds-metric-card .change.negative { color: var(--ds-danger); }
+
+/* === BADGES & TAGS === */
+.ds-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.ds-badge.success { background: #c6f6d5; color: #22543d; }
+.ds-badge.warning { background: #fefcbf; color: #744210; }
+.ds-badge.danger { background: #fed7d7; color: #822727; }
+.ds-badge.info { background: #bee3f8; color: #2a4365; }
+.ds-badge.neutral { background: var(--ds-bg-subtle); color: var(--ds-text-muted); }
+
+.ds-tag {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  background: var(--ds-bg-subtle);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: var(--ds-text-muted);
+  margin-right: 0.25rem;
+}
+
+/* === CONFIDENCE INDICATORS === */
+.ds-confidence {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+.ds-confidence .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ds-border);
+}
+.ds-confidence .dot.filled { background: var(--ds-accent); }
+.ds-confidence-bar {
+  height: 6px;
+  background: var(--ds-border);
+  border-radius: 3px;
+  overflow: hidden;
+  width: 100px;
+}
+.ds-confidence-bar .fill {
+  height: 100%;
+  background: var(--ds-accent);
+  border-radius: 3px;
+}
+
+/* === CALLOUTS & ALERTS === */
+.ds-callout {
+  padding: 1rem 1.25rem;
+  border-radius: var(--ds-radius);
+  border-left: 4px solid var(--ds-accent);
+  background: var(--ds-bg-subtle);
+  margin: 1rem 0;
+}
+.ds-callout.info { border-left-color: var(--ds-accent); background: #ebf8ff; }
+.ds-callout.success { border-left-color: var(--ds-success); background: #f0fff4; }
+.ds-callout.warning { border-left-color: var(--ds-warning); background: #fffaf0; }
+.ds-callout.danger { border-left-color: var(--ds-danger); background: #fff5f5; }
+.ds-callout-title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--ds-primary);
+}
+
+/* === TABLES === */
+.ds-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--ds-radius);
+  overflow: hidden;
+  box-shadow: var(--ds-shadow);
+  margin: 1rem 0;
+}
+.ds-table th {
+  background: var(--ds-primary);
+  color: white;
+  font-weight: 600;
+  padding: 0.875rem 1rem;
+  text-align: left;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.ds-table td {
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid var(--ds-border);
+  background: var(--ds-bg-card);
+}
+.ds-table tr:last-child td { border-bottom: none; }
+.ds-table tr:hover td { background: var(--ds-bg-subtle); }
+
+/* === TIMELINE === */
+.ds-timeline {
+  position: relative;
+  padding-left: 2.5rem;
+  margin: 1.5rem 0;
+}
+.ds-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--ds-accent), var(--ds-border));
+}
+.ds-timeline-item {
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+.ds-timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2.15rem;
+  top: 0.35rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--ds-accent);
+  border: 3px solid var(--ds-bg);
+  box-shadow: 0 0 0 2px var(--ds-accent);
+}
+.ds-timeline-date {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ds-accent);
+  margin-bottom: 0.25rem;
+}
+.ds-timeline-title {
+  font-weight: 600;
+  color: var(--ds-primary);
+}
+.ds-timeline-content {
+  color: var(--ds-text-muted);
+  font-size: 0.9375rem;
+  margin-top: 0.25rem;
+}
+
+/* === PROFILE/ACTOR CARDS === */
+.ds-profile {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.ds-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--ds-accent);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+.ds-profile-info { flex: 1; }
+.ds-profile-name {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--ds-primary);
+}
+.ds-profile-role {
+  color: var(--ds-text-muted);
+  font-size: 0.875rem;
+}
+
+/* === GRID LAYOUTS === */
+.ds-grid { display: grid; gap: 1.5rem; margin: 1rem 0; }
+.ds-grid-2 { grid-template-columns: repeat(2, 1fr); }
+.ds-grid-3 { grid-template-columns: repeat(3, 1fr); }
+.ds-grid-4 { grid-template-columns: repeat(4, 1fr); }
+.ds-flex { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* === SECTION DIVIDERS === */
+.ds-divider {
+  border: none;
+  height: 1px;
+  background: var(--ds-border);
+  margin: 2rem 0;
+}
+
+/* === STATS ROW === */
+.ds-stats-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+
+/* === PRINT STYLES === */
+@media print {
+  body { max-width: 100%; padding: 1rem; background: white; }
+  .ds-card, .ds-metric-card { box-shadow: none; border: 1px solid #ddd; }
+  .no-print { display: none; }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .ds-grid-2, .ds-grid-3, .ds-grid-4 { grid-template-columns: 1fr; }
+  .ds-stats-row { flex-direction: column; }
+  body { padding: 1rem; }
+}
+
+
+
+/* FINANCIAL THEME: Bloomberg-inspired, data-dense, dark mode */
+:root {
+  --ds-primary: #00d4aa;
+  --ds-accent: #00d4aa;
+  --ds-success: #00d4aa;
+  --ds-warning: #f6ad55;
+  --ds-danger: #fc8181;
+  --ds-bg: #0d1421;
+  --ds-bg-subtle: #1a2332;
+  --ds-bg-card: #1a2332;
+  --ds-border: #2d3748;
+  --ds-text: #e2e8f0;
+  --ds-text-muted: #a0aec0;
+  --ds-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+body { background: #0d1421; }
+.ds-table th { background: #2d3748; }
+.ds-badge.success { background: #1a4731; color: #9ae6b4; }
+.ds-badge.danger { background: #742a2a; color: #feb2b2; }
+.ds-badge.warning { background: #744210; color: #fbd38d; }
+.ds-badge.info { background: #2a4365; color: #90cdf4; }
+.ds-callout { background: #1a2332; }
+.ds-callout.info { background: #1a365d; border-left-color: #4299e1; }
+.ds-callout.success { background: #1a4731; border-left-color: #48bb78; }
+.ds-callout.warning { background: #744210; border-left-color: #ed8936; }
+.ds-callout.danger { background: #742a2a; border-left-color: #fc8181; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NVIDIA Investment Analysis: Q3 FY2025 Deep Dive</h1>
+  </header>
+
+  <main>
+    <section>
+      <div class="ds-card">
+        <div class="ds-card-header">
+          <h3>Session Overview</h3>
+        </div>
+        <p><strong>Query:</strong> Should I invest in NVIDIA (NVDA) at current valuations given AI infrastructure demand? Provide comprehensive analysis.</p>
+        <p><strong>Template Type:</strong> Financial Research</p>
+        <p><strong>Status:</strong> Completed</p>
+        <p><strong>Duration:</strong> 52 minutes</p>
+        <p><strong>Sources Analyzed:</strong> 67</p>
+        <p><strong>Generated:</strong> December 24, 2025 at 15:22</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Key Metrics</h2>
+      <div class="ds-stats-row">
+        <div class="ds-metric-card">
+          <div class="value">$35.1B</div>
+          <div class="label">Revenue</div>
+          <div class="change positive">▲ +94% YoY</div>
+        </div>
+        <div class="ds-metric-card">
+          <div class="value">75.0%</div>
+          <div class="label">Gross Margin</div>
+          <div class="change positive">▲ +11pp YoY</div>
+        </div>
+        <div class="ds-metric-card">
+          <div class="value">$19.3B</div>
+          <div class="label">Net Income</div>
+          <div class="change positive">▲ +109% YoY</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="ds-card">
+        <div class="ds-card-header">
+          <h3>Company Profile</h3>
+        </div>
+        <table class="ds-table">
+          <thead>
+            <tr>
+              <th>Attribute</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td>NVIDIA Corporation</td>
+            </tr>
+            <tr>
+              <td>Ticker</td>
+              <td>NVDA</td>
+            </tr>
+            <tr>
+              <td>Sector</td>
+              <td>Technology</td>
+            </tr>
+            <tr>
+              <td>Market Cap</td>
+              <td>$3.4 trillion</td>
+            </tr>
+            <tr>
+              <td>CEO</td>
+              <td>Jensen Huang (co-founder)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="ds-card">
+        <div class="ds-card-header">
+          <h3>Financial Metrics (Latest Quarter)</h3>
+        </div>
+        <table class="ds-table">
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Value</th>
+              <th>YoY Change</th>
+              <th>vs Estimate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Revenue</td>
+              <td>$35.1B</td>
+              <td><span class="ds-badge success">+94%</span></td>
+              <td><span class="ds-badge success">Beat</span></td>
+            </tr>
+            <tr>
+              <td>Gross Margin</td>
+              <td>75.0%</td>
+              <td><span class="ds-badge success">+11pp</span></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Operating Margin</td>
+              <td>62.3%</td>
+              <td><span class="ds-badge success">+15pp</span></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Net Income</td>
+              <td>$19.3B</td>
+              <td><span class="ds-badge success">+109%</span></td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Eps</td>
+              <td>$0.78</td>
+              <td><span class="ds-badge success">+103%</span></td>
+              <td><span class="ds-badge success">Beat</span></td>
+            </tr>
+            <tr>
+              <td>Free Cash Flow</td>
+              <td>$16.8B</td>
+              <td>N/A</td>
+              <td>N/A</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="ds-card">
+        <div class="ds-card-header">
+          <h3>Risk Factors</h3>
+        </div>
+        <ul>
+          <li><strong>Customer Concentration</strong> (High): Top 5 customers = 50%+ of Data Center revenue <span class="ds-badge danger">High</span></li>
+          <li><strong>China Export Restrictions</strong> (High): US restrictions limit China sales (~10-15% DC revenue at risk) <span class="ds-badge danger">High</span></li>
+          <li><strong>Competition Intensifying</strong> (Medium): AMD MI300X, Intel Gaudi, custom chips (Google TPU, Amazon Trainium) <span class="ds-badge warning">Medium</span></li>
+          <li><strong>Valuation Risk</strong> (Medium): Premium valuation leaves little room for disappointment <span class="ds-badge warning">Medium</span></li>
+          <li><strong>Supply Chain</strong> (Medium): TSMC dependency for advanced nodes, CoWoS packaging constraints <span class="ds-badge warning">Medium</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="ds-card">
+        <div class="ds-card-header">
+          <h3>Growth Catalysts</h3>
+        </div>
+        <ul>
+          <li><strong>Blackwell GPU Launch</strong> (Q4 FY2025): Next-gen architecture with 2.5x training performance - Impact: High <span class="ds-badge success">High Impact</span></li>
+          <li><strong>Hyperscaler Capex</strong> (Ongoing): Microsoft, Google, Amazon, Meta all increasing AI infrastructure spend - Impact: High <span class="ds-badge success">High Impact</span></li>
+          <li><strong>Sovereign AI</strong> (2024-2026): Governments building domestic AI compute capacity - Impact: Medium <span class="ds-badge info">Medium Impact</span></li>
+          <li><strong>Inference Demand</strong> (2025+): Production AI deployments driving inference chip demand - Impact: High <span class="ds-badge success">High Impact</span></li>
+          <li><strong>Software/Services</strong> (Ongoing): CUDA moat deepening, DGX Cloud, AI Enterprise expanding - Impact: Medium <span class="ds-badge info">Medium Impact</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="ds-card">
+        <div class="ds-card-header">
+          <h3>Valuation Metrics</h3>
+        </div>
+        <ul>
+          <li><strong>Stock Price</strong>: $140.50 (as of analysis)</li>
+          <li><strong>P/E (TTM)</strong>: 68.5x</li>
+          <li><strong>Forward P/E</strong>: 35.2x (FY2026E)</li>
+          <li><strong>Price Target Consensus</strong>: $165 (median)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Research Findings</h2>
+      <div class="ds-callout info">
+        <div class="ds-callout-title">Key Finding</div>
+        NVIDIA achieved $35.1 billion in Q3 FY2025 revenue, up 94% year-over-year, with Data Center segment generating $30.8 billion (88% of total), exceeding all analyst estimates.... <span class="ds-badge success">Confidence: 99%</span>
+      </div>
+      <div class="ds-callout info">
+        <div class="ds-callout-title">Key Finding</div>
+        Gross margins expanded to 75% from 64% year-over-year, demonstrating exceptional pricing power and operating leverage as AI demand outpaces supply.... <span class="ds-badge success">Confidence: 98%</span>
+      </div>
+      <div class="ds-callout info">
+        <div class="ds-callout-title">Key Finding</div>
+        Hyperscaler capex guidance indicates continued aggressive AI infrastructure investment through 2025-2026, with Microsoft, Google, and Amazon all projecting increased capital expenditure.... <span class="ds-badge success">Confidence: 91%</span>
+      </div>
+      <div class="ds-callout info">
+        <div class="ds-callout-title">Key Finding</div>
+        Blackwell GPU demand significantly exceeds supply for next several quarters according to management commentary, with production ramping in Q4 FY2025.... <span class="ds-badge success">Confidence: 93%</span>
+      </div>
+      <div class="ds-callout info">
+        <div class="ds-callout-title">Key Finding</div>
+        The inference market (deploying AI models in production) is emerging as the next growth driver, potentially larger than training market long-term.... <span class="ds-badge success">Confidence: 84%</span>
+      </div>
+      <div class="ds-callout warning">
+        <div class="ds-callout-title">Key Finding</div>
+        Long-term AI infrastructure spending sustainability beyond current hyperscaler buildout cycle remains uncertain. Spending could normalize after initial capacity build.... <span class="ds-badge warning">Confidence: 72%</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="ds-card">
+        <div class="ds-card-header">
+          <h3>Expert Perspectives: Valuation Analysis</h3>
+          <span class="ds-badge success">Confidence: 85%</span>
+        </div>
+        <p>NVIDIA's current valuation of 68.5x trailing earnings appears elevated versus historical averages (40x), but forward estimates of 35x on FY2026E earnings are more reasonable given the growth trajectory. The PEG ratio of 1.2x suggests the stock is fairly valued relative to growth, though not cheap. DCF analysis with conservative assumptions yields fair value in the $130-150 range.</p>
+
+        <h4>Key Insights:</h4>
+        <ul>
+          <li>Forward P/E of 35x reasonable for 50%+ growth</li>
+          <li>PEG of 1.2x indicates fair value, not deep value</li>
+          <li>Premium justified by moat but priced for perfection</li>
+          <li>Any growth deceleration could trigger multiple compression</li>
+        </ul>
+
+        <h4>Recommendations:</h4>
+        <ul>
+          <li>Consider dollar-cost averaging rather than lump sum at ATH</li>
+          <li>Position size appropriately given volatility (2-5% of portfolio)</li>
+          <li>Set price alerts for better entry points on pullbacks</li>
+        </ul>
+
+        <h4>Warnings:</h4>
+        <ul>
+          <li>Guidance miss or margin compression could trigger 20%+ drawdown</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="ds-card">
+        <div class="ds-card-header">
+          <h3>Expert Perspectives: Risk Analysis</h3>
+          <span class="ds-badge success">Confidence: 82%</span>
+        </div>
+        <p>Key risks center on concentration (customers, TSMC), geopolitics (China restrictions), and competition (AMD, custom silicon). The stock's beta of 1.7 indicates elevated volatility. However, the company's net cash position and FCF generation provide significant downside protection.</p>
+
+        <h4>Key Insights:</h4>
+        <ul>
+          <li>Customer concentration improving but still elevated</li>
+          <li>China risk partially priced in but could worsen</li>
+          <li>TSMC dependency is industry-wide, not NVDA-specific</li>
+          <li>Competition is real but 2+ years behind on software stack</li>
+        </ul>
+
+        <h4>Recommendations:</h4>
+        <ul>
+          <li>Monitor hyperscaler capex guidance for demand signals</li>
+          <li>Track AMD MI300X adoption as competitive indicator</li>
+          <li>Watch for potential China policy escalation</li>
+        </ul>
+
+        <h4>Warnings:</h4>
+        <ul>
+          <li>Export restriction expansion could impact 10-15% of revenue</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="ds-card">
+        <div class="ds-card-header">
+          <h3>Sources</h3>
+        </div>
+        <table class="ds-table">
+          <thead>
+            <tr>
+              <th>Source</th>
+              <th>URL</th>
+              <th>Type</th>
+              <th>Credibility</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>NVIDIA Q3 FY2025 Earnings</td>
+              <td><a href="https://investor.nvidia.com/financial-info/quarterly-results/default.aspx">investor.nvidia.com</a></td>
+              <td>sec_filing</td>
+              <td>100%</td>
+            </tr>
+            <tr>
+              <td>NVIDIA SEC Filings</td>
+              <td><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810">sec.gov</a></td>
+              <td>sec_filing</td>
+              <td>100%</td>
+            </tr>
+            <tr>
+              <td>NVDA Market Data</td>
+              <td><a href="https://finance.yahoo.com/quote/NVDA">finance.yahoo.com</a></td>
+              <td>financial</td>
+              <td>88%</td>
+            </tr>
+            <tr>
+              <td>Analyst Consensus</td>
+              <td><a href="https://www.tipranks.com/stocks/nvda/forecast">tipranks.com</a></td>
+              <td>research_report</td>
+              <td>85%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

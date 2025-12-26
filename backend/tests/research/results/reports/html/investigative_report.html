@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FTX Collapse Investigation Report</title>
+  <style>
+/* === DESIGN SYSTEM === */
+/* A curated set of reusable CSS patterns for professional reports */
+
+:root {
+  /* Theme Colors - Will be overridden per template */
+  --ds-primary: #1a365d;
+  --ds-accent: #3182ce;
+  --ds-success: #38a169;
+  --ds-warning: #d69e2e;
+  --ds-danger: #e53e3e;
+  --ds-bg: #ffffff;
+  --ds-bg-subtle: #f7fafc;
+  --ds-bg-card: #ffffff;
+  --ds-border: #e2e8f0;
+  --ds-text: #2d3748;
+  --ds-text-muted: #718096;
+  --ds-radius: 8px;
+  --ds-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+  --ds-shadow-lg: 0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: var(--ds-text);
+  background: var(--ds-bg);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* === TYPOGRAPHY === */
+h1, h2, h3, h4 { color: var(--ds-primary); margin-top: 1.5rem; margin-bottom: 0.75rem; font-weight: 600; }
+h1 { font-size: 2.25rem; border-bottom: 3px solid var(--ds-accent); padding-bottom: 0.5rem; }
+h2 { font-size: 1.75rem; border-bottom: 1px solid var(--ds-border); padding-bottom: 0.25rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1.1rem; }
+p { margin-bottom: 1rem; }
+a { color: var(--ds-accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* === CARDS === */
+.ds-card {
+  background: var(--ds-bg-card);
+  border-radius: var(--ds-radius);
+  box-shadow: var(--ds-shadow);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.ds-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--ds-border);
+}
+
+/* === METRIC CARDS === */
+.ds-metric-card {
+  background: var(--ds-bg-card);
+  border-radius: var(--ds-radius);
+  box-shadow: var(--ds-shadow);
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  display: inline-block;
+  min-width: 160px;
+}
+.ds-metric-card .value {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--ds-accent);
+  line-height: 1.2;
+}
+.ds-metric-card .label {
+  font-size: 0.875rem;
+  color: var(--ds-text-muted);
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.ds-metric-card .change {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+.ds-metric-card .change.positive { color: var(--ds-success); }
+.ds-metric-card .change.negative { color: var(--ds-danger); }
+
+/* === BADGES & TAGS === */
+.ds-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.ds-badge.success { background: #c6f6d5; color: #22543d; }
+.ds-badge.warning { background: #fefcbf; color: #744210; }
+.ds-badge.danger { background: #fed7d7; color: #822727; }
+.ds-badge.info { background: #bee3f8; color: #2a4365; }
+.ds-badge.neutral { background: var(--ds-bg-subtle); color: var(--ds-text-muted); }
+
+.ds-tag {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  background: var(--ds-bg-subtle);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: var(--ds-text-muted);
+  margin-right: 0.25rem;
+}
+
+/* === CONFIDENCE INDICATORS === */
+.ds-confidence {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+.ds-confidence .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ds-border);
+}
+.ds-confidence .dot.filled { background: var(--ds-accent); }
+.ds-confidence-bar {
+  height: 6px;
+  background: var(--ds-border);
+  border-radius: 3px;
+  overflow: hidden;
+  width: 100px;
+}
+.ds-confidence-bar .fill {
+  height: 100%;
+  background: var(--ds-accent);
+  border-radius: 3px;
+}
+
+/* === CALLOUTS & ALERTS === */
+.ds-callout {
+  padding: 1rem 1.25rem;
+  border-radius: var(--ds-radius);
+  border-left: 4px solid var(--ds-accent);
+  background: var(--ds-bg-subtle);
+  margin: 1rem 0;
+}
+.ds-callout.info { border-left-color: var(--ds-accent); background: #ebf8ff; }
+.ds-callout.success { border-left-color: var(--ds-success); background: #f0fff4; }
+.ds-callout.warning { border-left-color: var(--ds-warning); background: #fffaf0; }
+.ds-callout.danger { border-left-color: var(--ds-danger); background: #fff5f5; }
+.ds-callout-title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--ds-primary);
+}
+
+/* === TABLES === */
+.ds-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--ds-radius);
+  overflow: hidden;
+  box-shadow: var(--ds-shadow);
+  margin: 1rem 0;
+}
+.ds-table th {
+  background: var(--ds-primary);
+  color: white;
+  font-weight: 600;
+  padding: 0.875rem 1rem;
+  text-align: left;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.ds-table td {
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid var(--ds-border);
+  background: var(--ds-bg-card);
+}
+.ds-table tr:last-child td { border-bottom: none; }
+.ds-table tr:hover td { background: var(--ds-bg-subtle); }
+
+/* === TIMELINE === */
+.ds-timeline {
+  position: relative;
+  padding-left: 2.5rem;
+  margin: 1.5rem 0;
+}
+.ds-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--ds-accent), var(--ds-border));
+}
+.ds-timeline-item {
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+.ds-timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2.15rem;
+  top: 0.35rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--ds-accent);
+  border: 3px solid var(--ds-bg);
+  box-shadow: 0 0 0 2px var(--ds-accent);
+}
+.ds-timeline-date {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ds-accent);
+  margin-bottom: 0.25rem;
+}
+.ds-timeline-title {
+  font-weight: 600;
+  color: var(--ds-primary);
+}
+.ds-timeline-content {
+  color: var(--ds-text-muted);
+  font-size: 0.9375rem;
+  margin-top: 0.25rem;
+}
+
+/* === PROFILE/ACTOR CARDS === */
+.ds-profile {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.ds-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--ds-accent);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+.ds-profile-info { flex: 1; }
+.ds-profile-name {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--ds-primary);
+}
+.ds-profile-role {
+  color: var(--ds-text-muted);
+  font-size: 0.875rem;
+}
+
+/* === GRID LAYOUTS === */
+.ds-grid { display: grid; gap: 1.5rem; margin: 1rem 0; }
+.ds-grid-2 { grid-template-columns: repeat(2, 1fr); }
+.ds-grid-3 { grid-template-columns: repeat(3, 1fr); }
+.ds-grid-4 { grid-template-columns: repeat(4, 1fr); }
+.ds-flex { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* === SECTION DIVIDERS === */
+.ds-divider {
+  border: none;
+  height: 1px;
+  background: var(--ds-border);
+  margin: 2rem 0;
+}
+
+/* === STATS ROW === */
+.ds-stats-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+
+/* === PRINT STYLES === */
+@media print {
+  body { max-width: 100%; padding: 1rem; background: white; }
+  .ds-card, .ds-metric-card { box-shadow: none; border: 1px solid #ddd; }
+  .no-print { display: none; }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .ds-grid-2, .ds-grid-3, .ds-grid-4 { grid-template-columns: 1fr; }
+  .ds-stats-row { flex-direction: column; }
+  body { padding: 1rem; }
+}
+
+
+
+/* INVESTIGATIVE THEME: Newspaper-inspired, serious, evidence-focused */
+:root {
+  --ds-primary: #1a202c;
+  --ds-accent: #2b6cb0;
+  --ds-success: #38a169;
+  --ds-warning: #dd6b20;
+  --ds-danger: #c53030;
+  --ds-bg: #ffffff;
+  --ds-bg-subtle: #f7fafc;
+  --ds-bg-card: #ffffff;
+  --ds-border: #e2e8f0;
+  --ds-text: #1a202c;
+  --ds-text-muted: #4a5568;
+}
+body { font-family: 'Georgia', 'Times New Roman', serif; }
+h1, h2, h3, h4 { font-family: 'Segoe UI', system-ui, sans-serif; }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FTX Collapse: Complete Timeline and Actor Analysis</h1>
+  </header>
+
+  <main>
+    <section class="ds-card">
+      <div class="ds-card-header">
+        <h3>Session Overview</h3>
+      </div>
+      <p><b>Query:</b> What led to the collapse of FTX cryptocurrency exchange and who were the key players involved in the fraud?</p>
+      <p><b>Template Type:</b> Investigative Research</p>
+      <p><b>Status:</b> Completed</p>
+      <div class="ds-stats-row">
+        <div class="ds-metric-card">
+          <div class="value">47 min</div>
+          <div class="label">Duration</div>
+        </div>
+        <div class="ds-metric-card">
+          <div class="value">156</div>
+          <div class="label">Sources Analyzed</div>
+        </div>
+      </div>
+      <p><b>Generated:</b> December 24, 2025 at 15:21</p>
+    </section>
+
+    <section class="ds-card">
+      <div class="ds-card-header">
+        <h3>Executive Summary</h3>
+      </div>
+      <p>This investigation reveals a systematic fraud operation at FTX cryptocurrency exchange that resulted in approximately $8-10 billion in missing customer funds. The collapse, triggered in November 2022, exposed a web of interconnected entities, regulatory failures, and deliberate misrepresentation to investors. Key findings indicate that customer deposits were secretly transferred to Alameda Research, a trading firm also controlled by FTX founder Sam Bankman-Fried, to cover trading losses and fund personal ventures.</p>
+    </section>
+
+    <section class="ds-card">
+      <div class="ds-card-header">
+        <h3>Timeline of Key Events</h3>
+      </div>
+      <div class="ds-timeline">
+        <div class="ds-timeline-item">
+          <div class="ds-timeline-date">2017-11-01</div>
+          <div class="ds-timeline-title">Alameda Research Founded</div>
+          <div class="ds-timeline-content">Sam Bankman-Fried founds Alameda Research, a quantitative cryptocurrency trading firm. <span class="ds-confidence"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></span></div>
+        </div>
+        <div class="ds-timeline-item">
+          <div class="ds-timeline-date">2019-05-01</div>
+          <div class="ds-timeline-title">FTX Exchange Launch</div>
+          <div class="ds-timeline-content">FTX cryptocurrency derivatives exchange launches, marketed as 'built by traders, for traders'. <span class="ds-confidence"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></span></div>
+        </div>
+        <div class="ds-timeline-item">
+          <div class="ds-timeline-date">2021-07-20</div>
+          <div class="ds-timeline-title">Series B Funding Round</div>
+          <div class="ds-timeline-content">FTX raises $900 million at $18 billion valuation from Paradigm, Sequoia Capital, and others. <span class="ds-confidence"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></span></div>
+        </div>
+        <div class="ds-timeline-item">
+          <div class="ds-timeline-date">2022-01-14</div>
+          <div class="ds-timeline-title">Series C at $32B Valuation</div>
+          <div class="ds-timeline-content">FTX raises $400 million, valuing the company at $32 billion. <span class="ds-confidence"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></span></div>
+        </div>
+        <div class="ds-timeline-item">
+          <div class="ds-timeline-date">2022-11-02</div>
+          <div class="ds-timeline-title">CoinDesk Exposé Published</div>
+          <div class="ds-timeline-content">CoinDesk publishes article revealing Alameda Research's balance sheet heavily weighted with FTT tokens. <span class="ds-confidence"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></span></div>
+        </div>
+        <div class="ds-timeline-item">
+          <div class="ds-timeline-date">2022-11-06</div>
+          <div class="ds-timeline-title">Binance Announces FTT Sale</div>
+          <div class="ds-timeline-content">Binance CEO CZ announces plan to liquidate $580 million in FTT holdings. <span class="ds-confidence"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></span></div>
+        </div>
+        <div class="ds-timeline-item">
+          <div class="ds-timeline-date">2022-11-08</div>
+          <div class="ds-timeline-title">FTX Halts Withdrawals</div>
+          <div class="ds-timeline-content">FTX stops processing customer withdrawal requests citing liquidity issues. <span class="ds-confidence"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></span></div>
+        </div>
+        <div class="ds-timeline-item">
+          <div class="ds-timeline-date">2022-11-11</div>
+          <div class="ds-timeline-title">FTX Files Bankruptcy</div>
+          <div class="ds-timeline-content">FTX, FTX US, and 130 affiliated companies file Chapter 11 bankruptcy. <span class="ds-confidence"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></span></div>
+        </div>
+        <div class="ds-timeline-item">
+          <div class="ds-timeline-date">2022-12-12</div>
+          <div class="ds-timeline-title">SBF Arrested in Bahamas</div>
+          <div class="ds-timeline-content">Sam Bankman-Fried arrested at his Bahamas residence on US federal charges. <span class="ds-confidence"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></span></div>
+        </div>
+        <div class="ds-timeline-item">
+          <div class="ds-timeline-date">2024-03-28</div>
+          <div class="ds-timeline-title">SBF Sentenced</div>
+          <div class="ds-timeline-content">Sam Bankman-Fried sentenced to 25 years in federal prison. <span class="ds-confidence"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ds-card">
+      <div class="ds-card-header">
+        <h3>Key Actors</h3>
+      </div>
+      <div class="ds-grid ds-grid-2">
+        <div class="ds-card">
+          <div class="ds-profile">
+            <div class="ds-avatar">SBF</div>
+            <div class="ds-profile-info">
+              <div class="ds-profile-name">Sam Bankman-Fried</div>
+              <div class="ds-profile-role">Founder & CEO, FTX</div>
+              <div style="margin-top: 0.5rem;">
+                <span class="ds-badge danger">Serving 25-year sentence</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-card">
+          <div class="ds-profile">
+            <div class="ds-avatar">CE</div>
+            <div class="ds-profile-info">
+              <div class="ds-profile-name">Caroline Ellison</div>
+              <div class="ds-profile-role">CEO, Alameda Research</div>
+              <div style="margin-top: 0.5rem;">
+                <span class="ds-badge info">Cooperating witness</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-card">
+          <div class="ds-profile">
+            <div class="ds-avatar">GW</div>
+            <div class="ds-profile-info">
+              <div class="ds-profile-name">Gary Wang</div>
+              <div class="ds-profile-role">Co-founder & CTO, FTX</div>
+              <div style="margin-top: 0.5rem;">
+                <span class="ds-badge info">Cooperating witness</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-card">
+          <div class="ds-profile">
+            <div class="ds-avatar">NS</div>
+            <div class="ds-profile-info">
+              <div class="ds-profile-name">Nishad Singh</div>
+              <div class="ds-profile-role">Director of Engineering, FTX</div>
+              <div style="margin-top: 0.5rem;">
+                <span class="ds-badge info">Cooperating witness</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-card">
+          <div class="ds-profile">
+            <div class="ds-avatar">RS</div>
+            <div class="ds-profile-info">
+              <div class="ds-profile-name">Ryan Salame</div>
+              <div class="ds-profile-role">Co-CEO, FTX Digital Markets</div>
+              <div style="margin-top: 0.5rem;">
+                <span class="ds-badge danger">Sentenced to 7.5 years</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ds-card">
+      <div class="ds-card-header">
+        <h3>Research Findings</h3>
+      </div>
+      <div class="ds-callout info">
+        <div class="ds-callout-title">Key Finding</div>
+        FTX customer deposits totaled approximately $16 billion at peak, with $8-10 billion subsequently unaccounted for or transferred to Alameda Research. <span class="ds-confidence"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></span>
+      </div>
+      <div class="ds-callout info">
+        <div class="ds-callout-title">Key Finding</div>
+        A secret 'backdoor' in FTX's code allowed Alameda Research to withdraw unlimited funds without triggering normal security alerts. <span class="ds-confidence"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></span>
+      </div>
+      <div class="ds-callout warning">
+        <div class="ds-callout-title">Key Finding</div>
+        FTX operated from the Bahamas specifically to avoid US regulatory oversight while still serving US customers through complex corporate structures. <span class="ds-confidence"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span></span>
+      </div>
+      <div class="ds-callout info">
+        <div class="ds-callout-title">Key Finding</div>
+        Sam Bankman-Fried made approximately $40 million in political donations to both parties, with some violations of campaign finance laws. <span class="ds-confidence"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span></span>
+      </div>
+      <div class="ds-callout info">
+        <div class="ds-callout-title">Key Finding</div>
+        No independent board existed at FTX. SBF, Wang, and Singh made all major decisions without oversight. <span class="ds-confidence"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></span>
+      </div>
+      <div class="ds-callout info">
+        <div class="ds-callout-title">Key Finding</div>
+        FTX's terms of service explicitly stated customer funds would not be used for trading, a promise that was systematically violated. <span class="ds-confidence"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></span>
+      </div>
+      <div class="ds-callout warning">
+        <div class="ds-callout-title">Key Finding</div>
+        The full trail of where misappropriated funds ultimately went remains partially unclear, with ongoing forensic accounting. <span class="ds-confidence"><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
+      </div>
+    </section>
+
+    <section class="ds-card">
+      <div class="ds-card-header">
+        <h3>Expert Perspectives</h3>
+      </div>
+      <div class="ds-card">
+        <h4>Historical Analysis</h4>
+        <p>The FTX collapse represents one of the largest financial frauds in history, comparable to Enron and Bernie Madoff's scheme. The concentration of power without oversight, combined with a charismatic leader promoting charitable causes, created conditions for massive fraud to go undetected. The 'effective altruism' veneer provided moral cover for actions that ultimately harmed millions.</p>
+
+        <h5>Key Insights:</h5>
+        <ul>
+          <li>Parallels to Enron in governance failures and auditor capture</li>
+          <li>Fastest collapse from peak valuation ($32B) to bankruptcy in history</li>
+          <li>Cryptocurrency industry's 'move fast and break things' culture enabled fraud</li>
+          <li>Media and investors failed to apply basic due diligence</li>
+        </ul>
+
+        <h5>Recommendations:</h5>
+        <ul>
+          <li>Implement mandatory segregation of customer funds with third-party verification</li>
+          <li>Require registered exchanges to maintain audited proof-of-reserves</li>
+          <li>Establish clear jurisdictional requirements for serving US customers</li>
+        </ul>
+
+        <h5>Warnings:</h5>
+        <ul>
+          <li>Similar structures may exist at other cryptocurrency entities</li>
+        </ul>
+
+        <p><span class="ds-confidence"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></span></p>
+      </div>
+
+      <div class="ds-card">
+        <h4>Economic Analysis</h4>
+        <p>The economic ripple effects extended far beyond FTX's direct victims. The collapse triggered a cascade of failures including BlockFi, Genesis, and contributed to broader crypto market capitalization declining over $200 billion. Institutional confidence in cryptocurrency markets suffered a significant setback.</p>
+
+        <h5>Key Insights:</h5>
+        <ul>
+          <li>Direct customer losses estimated at $8-10 billion</li>
+          <li>Indirect market capitalization loss exceeded $200 billion</li>
+          <li>Contagion spread to BlockFi (bankruptcy), Genesis (bankruptcy), DCG (restructuring)</li>
+          <li>Venture capital write-downs in billions (Sequoia, Paradigm, others)</li>
+        </ul>
+
+        <h5>Recommendations:</h5>
+        <ul>
+          <li>Implement circuit breakers for large withdrawals across the industry</li>
+          <li>Require disclosure of institutional counterparty relationships</li>
+          <li>Consider deposit insurance mechanisms for regulated exchanges</li>
+        </ul>
+
+        <h5>Warnings:</h5>
+        <ul>
+          <li>Interconnected lending relationships remain opaque in crypto</li>
+        </ul>
+
+        <p><span class="ds-confidence"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></span></p>
+      </div>
+    </section>
+
+    <section class="ds-card">
+      <div class="ds-card-header">
+        <h3>Sources</h3>
+      </div>
+      <table class="ds-table">
+        <thead>
+          <tr>
+            <th>Source</th>
+            <th>URL</th>
+            <th>Type</th>
+            <th>Credibility</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>SEC Charges Samuel Bankman-Fried with Defrauding Investors</td>
+            <td><a href="https://sec.gov/news/press-release/2022-219">sec.gov</a></td>
+            <td>Government</td>
+            <td><span class="ds-confidence"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></span></td>
+          </tr>
+          <tr>
+            <td>CoinDesk Alameda Balance Sheet Exposé</td>
+            <td><a href="https://www.coindesk.com/business/2022/11/02/divisions-in-sam-bankman-frieds-crypto-empire-blur-on-his-trading-titan-alamedas-balance-sheet/">coindesk.com</a></td>
+            <td>News</td>
+            <td><span class="ds-confidence"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></span></td>
+          </tr>
+          <tr>
+            <td>DOJ Criminal Charges Announcement</td>
+            <td><a href="https://www.justice.gov/usao-sdny/pr/united-states-attorney-announces-charges-against-ftx-founder-samuel-bankman-fried">justice.gov</a></td>
+            <td>Government</td>
+            <td><span class="ds-confidence"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></span></td>
+          </tr>
+          <tr>
+            <td>FTX Bankruptcy Case Documents</td>
+            <td><a href="https://restructuring.ra.kroll.com/FTX/">kroll.com</a></td>
+            <td>Legal</td>
+            <td><span class="ds-confidence"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></span></td>
+          </tr>
+          <tr>
+            <td>Sam Bankman-Fried Sentenced to 25 Years</td>
+            <td><a href="https://www.nytimes.com/2024/03/28/technology/sam-bankman-fried-sentencing.html">nytimes.com</a></td>
+            <td>News</td>
+            <td><span class="ds-confidence"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

@@ -149,10 +149,10 @@ class GeminiResearchClient:
         response = await client.generate("Explain quantum computing")
     """
 
-    DEFAULT_MODEL = "gemini-2.0-flash"
+    DEFAULT_MODEL = "gemini-3-flash-preview"
 
     COST_RATES = {
-        "gemini-2.0-flash": {"input": 0.075, "output": 0.30},
+        "gemini-3-flash-preview": {"input": 0.075, "output": 0.30},
         "gemini-1.5-flash": {"input": 0.075, "output": 0.30},
         "gemini-1.5-pro": {"input": 1.25, "output": 5.00},
     }
