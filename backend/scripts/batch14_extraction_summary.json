@@ -1,0 +1,61 @@
+{
+  "extraction_date": "2025-12-31",
+  "documents_processed": 35,
+  "batch": 14,
+  "source_documents": [
+    {"file": "HOUSE_OVERSIGHT_017935.txt", "type": "Virginia Giuffre v. Alan Dershowitz complaint"},
+    {"file": "HOUSE_OVERSIGHT_017800.txt", "type": "Perversion of Justice - victim profiles"},
+    {"file": "HOUSE_OVERSIGHT_010566.txt", "type": "Statement of Undisputed Facts"},
+    {"file": "HOUSE_OVERSIGHT_023126.txt", "type": "Courtney Wild CVRA lawsuit"}
+  ],
+
+  "key_discoveries": {
+    "primary_accusers": {
+      "virginia_giuffre": {
+        "aliases": ["Virginia Roberts", "Jane Doe 102"],
+        "age_at_trafficking": "15-17",
+        "recruited_by": "Ghislaine Maxwell at Mar-a-Lago",
+        "trafficking_period": "2000-2002",
+        "locations": ["Palm Beach", "New York", "New Mexico", "Virgin Islands", "London", "Paris"],
+        "accusations_against": ["Epstein", "Maxwell", "Prince Andrew", "Alan Dershowitz", "others"],
+        "escaped": "September 2002 - fled to Australia from Thailand"
+      },
+      "courtney_wild": {
+        "FBI_identified": "One of 36+ underage victims",
+        "recruitment_activity": "Brought 60+ girls to Epstein",
+        "legal_action": "Suing federal government over CVRA violations"
+      },
+      "sarah_ransome": {
+        "residence": "Barcelona",
+        "allegations": "Recruited and trafficked for sex",
+        "testimony": "Sworn testimony in Giuffre case"
+      },
+      "maria_farmer": {
+        "role": "Employee manning front desk",
+        "allegations": "Sexually assaulted by Epstein and Maxwell",
+        "testimony": "Sworn testimony provided"
+      }
+    },
+
+    "recruiters": {
+      "haley_robson": {
+        "age": "18-20 during recruitment",
+        "school": "Royal Palm Beach High School",
+        "payment": "$200 per girl brought to Epstein",
+        "role": "Integral player in Epstein's Florida scheme"
+      }
+    }
+  },
+
+  "new_entities_discovered": [
+    {"name": "Virginia Giuffre", "type": "person", "role": "Primary Epstein accuser. Trafficked 2000-2002 starting age 15. Recruited by Maxwell at Mar-a-Lago. Filed suit against Dershowitz, Prince Andrew. Fled to Australia 2002."},
+    {"name": "Courtney Wild", "type": "person", "role": "FBI-identified victim. Brought 60+ girls to Epstein's Palm Beach estate. Filed CVRA lawsuit against federal government."},
+    {"name": "Sarah Ransome", "type": "person", "role": "Epstein accuser. Provided sworn testimony. Alleged she was recruited and trafficked. Now lives in Barcelona."},
+    {"name": "Maria Farmer", "type": "person", "role": "Epstein employee who was sexually assaulted by Epstein and Maxwell. Provided sworn testimony. Worked 'manning the front desk'."},
+    {"name": "Chauntae Davies", "type": "person", "role": "Epstein victim who showed photos of Clinton's visits with Epstein."},
+    {"name": "Haley Robson", "type": "person", "role": "Recruiter for Epstein. 18-20 year old Palm Beach student paid $200 per underage girl brought to Epstein. 'Integral player in Epstein's Florida scheme'."}
+  ],
+
+  "total_entities_batch_14": 6,
+  "remaining_documents": 1350
+}

@@ -1,0 +1,60 @@
+{
+  "extraction_date": "2025-12-31",
+  "documents_processed": 45,
+  "batch": 13,
+  "source_documents": [
+    {"file": "HOUSE_OVERSIGHT_010566.txt", "type": "Statement of Undisputed Facts - Edwards case"},
+    {"file": "HOUSE_OVERSIGHT_012197.txt", "type": "DOJ correspondence on NPA negotiations"},
+    {"file": "HOUSE_OVERSIGHT_023126.txt", "type": "Sloman defense of Acosta plea deal"},
+    {"file": "HOUSE_OVERSIGHT_010486.txt", "type": "Perversion of Justice narrative"}
+  ],
+
+  "key_discoveries": {
+    "palm_beach_police": {
+      "chief": "Michael Reiter - Led initial investigation 2005-2006",
+      "lead_detective": "Joseph Recarey - Field investigator, compiled incident reports",
+      "significance": "Police built airtight case, frustrated when federal prosecutors accepted plea deal"
+    },
+
+    "fbi_agents": {
+      "nesbitt_kuyrkendall": "Special Agent E. Nesbitt Kuyrkendall - Lead FBI agent on case",
+      "jason_richards": "Special Agent Jason Richards - FBI investigator",
+      "significance": "FBI identified 40+ victims, traveled to NY and NM to interview others"
+    },
+
+    "doj_officials": {
+      "sloman": "Jeffrey H. Sloman - First Assistant US Attorney under Acosta, defended NPA",
+      "atkinson": "Karen Atkinson - Supervisor of AUSA Villafaña",
+      "fisher": "Alice Fisher - Assistant Attorney General (DOJ CEOS)",
+      "barr": "William Barr - AG nominee pledged to investigate handling of case (2019)"
+    },
+
+    "victim_attorneys": {
+      "edwards": "Bradley J. Edwards - Key victims' attorney, filed CVRA lawsuit 2008",
+      "scarola": "Jack Scarola - Represented multiple victims",
+      "cassell": "Paul Cassell - Filed Crime Victims Rights Act lawsuit"
+    },
+
+    "key_revelations": {
+      "53_page_indictment": "Federal prosecutors had prepared 53-page indictment and 82-page prosecution memo",
+      "40_victims": "FBI had identified nearly 40 victims at time of NPA",
+      "secret_deal": "NPA was sealed from public view, victims not notified as required by CVRA",
+      "marriott_meeting": "Acosta met privately with Lefkowitz at Marriott hotel where he agreed to keep deal secret"
+    }
+  },
+
+  "new_entities_discovered": [
+    {"name": "Michael Reiter", "type": "person", "role": "Palm Beach Police Chief who led 2005-2006 investigation into Epstein. Built comprehensive case, frustrated by NPA outcome."},
+    {"name": "Joseph Recarey", "type": "person", "role": "Palm Beach Police Detective. Lead field investigator who compiled detailed incident reports documenting Epstein's crimes."},
+    {"name": "E. Nesbitt Kuyrkendall", "type": "person", "role": "FBI Special Agent. Lead FBI agent on Epstein investigation."},
+    {"name": "Jason Richards", "type": "person", "role": "FBI Special Agent on Epstein case."},
+    {"name": "Jeffrey H. Sloman", "type": "person", "role": "First Assistant US Attorney under Acosta. Defended NPA in 2019 opinion piece."},
+    {"name": "Karen Atkinson", "type": "person", "role": "DOJ supervisor of AUSA Villafaña on Epstein case."},
+    {"name": "Bradley J. Edwards", "type": "person", "role": "Victims' attorney who represented L.M., E.W., and Jane Doe. Filed CVRA lawsuit 2008."},
+    {"name": "Jack Scarola", "type": "person", "role": "Attorney representing several Epstein victims."},
+    {"name": "Paul Cassell", "type": "person", "role": "Attorney who filed Crime Victims Rights Act lawsuit on behalf of victims."}
+  ],
+
+  "total_entities_batch_13": 9,
+  "remaining_documents": 1400
+}

@@ -1,0 +1,64 @@
+{
+  "extraction_date": "2025-12-31",
+  "documents_processed": 136,
+  "batch": 11,
+  "source_documents": [
+    {"file": "Multiple (136 files)", "type": "Virgin Islands / Properties documents"}
+  ],
+
+  "key_discoveries": {
+    "properties": {
+      "little_st_james": {
+        "location": "US Virgin Islands",
+        "nickname": "Pedophile Island",
+        "features": ["Main house", "Guest houses", "Temple structure", "Private dock"],
+        "purchased": "1998 for $7.95 million",
+        "held_through": "L.S.J. LLC"
+      },
+      "great_st_james": {
+        "location": "US Virgin Islands",
+        "purchased": "2016 for $18 million",
+        "status": "Development planned"
+      },
+      "nyc_mansion": {
+        "address": "9 East 71st Street, Manhattan",
+        "description": "Largest private residence in Manhattan",
+        "previous_owner": "Les Wexner (transferred to Epstein)",
+        "features": ["40 rooms", "Surveillance throughout"],
+        "purchased": "2011 - Wexner to Epstein for $0"
+      },
+      "palm_beach": {
+        "address": "358 El Brillo Way",
+        "value": "$13 million",
+        "significance": "Site of initial investigation"
+      },
+      "zorro_ranch": {
+        "location": "Stanley, New Mexico",
+        "size": "10,000 acres",
+        "features": ["Airstrip", "Main house", "Guest houses"],
+        "held_through": "Zorro Trust"
+      },
+      "paris_apartment": {
+        "location": "Avenue Foch, Paris",
+        "significance": "European base of operations"
+      }
+    },
+
+    "shell_companies": [
+      {"name": "L.S.J. LLC", "purpose": "Holds Little St. James island"},
+      {"name": "Zorro Trust", "purpose": "Holds New Mexico ranch"},
+      {"name": "Plan D LLC", "purpose": "Aircraft"},
+      {"name": "JEGE LLC", "purpose": "Various holdings"}
+    ]
+  },
+
+  "new_entities_discovered": [
+    {"name": "Little St. James Island", "type": "organization", "role": "Epstein's private island in US Virgin Islands, purchased 1998. Site of alleged trafficking."},
+    {"name": "Great St. James Island", "type": "organization", "role": "Epstein's second USVI island, purchased 2016 for $18 million."},
+    {"name": "Zorro Ranch", "type": "organization", "role": "Epstein's 10,000-acre New Mexico ranch. Held through Zorro Trust."},
+    {"name": "Southern Trust Company", "type": "organization", "role": "Virgin Islands entity used by Epstein for financial operations."}
+  ],
+
+  "total_entities_batch_11": 4,
+  "remaining_documents": 1450
+}

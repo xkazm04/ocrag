@@ -1,0 +1,76 @@
+{
+  "extraction_date": "2025-12-31",
+  "documents_processed": 60,
+  "batch": 9,
+  "source_documents": [
+    {"file": "HOUSE_OVERSIGHT_030587.txt", "type": "BBC Today Programme - mentions Bill Gates, Stephen Hawking, George Soros"},
+    {"file": "HOUSE_OVERSIGHT_011284.txt", "type": "Origins Project AI Workshop - Lawrence Krauss organizer"},
+    {"file": "Multiple (27 files)", "type": "Lawrence Krauss documents"},
+    {"file": "Multiple (13 files)", "type": "Danny Hillis documents"},
+    {"file": "Multiple (33 files)", "type": "George Church/genetics documents"},
+    {"file": "Multiple (42 files)", "type": "Marvin Minsky references"}
+  ],
+
+  "key_discoveries": {
+    "scientific_network_overview": {
+      "key_figures": [
+        {"name": "Lawrence Krauss", "affiliation": "Arizona State University, Origins Project", "documents": 27, "role": "Physicist, close Epstein associate, organized conferences"},
+        {"name": "Marvin Minsky", "affiliation": "MIT AI Lab co-founder", "documents": 42, "role": "AI pioneer, named in victim allegations"},
+        {"name": "Danny Hillis", "affiliation": "Thinking Machines, Applied Minds", "documents": 13, "role": "Computer scientist, Edge Foundation"},
+        {"name": "George Church", "affiliation": "Harvard genetics", "documents": 33, "role": "Geneticist, received Epstein funding"},
+        {"name": "Stephen Hawking", "affiliation": "Cambridge", "role": "Physicist, attended Epstein's island conferences"},
+        {"name": "John Brockman", "affiliation": "Edge Foundation", "role": "Literary agent, connected scientists to Epstein - already in KB"}
+      ],
+      "significance": "Epstein cultivated relationships with elite scientists through funding, conferences, and social events"
+    },
+
+    "bbc_today_programme_vip_list": {
+      "document": "030587",
+      "date": "March 7, 2011",
+      "context": "Kirsty MacKenzie lists previous guests to entice Epstein",
+      "names_listed": ["Tim Geithner", "Nicolas Sarkozy", "Hamid Karzai", "Prince Charles", "Pervez Musharraf", "Condoleezza Rice", "Bill Clinton", "George Mitchell", "Al Gore", "Kofi Annan", "Tony Blair", "Dalai Lama", "Bill Gates", "George Soros", "Stephen Hawking", "Paul McCartney", "Mick Jagger", "Salman Rushdie"]
+    },
+
+    "origins_project_workshop": {
+      "document": "011284",
+      "date": "February 24-26, 2017",
+      "title": "Challenges of Artificial Intelligence: Envisioning and Addressing Adverse Outcomes",
+      "organizer": "Lawrence Krauss - Arizona State University",
+      "notable_participants": ["Lawrence Krauss", "Frank Wilczek", "Dario Amodei", "Eric Horvitz", "Elon Musk", "Stuart Russell"],
+      "topics": ["AI and financial markets", "AI and democracy", "AI in warfare", "Cybersecurity"],
+      "note": "Krauss organized high-profile science events while maintaining Epstein relationship"
+    },
+
+    "edge_foundation_network": {
+      "founder": "John Brockman",
+      "role": "Connected Silicon Valley, scientists, and Epstein",
+      "key_members_in_archive": ["Danny Hillis", "Marvin Minsky", "Lawrence Krauss", "George Church", "Joi Ito"],
+      "events": "Organized 'billionaires dinners' and science salons at Epstein properties"
+    }
+  },
+
+  "new_entities_discovered": [
+    {"name": "Lawrence Krauss", "type": "person", "role": "Arizona State physicist, Origins Project founder. 27 documents in archive. Close Epstein associate who organized conferences and defended Epstein. Resigned from ASU 2018 over misconduct allegations."},
+    {"name": "Marvin Minsky", "type": "person", "role": "MIT AI Lab co-founder, AI pioneer. Named in victim allegations - victim directed to have sex with him. 42 documents. Died 2016."},
+    {"name": "Danny Hillis", "type": "person", "role": "Computer scientist, Thinking Machines founder, Applied Minds. Edge Foundation member. 13 documents in Epstein archive."},
+    {"name": "George Church", "type": "person", "role": "Harvard geneticist, received Epstein funding for research. 33 documents. Met with Epstein multiple times."},
+    {"name": "Frank Wilczek", "type": "person", "role": "MIT physicist, Nobel laureate 2004. Participated in Epstein-funded Origins Project events."},
+    {"name": "Stuart Russell", "type": "person", "role": "UC Berkeley AI researcher. Participated in Lawrence Krauss Origins Project AI workshop 2017."},
+    {"name": "Kirsty MacKenzie", "type": "person", "role": "BBC Today Programme Interviews Editor. March 2011 requested Epstein interview about Prince Andrew stories."},
+    {"name": "Origins Project", "type": "organization", "role": "Arizona State University science initiative founded by Lawrence Krauss. Received Epstein funding."},
+    {"name": "Edge Foundation", "type": "organization", "role": "John Brockman's organization connecting scientists, tech billionaires. Gateway for Epstein's scientific network."},
+    {"name": "Thinking Machines", "type": "organization", "role": "Supercomputer company founded by Danny Hillis. Connected to Epstein network."}
+  ],
+
+  "key_quotes": [
+    {
+      "source": "BBC Today Programme email",
+      "quote": "Programme guests have included... Bill Gates, George Soros, Stephen Hawking",
+      "date": "March 7, 2011",
+      "about": "BBC listing VIP guests to entice Epstein"
+    }
+  ],
+
+  "total_entities_batch_9": 10,
+  "remaining_documents": 1600
+}

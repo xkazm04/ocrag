@@ -1,0 +1,279 @@
+{
+  "extraction_date": "2025-12-31",
+  "source": "C:\\Users\\kazim\\dac\\TrumpEpsteinFiles",
+  "documents_scanned": 2895,
+  "documents_with_epstein_financial_content": 1102,
+  "high_priority_documents": 396,
+
+  "key_financial_transactions": [
+    {
+      "date": "2015-04-15",
+      "source": "Jeffrey Epstein",
+      "target": "Gratitude America Ltd",
+      "amount": 10000000,
+      "currency": "USD",
+      "type": "donation",
+      "description": "Payment to 501(c)(3) to 'make last year complete'",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt",
+      "evidence_quote": "10m paid today to gratitude america, a 501 c 3, willl make last year complete"
+    },
+    {
+      "date": "2015-04-15",
+      "source": "Jeffrey Epstein",
+      "target": "Financial Trust Company (FTC)",
+      "amount": 20000000,
+      "currency": "USD",
+      "type": "transfer",
+      "description": "Payment to Financial Trust Company",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt",
+      "evidence_quote": "20 million paid today ftc"
+    },
+    {
+      "date": "2015-07-15",
+      "source": "Jeffrey Epstein",
+      "target": "Financial Trust Company",
+      "amount": 10000000,
+      "currency": "USD",
+      "type": "scheduled_payment",
+      "description": "Scheduled payment",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt"
+    },
+    {
+      "date": "2015-09-30",
+      "source": "Jeffrey Epstein",
+      "target": "Unknown",
+      "amount": 5000000,
+      "currency": "USD",
+      "type": "scheduled_payment",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt"
+    },
+    {
+      "date": "2016-01-01",
+      "source": "Jeffrey Epstein",
+      "target": "Unknown",
+      "amount": 5000000,
+      "currency": "USD",
+      "type": "scheduled_payment",
+      "description": "For all of 2016",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt"
+    },
+    {
+      "date": "2016-01-18",
+      "source": "Great St. Jim LLC (Epstein)",
+      "target": "Danish Kjaer family",
+      "amount": 17500000,
+      "currency": "USD",
+      "type": "property_purchase",
+      "description": "Purchase of Great St. James Island - 80.1 acres (3 parcels)",
+      "evidence_document": "HOUSE_OVERSIGHT_031209.txt"
+    },
+    {
+      "date": "2016-01-21",
+      "source": "GSJ Properties Corp",
+      "target": "Great St. Jim LLC",
+      "amount": 5000000,
+      "currency": "USD",
+      "type": "property_transfer",
+      "description": "Transfer of 81.22 acres (12 parcels) on Great St. James",
+      "evidence_document": "HOUSE_OVERSIGHT_031209.txt"
+    },
+    {
+      "date": "1989",
+      "source": "Leslie Wexner",
+      "target": "Herbert N. Straus Mansion (9 East 71st Street)",
+      "amount": null,
+      "currency": "USD",
+      "type": "property_purchase",
+      "description": "Acquisition of Manhattan townhouse, later transferred to Epstein",
+      "evidence_document": "HOUSE_OVERSIGHT_010486.txt"
+    },
+    {
+      "date": "1981",
+      "source": "Bear Stearns",
+      "target": "Jeffrey Epstein",
+      "amount": 100000,
+      "currency": "USD",
+      "type": "bonus",
+      "description": "Annual resignation bonus (roughly $275,000 in 2006 dollars)",
+      "evidence_document": "HOUSE_OVERSIGHT_021958.txt"
+    },
+    {
+      "date": "2000-2005",
+      "source": "Jeffrey Epstein",
+      "target": "Victims (various)",
+      "amount": 200,
+      "currency": "USD",
+      "type": "payment_per_victim",
+      "description": "Payment for recruiting underage victims ($200-$300 per victim)",
+      "evidence_document": "HOUSE_OVERSIGHT_010566.txt"
+    }
+  ],
+
+  "financial_entities": [
+    {
+      "name": "Gratitude America Ltd",
+      "type": "501(c)(3) nonprofit",
+      "jurisdiction": "Virgin Islands",
+      "formed": "2012",
+      "officers": ["Erika Kellerhals", "Darren Indyke", "Richard Kahn"],
+      "connection": "Financial contributions vehicle for Epstein"
+    },
+    {
+      "name": "Financial Trust Company (FTC)",
+      "type": "trust_company",
+      "jurisdiction": "Unknown",
+      "connection": "Received $20+ million from Epstein"
+    },
+    {
+      "name": "J. Epstein Virgin Islands Foundation",
+      "type": "foundation",
+      "jurisdiction": "Virgin Islands",
+      "officers": ["Erika Kellerhals", "Darren Indyke", "Richard Kahn"],
+      "connection": "Defunct nonprofit run by Epstein"
+    },
+    {
+      "name": "C.O.U.Q. Foundation",
+      "type": "foundation",
+      "jurisdiction": "Virgin Islands",
+      "officers": ["Erika Kellerhals", "Darren Indyke", "Richard Kahn"],
+      "connection": "Defunct nonprofit run by Epstein"
+    },
+    {
+      "name": "Great St. Jim LLC",
+      "type": "LLC",
+      "jurisdiction": "Virgin Islands",
+      "formed": "2015-10-26",
+      "sole_member": "Erika Kellerhals",
+      "resident_agent": "Business Basics VI LLC",
+      "connection": "Shell company for Great St. James Island purchase"
+    },
+    {
+      "name": "GSJ Properties Corp",
+      "type": "corporation",
+      "jurisdiction": "Virgin Islands",
+      "connection": "Transferred 81.22 acres to Great St. Jim LLC"
+    },
+    {
+      "name": "Poplar Inc",
+      "type": "corporation",
+      "jurisdiction": "Virgin Islands",
+      "formed": "2011",
+      "officers": {
+        "president": "Jeffrey Epstein",
+        "vice_president_secretary": "Darren Indyke",
+        "treasurer": "Richard Kahn"
+      },
+      "connection": "Shell company for island development"
+    },
+    {
+      "name": "Epstein Interests",
+      "type": "corporation",
+      "jurisdiction": "Unknown",
+      "officers": ["Erika Kellerhals", "Darren Indyke", "Richard Kahn"],
+      "connection": "Defunct Epstein entity"
+    },
+    {
+      "name": "International Assets Group (IAG)",
+      "type": "investment_firm",
+      "formed": "1982-1983",
+      "connection": "Epstein's first company after Bear Stearns, run from apartment"
+    },
+    {
+      "name": "Knowledge Universe",
+      "type": "investment_company",
+      "connection": "Investment mentioned in Epstein financial records"
+    },
+    {
+      "name": "Environmental Solutions",
+      "type": "investment",
+      "value": 12000000,
+      "connection": "Stock holding mentioned in Epstein records"
+    }
+  ],
+
+  "key_financial_figures": [
+    {
+      "name": "Richard Kahn",
+      "role": "Treasurer/Financial advisor",
+      "connection": "Poplar Inc treasurer, handles financial communications"
+    },
+    {
+      "name": "Darren Indyke",
+      "role": "Longtime lawyer",
+      "connection": "VP/Secretary of Poplar Inc, officer of multiple Epstein entities"
+    },
+    {
+      "name": "Erika Kellerhals",
+      "role": "St. Thomas attorney",
+      "connection": "Organized shell companies including Great St. Jim LLC"
+    },
+    {
+      "name": "Gregory Ferguson",
+      "role": "Attorney",
+      "connection": "Partner in Kellerhals firm, helped organize Poplar Inc"
+    },
+    {
+      "name": "Brett Geary",
+      "role": "Business consultant",
+      "connection": "Business Basics VI LLC, resident agent for Epstein entities"
+    },
+    {
+      "name": "Leslie Wexner",
+      "role": "Billionaire, L Brands founder",
+      "connection": "Acquired 71st Street mansion in 1989, transferred to Epstein"
+    },
+    {
+      "name": "Melanie Spinella",
+      "role": "Executive assistant",
+      "connection": "Recipient of financial communications from Richard Kahn"
+    }
+  ],
+
+  "properties": [
+    {
+      "address": "9 East 71st Street, New York, NY",
+      "name": "Herbert N. Straus Mansion",
+      "acquired_by_wexner": "1989",
+      "connection": "Epstein's primary NYC residence, originally Wexner property"
+    },
+    {
+      "address": "Little St. James Island, USVI",
+      "name": "Little St. James",
+      "connection": "Epstein's primary residence for decades"
+    },
+    {
+      "address": "Great St. James Island, USVI",
+      "purchase_price": 22500000,
+      "purchase_date": "2016-01",
+      "acreage": 161.32,
+      "connection": "Second island purchased via shell companies"
+    },
+    {
+      "address": "345 South County Road, Palm Beach, FL",
+      "connection": "Palm Beach mansion, site of FBI evidence collection"
+    },
+    {
+      "address": "301 East 66th Street, New York, NY",
+      "connection": "Property owned by Epstein brothers"
+    }
+  ],
+
+  "financial_summary": {
+    "total_known_transactions_value": 82500000,
+    "estimated_household_expenses": 12000000,
+    "stock_holdings_mentioned": 12000000,
+    "shell_companies_identified": 8,
+    "key_officers_identified": 5,
+    "bank_accounts_mentioned": "100+"
+  },
+
+  "document_sources": [
+    "HOUSE_OVERSIGHT_023208.txt - Richard Kahn financial emails (April-May 2015)",
+    "HOUSE_OVERSIGHT_023291.txt - Duplicate of financial emails",
+    "HOUSE_OVERSIGHT_031209.txt - Virgin Islands Daily News article on Great St. James",
+    "HOUSE_OVERSIGHT_021958.txt - James Patterson 'Filthy Rich' excerpts",
+    "HOUSE_OVERSIGHT_010486.txt - Photo captions with property info",
+    "HOUSE_OVERSIGHT_010566.txt - Court filing with victim payments",
+    "HOUSE_OVERSIGHT_017935.txt - Virginia Giuffre complaint"
+  ]
+}

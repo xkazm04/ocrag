@@ -1,0 +1,190 @@
+{
+  "extraction_date": "2025-12-31",
+  "documents_processed": 35,
+  "batch": 6,
+  "source_documents": [
+    {"file": "HOUSE_OVERSIGHT_029622.txt", "type": "EXPLOSIVE: Epstein's 'list for bannon steve' - June 30, 2019 (6 days before arrest)"},
+    {"file": "HOUSE_OVERSIGHT_030571.txt", "type": "Epstein-Jes Staley email: Barak meeting Biden/Clinton/Panetta"},
+    {"file": "HOUSE_OVERSIGHT_030570.txt", "type": "Epstein advising Staley on Treasury Secretary (Jamie Dimon or Bill Clinton)"},
+    {"file": "HOUSE_OVERSIGHT_030510.txt", "type": "Epstein sends Staley book about Summers/Volcker Rule"},
+    {"file": "HOUSE_OVERSIGHT_030501.txt", "type": "Epstein-Staley PR strategy at Davos, Kate Kelly is 'a snake'"},
+    {"file": "HOUSE_OVERSIGHT_030490.txt", "type": "Epstein setting up Staley-Darling meeting at Davos"},
+    {"file": "HOUSE_OVERSIGHT_030487.txt", "type": "Epstein forwarding UK government intelligence on banking reforms"},
+    {"file": "HOUSE_OVERSIGHT_030486.txt", "type": "Epstein CC'ing Peter Mandelson on Staley banking discussion"},
+    {"file": "HOUSE_OVERSIGHT_030389.txt", "type": "Landon Thomas (NY Times) asking Epstein about 'Trump contacts' and Comey"},
+    {"file": "HOUSE_OVERSIGHT_030332.txt", "type": "Epstein sends Staley article on Ruemmler for AG"},
+    {"file": "HOUSE_OVERSIGHT_030330.txt", "type": "Staley dinner with George Tenet (CIA), discussion of Larry visiting"}
+  ],
+
+  "key_discoveries": {
+    "steve_bannon_list": {
+      "document": "HOUSE_OVERSIGHT_029622.txt",
+      "date": "June 30, 2019",
+      "significance": "Epstein prepared contact list for Steve Bannon just 6 DAYS before his July 6, 2019 arrest",
+      "subject": "list for bannon steve",
+      "names_on_list": {
+        "politics": ["Clinton", "Ehud Barak", "Prince Andrew", "George Mitchell", "Bill Richardson", "Patrick Leahy", "Chuck Schumer", "Madelson/Blair", "Qatar/Mongolia leaders"],
+        "business_finance": ["Jes Staley", "Sultan (Bin Sulayem)", "Rockefeller", "Rothschild", "Ambani", "Pritzker", "Tata"],
+        "tech_silicon_valley": ["Bill Gates", "Peter Thiel", "Reid Hoffman", "Joi Ito", "Joscha Bach", "Sinofsky"],
+        "legal": ["Dershowitz", "Ken Starr", "Kathy Ruemmler"],
+        "media_journalists": ["Sulzberger (NY Times)"],
+        "academics_scientists": ["Chomsky", "Krauss", "Brian Greene", "EO Wilson", "Minsky", "Brockman", "Hillis"],
+        "entertainment": ["Woody (Allen)", "Ovitz"]
+      }
+    },
+
+    "jes_staley_relationship": {
+      "identity": "Jes Staley - JPMorgan Chase Private Banking CEO (2009-2013), Barclays CEO (2015-2021)",
+      "documents_count": 32,
+      "relationship_period": "2010-2017 (documented)",
+      "key_activities": [
+        {
+          "date": "January 2010",
+          "event": "Davos - Epstein facilitating Staley meeting with UK Chancellor Alistair Darling",
+          "documents": ["030490", "030487"],
+          "detail": "Epstein CC'd Peter Mandelson on banking reform discussions"
+        },
+        {
+          "date": "January 28, 2010",
+          "event": "Epstein advising Staley on PR strategy from Davos",
+          "quote": "kate kelly is a snake... ask peters advice he is the pr genius",
+          "document": "030501"
+        },
+        {
+          "date": "May 4, 2011",
+          "event": "Epstein advising on Treasury Secretary appointment",
+          "quote": "I still think that the only really qualified person is Jamie [Dimon]... I think it would behoove Obama to make Bill Clinton Treasury sec",
+          "document": "030570"
+        },
+        {
+          "date": "July 27, 2011",
+          "event": "Epstein jokes about Barak meeting Biden/Clinton/Panetta",
+          "quote": "it seems they forgot one person on the list",
+          "document": "030571"
+        },
+        {
+          "date": "January 9, 2014",
+          "event": "Staley dinner with George Tenet (CIA Director), Larry (Summers?) visiting",
+          "document": "030330"
+        },
+        {
+          "date": "September 26, 2014",
+          "event": "Epstein sends Staley article on Kathy Ruemmler for Attorney General",
+          "document": "030332"
+        },
+        {
+          "date": "May 11, 2017",
+          "event": "Epstein discussing Staley's Barclays whistleblower scandal with NY Times reporter",
+          "document": "030389"
+        }
+      ],
+      "significance": "Convicted sex offender acting as informal advisor to one of world's most powerful bankers, facilitating government meetings and advising on cabinet appointments"
+    },
+
+    "landon_thomas_jr_relationship": {
+      "identity": "Landon Thomas Jr. - New York Times Financial Reporter",
+      "documents_count": 166,
+      "relationship_period": "2017+ (documented)",
+      "key_communications": [
+        {
+          "date": "May 11, 2017",
+          "document": "030389",
+          "context": "Thomas asks Epstein about Staley's troubles at Barclays",
+          "quote": "How are you Trump contacts responding to Comey?",
+          "note": "NY Times reporter asking sex offender about Trump contacts day after Comey firing"
+        }
+      ],
+      "significance": "Major newspaper's financial reporter in regular email contact with convicted sex offender, asking about Trump connections"
+    },
+
+    "george_tenet_connection": {
+      "identity": "George Tenet - CIA Director 1997-2004",
+      "document": "030330",
+      "date": "January 9, 2014",
+      "context": "Jes Staley had dinner with Tenet and 'my military guy from Brookings'",
+      "note": "Shows intelligence/military connections in Epstein's network"
+    },
+
+    "alistair_darling_connection": {
+      "identity": "Alistair Darling - UK Chancellor of the Exchequer 2007-2010",
+      "documents": ["030490", "030487"],
+      "date": "January 2010",
+      "context": "Epstein setting up meeting between JPMorgan's Jes Staley and UK Chancellor at Davos",
+      "note": "Epstein acting as intermediary between US bank executive and UK Treasury"
+    },
+
+    "jamie_dimon_mention": {
+      "identity": "Jamie Dimon - JPMorgan Chase CEO",
+      "document": "030570",
+      "date": "May 4, 2011",
+      "context": "Epstein suggests Dimon for Treasury Secretary",
+      "quote": "I still think that the only really qualified person is Jamie. knowledge of system, derivatives, banking operations"
+    }
+  },
+
+  "new_entities_discovered": [
+    {"name": "Jes Staley", "type": "person", "role": "JPMorgan Private Banking CEO, later Barclays CEO, extensive Epstein email contact 2010-2017"},
+    {"name": "Landon Thomas Jr.", "type": "person", "role": "NY Times Financial Reporter, 166 Epstein documents, asked about 'Trump contacts'"},
+    {"name": "George Tenet", "type": "person", "role": "CIA Director 1997-2004, dinner with Jes Staley in Epstein network"},
+    {"name": "Alistair Darling", "type": "person", "role": "UK Chancellor 2007-2010, meeting facilitated by Epstein with Staley at Davos"},
+    {"name": "Jamie Dimon", "type": "person", "role": "JPMorgan CEO, Epstein suggested him for Treasury Secretary"},
+    {"name": "John McFarlane", "type": "person", "role": "Barclays Chairman, discussed in Epstein-Landon Thomas emails"},
+    {"name": "Steve Bannon", "type": "person", "role": "Trump Chief Strategist, recipient of Epstein's contact list June 30, 2019"},
+    {"name": "Joi Ito", "type": "person", "role": "MIT Media Lab Director, on Epstein's Bannon list"},
+    {"name": "Peter Thiel", "type": "person", "role": "PayPal/Palantir founder, on Epstein's Bannon list"},
+    {"name": "Reid Hoffman", "type": "person", "role": "LinkedIn founder, on Epstein's Bannon list"},
+    {"name": "Noam Chomsky", "type": "person", "role": "MIT linguist, on Epstein's Bannon list"},
+    {"name": "E.O. Wilson", "type": "person", "role": "Harvard biologist, on Epstein's Bannon list"},
+    {"name": "Brian Greene", "type": "person", "role": "Columbia physicist, on Epstein's Bannon list"},
+    {"name": "John Brockman", "type": "person", "role": "Edge Foundation, on Epstein's Bannon list"},
+    {"name": "Barclays", "type": "organization", "role": "UK bank, Jes Staley was CEO 2015-2021"},
+    {"name": "JPMorgan Chase", "type": "organization", "role": "US bank, maintained Epstein accounts despite sex offense conviction"}
+  ],
+
+  "key_quotes": [
+    {
+      "speaker": "Jeffrey Epstein",
+      "to": "Jes Staley",
+      "quote": "I still think that the only really qualified person is Jamie [Dimon]... I think it would behoove Obama to make Bill Clinton Treasury sec",
+      "date": "May 4, 2011",
+      "about": "Treasury Secretary appointment advice"
+    },
+    {
+      "speaker": "Jeffrey Epstein",
+      "to": "Jes Staley",
+      "quote": "kate kelly is a snake",
+      "date": "January 28, 2010",
+      "about": "WSJ reporter"
+    },
+    {
+      "speaker": "Landon Thomas Jr.",
+      "to": "Jeffrey Epstein",
+      "quote": "How are you Trump contacts responding to Comey?",
+      "date": "May 11, 2017",
+      "about": "Day after Comey firing"
+    },
+    {
+      "speaker": "Jeffrey Epstein",
+      "to": "Jes Staley (about Barak)",
+      "quote": "it seems they forgot one person on the list",
+      "date": "July 27, 2011",
+      "about": "Ehud Barak meeting Biden/Clinton/Panetta"
+    }
+  ],
+
+  "timeline_events": [
+    {"date": "2010-01-24", "event": "Epstein forwarding UK government banking intelligence to Jes Staley"},
+    {"date": "2010-01-25", "event": "Epstein setting up Staley-Darling meeting at Davos"},
+    {"date": "2010-01-28", "event": "Epstein advising Staley on PR strategy at Davos"},
+    {"date": "2010-11-15", "event": "Epstein sends Staley book excerpt on Summers/Volcker Rule"},
+    {"date": "2011-05-04", "event": "Epstein advises Staley to push Jamie Dimon or Bill Clinton for Treasury"},
+    {"date": "2011-07-27", "event": "Epstein sends Staley article on Barak meeting Biden/Clinton/Panetta"},
+    {"date": "2014-01-09", "event": "Staley dinner with George Tenet; Larry visiting Epstein"},
+    {"date": "2014-09-26", "event": "Epstein sends Staley article on Ruemmler for AG"},
+    {"date": "2017-05-11", "event": "Landon Thomas asks Epstein about Trump contacts after Comey firing"},
+    {"date": "2019-06-30", "event": "Epstein prepares 'list for bannon steve' - 6 days before arrest"}
+  ],
+
+  "total_entities_batch_6": 16,
+  "remaining_documents": 1850
+}

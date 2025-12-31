@@ -124,6 +124,58 @@ from .verification import (
     DocumentExtractionDB,
 )
 
+# Deep Research schemas - Recursive
+from .recursive import (
+    FollowUpType,
+    NodeStatus,
+    TreeStatus,
+    SkipReason,
+    RecursiveResearchConfig,
+    StartRecursiveResearchRequest,
+    FollowUpQuestion,
+    NodeFinding,
+    ResearchNodeStatus,
+    ResearchTreeStatus,
+    ResearchTreeResult,
+    ReasoningChain,
+)
+
+# Deep Research schemas - Financial
+from .financial import (
+    FinancialEntityType,
+    TransactionType,
+    EvidenceStrength,
+    FinancialEntity,
+    FinancialTransaction,
+    TransactionChain,
+    CorporateStructure,
+    BeneficialOwner,
+    PropertyRecord,
+    TraceMoneyRequest,
+    TraceMoneyResponse,
+    CorporateStructureRequest,
+    CorporateStructureResponse,
+    PropertySearchRequest,
+    PropertySearchResponse,
+)
+
+# Deep Research schemas - Causality
+from .causality import (
+    CausalityType,
+    CausalMechanism,
+    PatternType as CausalPatternType,
+    CausalLink,
+    CausalChain,
+    CausalPattern,
+    CausalGraph,
+    ExtractCausalityRequest,
+    FindCausesRequest,
+    FindCausesResponse,
+    FindConsequencesRequest,
+    FindConsequencesResponse,
+    BuildCausalGraphRequest,
+)
+
 # Knowledge Explorer schemas
 from .knowledge_explorer import (
     # Graph
@@ -296,4 +348,47 @@ __all__ = [
     "InvestigativeAnswer",
     "EntityProfile",
     "EntityProfileRequest",
+    # Deep Research - Recursive
+    "FollowUpType",
+    "NodeStatus",
+    "TreeStatus",
+    "SkipReason",
+    "RecursiveResearchConfig",
+    "StartRecursiveResearchRequest",
+    "FollowUpQuestion",
+    "NodeFinding",
+    "ResearchNodeStatus",
+    "ResearchTreeStatus",
+    "ResearchTreeResult",
+    "ReasoningChain",
+    # Deep Research - Financial
+    "FinancialEntityType",
+    "TransactionType",
+    "EvidenceStrength",
+    "FinancialEntity",
+    "FinancialTransaction",
+    "TransactionChain",
+    "CorporateStructure",
+    "BeneficialOwner",
+    "PropertyRecord",
+    "TraceMoneyRequest",
+    "TraceMoneyResponse",
+    "CorporateStructureRequest",
+    "CorporateStructureResponse",
+    "PropertySearchRequest",
+    "PropertySearchResponse",
+    # Deep Research - Causality
+    "CausalityType",
+    "CausalMechanism",
+    "CausalPatternType",
+    "CausalLink",
+    "CausalChain",
+    "CausalPattern",
+    "CausalGraph",
+    "ExtractCausalityRequest",
+    "FindCausesRequest",
+    "FindCausesResponse",
+    "FindConsequencesRequest",
+    "FindConsequencesResponse",
+    "BuildCausalGraphRequest",
 ]

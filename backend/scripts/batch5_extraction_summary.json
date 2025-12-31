@@ -1,0 +1,151 @@
+{
+  "extraction_date": "2025-12-31",
+  "documents_processed": 15,
+  "batch": 5,
+  "source_documents": [
+    {"file": "HOUSE_OVERSIGHT_033448.txt", "type": "Larry Summers-Epstein personal emails March 2019"},
+    {"file": "HOUSE_OVERSIGHT_032336.txt", "type": "Ehud Barak-Epstein election night 2016"},
+    {"file": "HOUSE_OVERSIGHT_033578.txt", "type": "Ehud Barak-Epstein Trump Israel video"},
+    {"file": "HOUSE_OVERSIGHT_029766.txt", "type": "Daily Beast article with VIP passenger list"},
+    {"file": "HOUSE_OVERSIGHT_031876.txt", "type": "Press clippings collection"},
+    {"file": "HOUSE_OVERSIGHT_033482.txt", "type": "Sultan Bin Sulayem Fareed Zakaria article"}
+  ],
+
+  "key_discoveries": {
+    "larry_summers_relationship": {
+      "identity": "Lawrence Summers - Treasury Secretary (1999-2001), Harvard President (2001-2006)",
+      "documents": ["HOUSE_OVERSIGHT_033448.txt"],
+      "date": "March 17, 2019",
+      "context": "Subject: 'Call from New Yorker' - coordinating response to media inquiry",
+      "nature": "Intimate personal relationship advice exchange",
+      "key_communications": [
+        {
+          "from": "Epstein",
+          "quote": "last i looked (sic), you do not have ovaries"
+        },
+        {
+          "from": "Summers",
+          "quote": "I hear you"
+        },
+        {
+          "from": "Epstein",
+          "quote": "its like trump firing comey :)"
+        },
+        {
+          "from": "Summers",
+          "quote": "Best to make reversible errors. I've written note for exit strategy 1"
+        },
+        {
+          "from": "Epstein",
+          "quote": "you care very much for this person. you might want to demonstrate that"
+        },
+        {
+          "from": "Summers",
+          "quote": "Going to treat it all as a game till I maybe see her in Beijing"
+        }
+      ],
+      "significance": "Summers still in close personal contact with convicted sex offender Epstein in March 2019, 4 months before Epstein's arrest. Discussing personal relationship matters and coordinating about New Yorker media inquiry."
+    },
+
+    "ehud_barak_relationship": {
+      "identity": "Ehud Barak - Israeli Prime Minister (1999-2001), Defense Minister, IDF Chief of Staff",
+      "documents": ["HOUSE_OVERSIGHT_032336.txt", "HOUSE_OVERSIGHT_033578.txt"],
+      "key_communications": [
+        {
+          "date": "November 5-7, 2016",
+          "document": "HOUSE_OVERSIGHT_032336.txt",
+          "context": "Election night exchange",
+          "barak_quote": "The Trump momentum, I believe was stopped. Hillary might be on her way to Win. But with much lower margin, and probably still GOP controlled Senate.",
+          "epstein_location": "Paris"
+        },
+        {
+          "date": "February 12, 2017",
+          "document": "HOUSE_OVERSIGHT_033578.txt",
+          "context": "Barak shares Trump-Israel video with Epstein"
+        }
+      ],
+      "significance": "Former Israeli PM in regular casual communication with Epstein about US election and Trump"
+    },
+
+    "vip_passenger_list_daily_beast": {
+      "document": "HOUSE_OVERSIGHT_029766.txt",
+      "source": "Daily Beast article by Conchita Sarnoff",
+      "quote": "former President Bill Clinton; Prince Andrew; former Israeli Prime Minister Ehud Barak; New Mexico Gov. Bill Richardson; and former Treasury Secretary Larry Summers were just a few of the prominent passengers on his private jets",
+      "additional_names": {
+        "house_warming_dinner_invitees": ["Katie Couric", "Charlie Rose", "George Stephanopoulos", "Prince Andrew"],
+        "legal_team": ["Alan Dershowitz", "Gerald Lefcourt", "Roy Black", "Kenneth Starr", "Guy Lewis", "Martin Weinberger"],
+        "staff_investigated": ["Sarah Kellen", "Adriana Ross", "Lesley Groff", "Nadia Marcinkova", "Ghislaine Maxwell"]
+      }
+    },
+
+    "lesley_groff_discovery": {
+      "identity": "Lesley Groff - Epstein's executive assistant",
+      "document": "HOUSE_OVERSIGHT_029766.txt",
+      "status": "Named co-conspirator in Non Prosecution Agreement",
+      "role": "Ensured 'appointment book for twice- or thrice-daily massages was stocked with fresh recruits'"
+    },
+
+    "police_department_donations": {
+      "document": "HOUSE_OVERSIGHT_029766.txt",
+      "finding": "Epstein gave $100,000 to Palm Beach Police Department for 'sophisticated equipment'",
+      "detail": "Given PBPD baseball hats to put on car dashboards to avoid tickets",
+      "outcome": "Money returned when Epstein came under suspicion"
+    }
+  },
+
+  "new_entities_discovered": [
+    {"name": "Larry Summers", "type": "person", "role": "Treasury Secretary 1999-2001, Harvard President, in personal email exchange with Epstein March 2019"},
+    {"name": "Ehud Barak", "type": "person", "role": "Israeli Prime Minister 1999-2001, regular email contact with Epstein 2016-2017"},
+    {"name": "Bill Richardson", "type": "person", "role": "New Mexico Governor, Epstein private jet passenger"},
+    {"name": "Katie Couric", "type": "person", "role": "TV journalist, invited to Epstein house warming dinner"},
+    {"name": "Charlie Rose", "type": "person", "role": "TV journalist, invited to Epstein house warming dinner, suggested by Wolff for Epstein interview"},
+    {"name": "George Stephanopoulos", "type": "person", "role": "ABC journalist, invited to Epstein house warming dinner"},
+    {"name": "Lesley Groff", "type": "person", "role": "Epstein executive assistant, named co-conspirator in NPA"},
+    {"name": "Conchita Sarnoff", "type": "person", "role": "Daily Beast journalist, wrote exposé on Epstein"},
+    {"name": "Guy Lewis", "type": "person", "role": "Epstein defense attorney"},
+    {"name": "Dr. Stephen Alexander", "type": "person", "role": "Palm Beach psychologist who provided Epstein's psychological evaluation"},
+    {"name": "Lupita", "type": "person", "role": "Epstein maid who 'wept' about cleaning up after massage sessions"}
+  ],
+
+  "key_quotes": [
+    {
+      "speaker": "Ehud Barak",
+      "quote": "The Trump momentum, I believe was stopped. Hillary might be on her way to Win",
+      "date": "November 7, 2016"
+    },
+    {
+      "speaker": "Larry Summers",
+      "quote": "Best to make reversible errors. I've written note for exit strategy 1",
+      "date": "March 17, 2019"
+    },
+    {
+      "speaker": "Jeffrey Epstein",
+      "quote": "last i looked (sic), you do not have ovaries",
+      "date": "March 17, 2019",
+      "to": "Larry Summers"
+    },
+    {
+      "speaker": "Daily Beast",
+      "quote": "Epstein was allowed to submit a report by his private psychologist, Dr. Stephen Alexander of Palm Beach",
+      "about": "Special treatment"
+    },
+    {
+      "speaker": "Alfredo Rodriguez",
+      "quote": "a maid named Lupita, who was a devout Catholic, wept when she complained about cleaning up after the massage sessions",
+      "source": "Deposition"
+    }
+  ],
+
+  "timeline_events": [
+    {"date": "2010-08", "event": "Epstein returns to NYC mansion after release, holds house warming dinner"},
+    {"date": "2011-03", "event": "BBC Today Programme requests interview, forwarded to Mandelson"},
+    {"date": "2016-11-05", "event": "Ehud Barak asks to speak with Epstein, who is in Paris"},
+    {"date": "2016-11-07", "event": "Barak emails Epstein about Trump momentum being 'stopped'"},
+    {"date": "2017-02-12", "event": "Barak shares Trump-Israel video with Epstein"},
+    {"date": "2019-03-17", "event": "Summers-Epstein personal email exchange about New Yorker call"},
+    {"date": "2019-07-06", "event": "Epstein arrested (4 months after Summers emails)"}
+  ],
+
+  "total_entities_batch_5": 11,
+  "remaining_documents": 325
+}

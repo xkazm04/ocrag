@@ -19,6 +19,11 @@ from .extraction import QualityFilter, EvidenceExtractionService
 from .job_processor import process_research_job
 from .deduplicator import FindingDeduplicator
 
+# Deep research services
+from .recursive_research_service import RecursiveResearchService
+from .financial_research_service import FinancialResearchService
+from .causality_service import CausalityService
+
 __all__ = [
     # Core services
     "WebSearchService",
@@ -39,4 +44,8 @@ __all__ = [
     # Processing services
     "process_research_job",
     "FindingDeduplicator",
+    # Deep research services
+    "RecursiveResearchService",
+    "FinancialResearchService",
+    "CausalityService",
 ]

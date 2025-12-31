@@ -1,0 +1,178 @@
+{
+  "extraction_date": "2025-12-31",
+  "documents_processed": 20,
+  "batch": 4,
+  "source_documents": [
+    {"file": "HOUSE_OVERSIGHT_030628.txt", "type": "Epstein-Peggy Siegal victim discredit campaign"},
+    {"file": "HOUSE_OVERSIGHT_032157.txt", "type": "Epstein-Peggy Siegal Huffington pitch"},
+    {"file": "HOUSE_OVERSIGHT_030679.txt", "type": "IFP Gotham Awards 2017 - Al Gore tribute"},
+    {"file": "HOUSE_OVERSIGHT_031691.txt", "type": "Jesse Kornbluth NYT investigation"},
+    {"file": "HOUSE_OVERSIGHT_030516.txt", "type": "Peter Mandelson BBC response"},
+    {"file": "HOUSE_OVERSIGHT_030587.txt", "type": "BBC Today Programme interview request"},
+    {"file": "HOUSE_OVERSIGHT_031350.txt", "type": "Tyler Shears SEO reputation management"},
+    {"file": "HOUSE_OVERSIGHT_031423.txt", "type": "Sultan Bin Sulayem Dubai article"},
+    {"file": "HOUSE_OVERSIGHT_033339.txt", "type": "David Mitchell Deutsche Bank inquiry"},
+    {"file": "HOUSE_OVERSIGHT_033259.txt", "type": "Richard Kahn Reid Hoffman article"}
+  ],
+
+  "key_discoveries": {
+    "peggy_siegal_pr_network": {
+      "identity": "Peggy Siegal - Top Hollywood publicist, 'PR Doyenne'",
+      "relationship_period": "2008-2019",
+      "role": "Organized social events for Epstein post-conviction, connected him to celebrities",
+      "key_activities": [
+        {
+          "date": "September 2010",
+          "event": "Yom Kippur Break Fast",
+          "details": "120 friends and their children attended at Epstein's home - months after prison release",
+          "source": "Daily Beast article referenced in HOUSE_OVERSIGHT_031691"
+        },
+        {
+          "date": "July 1, 2011",
+          "document": "HOUSE_OVERSIGHT_030628",
+          "action": "Epstein asks Peggy to contact Arianna Huffington to attack Virginia Roberts",
+          "quote": "should you point out to Ariana Huff, that the same type of person, same as strauss Kahn is Andrews accuser, long criminal record. total liar"
+        },
+        {
+          "date": "July 1, 2011",
+          "document": "HOUSE_OVERSIGHT_030628",
+          "action": "Epstein claims victim can be 'proven to be a liar'",
+          "quote": "I promise you she is a fraud. you and i will be able to go to ascot for the rest of our lives"
+        },
+        {
+          "date": "November 2017",
+          "document": "HOUSE_OVERSIGHT_030679",
+          "action": "Still arranging Epstein attendance at IFP Gotham Awards honoring Al Gore",
+          "quote": "Jeffrey; every year I beg you to come and every year you don't"
+        }
+      ]
+    },
+
+    "victim_discrediting_campaign": {
+      "target": "Virginia Roberts (later Virginia Giuffre)",
+      "date": "July 2011",
+      "tactics": [
+        "Compared to DSK accuser who was 'proven to have lied'",
+        "Called 'total liar' with 'long criminal record'",
+        "Claimed she 'was never 15' and 'nothing more than a telephone answerer'",
+        "Mentioned she worked for Trump at Mar-a-Lago at age 15",
+        "Proposed sending HuffPost reporters to 'investigate' her",
+        "Promised 'Buckingham Palace would love it'"
+      ],
+      "media_targets": ["Arianna Huffington", "Huffington Post"]
+    },
+
+    "peter_mandelson_connection": {
+      "identity": "Peter Mandelson (Lord Mandelson) - Labour politician, European Commissioner, Blair ally",
+      "document": "HOUSE_OVERSIGHT_030516",
+      "date": "March 7, 2011",
+      "context": "Epstein forwarded BBC Today Programme interview request to Mandelson",
+      "topic": "Prince Andrew stories circulating in UK press",
+      "response": "Mandelson replied simply: 'No !!'"
+    },
+
+    "reputation_management_operation": {
+      "operator": "Tyler Shears",
+      "document": "HOUSE_OVERSIGHT_031350",
+      "date": "January 2014",
+      "goal": "Clean up Epstein's Google search results",
+      "details": [
+        "At time, first page showed Forbes 'Sex Offender' article, NY Post 'Billionaire pervert' piece",
+        "Woody Allen spotted with Epstein story on Daily Mail",
+        "Duke of York secret journal story in Telegraph",
+        "Shears: 'another 45 days should be enough to have a clean first page'",
+        "Foundation site was hacked during this period"
+      ]
+    },
+
+    "bbc_interview_request_2011": {
+      "requester": "Kirsty MacKenzie - Interviews Editor, BBC Today Programme",
+      "date": "March 7, 2011",
+      "topic": "Stories circulating about Epstein and Prince Andrew",
+      "handling": "Epstein forwarded to Peggy Siegal and Peter Mandelson",
+      "notable": "BBC noted their guests included Bill Gates, Al Gore, Stephen Hawking, Tony Blair"
+    },
+
+    "celebrity_events_post_conviction": {
+      "yom_kippur_break_fast_2010": {
+        "attendees": "120 friends with children",
+        "organizer": "Peggy Siegal",
+        "timing": "Few months after prison release"
+      },
+      "ifp_gotham_awards_2017": {
+        "epstein_contribution": "$10,000 for chairs",
+        "honorees": ["Nicole Kidman", "Dustin Hoffman", "Sofia Coppola", "Al Gore (Humanitarian Tribute)"],
+        "organizer": "Peggy Siegal"
+      }
+    },
+
+    "journalist_investigation_2011": {
+      "journalist": "Jesse Kornbluth",
+      "outlet": "New York Times",
+      "date": "April 2011",
+      "topic": "Why rich people don't shun Epstein",
+      "key_questions_to_peggy": [
+        "Why was your reaction to his crimes to continue being his friend?",
+        "What would he have had to do for you to shun him?"
+      ],
+      "referenced_article": "Daily Beast: Bill Clinton, Katie Couric, Woody Allen - Jeffrey Epstein's Society Friends Close Ranks"
+    }
+  },
+
+  "new_entities_discovered": [
+    {"name": "Peggy Siegal", "type": "person", "role": "Hollywood publicist, organized Epstein social events post-conviction"},
+    {"name": "Peter Mandelson", "type": "person", "role": "Lord Mandelson, Labour politician, email contact with Epstein"},
+    {"name": "Arianna Huffington", "type": "person", "role": "Huffington Post founder, Epstein wanted her to attack Virginia Roberts"},
+    {"name": "Tyler Shears", "type": "person", "role": "SEO/reputation management for Epstein 2014"},
+    {"name": "Kirsty MacKenzie", "type": "person", "role": "BBC Today Programme Interviews Editor"},
+    {"name": "Jesse Kornbluth", "type": "person", "role": "NY Times journalist investigating Epstein social circle"},
+    {"name": "David Mitchell", "type": "person", "role": "Mitchell Holdings LLC, sent Epstein Trump-Deutsche Bank article"},
+    {"name": "Steven Pfeiffer", "type": "person", "role": "IFP Associate Director Development"},
+    {"name": "Joana Vicente", "type": "person", "role": "IFP executive"},
+    {"name": "Independent Filmmaker Project", "type": "organization", "role": "IFP, Epstein donor for Gotham Awards"},
+    {"name": "BBC Today Programme", "type": "organization", "role": "UK news show, requested Epstein interview 2011"},
+    {"name": "Huffington Post", "type": "organization", "role": "Target for Epstein victim-discrediting campaign"},
+    {"name": "Mitchell Holdings LLC", "type": "organization", "role": "745 Fifth Avenue, David Mitchell company"}
+  ],
+
+  "celebrities_mentioned": {
+    "events_attended_with_epstein": ["Woody Allen", "Katie Couric", "Bill Clinton"],
+    "2017_gotham_awards_honorees": ["Nicole Kidman", "Dustin Hoffman", "Sofia Coppola", "Al Gore", "Jason Blum"],
+    "bbc_guests_for_comparison": ["Bill Gates", "Al Gore", "Stephen Hawking", "Tony Blair", "George Soros"]
+  },
+
+  "key_quotes": [
+    {
+      "speaker": "Peggy Siegal",
+      "quote": "I and many others that know him describe him as brilliant. His unique mind is what attracts the world's smartest people to his home",
+      "date": "2011"
+    },
+    {
+      "speaker": "Jeffrey Epstein",
+      "quote": "I promise you she is a fraud. you and i will be able to go to ascot for the rest of our lives",
+      "date": "July 1, 2011",
+      "about": "Virginia Roberts"
+    },
+    {
+      "speaker": "Jeffrey Epstein",
+      "quote": "the palace would love it",
+      "date": "July 1, 2011",
+      "about": "Attacking Virginia Roberts"
+    },
+    {
+      "speaker": "Tyler Shears",
+      "quote": "another 45 days should be enough to have a clean first page",
+      "date": "January 2014",
+      "about": "Google search results"
+    },
+    {
+      "speaker": "Peggy Siegal",
+      "quote": "Jeffrey; every year I beg you to come and every year you don't",
+      "date": "November 2017",
+      "about": "Gotham Awards"
+    }
+  ],
+
+  "total_entities_batch_4": 13,
+  "remaining_documents": 350
+}

@@ -1,0 +1,146 @@
+{
+  "extraction_date": "2025-12-31",
+  "documents_processed": 45,
+  "batch": 7,
+  "source_documents": [
+    {"file": "HOUSE_OVERSIGHT_030589.txt", "type": "EXPLOSIVE: Mail on Sunday victim allegations naming Glenn Dubin, Les Wexner, George Mitchell, Stephen Kosslyn, Ehud Barak"},
+    {"file": "HOUSE_OVERSIGHT_030417.txt", "type": "Eva Dubin emails 'superb!!!!' about Vicky Ward article"},
+    {"file": "HOUSE_OVERSIGHT_030347.txt", "type": "Epstein emails Eva Dubin: 'told you, the case was a fake' - Doe v Trump dismissal Nov 4, 2016"},
+    {"file": "HOUSE_OVERSIGHT_030432.txt", "type": "Glenn Dubin sends Epstein Michael Cohen New Yorker article April 2018"},
+    {"file": "HOUSE_OVERSIGHT_030584.txt", "type": "Boris Nikolic (Gates science advisor) defends Epstein after Vicky Ward article"},
+    {"file": "HOUSE_OVERSIGHT_010477.txt", "type": "Patterson book excerpts - photos of Wexner, Trump, Epstein, Maxwell"},
+    {"file": "HOUSE_OVERSIGHT_013304.txt", "type": "Legal filing mentioning Trump/Epstein/Wexner/Landon Thomas"}
+  ],
+
+  "key_discoveries": {
+    "victim_allegations_named_individuals": {
+      "document": "HOUSE_OVERSIGHT_030589.txt",
+      "date": "March 4, 2011",
+      "source": "Mail on Sunday media inquiry to Maxwell lawyer Mark Cohen",
+      "individuals_named_in_allegations": [
+        {"name": "Glenn Dubin", "role": "Hedge fund manager, Highbridge Capital", "allegation": "Victim 'required to have sex' with him"},
+        {"name": "Les Wexner", "role": "Limited Brands CEO", "allegation": "Victim 'required to have sex' with him"},
+        {"name": "Ehud Barak", "role": "Former Israeli PM", "allegation": "Ms Maxwell and Mr Epstein arranged for Ehud Barak to have sex with several girls, often at Mr Epstein's Palm Beach house"},
+        {"name": "George Mitchell", "role": "Former US Senator, Senate Majority Leader", "allegation": "Victim 'required to have sex' with him"},
+        {"name": "Stephen Kosslyn", "role": "Harvard psychologist", "allegation": "Victim 'required to have sex' with him"},
+        {"name": "Prince Andrew", "role": "Duke of York", "allegation": "Multiple sexual encounters directed by Maxwell"}
+      ],
+      "additional_allegations": [
+        "Surveillance cameras taped sex sessions in all residences",
+        "Maxwell 'piloted President Bill Clinton in a helicopter to a dinner on Little St James'",
+        "Epstein bought Maxwell helicopter, homes in NY/London, Mercedes",
+        "Maxwell tried to persuade victim to bear Epstein's child"
+      ]
+    },
+
+    "glenn_eva_dubin_relationship": {
+      "documents_count": 55,
+      "key_communications": [
+        {
+          "date": "March 8, 2011",
+          "document": "030417",
+          "content": "Eva Dubin emails Epstein 'superb!!!!' about Vicky Ward Vanity Fair article mentioning Leon Black, Mort Zuckerman"
+        },
+        {
+          "date": "November 4, 2016",
+          "document": "030347",
+          "content": "Epstein emails Eva Dubin about Doe v. Trump dismissal with subject 'told you, the case was a fake'. Eva responds 'EEEE'",
+          "significance": "Epstein and Eva Dubin celebrating Trump lawsuit dismissal 4 days before election"
+        },
+        {
+          "date": "April 15, 2018",
+          "document": "030432",
+          "content": "Glenn Dubin sends Epstein New Yorker article 'Michael Cohen and the End Stage of the Trump Presidency'"
+        }
+      ],
+      "note": "Eva Dubin was formerly Eva Andersson, Swedish model who dated Epstein in 1980s before marrying Glenn Dubin"
+    },
+
+    "boris_nikolic_connection": {
+      "identity": "Boris Nikolic - Bill Gates' former science advisor, Biomatics Capital founder",
+      "document": "030584",
+      "date": "March 8, 2011",
+      "context": "Epstein sends Nikolic Vicky Ward article",
+      "nikolic_response": "What is this??? When this will stop. This is crazy. And you are NOT 57;) And certainly you are NOT socially awkward. Who is that idiot.",
+      "significance": "Named as backup executor in Epstein's will (August 2019). Close enough to defend Epstein personally."
+    },
+
+    "vicky_ward_article_reveals": {
+      "date": "March 8, 2011",
+      "title": "Jeffrey and Ghislaine: Notes on New York's Oddest Alliance",
+      "key_quotes": [
+        "Leon Black, Mort Zuckerman and a few other financiers hang out with him",
+        "She is passionate about Bill Clinton with whom she is close friends",
+        "Jeffrey knows what he's talking about far more than 'Andy' does",
+        "When it comes to international business, Jeffrey knows what he's talking about"
+      ],
+      "epstein_associates_mentioned": ["Les Wexner", "Jimmy Cayne", "Steven Jude Hoffenberg", "Leon Black", "Mort Zuckerman", "Bill Clinton", "Prince Andrew"]
+    },
+
+    "trump_lawsuit_monitoring": {
+      "document": "030347",
+      "case": "Doe v. Trump et al (1:16-cv-07673-RA)",
+      "date_dismissed": "November 4, 2016",
+      "date_election": "November 8, 2016",
+      "epstein_subject_line": "told you, the case was a fake",
+      "significance": "Epstein monitoring Trump's legal troubles and sharing news with associates"
+    }
+  },
+
+  "new_entities_discovered": [
+    {"name": "Glenn Dubin", "type": "person", "role": "Highbridge Capital co-founder. Named in victim allegations. 55 documents in archive. April 2018 sent Epstein Cohen/Trump article."},
+    {"name": "Eva Dubin", "type": "person", "role": "Glenn Dubin's wife, former Epstein girlfriend Eva Andersson. Regular email correspondent. Celebrated Trump lawsuit dismissal with Epstein Nov 2016."},
+    {"name": "Boris Nikolic", "type": "person", "role": "Bill Gates' former science advisor, Biomatics Capital founder. Defended Epstein March 2011. Named backup executor of Epstein's will."},
+    {"name": "Stephen Kosslyn", "type": "person", "role": "Harvard psychologist, later Minerva Schools founding dean. Named in victim allegations March 2011."},
+    {"name": "George Mitchell", "type": "person", "role": "Former US Senator and Senate Majority Leader (D-Maine). Named in victim allegations March 2011. On Epstein's Bannon list."},
+    {"name": "Mort Zuckerman", "type": "person", "role": "Media mogul, NY Daily News owner, Boston Properties. 70 documents in archive. Quoted praising Epstein in Vanity Fair 2011."},
+    {"name": "Vicky Ward", "type": "person", "role": "Journalist, wrote 2003 Vanity Fair 'The Talented Mr. Epstein' and 2011 follow-up on Maxwell."},
+    {"name": "Jimmy Cayne", "type": "person", "role": "Bear Stearns CEO. Named as early Epstein associate in Vanity Fair."},
+    {"name": "Steven Jude Hoffenberg", "type": "person", "role": "Towers Financial fraudster (20-year sentence). Claimed to be Epstein's mentor in Vanity Fair."},
+    {"name": "Annette Witheridge", "type": "person", "role": "Mail on Sunday journalist who sent victim allegations to Maxwell's lawyer March 2011."},
+    {"name": "Mark Cohen", "type": "person", "role": "Attorney for Ghislaine Maxwell, received Mail on Sunday inquiry March 2011."},
+    {"name": "Highbridge Capital", "type": "organization", "role": "Hedge fund co-founded by Glenn Dubin."}
+  ],
+
+  "key_quotes": [
+    {
+      "speaker": "Boris Nikolic",
+      "to": "Jeffrey Epstein",
+      "quote": "What is this??? When this will stop. This is crazy. And you are NOT 57;) And certainly you are NOT socially awkward. Who is that idiot.",
+      "date": "March 8, 2011",
+      "about": "Vicky Ward Vanity Fair article"
+    },
+    {
+      "speaker": "Jeffrey Epstein",
+      "to": "Eva Dubin",
+      "subject_line": "told you, the case was a fake",
+      "date": "November 4, 2016",
+      "about": "Doe v. Trump dismissal"
+    },
+    {
+      "speaker": "Eva Dubin",
+      "to": "Jeffrey Epstein",
+      "quote": "superb!!!!",
+      "date": "March 8, 2011",
+      "about": "Vicky Ward article"
+    },
+    {
+      "speaker": "Mort Zuckerman",
+      "quote": "Jeffrey knows a good deal about most subjects",
+      "date": "March 2011",
+      "source": "Vanity Fair"
+    }
+  ],
+
+  "timeline_events": [
+    {"date": "2003", "event": "Vicky Ward writes 'The Talented Mr. Epstein' for Vanity Fair"},
+    {"date": "2011-03-04", "event": "Mail on Sunday sends victim allegations to Maxwell lawyer naming Dubin, Wexner, Barak, Mitchell, Kosslyn"},
+    {"date": "2011-03-08", "event": "Vicky Ward publishes follow-up article; Eva Dubin, Boris Nikolic react"},
+    {"date": "2016-11-04", "event": "Doe v. Trump dismissed; Epstein emails Eva Dubin 'told you, the case was a fake'"},
+    {"date": "2018-04-15", "event": "Glenn Dubin sends Epstein Michael Cohen New Yorker article"},
+    {"date": "2019-08", "event": "Boris Nikolic named backup executor in Epstein's will"}
+  ],
+
+  "total_entities_batch_7": 12,
+  "remaining_documents": 1750
+}

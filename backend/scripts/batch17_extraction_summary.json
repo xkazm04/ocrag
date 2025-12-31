@@ -1,0 +1,83 @@
+{
+  "extraction_date": "2025-12-31",
+  "documents_processed": 45,
+  "batch": 17,
+  "source_documents": [
+    {"file": "HOUSE_OVERSIGHT_030589.txt", "type": "Mail on Sunday - surveillance/blackmail allegations"},
+    {"file": "HOUSE_OVERSIGHT_010887.txt", "type": "Virginia Giuffre declaration - blackmail testimony"},
+    {"file": "HOUSE_OVERSIGHT_010757.txt", "type": "Deposition transcript - blackmail references"},
+    {"file": "HOUSE_OVERSIGHT_010486.txt", "type": "Perversion of Justice - Hoffenberg, Bear Stearns"},
+    {"file": "HOUSE_OVERSIGHT_017771.txt", "type": "Vanity Fair - Epstein career origins"}
+  ],
+
+  "key_discoveries": {
+    "surveillance_blackmail_operation": {
+      "documentary_evidence": "Mail on Sunday document explicitly states: 'Mr Epstein's residences in Florida and New York had surveillance cameras that taped the sex sessions and taped even in the bathroom'",
+      "giuffre_testimony": "Virginia Giuffre testified about 'sexual events that I had with these men presumably so that he could potentially blackmail them'",
+      "hidden_cameras": "Found throughout NYC mansion, Palm Beach estate, and allegedly Little St. James"
+    },
+
+    "israeli_government_connections": {
+      "ehud_barak": {
+        "role": "Former Israeli Prime Minister (1999-2001) and Defense Minister (2007-2013)",
+        "allegations": "Mail on Sunday: 'Ms Maxwell and Mr Epstein arranged for Ehud Barak to have sex with several girls, often at Mr Epstein's Palm Beach house'",
+        "business_connection": "Chairman of Carbyne (Reporty Homeland Security), an Israeli surveillance/911 tech company that received investment from Epstein",
+        "context": "Barak was photographed entering Epstein's NYC mansion multiple times; reportedly received business funding connected to Epstein"
+      }
+    },
+
+    "robert_maxwell_intelligence_context": {
+      "documentary_mention": "Virginia Giuffre declaration: 'Ghislaine Maxwell. She is the daughter of Robert Maxwell, who had been a wealthy publisher in Britain'",
+      "background_context": "Robert Maxwell was a Czechoslovakian-born British media tycoon (Mirror Group) who died mysteriously in 1991 falling from his yacht 'Lady Ghislaine'. He was given a state funeral in Israel on the Mount of Olives, attended by Israeli intelligence officials. Former Mossad officer Victor Ostrovsky alleged in books that Maxwell was a Mossad asset used for influence operations.",
+      "significance": "Ghislaine allegedly inherited intelligence connections and tradecraft from her father"
+    },
+
+    "epstein_career_origins": {
+      "dalton_school": "Epstein taught math/physics at Dalton School (elite Manhattan K-12) from 1973-1976 WITHOUT a college degree. He was hired by headmaster Donald Barr (father of future AG William Barr)",
+      "bear_stearns": "Epstein moved to Bear Stearns after tutoring the son of chairman Ace Greenberg. Worked there 1976-1981 before starting his own firm",
+      "hoffenberg_connection": "Steven Hoffenberg partnered with Epstein in Towers Financial Corporation - a $500 million Ponzi scheme. Hoffenberg served 18 years; Epstein escaped prosecution. Hoffenberg later claimed Epstein was 'introduced to intelligence work'"
+    },
+
+    "surveillance_technology_investments": {
+      "carbyne": {
+        "description": "Israeli surveillance/emergency response technology company (formerly Reporty Homeland Security)",
+        "epstein_connection": "Epstein was an investor",
+        "barak_connection": "Ehud Barak served as chairman",
+        "other_investors": "Nicole Junkermann, Peter Thiel's Founders Fund",
+        "significance": "Technology for emergency call monitoring/surveillance - connects to broader surveillance apparatus"
+      }
+    },
+
+    "mega_group_context": {
+      "description": "Secretive organization of wealthy American Jewish businessmen founded 1991 by Leslie Wexner and Charles Bronfman",
+      "members": ["Leslie Wexner", "Charles Bronfman", "Edgar Bronfman Sr.", "Michael Steinhardt", "Laurence Tisch", "Lester Crown"],
+      "purpose": "Pro-Israel philanthropy and advocacy",
+      "epstein_connection": "Wexner was Epstein's only known billionaire client; transferred power of attorney and $77 million NYC mansion to Epstein"
+    }
+  },
+
+  "entities_for_import": [
+    {"name": "Robert Maxwell", "type": "person", "role": "Ghislaine's father. British media tycoon (Mirror Group). Died mysteriously 1991. Given Israeli state funeral. Widely alleged Mossad asset."},
+    {"name": "Carbyne", "type": "organization", "role": "Israeli surveillance/911 tech company. Ehud Barak chairman, Epstein investor. Formerly called Reporty Homeland Security."},
+    {"name": "Steven Hoffenberg", "type": "person", "role": "Epstein's early business partner. Towers Financial $500M Ponzi scheme. Served 18 years. Claimed Epstein was 'introduced to intelligence work'."},
+    {"name": "Ace Greenberg", "type": "person", "role": "Bear Stearns chairman. His son was tutored by Epstein at Dalton. Gave Epstein his Wall Street career start."},
+    {"name": "Donald Barr", "type": "person", "role": "Dalton School headmaster who hired Epstein to teach without a degree (1973). Father of future AG William Barr."},
+    {"name": "Bear Stearns", "type": "organization", "role": "Wall Street firm where Epstein worked 1976-1981 after Dalton. Starting point of his financial career."},
+    {"name": "Dalton School", "type": "organization", "role": "Elite Manhattan K-12 school where Epstein taught math 1973-1976 without degree. Hired by Donald Barr."},
+    {"name": "Mega Group", "type": "organization", "role": "Secretive group of wealthy American Jewish businessmen (Wexner, Bronfmans, etc.) focused on pro-Israel philanthropy. Founded 1991."}
+  ],
+
+  "intelligence_operation_hypothesis": {
+    "evidence_summary": [
+      "Systematic surveillance cameras recording sexual encounters in all residences",
+      "Explicit testimony about blackmail potential",
+      "Robert Maxwell's alleged Mossad connections inherited by Ghislaine",
+      "Epstein's mysterious source of wealth never fully explained",
+      "Connections to Israeli defense/intelligence figures (Barak)",
+      "Investment in Israeli surveillance technology (Carbyne)",
+      "Escape from prosecution in Hoffenberg Ponzi scheme",
+      "Sweetheart 2008 plea deal with intelligence overtones"
+    ],
+    "note": "While no single document proves intelligence agency involvement, the pattern of evidence has led multiple investigators to hypothesize Epstein operated a sexual blackmail operation potentially connected to intelligence services"
+  }
+}

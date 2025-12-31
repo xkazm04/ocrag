@@ -1,0 +1,104 @@
+{
+  "extraction_date": "2025-12-31",
+  "documents_processed": 5,
+  "source_documents": [
+    {"file": "HOUSE_OVERSIGHT_018872.txt", "score": 8475, "type": "FBI FOIA Palm Beach Investigation"},
+    {"file": "HOUSE_OVERSIGHT_013304.txt", "score": 4392, "type": "Court Filing - Edwards vs Epstein"},
+    {"file": "HOUSE_OVERSIGHT_017935.txt", "score": 3898, "type": "Giuffre vs Dershowitz Complaint"},
+    {"file": "HOUSE_OVERSIGHT_012197.txt", "score": 3572, "type": "NPA Correspondence"},
+    {"file": "HOUSE_OVERSIGHT_021958.txt", "score": 3502, "type": "James Patterson 'Filthy Rich'"}
+  ],
+
+  "financial_summary": {
+    "total_documented_value": "$1,500,000,000+",
+    "victim_payments_documented": "$200-$1,000 per massage session",
+    "recruitment_fees": "$200-$300 per victim recruited",
+    "settlements_range": "$50,000 to $1,000,000+",
+    "key_transactions": [
+      {"amount": "$100,000", "description": "Bear Stearns exit bonus (1981)"},
+      {"amount": "$160,000,000", "description": "Drysdale Securities default recovered"},
+      {"amount": "$460,000,000", "description": "Hoffenberg Ponzi scheme"},
+      {"amount": "$30,000,000", "description": "Harvard donation"},
+      {"amount": "$20,000,000", "description": "Citibank loan default"},
+      {"amount": "$1,000,000", "description": "MC2 Modeling investment"},
+      {"amount": "$18,000,000", "description": "Zorro Ranch (New Mexico)"},
+      {"amount": "$24,000", "description": "Sarah Ferguson loan"},
+      {"amount": "$50,000,000+", "description": "Victim lawsuits"}
+    ]
+  },
+
+  "new_entities_discovered": [
+    {"name": "Steven Hoffenberg", "type": "person", "role": "Ponzi scheme operator, Epstein employer", "evidence": "Tower Financial $460M fraud"},
+    {"name": "Robert Meister", "type": "person", "role": "Aon VP, introduced Epstein to Wexner", "evidence": "021958"},
+    {"name": "Wendy Meister", "type": "person", "role": "Robert's wife, called Epstein 'the virus'", "evidence": "021958"},
+    {"name": "Ana Obregón", "type": "person", "role": "Spanish actress, first major client", "evidence": "021958"},
+    {"name": "Eva Andersson", "type": "person", "role": "Miss Sweden 1980, Epstein girlfriend", "evidence": "021958"},
+    {"name": "Glenn Dubin", "type": "person", "role": "Hedge fund manager, married Eva Andersson", "evidence": "021958"},
+    {"name": "Andrew Levander", "type": "person", "role": "Assistant US Attorney, Drysdale case", "evidence": "021958"},
+    {"name": "Robert Gold", "type": "person", "role": "Former federal prosecutor, helped Epstein", "evidence": "021958"},
+    {"name": "Diana Crane", "type": "person", "role": "Former model", "evidence": "021958"},
+    {"name": "Nadia Bjorlin", "type": "person", "role": "13-year-old target, singer", "evidence": "021958"},
+    {"name": "Jean-Luc Brunel", "type": "person", "role": "MC2 Modeling Agency owner", "evidence": "017935"},
+    {"name": "Maritza Vasquez", "type": "person", "role": "MC2 finances 2003-2006", "evidence": "017935"},
+    {"name": "Sarah Ransome", "type": "person", "role": "Victim, witness", "evidence": "017935"},
+    {"name": "Maria Farmer", "type": "person", "role": "Epstein employee, witness", "evidence": "017935"},
+    {"name": "Juan Alessi", "type": "person", "role": "Epstein household employee", "evidence": "017935"},
+    {"name": "Alfredo Rodriguez", "type": "person", "role": "Epstein household employee", "evidence": "017935"},
+    {"name": "Joe Recarey", "type": "person", "role": "Palm Beach Police Detective", "evidence": "018872"},
+    {"name": "Haley Robson", "type": "person", "role": "Recruiter, 'like a Heidi Fleiss'", "evidence": "018872"},
+    {"name": "Roy Black", "type": "person", "role": "Defense attorney (Rush Limbaugh, WK Smith)", "evidence": "018872"},
+    {"name": "Lanna Belohlavek", "type": "person", "role": "Prosecutor, offered plea deal", "evidence": "018872"},
+    {"name": "Barry Krischer", "type": "person", "role": "State Attorney", "evidence": "018872"},
+    {"name": "Michael Reiter", "type": "person", "role": "Palm Beach Police Chief", "evidence": "018872"},
+    {"name": "Jay Lefkowitz", "type": "person", "role": "Attorney, Kirkland & Ellis", "evidence": "012197"},
+    {"name": "Marie Villafana", "type": "person", "role": "AUSA handling Epstein case", "evidence": "012197"},
+    {"name": "R. Alexander Acosta", "type": "person", "role": "US Attorney, signed NPA", "evidence": "012197"},
+    {"name": "Kenneth Starr", "type": "person", "role": "Former Solicitor General, Epstein attorney", "evidence": "012197"},
+    {"name": "MC2 Modeling Agency", "type": "organization", "role": "Model agency, Epstein invested $1M", "evidence": "017935"},
+    {"name": "Tower Financial", "type": "organization", "role": "Hoffenberg Ponzi scheme company", "evidence": "021958"},
+    {"name": "Drysdale Securities", "type": "organization", "role": "Collapsed 1982, $160M default", "evidence": "021958"},
+    {"name": "Aon Corporation", "type": "organization", "role": "Insurance brokerage, Meister VP", "evidence": "021958"},
+    {"name": "Kirkland & Ellis", "type": "organization", "role": "Law firm, represented Epstein", "evidence": "012197"},
+    {"name": "Podhurst Josefsberg", "type": "organization", "role": "Law firm, represented 34 victims", "evidence": "012197"}
+  ],
+
+  "properties_confirmed": [
+    {"address": "9 East 71st Street, New York", "name": "Herbert N. Straus Mansion", "from": "Wexner"},
+    {"address": "301 East 66th Street, New York", "name": "Model apartments", "note": "$1,000/month rent"},
+    {"address": "358 El Brillo Way, Palm Beach", "name": "Palm Beach mansion", "note": "FBI search site"},
+    {"address": "Zorro Ranch, New Mexico", "value": "$18 million", "acres": 7500},
+    {"address": "Little St. James Island, USVI", "name": "Private island", "acres": 100},
+    {"address": "Great St. James Island, USVI", "value": "$22.5 million", "acres": 161}
+  ],
+
+  "victim_payment_structure": {
+    "massage_session": "$200-$1,000",
+    "recruitment_fee": "$200-$300 per victim",
+    "premium_acts": "$350-$400",
+    "christmas_bonus": "$200",
+    "total_victims_documented": "70+ recruited by L.M. alone",
+    "34_federal_victims": "Eligible for 18 U.S.C. § 2255 compensation"
+  },
+
+  "legal_team_identified": [
+    "Alan Dershowitz - Harvard Law",
+    "Kenneth Starr - Former Solicitor General",
+    "Jay Lefkowitz - Kirkland & Ellis",
+    "Gerald Lefcourt",
+    "Lilly Ann Sanchez",
+    "Jack Goldberger",
+    "Guy Fronstin",
+    "Roy Black"
+  ],
+
+  "key_relationships": [
+    {"source": "Robert Meister", "target": "Leslie Wexner", "type": "introduced", "year": 1989},
+    {"source": "Jeffrey Epstein", "target": "Steven Hoffenberg", "type": "business_partner", "note": "$460M Ponzi"},
+    {"source": "Jeffrey Epstein", "target": "Leon Black", "type": "financial_advisor", "value": "$20M+ fees"},
+    {"source": "Ghislaine Maxwell", "target": "Jeffrey Epstein", "type": "procurer", "period": "1991-2019"},
+    {"source": "Jean-Luc Brunel", "target": "Jeffrey Epstein", "type": "model_supplier", "investment": "$1M"}
+  ],
+
+  "remaining_documents": 391,
+  "next_priority": "HOUSE_OVERSIGHT_022058.txt (score: 2500)"
+}

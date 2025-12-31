@@ -1,0 +1,138 @@
+{
+  "extraction_date": "2025-12-31",
+  "documents_processed": 8,
+  "batch": 2,
+  "source_documents": [
+    {"file": "HOUSE_OVERSIGHT_022058.txt", "type": "James Patterson - Filthy Rich content"},
+    {"file": "HOUSE_OVERSIGHT_010566.txt", "type": "Edwards Statement of Facts - Trump/Clinton"},
+    {"file": "HOUSE_OVERSIGHT_010486.txt", "type": "Photo captions - Mar-a-Lago, Prince Andrew"},
+    {"file": "HOUSE_OVERSIGHT_023291.txt", "type": "Leon Black emails (duplicate of 023208)"},
+    {"file": "HOUSE_OVERSIGHT_031791.txt", "type": "Jane Doe lawsuit service emails"},
+    {"file": "HOUSE_OVERSIGHT_032398.txt", "type": "Epstein island development emails"},
+    {"file": "HOUSE_OVERSIGHT_031764.txt", "type": "Elliott Broidy investigation"},
+    {"file": "HOUSE_OVERSIGHT_031794.txt", "type": "French press - Financial Trust Co"}
+  ],
+
+  "key_discoveries": {
+    "legal_service_august_2009": {
+      "document": "HOUSE_OVERSIGHT_031791.txt",
+      "case": "Jane Doe lawsuit",
+      "date": "August 5, 2009",
+      "findings": [
+        "Maxwell was NOT served",
+        "Wexner's counsel accepted service for him",
+        "Trump's staff accepted service for him",
+        "Law firm: Burman Critton Luttier & Coleman LLP"
+      ]
+    },
+
+    "trump_connections": {
+      "document": "HOUSE_OVERSIGHT_010566.txt",
+      "findings": [
+        "Trump called Epstein's mansion on several occasions during relevant time period",
+        "Trump quoted: 'I've known Jeff for fifteen years. Terrific guy.'",
+        "Trump banned Epstein from Mar-a-Lago for assaulting underage girl",
+        "Jane Doe 102 recruited at Mar-a-Lago by Ghislaine Maxwell",
+        "Mark Epstein testified Trump flew on Epstein's plane"
+      ]
+    },
+
+    "clinton_connections": {
+      "document": "HOUSE_OVERSIGHT_010566.txt",
+      "findings": [
+        "Clinton flew on Epstein's plane numerous occasions 2002-2005",
+        "21 phone numbers for Clinton in Epstein's directory",
+        "Clinton's assistant Doug Band phone numbers listed",
+        "Flight logs show Clinton with Maxwell, Kellen, Mucinska",
+        "Ghislaine Maxwell attended Chelsea Clinton's wedding July 31, 2010"
+      ]
+    },
+
+    "island_development_2016": {
+      "document": "HOUSE_OVERSIGHT_032398.txt",
+      "date": "December 28-29, 2016",
+      "findings": [
+        "Epstein planning construction on Great and Little St. James",
+        "Contacted Eduardo Robles (Creative Kingdom, Dubai) for architecture",
+        "Sultan Suleiman in Dubai made introduction",
+        "January 20, 2017 meeting planned - 'my birthday and inauguration of trump'",
+        "Epstein: 'I have two islands in the us virgin islands'"
+      ]
+    },
+
+    "mar_a_lago_photos": {
+      "document": "HOUSE_OVERSIGHT_010486.txt",
+      "findings": [
+        "Photo: Epstein, Maxwell, Gwendolyn Beck at Mar-a-Lago reception, 1995",
+        "Photo: Epstein, Trump, Ingrid Seynhaeve at Victoria's Secret Angels party, 1997",
+        "Photo: Prince Andrew, Virginia Roberts (17), Maxwell in London",
+        "Photo: Virginia Roberts (15) in NYC - taken by Epstein",
+        "Photo: Epstein with Dershowitz, Cambridge MA, September 8, 2004"
+      ]
+    }
+  },
+
+  "new_entities_discovered": [
+    {"name": "Burman Critton Luttier & Coleman LLP", "type": "organization", "role": "Epstein's law firm, West Palm Beach"},
+    {"name": "Robert D. Critton Jr.", "type": "person", "role": "Attorney at Burman Critton"},
+    {"name": "Eduardo Robles", "type": "person", "role": "Architect, Creative Kingdom Dubai"},
+    {"name": "Sultan Suleiman", "type": "person", "role": "Dubai contact, introduced architect to Epstein"},
+    {"name": "Creative Kingdom", "type": "organization", "role": "Dubai architecture firm"},
+    {"name": "Doug Band", "type": "person", "role": "Bill Clinton's assistant, phone in Epstein's directory"},
+    {"name": "Ingrid Seynhaeve", "type": "person", "role": "Trump Model, Victoria's Secret party 1997"},
+    {"name": "Gwendolyn Beck", "type": "person", "role": "At Mar-a-Lago with Epstein/Maxwell 1995"},
+    {"name": "Deborah Blohm", "type": "person", "role": "At Mar-a-Lago with Epstein/Maxwell 1995"},
+    {"name": "Larry Visoski", "type": "person", "role": "Epstein's longtime personal pilot"},
+    {"name": "Adrianna Ross", "type": "person", "role": "Epstein associate, Radar magazine launch 2005"},
+    {"name": "Nadia Marcinkova", "type": "person", "role": "Epstein's 'live-in sex slave', pilot trainee"},
+    {"name": "Michele Tagliani", "type": "person", "role": "Tribeca Ball 2004 attendee"},
+    {"name": "Teala Davies", "type": "person", "role": "Tribeca Ball 2004 attendee"},
+    {"name": "Brian Vickers", "type": "person", "role": "NASCAR driver, married Sarah Kellen"},
+    {"name": "Charlie Crist", "type": "person", "role": "Florida Governor, photo with Rothstein"},
+    {"name": "Scott Rothstein", "type": "person", "role": "Florida attorney, Ponzi scheme"}
+  ],
+
+  "properties_confirmed": [
+    {"address": "358 El Brillo Way, Palm Beach", "note": "Police search warrant site"},
+    {"address": "Great St. James Island, USVI", "note": "Development planned Dec 2016"},
+    {"address": "Little St. James Island, USVI", "note": "Epstein's primary island"},
+    {"address": "Mar-a-Lago, Palm Beach", "note": "1995 reception, Jane Doe 102 recruitment site"}
+  ],
+
+  "flight_log_evidence": {
+    "clinton_flights": "Numerous occasions 2002-2005",
+    "clinton_companions": ["Ghislaine Maxwell", "Sarah Kellen", "Adriana Mucinska"],
+    "trump_plane": "Mark Epstein testified Trump flew on Epstein's plane"
+  },
+
+  "photographic_evidence": [
+    {
+      "date": "1995",
+      "location": "Mar-a-Lago",
+      "subjects": ["Deborah Blohm", "Jeffrey Epstein", "Ghislaine Maxwell", "Gwendolyn Beck"],
+      "source": "Davidoff Studios"
+    },
+    {
+      "date": "April 8, 1997",
+      "location": "Laura Belle club, NYC",
+      "subjects": ["Jeffrey Epstein", "Donald Trump", "Ingrid Seynhaeve"],
+      "event": "Victoria's Secret Angels party",
+      "source": "Marina Garnier"
+    },
+    {
+      "date": "September 8, 2004",
+      "location": "Cambridge, MA",
+      "subjects": ["Jeffrey Epstein", "Alan Dershowitz"],
+      "source": "Rich Friedman / Corbis"
+    },
+    {
+      "date": "2000-2001",
+      "location": "London (Maxwell townhouse)",
+      "subjects": ["Prince Andrew", "Virginia Roberts (age 17)", "Ghislaine Maxwell"],
+      "note": "Photo taken by Epstein with Roberts's camera"
+    }
+  ],
+
+  "total_entities_batch_2": 17,
+  "remaining_documents": 383
+}

@@ -54,7 +54,10 @@
       "Bash(C:/Users/kazim/dac/rag/backend/.venv/Scripts/python.exe -m uvicorn:*)",
       "Bash(\"/c/Program Files/Python311/python.exe\" -c \"import fastapi; print\\(''FastAPI available''\\)\")",
       "Bash(# Merge Jeffrey Pagliuca duplicates curl -s -X POST \"\"http://localhost:8000/api/research/knowledge/entities/merge\"\" -H \"\"Content-Type: application/json\"\" -d ''{ \"\"target_id\"\": \"\"c32b65fc-2286-469e-a95a-d772ae4f8511\"\", \"\"source_ids\"\": [\"\"2d10d9d3-2b3e-4d0d-9b3f-3f3f3f3f3f3f\"\"] }'' || echo \"\"Skip Jeffrey P\"\" # Need full IDs - let me get them first curl -s \"\"http://localhost:8000/api/research/knowledge/entities?search=pagliuca&limit=10\"\")",
-      "Bash(__NEW_LINE__ curl -s \"http://localhost:8000/api/research/knowledge/entities?workspace_id=default&limit=1\")"
+      "Bash(__NEW_LINE__ curl -s \"http://localhost:8000/api/research/knowledge/entities?workspace_id=default&limit=1\")",
+      "Bash(grep:*)",
+      "Bash(C:/Users/kazim/dac/rag/backend/.venv/Scripts/python.exe:*)",
+      "Bash(.venvScriptspython.exe scriptsimport_batch5_entities.py)"
     ]
   }
 }

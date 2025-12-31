@@ -44,6 +44,7 @@ from .templates import TEMPLATE_REGISTRY
 from .services.analysis import MultiPerspectiveAnalyzer
 from .reports.router import router as reports_router
 from .knowledge_router import router as knowledge_router
+from .deep_research_router import router as deep_research_router
 
 
 router = APIRouter()
@@ -53,6 +54,9 @@ router.include_router(reports_router, prefix="/reports", tags=["Report Generatio
 
 # Include knowledge explorer sub-router
 router.include_router(knowledge_router, prefix="/knowledge", tags=["Knowledge Explorer"])
+
+# Include deep research sub-router (recursive, financial, causality)
+router.include_router(deep_research_router, prefix="/deep", tags=["Deep Research"])
 
 
 @router.post("/start")

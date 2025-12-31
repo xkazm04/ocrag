@@ -1,0 +1,49 @@
+{
+  "extraction_date": "2025-12-31",
+  "documents_processed": 50,
+  "batch": 10,
+  "source_documents": [
+    {"file": "Multiple (30+ files)", "type": "Alex Acosta / Non Prosecution Agreement documents"},
+    {"file": "HOUSE_OVERSIGHT_022210.txt", "type": "Perversion of Justice - detailed NPA analysis"},
+    {"file": "Multiple files", "type": "Legal team communications"}
+  ],
+
+  "key_discoveries": {
+    "non_prosecution_agreement": {
+      "date": "September 2008",
+      "prosecutor": "Alex Acosta - US Attorney Southern District of Florida",
+      "key_terms": [
+        "Federal charges dropped in exchange for state guilty plea",
+        "Epstein served 13 months in county jail with work release",
+        "Named co-conspirators granted immunity (Kellen, Marcinkova, Groff, Ross)",
+        "Victims not notified as required by Crime Victims Rights Act",
+        "Agreement kept secret from victims"
+      ],
+      "defense_team": ["Kenneth Starr", "Jay Lefkowitz", "Alan Dershowitz", "Roy Black", "Gerald Lefcourt", "Martin Weinberg", "Guy Lewis"],
+      "aftermath": "Acosta confirmed as Trump Labor Secretary 2017, resigned 2019 after Miami Herald investigation"
+    },
+
+    "key_prosecutors": [
+      {"name": "Alex Acosta", "role": "US Attorney who approved NPA. Later Trump Labor Secretary 2017-2019."},
+      {"name": "Marie Villafaña", "role": "Line prosecutor who worked on Epstein case, expressed frustration with deal"},
+      {"name": "Ann Marie Villafaña", "role": "Assistant US Attorney who investigated case"}
+    ],
+
+    "crime_victims_rights_act_lawsuit": {
+      "filed_by": "Paul Cassell on behalf of victims",
+      "ruling": "2019 - Judge Kenneth Marra ruled government violated CVRA by not notifying victims",
+      "significance": "First successful CVRA challenge to federal plea deal"
+    }
+  },
+
+  "new_entities_discovered": [
+    {"name": "Alex Acosta", "type": "person", "role": "US Attorney who approved NPA 2008. Trump Labor Secretary 2017-2019. Resigned after Epstein re-arrest."},
+    {"name": "Marie Villafaña", "type": "person", "role": "Federal prosecutor on Epstein case. Expressed frustration with plea deal in emails."},
+    {"name": "Kenneth Marra", "type": "person", "role": "Federal judge who ruled government violated Crime Victims Rights Act in 2019."},
+    {"name": "Roy Black", "type": "person", "role": "Miami defense attorney, part of Epstein 'dream team' legal defense."},
+    {"name": "Gerald Lefcourt", "type": "person", "role": "Defense attorney, part of Epstein legal team."}
+  ],
+
+  "total_entities_batch_10": 5,
+  "remaining_documents": 1550
+}

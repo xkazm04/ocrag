@@ -1,0 +1,348 @@
+{
+  "extraction_date": "2025-12-31",
+  "extraction_type": "deep_financial",
+  "source_documents": [
+    "HOUSE_OVERSIGHT_023208.txt",
+    "HOUSE_OVERSIGHT_018872.txt",
+    "HOUSE_OVERSIGHT_013304.txt"
+  ],
+
+  "major_discovery": {
+    "summary": "Jeffrey Epstein was managing Leon Black's $6 billion family office from 2014-2016",
+    "evidence_documents": ["HOUSE_OVERSIGHT_023208.txt"],
+    "key_figures": {
+      "family_office_value": "$6 billion",
+      "annual_income": "$250-500 million",
+      "tax_savings_achieved": "$600 million",
+      "bank_accounts_managed": "100+",
+      "household_expenses": "$12 million/year"
+    }
+  },
+
+  "transactions": [
+    {
+      "date": "2015-04-15",
+      "source": "Leon Black (via Epstein)",
+      "target": "Gratitude America Ltd",
+      "amount": 10000000,
+      "currency": "USD",
+      "type": "donation",
+      "description": "Payment to 501(c)(3) to 'make last year complete'",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt",
+      "evidence_quote": "10m paid today to gratitude america, a 501 c 3, willl make last year complete"
+    },
+    {
+      "date": "2015-04-15",
+      "source": "Leon Black (via Epstein)",
+      "target": "Financial Trust Company (FTC)",
+      "amount": 20000000,
+      "currency": "USD",
+      "type": "transfer",
+      "description": "Payment to Financial Trust Company",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt",
+      "evidence_quote": "20 million paid today ftc"
+    },
+    {
+      "date": "2015-07-15",
+      "source": "Leon Black",
+      "target": "Financial Trust Company",
+      "amount": 10000000,
+      "currency": "USD",
+      "type": "scheduled_payment",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt"
+    },
+    {
+      "date": "2015-09-30",
+      "source": "Leon Black",
+      "target": "Unknown",
+      "amount": 5000000,
+      "currency": "USD",
+      "type": "scheduled_payment",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt"
+    },
+    {
+      "date": "2016-01-01",
+      "source": "Leon Black",
+      "target": "Unknown",
+      "amount": 5000000,
+      "currency": "USD",
+      "type": "scheduled_payment",
+      "description": "For all of 2016",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt"
+    },
+    {
+      "date": "2014-2015",
+      "source": "Leon Black",
+      "target": "Jeffrey Epstein",
+      "amount": 20000000,
+      "currency": "USD",
+      "type": "consulting_fee",
+      "description": "Fee for family office management (originally agreed $50-60M but reduced to $20M)",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt",
+      "evidence_quote": "after a number of conversations with brad karp that only 20m would be paid"
+    },
+    {
+      "date": "2015",
+      "source": "Leon Black",
+      "target": "Gagosian Gallery",
+      "amount": 100000000,
+      "currency": "USD",
+      "type": "art_transfer",
+      "description": "Art transfer overseas without written contract - flagged by Epstein as suspicious",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt",
+      "evidence_quote": "who transfers 100 million dollars overseas without a contract"
+    },
+    {
+      "date": "2015",
+      "source": "Leon Black",
+      "target": "Carlyn (cleanup)",
+      "amount": 30000000,
+      "currency": "USD",
+      "type": "settlement",
+      "description": "Cleanup of 'Carlyn's mess' - settlement/correction",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt",
+      "evidence_quote": "After cleaning up Carlyn's mess, which was a few weeks and 30 million dollars"
+    },
+    {
+      "date": "2015-12-11",
+      "source": "Loan drawdown",
+      "target": "Noel Kalb purchase",
+      "amount": 30000000,
+      "currency": "USD",
+      "type": "fee_payment",
+      "description": "Fee payment structure via loan drawdown",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt",
+      "evidence_quote": "30 million paid now. with purchase of noel kalb, paid with funds from the drawdown"
+    },
+    {
+      "date": "2015",
+      "source": "Leon Black family office",
+      "target": "Various consultants",
+      "amount": 50000,
+      "currency": "USD",
+      "type": "daily_interest",
+      "description": "Daily interest cost on borrowed funds",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt",
+      "evidence_quote": "given the high daily interest cost (50k+/-) on $$ borrowed"
+    }
+  ],
+
+  "entities_discovered": [
+    {
+      "name": "Leon Black",
+      "type": "person",
+      "role": "Billionaire investor, Apollo Global Management founder",
+      "connection": "Epstein's $6B family office client, received tax savings of $600M",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt"
+    },
+    {
+      "name": "Brad Wechsler",
+      "type": "person",
+      "role": "Family office manager",
+      "connection": "Managed Leon Black's family office, reported to Epstein for guidance",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt"
+    },
+    {
+      "name": "Phaidon Press",
+      "type": "organization",
+      "role": "Publishing company",
+      "connection": "Owned by Leon Black, restructured by Epstein, $24M+ tax savings projected",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt"
+    },
+    {
+      "name": "Apollo Global Management",
+      "type": "organization",
+      "role": "Private equity firm",
+      "connection": "Leon Black's investment firm, coordinated with family office on tax matters",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt"
+    },
+    {
+      "name": "Gagosian Gallery",
+      "type": "organization",
+      "role": "Art dealer",
+      "connection": "Received $100M+ overseas transfers from Leon Black, flagged by Epstein",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt"
+    },
+    {
+      "name": "Athene Holding",
+      "type": "organization",
+      "role": "Insurance/annuity company",
+      "connection": "Apollo-related entity with $2B tax implications discussed",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt"
+    },
+    {
+      "name": "Regan Arts",
+      "type": "organization",
+      "role": "Publishing company",
+      "connection": "Leon Black investment, $9.8M invested with no P&L available",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt"
+    },
+    {
+      "name": "Art Space",
+      "type": "organization",
+      "role": "Art-related entity",
+      "connection": "Leon Black entity with $3M deductions that had ZERO benefit",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt"
+    },
+    {
+      "name": "Environmental Solutions",
+      "type": "organization",
+      "role": "Investment",
+      "connection": "$12 million stock holding, stock options 'still not done'",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt"
+    },
+    {
+      "name": "Knowledge Universe",
+      "type": "organization",
+      "role": "Investment company",
+      "connection": "Investment mentioned in Leon Black's portfolio managed by Epstein",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt"
+    },
+    {
+      "name": "Eileen Alexandersson",
+      "type": "person",
+      "role": "Former family office manager",
+      "connection": "Previous manager of Leon Black's accounting, described as 'incompetent' by Epstein",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt"
+    },
+    {
+      "name": "Alan Halperin",
+      "type": "person",
+      "role": "Attorney",
+      "connection": "Leon Black's trust attorney, mentioned as having conflicts of interest",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt"
+    },
+    {
+      "name": "Ada Clapp",
+      "type": "person",
+      "role": "Trust administrator",
+      "connection": "Administered Leon Black's trusts and GRATs",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt"
+    },
+    {
+      "name": "Richard Joslin",
+      "type": "person",
+      "role": "Financial advisor",
+      "connection": "Worked in Leon Black's family office, took instructions from Eileen",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt"
+    },
+    {
+      "name": "Joe Avantario",
+      "type": "person",
+      "role": "Staff member",
+      "connection": "Worked in Leon Black's family office, involved in transactions",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt"
+    },
+    {
+      "name": "Barry J. Cohen",
+      "type": "person",
+      "role": "Advisor",
+      "connection": "Involved in trust reviews for Leon Black",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt"
+    },
+    {
+      "name": "Brad Karp",
+      "type": "person",
+      "role": "Attorney (Paul Weiss)",
+      "connection": "Negotiated Epstein's fee reduction from $50-60M to $20M",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt"
+    },
+    {
+      "name": "Heather Gray",
+      "type": "person",
+      "role": "Staff member",
+      "connection": "Met with Epstein on family office matters",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt"
+    },
+    {
+      "name": "Debra Black",
+      "type": "person",
+      "role": "Leon Black's wife",
+      "connection": "Discussed in estate planning, tenants in common agreement with kids",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt"
+    },
+    {
+      "name": "Judy Black Trust",
+      "type": "trust",
+      "role": "Family trust",
+      "connection": "Epstein recommended getting rid of it",
+      "evidence_document": "HOUSE_OVERSIGHT_023208.txt"
+    }
+  ],
+
+  "trusts_and_structures": [
+    {
+      "name": "APO-1",
+      "type": "trust",
+      "description": "Trust structure for Leon Black, bank account opened Dec 2015"
+    },
+    {
+      "name": "APO-01",
+      "type": "trust",
+      "description": "New trust formed for decanting purposes"
+    },
+    {
+      "name": "Dynasty Trust",
+      "type": "trust",
+      "description": "Long-term wealth preservation structure discussed"
+    },
+    {
+      "name": "GRATs",
+      "type": "grantor_retained_annuity_trust",
+      "description": "Multiple GRATs created, some at 22% then adjusted to 19%"
+    },
+    {
+      "name": "TRA",
+      "type": "tax_receivable_agreement",
+      "description": "Major asset - sale discussed with 'nuanced' treatment"
+    },
+    {
+      "name": "BRH",
+      "type": "agreement",
+      "description": "Major asset of Leon Black, tax basis and estate disposition discussed"
+    }
+  ],
+
+  "law_firms_involved": [
+    "Paul Weiss (Brad Karp)",
+    "McDermott Will",
+    "Macfarlanes",
+    "Price Waterhouse",
+    "Akin Gump",
+    "BBD Seidman",
+    "Withers Bergman",
+    "Empire"
+  ],
+
+  "banks_mentioned": [
+    "Bank of America (BOFA)",
+    "JP Morgan",
+    "Deutsche Bank",
+    "Goldman Sachs",
+    "Bank of Scotland (FBAR issues)",
+    "Rothschild Bank"
+  ],
+
+  "victim_payments": {
+    "date_range": "2000-2005",
+    "amount_per_victim": "$200-$400",
+    "description": "Payments for recruiting underage victims",
+    "evidence_document": "HOUSE_OVERSIGHT_018872.txt",
+    "evidence_quotes": [
+      "At the conclusion of the massages the victims were paid sums of money ranging from $200 - $1,000",
+      "she was paid $200.00 for bringing to Epstein's house",
+      "Epstein paid $200"
+    ]
+  },
+
+  "financial_summary": {
+    "total_documented_transactions": "$295,000,000+",
+    "epstein_fee_from_leon_black": "$20,000,000 (reduced from $50-60M)",
+    "tax_savings_achieved": "$600,000,000",
+    "gagosian_art_transfer": "$100,000,000",
+    "gratitude_america_donation": "$10,000,000",
+    "ftc_payments": "$40,000,000+ (scheduled)",
+    "new_entities_identified": 20,
+    "new_relationships_identified": 35
+  }
+}

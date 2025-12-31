@@ -1,0 +1,205 @@
+{
+  "extraction_date": "2025-12-31",
+  "documents_processed": 25,
+  "batch": 3,
+  "source_documents": [
+    {"file": "HOUSE_OVERSIGHT_033589.txt", "type": "Michael Wolff strategy email to Epstein legal team"},
+    {"file": "HOUSE_OVERSIGHT_033586.txt", "type": "Sultan Bin Sulayem email about Trump"},
+    {"file": "HOUSE_OVERSIGHT_032222-032226.txt", "type": "Ruemmler-Epstein personal emails"},
+    {"file": "HOUSE_OVERSIGHT_032241.txt", "type": "Ruemmler on Trump success"},
+    {"file": "HOUSE_OVERSIGHT_032253.txt", "type": "Ruemmler-Epstein Breitbart discussion"},
+    {"file": "HOUSE_OVERSIGHT_032259.txt", "type": "Ruemmler speech about Trump"},
+    {"file": "HOUSE_OVERSIGHT_032233.txt", "type": "ABC News inquiry - Trump/Clinton"},
+    {"file": "HOUSE_OVERSIGHT_032058.txt", "type": "CNN inquiry - island allegations"},
+    {"file": "HOUSE_OVERSIGHT_033564.txt", "type": "Wolff-Ken Starr introduction by Epstein"},
+    {"file": "HOUSE_OVERSIGHT_033398.txt", "type": "Epstein sends Wolff Trump article"},
+    {"file": "HOUSE_OVERSIGHT_033360.txt", "type": "Wolff 'Siege' book launch - Epstein BCC'd"},
+    {"file": "HOUSE_OVERSIGHT_033296.txt", "type": "Wolff sends Trump article to Epstein"},
+    {"file": "HOUSE_OVERSIGHT_033490.txt", "type": "Jonathan Farkas - White House Fellowship appointment"}
+  ],
+
+  "key_discoveries": {
+    "kathy_ruemmler_connection": {
+      "identity": "Kathryn Ruemmler - Obama White House Counsel 2011-2014, later Latham & Watkins partner",
+      "relationship_period": "2015-2016+",
+      "nature": "Personal friend, legal advisor, regular correspondent",
+      "key_communications": [
+        {
+          "date": "August 27, 2015",
+          "document": "HOUSE_OVERSIGHT_032222.txt",
+          "content": "Ruemmler to Epstein: 'Trump is living proof of the adage that it is better to be lucky than smart'"
+        },
+        {
+          "date": "August 27, 2015",
+          "document": "HOUSE_OVERSIGHT_032223.txt",
+          "content": "Ruemmler planning to drive to NY to visit Epstein: 'Going up to NY Friday morning'"
+        },
+        {
+          "date": "August 27, 2015",
+          "document": "HOUSE_OVERSIGHT_032226.txt",
+          "content": "Epstein: 'you can drive right to me and i will feed you' - Ruemmler: 'Great'"
+        },
+        {
+          "date": "February 21, 2016",
+          "document": "HOUSE_OVERSIGHT_032241.txt",
+          "content": "Ruemmler: 'The Trump success is seriously scary'"
+        },
+        {
+          "date": "March 18, 2016",
+          "document": "HOUSE_OVERSIGHT_033589.txt",
+          "content": "Ruemmler CC'd on Wolff's anti-Trump strategy email to Epstein legal team"
+        },
+        {
+          "date": "May 8, 2016",
+          "document": "HOUSE_OVERSIGHT_032253.txt",
+          "content": "Epstein sends Breitbart article about Bill's sex accusers; Ruemmler: 'What's more disturbing is that you are reading breitbart'"
+        },
+        {
+          "date": "May 21, 2016",
+          "document": "HOUSE_OVERSIGHT_032259.txt",
+          "content": "Ruemmler: 'I am about to go on stage. The first part of my presentation is about Trump'"
+        }
+      ],
+      "significance": "Obama's former White House Counsel maintained close personal relationship with convicted sex offender Epstein, discussed Trump strategy, and was part of Epstein's legal/media response team"
+    },
+
+    "michael_wolff_relationship": {
+      "identity": "Michael Wolff - Journalist, author of 'Fire and Fury' (2018) and 'Siege' (2019)",
+      "relationship_period": "2016-2019",
+      "key_communications": [
+        {
+          "date": "March 18, 2016",
+          "document": "HOUSE_OVERSIGHT_033589.txt",
+          "content": "Wolff advises Epstein: 'Trump offers an ideal opportunity' for 'counter narrative' - 'becoming an anti-Trump voice gives you a certain political cover'"
+        },
+        {
+          "date": "June 1, 2016",
+          "document": "HOUSE_OVERSIGHT_033296.txt",
+          "content": "Wolff sends Epstein Hollywood Reporter article about Trump"
+        },
+        {
+          "date": "May 19, 2018",
+          "document": "HOUSE_OVERSIGHT_033564.txt",
+          "content": "Epstein introduces Wolff to Ken Starr; Wolff: 'Jeffrey has long told me about your friendship and the respect he has for you'"
+        },
+        {
+          "date": "May 19, 2018",
+          "document": "HOUSE_OVERSIGHT_033564.txt",
+          "content": "Wolff to Starr: 'I'm now at work on a sequel focusing on the legal case against Trump'"
+        },
+        {
+          "date": "December 15, 2018",
+          "document": "HOUSE_OVERSIGHT_033398.txt",
+          "content": "Epstein sends Wolff BuzzFeed article about Trump misconduct"
+        },
+        {
+          "date": "May 28, 2019",
+          "document": "HOUSE_OVERSIGHT_033360.txt",
+          "content": "Epstein BCC'd on invitation to Wolff's 'Siege' book launch party at 15 West 67th Street"
+        }
+      ],
+      "wolff_advice_to_epstein": {
+        "date": "March 18, 2016",
+        "strategy": "Use Trump as weapon against Patterson book",
+        "key_quotes": [
+          "Trump offers an ideal opportunity. It's a chance to make the story about something other than you",
+          "becoming an anti-Trump voice gives you a certain political cover which you decidedly don't have now",
+          "this necessary involves you going public... writing an op-ed, doing a high profile television interview (Charlie Rose, I'd say)",
+          "Because this will be tied to the election, the Trump-Clinton angle will amp up the attention 10-fold"
+        ]
+      },
+      "significance": "Author of major anti-Trump books was advised by and connected through Epstein; Epstein facilitated Wolff-Ken Starr connection for 'Siege' research"
+    },
+
+    "media_inquiries_2016": {
+      "abc_news": {
+        "date": "January 20, 2016",
+        "document": "HOUSE_OVERSIGHT_032233.txt",
+        "reporter": "Matthew Mosk",
+        "subject": "Meeting request about Trump and Clinton connections to Epstein",
+        "quote": "Seeing that both former President Clinton and Mr. Trump have been mentioned in connection to the Jeffrey Epstein case, I am interested in better understanding the case"
+      },
+      "cnn_investigation": {
+        "date": "October 13, 2016",
+        "document": "HOUSE_OVERSIGHT_032058.txt",
+        "reporters": ["Melanie Hicken", "Blake Ellis"],
+        "subject": "Whether Trump/Clinton had sexual relations with minors on Epstein's island",
+        "quote": "We are trying to determine whether there is any truth to the allegations that either or both of these men may have had sexual relations with minors while there",
+        "approach": "Contacted Epstein's pilot via LinkedIn asking for off-record conversation"
+      }
+    },
+
+    "sultan_bin_sulayem_connection": {
+      "identity": "Sultan Bin Sulayem - Chairman of DP World, Dubai World Group",
+      "document": "HOUSE_OVERSIGHT_033586.txt",
+      "date": "June 2, 2016",
+      "content": "Forwarded Clinton speech attacking Trump to Epstein, mocked Trump's claim of foreign policy experience from Miss Universe pageant",
+      "significance": "Major Dubai business figure in regular email contact with Epstein during 2016 election"
+    },
+
+    "white_house_fellowship_connection": {
+      "document": "HOUSE_OVERSIGHT_033490.txt",
+      "date": "May 8, 2017",
+      "participants": ["Jeffrey Epstein", "Jonathan Farkas"],
+      "finding": "Discussion of someone named 'Somers' receiving White House Fellowship Commission appointment from Trump",
+      "channel": "Through Woody and Suzanne Johnson (NY Jets owners, Trump bundlers)",
+      "epstein_warning": "careful she is nottrustworthy at ALLL"
+    }
+  },
+
+  "new_entities_discovered": [
+    {"name": "Kathy Ruemmler", "type": "person", "role": "Obama White House Counsel 2011-2014, Latham partner, Epstein friend/advisor"},
+    {"name": "Michael Wolff", "type": "person", "role": "Journalist, Fire and Fury author, Epstein media advisor"},
+    {"name": "Sultan Bin Sulayem", "type": "person", "role": "DP World Chairman, Dubai World, Epstein contact"},
+    {"name": "Matthew Mosk", "type": "person", "role": "ABC News investigative producer"},
+    {"name": "Melanie Hicken", "type": "person", "role": "CNN reporter investigating Epstein-Trump-Clinton"},
+    {"name": "Blake Ellis", "type": "person", "role": "CNN reporter investigating Epstein-Trump-Clinton"},
+    {"name": "Martin Weinberg", "type": "person", "role": "Epstein defense attorney"},
+    {"name": "Jonathan Farkas", "type": "person", "role": "Epstein associate, discussed White House appointments"},
+    {"name": "Woody Johnson", "type": "person", "role": "NY Jets owner, Trump bundler, US Ambassador to UK"},
+    {"name": "Suzanne Johnson", "type": "person", "role": "Woody Johnson's wife"},
+    {"name": "Stephen Rubin", "type": "person", "role": "Henry Holt publisher, invited Epstein to Wolff book launch"},
+    {"name": "Henry Holt & Company", "type": "organization", "role": "Publisher of Fire and Fury and Siege"},
+    {"name": "Latham & Watkins", "type": "organization", "role": "Ruemmler's law firm after White House"},
+    {"name": "DP World", "type": "organization", "role": "Dubai ports company, Sultan Bin Sulayem chairman"},
+    {"name": "Dubai World Group", "type": "organization", "role": "Parent company of DP World"}
+  ],
+
+  "political_network_map": {
+    "obama_administration": {
+      "Kathy Ruemmler": {
+        "position": "White House Counsel 2011-2014",
+        "relationship": "Personal friend, regular correspondent, part of legal team",
+        "communications": "20+ documents in archive"
+      }
+    },
+    "trump_campaign_connections": {
+      "discussed_by": ["Ruemmler", "Wolff", "Sultan Bin Sulayem"],
+      "strategy": "Wolff advised Epstein to use Trump for 'political cover'",
+      "media_inquiries": "ABC News, CNN sought Trump-Epstein information"
+    },
+    "media_network": {
+      "Michael Wolff": "Anti-Trump book author, Epstein advisor 2016-2019",
+      "Charlie Rose": "Suggested by Wolff for Epstein interview",
+      "John Connolly": "Vanity Fair, actual author of Patterson book"
+    }
+  },
+
+  "timeline_of_key_events": [
+    {"date": "2015-08-27", "event": "Ruemmler emails Epstein mocking Trump; plans NY visit"},
+    {"date": "2016-01-20", "event": "ABC News requests meeting about Trump/Clinton Epstein connections"},
+    {"date": "2016-02-21", "event": "Ruemmler: 'The Trump success is seriously scary'"},
+    {"date": "2016-03-18", "event": "Wolff advises Epstein to use Trump as 'counter narrative'"},
+    {"date": "2016-05-08", "event": "Epstein sends Ruemmler Breitbart article about Bill Clinton accusers"},
+    {"date": "2016-05-21", "event": "Ruemmler gives speech about Trump"},
+    {"date": "2016-06-01", "event": "Wolff sends Epstein Hollywood Reporter Trump article"},
+    {"date": "2016-06-02", "event": "Sultan Bin Sulayem emails Epstein Clinton attack on Trump"},
+    {"date": "2016-10-13", "event": "CNN investigates Trump/Clinton island allegations"},
+    {"date": "2017-05-08", "event": "Discussion of White House Fellowship appointments"},
+    {"date": "2018-05-19", "event": "Epstein introduces Wolff to Ken Starr for 'Siege' research"},
+    {"date": "2019-05-28", "event": "Epstein BCC'd on Wolff 'Siege' book launch invitation"}
+  ],
+
+  "total_entities_batch_3": 15,
+  "remaining_documents": 365
+}

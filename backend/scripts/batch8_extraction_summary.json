@@ -1,0 +1,116 @@
+{
+  "extraction_date": "2025-12-31",
+  "documents_processed": 50,
+  "batch": 8,
+  "source_documents": [
+    {"file": "HOUSE_OVERSIGHT_021824.txt", "type": "Deposition transcript - Brunel hiding at Epstein mansion"},
+    {"file": "HOUSE_OVERSIGHT_022210.txt", "type": "Perversion of Justice article - VI Daily News, Acosta deal"},
+    {"file": "HOUSE_OVERSIGHT_019439.txt", "type": "Maureen Dowd - Clinton Foundation, Doug Band, Teneo"},
+    {"file": "HOUSE_OVERSIGHT_030299.txt", "type": "Sarah Kellen documents"},
+    {"file": "Multiple files", "type": "42 documents on Nadia Marcinkova"},
+    {"file": "Multiple files", "type": "60 documents on Sarah Kellen"},
+    {"file": "Multiple files", "type": "479 documents mentioning Clinton"}
+  ],
+
+  "key_discoveries": {
+    "jean_luc_brunel_evasion": {
+      "document": "HOUSE_OVERSIGHT_021824.txt",
+      "context": "Deposition transcript",
+      "finding": "Jean-Luc Brunel was 'hiding out in the mansion of Epstein while claiming he's unavailable for deposition'",
+      "role": "Very much involved in trafficking the girls",
+      "pattern": "Same evasion pattern as Maxwell and Dershowitz"
+    },
+
+    "epstein_legal_team_details": {
+      "document": "HOUSE_OVERSIGHT_022210.txt",
+      "source": "Perversion of Justice - Virgin Islands Daily News",
+      "attorneys": [
+        {"name": "Kenneth Starr", "role": "Lead defense attorney, Republican icon from Whitewater/Clinton investigation"},
+        {"name": "Jay Lefkowitz", "role": "Kirkland & Ellis partner, Bush domestic policy adviser, later North Korea envoy"},
+        {"name": "Bruce Reinhart", "role": "Former assistant US attorney, switched sides to represent Epstein employees Sarah Kellen, Nadia Marcinkova, and pilots on Jan 2, 2008"}
+      ],
+      "note": "Reinhart later became US Magistrate who signed Mar-a-Lago search warrant"
+    },
+
+    "epstein_staff_co_conspirators": {
+      "documents_count": {
+        "sarah_kellen": 60,
+        "nadia_marcinkova": 42
+      },
+      "details": [
+        {"name": "Sarah Kellen", "role": "Epstein's scheduler, named co-conspirator in NPA", "document_mentions": 60},
+        {"name": "Nadia Marcinkova", "role": "Described as Epstein's 'sex slave' in court documents, named co-conspirator", "document_mentions": 42},
+        {"name": "Lesley Groff", "role": "Executive assistant, named co-conspirator - already in KB"},
+        {"name": "Adriana Ross", "role": "Named co-conspirator in NPA"}
+      ]
+    },
+
+    "clinton_foundation_network": {
+      "documents_count": 479,
+      "key_figures": [
+        {"name": "Doug Band", "role": "Clinton Foundation, Teneo founder, described as 'surrogate son' to Bill Clinton"},
+        {"name": "Ira Magaziner", "role": "Clinton Foundation architect, helped Hillary 'torpedo her own health care plan'"},
+        {"name": "Huma Abedin", "role": "Put on Teneo payroll, 'surrogate daughter' to Hillary"}
+      ],
+      "teneo_details": {
+        "description": "Corporate consulting, public relations and merchant banking firm",
+        "billing": "Monthly retainer fees up to $250,000",
+        "scandal": "Clinton Foundation distanced itself after MF Global collapse (Jon Corzine)"
+      }
+    },
+
+    "bruce_reinhart_switching_sides": {
+      "document": "HOUSE_OVERSIGHT_022210.txt",
+      "finding": "Former assistant US attorney who switched from prosecution to defense",
+      "date": "January 2, 2008",
+      "represented": ["Epstein's pilots", "Sarah Kellen", "Nadia Marcinkova"],
+      "later_role": "Now a US Magistrate in Palm Beach district",
+      "allegations": "Accused of leveraging inside information to curry favor with Epstein (he denies)"
+    }
+  },
+
+  "new_entities_discovered": [
+    {"name": "Jean-Luc Brunel", "type": "person", "role": "French modeling agent, MC2 Model Management. 'Very much involved in trafficking the girls'. Hid at Epstein mansion to evade deposition. Found dead in prison February 2022."},
+    {"name": "Sarah Kellen", "type": "person", "role": "Epstein's scheduler, named co-conspirator in NPA. Represented by Bruce Reinhart. 60 documents in archive."},
+    {"name": "Nadia Marcinkova", "type": "person", "role": "Described as Epstein's 'sex slave', named co-conspirator in NPA. Later became pilot using name 'Nadia Marcinko'. 42 documents in archive."},
+    {"name": "Adriana Ross", "type": "person", "role": "Epstein associate, named co-conspirator in Non Prosecution Agreement."},
+    {"name": "Bruce Reinhart", "type": "person", "role": "Former assistant US attorney Palm Beach. Switched sides Jan 2008 to represent Epstein employees. Later became US Magistrate who signed Mar-a-Lago search warrant."},
+    {"name": "Jay Lefkowitz", "type": "person", "role": "Kirkland & Ellis partner, Bush domestic policy adviser, North Korea envoy. Part of Epstein defense team."},
+    {"name": "Doug Band", "type": "person", "role": "Clinton Foundation, Teneo founder, 'bag carrier' and 'surrogate son' to Bill Clinton. Teneo charged up to $250K/month."},
+    {"name": "Ira Magaziner", "type": "person", "role": "Clinton Foundation architect. Helped Hillary on health care plan. Dispatched teams to fly around world for climate proposals."},
+    {"name": "Jon Corzine", "type": "person", "role": "Former NJ Governor, MF Global CEO. MF Global collapse led to Clinton Foundation distancing from Teneo."},
+    {"name": "Paul Cassell", "type": "person", "role": "Victims' attorney who filed Crime Victims Rights Act complaint against Reinhart."},
+    {"name": "MC2 Model Management", "type": "organization", "role": "Modeling agency associated with Jean-Luc Brunel. Alleged to be pipeline for trafficking victims."},
+    {"name": "Teneo", "type": "organization", "role": "Consulting firm founded by Doug Band. Blend of corporate consulting, PR, merchant banking. Clinton Foundation connections."},
+    {"name": "Kirkland & Ellis", "type": "organization", "role": "Prestigious law firm. Both Alex Acosta and Jay Lefkowitz worked there. Provided Epstein defense team."}
+  ],
+
+  "key_quotes": [
+    {
+      "source": "Deposition transcript",
+      "quote": "Brunel's deposition is set and then he finagles out of it, too... he was hiding out in the mansion of Epstein while he's claiming he's unavailable for deposition",
+      "about": "Jean-Luc Brunel evading legal process"
+    },
+    {
+      "source": "Perversion of Justice article",
+      "quote": "Nadia Marcinkova, described by some victims as Epstein's sex slave",
+      "about": "Nadia Marcinkova"
+    },
+    {
+      "source": "Maureen Dowd column",
+      "quote": "The most egregious seat of sleaze was a firm founded by Doug Band called Teneo, a smarmy blend of corporate consulting, public relations and merchant banking",
+      "about": "Teneo and Doug Band"
+    }
+  ],
+
+  "timeline_events": [
+    {"date": "2008-01-02", "event": "Bruce Reinhart switches from federal prosecutor to representing Epstein employees"},
+    {"date": "2008-09", "event": "Non Prosecution Agreement grants immunity to Kellen, Marcinkova, Groff, Ross"},
+    {"date": "2011", "event": "Doug Band founds Teneo, recruiting from Clinton Foundation donors"},
+    {"date": "2011", "event": "MF Global collapse leads Clinton Foundation to distance from Teneo"},
+    {"date": "2022-02", "event": "Jean-Luc Brunel found dead in prison cell in France"}
+  ],
+
+  "total_entities_batch_8": 13,
+  "remaining_documents": 1700
+}
