@@ -1,0 +1,1787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epstein Network Investigation | Financial Intelligence Report</title>
+    <style>
+        :root {
+            --bg: #fafafa;
+            --surface: #ffffff;
+            --border: #e5e5e5;
+            --border-dark: #d0d0d0;
+            --text: #1a1a1a;
+            --text-muted: #666666;
+            --text-light: #888888;
+            --accent: #2563eb;
+            --accent-light: #dbeafe;
+            --danger: #dc2626;
+            --danger-light: #fee2e2;
+            --warning: #d97706;
+            --warning-light: #fef3c7;
+            --success: #059669;
+            --success-light: #d1fae5;
+            --sidebar-width: 220px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        /* Layout */
+        .app { display: flex; min-height: 100vh; }
+
+        /* Sidebar */
+        .sidebar {
+            width: var(--sidebar-width);
+            background: var(--surface);
+            border-right: 1px solid var(--border);
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            overflow-y: auto;
+            z-index: 100;
+        }
+
+        .sidebar-header {
+            padding: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .sidebar-header h1 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text);
+            letter-spacing: -0.3px;
+        }
+
+        .sidebar-header .subtitle {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .sidebar-nav { padding: 8px 0; }
+
+        .nav-section {
+            padding: 8px 16px 4px;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-light);
+        }
+
+        .nav-item {
+            display: block;
+            padding: 8px 16px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 12px;
+            border-left: 2px solid transparent;
+            transition: all 0.15s;
+        }
+
+        .nav-item:hover {
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .nav-item.active {
+            background: var(--accent-light);
+            color: var(--accent);
+            border-left-color: var(--accent);
+            font-weight: 500;
+        }
+
+        .sidebar-stats {
+            padding: 16px;
+            border-top: 1px solid var(--border);
+            margin-top: auto;
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            padding: 4px 0;
+        }
+
+        .stat-row .label { color: var(--text-muted); }
+        .stat-row .value { font-weight: 600; font-variant-numeric: tabular-nums; }
+
+        /* Main Content */
+        .main {
+            flex: 1;
+            margin-left: var(--sidebar-width);
+            padding: 24px 32px;
+            max-width: 1200px;
+        }
+
+        /* Section */
+        .section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            margin-bottom: 16px;
+            display: none;
+        }
+
+        .section.active { display: block; }
+
+        .section-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-header h2 {
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+        }
+
+        .section-content { padding: 20px; }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 0;
+            border-bottom: 1px solid var(--border);
+            margin: -20px -20px 20px;
+            padding: 0 20px;
+        }
+
+        .tab {
+            padding: 12px 16px;
+            font-size: 12px;
+            color: var(--text-muted);
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+
+        .tab:hover { color: var(--text); }
+        .tab.active {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+            font-weight: 500;
+        }
+
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+        }
+
+        th, td {
+            padding: 10px 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
+            background: var(--bg);
+        }
+
+        tr:hover td { background: var(--bg); }
+
+        .amount { font-variant-numeric: tabular-nums; font-weight: 500; }
+        .amount.positive { color: var(--success); }
+        .amount.negative { color: var(--danger); }
+
+        /* Tags */
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            font-size: 10px;
+            font-weight: 500;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .tag-danger { background: var(--danger-light); color: var(--danger); }
+        .tag-warning { background: var(--warning-light); color: var(--warning); }
+        .tag-success { background: var(--success-light); color: var(--success); }
+        .tag-info { background: var(--accent-light); color: var(--accent); }
+        .tag-muted { background: #f3f4f6; color: var(--text-muted); }
+
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
+        }
+
+        .card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 14px;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .card-title {
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        .card-body {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Money Flow Diagram */
+        .flow-diagram {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 20px;
+            margin: 16px 0;
+        }
+
+        .flow-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 8px 0;
+            font-size: 12px;
+        }
+
+        .flow-node {
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .flow-node.source { background: #dbeafe; color: #1e40af; }
+        .flow-node.target { background: #fecaca; color: #991b1b; }
+        .flow-node.intermediary { background: #fef3c7; color: #92400e; }
+
+        .flow-arrow {
+            color: var(--text-light);
+            flex-shrink: 0;
+        }
+
+        .flow-amount {
+            font-variant-numeric: tabular-nums;
+            color: var(--text-muted);
+            font-size: 11px;
+        }
+
+        /* Timeline */
+        .timeline { margin: 16px 0; }
+
+        .timeline-item {
+            display: flex;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .timeline-item:last-child { border-bottom: none; }
+
+        .timeline-date {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            width: 80px;
+            flex-shrink: 0;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .timeline-content { flex: 1; }
+
+        .timeline-title {
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+
+        .timeline-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Progress Bars */
+        .progress-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 0;
+        }
+
+        .progress-label {
+            width: 140px;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+
+        .progress-bar {
+            flex: 1;
+            height: 8px;
+            background: var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+        }
+
+        .progress-fill.danger { background: var(--danger); }
+        .progress-fill.warning { background: var(--warning); }
+        .progress-fill.success { background: var(--success); }
+        .progress-fill.info { background: var(--accent); }
+
+        .progress-value {
+            width: 50px;
+            font-size: 11px;
+            font-weight: 600;
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* Stats Row */
+        .stats-row {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .stat-box {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 14px 16px;
+            flex: 1;
+        }
+
+        .stat-box .number {
+            font-size: 24px;
+            font-weight: 600;
+            font-variant-numeric: tabular-nums;
+            letter-spacing: -1px;
+        }
+
+        .stat-box .label {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        /* Checklist */
+        .checklist { margin: 12px 0; }
+
+        .check-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            font-size: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .check-item:last-child { border-bottom: none; }
+
+        .check-icon {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .check-icon.fail { background: var(--danger-light); color: var(--danger); }
+        .check-icon.pass { background: var(--success-light); color: var(--success); }
+        .check-icon.unknown { background: #f3f4f6; color: var(--text-light); }
+
+        /* Matrix */
+        .matrix-table th, .matrix-table td {
+            text-align: center;
+            padding: 6px 8px;
+            font-size: 11px;
+        }
+
+        .matrix-table th { font-size: 9px; }
+
+        .evidence-cell {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            margin: 0 auto;
+        }
+
+        .evidence-cell.strong { background: var(--danger); }
+        .evidence-cell.moderate { background: var(--warning); }
+        .evidence-cell.weak { background: #fde68a; }
+        .evidence-cell.none { background: var(--border); }
+
+        /* Compact List */
+        .compact-list { font-size: 12px; }
+
+        .compact-list dt {
+            font-weight: 600;
+            margin-top: 12px;
+            margin-bottom: 4px;
+        }
+
+        .compact-list dd {
+            color: var(--text-muted);
+            padding-left: 12px;
+            border-left: 2px solid var(--border);
+        }
+
+        /* Columns */
+        .cols-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .cols-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+        }
+
+        /* Typography */
+        h3 {
+            font-size: 13px;
+            font-weight: 600;
+            margin: 20px 0 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h3:first-child { margin-top: 0; }
+
+        p { margin: 8px 0; color: var(--text-muted); }
+
+        .lead {
+            font-size: 14px;
+            color: var(--text);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        ul, ol {
+            margin: 8px 0;
+            padding-left: 20px;
+            color: var(--text-muted);
+        }
+
+        li { margin: 4px 0; }
+
+        .footnote {
+            font-size: 10px;
+            color: var(--text-light);
+            margin-top: 16px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Triangular Pattern */
+        .triangle-pattern {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 20px;
+            margin: 12px 0;
+        }
+
+        .triangle-header {
+            font-weight: 600;
+            font-size: 12px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .triangle-nodes {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin: 20px 0;
+        }
+
+        .triangle-node {
+            text-align: center;
+            max-width: 150px;
+        }
+
+        .triangle-node .name {
+            font-weight: 600;
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+
+        .triangle-node .role {
+            font-size: 10px;
+            color: var(--text-muted);
+        }
+
+        .triangle-flows {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 900px) {
+            .sidebar { display: none; }
+            .main { margin-left: 0; padding: 16px; }
+            .cols-2, .cols-3 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>Epstein Network</h1>
+                <div class="subtitle">Financial Intelligence Report</div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">Overview</div>
+                <a href="#" class="nav-item active" data-section="overview">Executive Summary</a>
+                <a href="#" class="nav-item" data-section="timeline">Key Timeline</a>
+
+                <div class="nav-section">Financial Analysis</div>
+                <a href="#" class="nav-item" data-section="money-flow">Money Flow Tracking</a>
+                <a href="#" class="nav-item" data-section="triangular">Triangular Patterns</a>
+                <a href="#" class="nav-item" data-section="banking">Banking Network</a>
+
+                <div class="nav-section">Network</div>
+                <a href="#" class="nav-item" data-section="power-spheres">Power Spheres</a>
+                <a href="#" class="nav-item" data-section="intelligence">Intelligence Links</a>
+                <a href="#" class="nav-item" data-section="prosecution">Prosecution Gaps</a>
+
+                <div class="nav-section">Evidence</div>
+                <a href="#" class="nav-item" data-section="evidence-matrix">Evidence Matrix</a>
+                <a href="#" class="nav-item" data-section="death">Death Investigation</a>
+                <a href="#" class="nav-item" data-section="unknowns">Open Questions</a>
+            </nav>
+            <div class="sidebar-stats">
+                <div class="stat-row"><span class="label">Entities</span><span class="value">4,004</span></div>
+                <div class="stat-row"><span class="label">Documents</span><span class="value">1,998</span></div>
+                <div class="stat-row"><span class="label">Victims ID'd</span><span class="value">40+</span></div>
+                <div class="stat-row"><span class="label">Total Flow</span><span class="value">$1.5B+</span></div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- OVERVIEW -->
+            <section class="section active" id="overview">
+                <div class="section-header">
+                    <h2>Executive Summary</h2>
+                    <span class="tag tag-danger">Active Investigation</span>
+                </div>
+                <div class="section-content">
+                    <div class="stats-row">
+                        <div class="stat-box">
+                            <div class="number">$1.5B+</div>
+                            <div class="label">Documented Financial Flow</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="number">40+</div>
+                            <div class="label">Identified Victims (FL only)</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="number">4</div>
+                            <div class="label">Co-conspirators w/ Immunity</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="number">0</div>
+                            <div class="label">Clients Ever Charged</div>
+                        </div>
+                    </div>
+
+                    <p class="lead">Jeffrey Epstein operated a multi-decade criminal enterprise involving sex trafficking, financial fraud, and systematic compromise of powerful individuals. Documentary evidence confirms surveillance recordings, victim testimony describes blackmail intent, and financial flows reveal patterns consistent with intelligence funding and money laundering.</p>
+
+                    <h3>Critical Findings</h3>
+                    <div class="cards-grid">
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="card-title">Surveillance Infrastructure</span>
+                                <span class="tag tag-danger">Documented</span>
+                            </div>
+                            <div class="card-body">"Mr Epstein's residences in Florida and New York had surveillance cameras that taped the sex sessions and taped even in the bathroom" — Mail on Sunday document (HOUSE_OVERSIGHT_030589)</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="card-title">Blackmail Intent</span>
+                                <span class="tag tag-danger">Testimony</span>
+                            </div>
+                            <div class="card-body">"Sexual events that I had with these men presumably so that he could potentially blackmail them" — Virginia Giuffre sworn declaration (HOUSE_OVERSIGHT_010887)</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="card-title">Intelligence Protection</span>
+                                <span class="tag tag-warning">Reported</span>
+                            </div>
+                            <div class="card-body">"I was told Epstein belonged to intelligence and to leave it alone" — Alexander Acosta to Trump transition team (Vicky Ward reporting, 2019)</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="card-title">Financial Anomaly</span>
+                                <span class="tag tag-warning">Unresolved</span>
+                            </div>
+                            <div class="card-body">Only one confirmed client (Wexner) despite claims of managing only billionaires. $200M+ assets at death with unclear revenue source. $1B+ in JPMorgan transactions flagged.</div>
+                        </div>
+                    </div>
+
+                    <h3>Evidence Confidence Overview</h3>
+                    <div class="progress-row">
+                        <span class="progress-label">Surveillance existed</span>
+                        <div class="progress-bar"><div class="progress-fill danger" style="width: 95%"></div></div>
+                        <span class="progress-value">95%</span>
+                    </div>
+                    <div class="progress-row">
+                        <span class="progress-label">Blackmail operation</span>
+                        <div class="progress-bar"><div class="progress-fill danger" style="width: 85%"></div></div>
+                        <span class="progress-value">85%</span>
+                    </div>
+                    <div class="progress-row">
+                        <span class="progress-label">Intelligence links</span>
+                        <div class="progress-bar"><div class="progress-fill warning" style="width: 70%"></div></div>
+                        <span class="progress-value">70%</span>
+                    </div>
+                    <div class="progress-row">
+                        <span class="progress-label">Money laundering</span>
+                        <div class="progress-bar"><div class="progress-fill warning" style="width: 65%"></div></div>
+                        <span class="progress-value">65%</span>
+                    </div>
+                    <div class="progress-row">
+                        <span class="progress-label">Death circumstances</span>
+                        <div class="progress-bar"><div class="progress-fill info" style="width: 40%"></div></div>
+                        <span class="progress-value">40%</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TIMELINE -->
+            <section class="section" id="timeline">
+                <div class="section-header">
+                    <h2>Key Timeline</h2>
+                </div>
+                <div class="section-content">
+                    <div class="tabs">
+                        <div class="tab active" data-tab="origins">Origins</div>
+                        <div class="tab" data-tab="rise">Rise</div>
+                        <div class="tab" data-tab="operation">Operation</div>
+                        <div class="tab" data-tab="legal">Legal</div>
+                        <div class="tab" data-tab="death">Death</div>
+                    </div>
+
+                    <div class="tab-content active" id="tab-origins">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">1953</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">Jeffrey Edward Epstein born in Brooklyn, NY</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">1973</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">Hired at Dalton School without degree</div>
+                                    <div class="timeline-desc">Headmaster Donald Barr (former OSS, father of future AG William Barr) hires Epstein to teach math/physics</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">1976</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">Bear Stearns hire</div>
+                                    <div class="timeline-desc">After tutoring chairman Ace Greenberg's son, Epstein joins Wall Street</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">1981</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">Leaves Bear Stearns</div>
+                                    <div class="timeline-desc">Starts J. Epstein & Co. with unclear funding source</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">1987-93</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">Towers Financial involvement</div>
+                                    <div class="timeline-desc">Partners with Steven Hoffenberg on $460M Ponzi scheme. Hoffenberg serves 18 years; Epstein never charged. Hoffenberg claims Epstein was "introduced to intelligence work"</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="tab-rise">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">Jul 1991</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">Wexner grants unlimited power of attorney</div>
+                                    <div class="timeline-desc">Epstein gains control over billions. Can hire, fire, sign tax returns, move money without approval</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">Nov 1991</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">Robert Maxwell dies</div>
+                                    <div class="timeline-desc">Falls from yacht near Canary Islands. Israeli state funeral. Ghislaine enters Epstein's orbit</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">1991-2006</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">$1.3B in Wexner stock sales</div>
+                                    <div class="timeline-desc">Epstein oversees sale of Wexner family trust holdings through NYSE</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">1996</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">Manhattan mansion transfer begins</div>
+                                    <div class="timeline-desc">$56M townhouse at 9 E 71st St (purchased by Wexner 1989 for $13.2M) transferred to Epstein-controlled entity</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">1998</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">Little St. James acquired</div>
+                                    <div class="timeline-desc">70-acre private island in USVI purchased</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="tab-operation">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">2000</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">Virginia Giuffre recruited</div>
+                                    <div class="timeline-desc">Age 16, approached by Maxwell at Trump's Mar-a-Lago while working as spa attendant</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">2001-05</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">Peak trafficking activity</div>
+                                    <div class="timeline-desc">Systematic recruitment in Palm Beach. Hundreds of "massages" documented</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">2011</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">Mail on Sunday allegations sent to Maxwell's lawyer</div>
+                                    <div class="timeline-desc">Names Dubin, Wexner, Barak, Mitchell, Prince Andrew as alleged perpetrators</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">2012-17</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">Leon Black pays $158M-$170M</div>
+                                    <div class="timeline-desc">For "tax advice" from someone who was neither CPA nor tax attorney. Senate investigation ongoing</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">2015</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">Carbyne investment with Ehud Barak</div>
+                                    <div class="timeline-desc">$1M+ invested in Israeli surveillance tech company via Southern Trust Company (BVI)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="tab-legal">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">Mar 2005</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">Palm Beach Police investigation begins</div>
+                                    <div class="timeline-desc">Chief Reiter and Detective Recarey identify 40+ victims</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">2006</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">State Attorney Krischer reduces charges</div>
+                                    <div class="timeline-desc">Single prostitution charge despite overwhelming evidence. Police chief publicly criticizes</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">Oct 2007</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">Secret Acosta-Lefkowitz meeting</div>
+                                    <div class="timeline-desc">US Attorney meets privately with Epstein's lawyer at hotel</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">Sep 2008</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">Non-Prosecution Agreement signed</div>
+                                    <div class="timeline-desc">13-month work release. 4 co-conspirators immunity. Victims not notified (CVRA violation)</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">Jul 2019</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">SDNY arrest</div>
+                                    <div class="timeline-desc">Federal sex trafficking charges. Israeli passport found in false name</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="tab-death">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">Jul 23</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">First apparent suicide attempt</div>
+                                    <div class="timeline-desc">Found semiconscious with marks on neck. Placed on suicide watch</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">Jul 29</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">Removed from suicide watch</div>
+                                    <div class="timeline-desc">After only 6 days. Cellmate (ex-cop charged with 4 murders) removed</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">Aug 9</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">New documents unsealed</div>
+                                    <div class="timeline-desc">Hours before death. Names prominent individuals</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">Aug 10</div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">Found dead 6:30 AM</div>
+                                    <div class="timeline-desc">Both cameras malfunctioned. Guards falsified logs for 8 hours. Hyoid broken in 3 places</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MONEY FLOW -->
+            <section class="section" id="money-flow">
+                <div class="section-header">
+                    <h2>Money Flow Tracking</h2>
+                </div>
+                <div class="section-content">
+                    <h3>Major Financial Flows (Documented)</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Source</th>
+                                <th>Recipient</th>
+                                <th>Amount</th>
+                                <th>Period</th>
+                                <th>Purpose</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Leslie Wexner</td>
+                                <td>Jeffrey Epstein</td>
+                                <td class="amount">$77M+</td>
+                                <td>1991-2007</td>
+                                <td>Mansion + POA + "misappropriated"</td>
+                                <td><span class="tag tag-warning">No lawsuit filed</span></td>
+                            </tr>
+                            <tr>
+                                <td>Wexner Trusts</td>
+                                <td>Epstein (via NYSE)</td>
+                                <td class="amount">$1.3B</td>
+                                <td>1991-2006</td>
+                                <td>Stock sales under Epstein control</td>
+                                <td><span class="tag tag-muted">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>Leon Black</td>
+                                <td>Jeffrey Epstein</td>
+                                <td class="amount">$170M</td>
+                                <td>2012-2017</td>
+                                <td>"Tax advice" - no license</td>
+                                <td><span class="tag tag-danger">Senate probe</span></td>
+                            </tr>
+                            <tr>
+                                <td>JPMorgan</td>
+                                <td>Epstein entities</td>
+                                <td class="amount">$1B+</td>
+                                <td>2003-2013</td>
+                                <td>Transactions flagged in SARs</td>
+                                <td><span class="tag tag-success">$290M settlement</span></td>
+                            </tr>
+                            <tr>
+                                <td>Deutsche Bank</td>
+                                <td>Epstein entities</td>
+                                <td class="amount">Unknown</td>
+                                <td>2013-2019</td>
+                                <td>Post-JPMorgan banking</td>
+                                <td><span class="tag tag-success">$75M settlement</span></td>
+                            </tr>
+                            <tr>
+                                <td>USVI Tax Benefits</td>
+                                <td>Southern Trust</td>
+                                <td class="amount">90% exemption</td>
+                                <td>2013-2023</td>
+                                <td>Fraudulent "DNA data mining" claim</td>
+                                <td><span class="tag tag-danger">$105M USVI settlement</span></td>
+                            </tr>
+                            <tr>
+                                <td>Epstein/Southern Trust</td>
+                                <td>Carbyne (via Barak)</td>
+                                <td class="amount">$1.5M+</td>
+                                <td>2015-2016</td>
+                                <td>Israeli surveillance tech</td>
+                                <td><span class="tag tag-warning">Ongoing scrutiny</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Shell Company Network</h3>
+                    <div class="cols-3">
+                        <div class="card">
+                            <div class="card-title">Financial Trust Company</div>
+                            <div class="card-body">
+                                Est. 1996, St. Thomas USVI<br>
+                                Assets: $212M (2012)<br>
+                                Primary banking: JPMorgan
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">Southern Trust Company</div>
+                            <div class="card-body">
+                                Est. 2011, USVI<br>
+                                Assets: $391M (2015)<br>
+                                "DNA data mining" fraud
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">Maple Inc.</div>
+                            <div class="card-body">
+                                NYC mansion ownership<br>
+                                9 E 71st Street<br>
+                                Value: $56M
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">Plan D LLC</div>
+                            <div class="card-body">
+                                Aircraft ownership<br>
+                                Gulfstream G550<br>
+                                Value: ~$60M
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">Great St. Jim LLC</div>
+                            <div class="card-body">
+                                Island ownership<br>
+                                Little St. James<br>
+                                70 acres USVI
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">Montilla International (BVI)</div>
+                            <div class="card-body">
+                                Offshore vehicle<br>
+                                Carbyne investment<br>
+                                Nicole Junkermann linked
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footnote">Sources: Senate Finance Committee, JPMorgan SARs, Bloomberg investigation, USVI court filings</div>
+                </div>
+            </section>
+
+            <!-- TRIANGULAR PATTERNS -->
+            <section class="section" id="triangular">
+                <div class="section-header">
+                    <h2>Triangular Transaction Patterns</h2>
+                </div>
+                <div class="section-content">
+                    <p class="lead">Money laundering often involves triangular structures where funds flow through intermediaries to obscure origin and purpose. Several documented patterns in the Epstein network exhibit these characteristics.</p>
+
+                    <div class="triangle-pattern">
+                        <div class="triangle-header">
+                            <span class="tag tag-danger">Pattern 1</span>
+                            Wexner → Epstein → Intelligence Operations
+                        </div>
+                        <div class="triangle-nodes">
+                            <div class="triangle-node">
+                                <div class="name">Leslie Wexner</div>
+                                <div class="role">L Brands founder<br>Mega Group co-founder<br>$4.5B net worth</div>
+                            </div>
+                            <div class="triangle-node">
+                                <div class="name">Jeffrey Epstein</div>
+                                <div class="role">Financial manager<br>Power of attorney<br>$1.3B stock access</div>
+                            </div>
+                            <div class="triangle-node">
+                                <div class="name">?</div>
+                                <div class="role">Unknown endpoint<br>$46M "misappropriated"<br>No lawsuit filed</div>
+                            </div>
+                        </div>
+                        <div class="triangle-flows">
+                            Wexner grants unlimited POA (1991) → Epstein controls billions → $46M+ disappears → Wexner claims theft but never sues<br>
+                            <strong>Question:</strong> Why no legal action for $46M theft? Who was protected?
+                        </div>
+                    </div>
+
+                    <div class="triangle-pattern">
+                        <div class="triangle-header">
+                            <span class="tag tag-danger">Pattern 2</span>
+                            Black → Epstein → Unknown Purpose
+                        </div>
+                        <div class="triangle-nodes">
+                            <div class="triangle-node">
+                                <div class="name">Leon Black</div>
+                                <div class="role">Apollo Global founder<br>$10B+ net worth<br>$170M to Epstein</div>
+                            </div>
+                            <div class="triangle-node">
+                                <div class="name">Jeffrey Epstein</div>
+                                <div class="role">No CPA license<br>No tax attorney license<br>"Tax advice"</div>
+                            </div>
+                            <div class="triangle-node">
+                                <div class="name">?</div>
+                                <div class="role">Senate probe ongoing<br>Evidence links to<br>trafficking operations</div>
+                            </div>
+                        </div>
+                        <div class="triangle-flows">
+                            Black pays $170M for "advice" → Epstein has no relevant credentials → Senate finds money funded trafficking<br>
+                            <strong>Question:</strong> What service worth $170M did unqualified Epstein provide?
+                        </div>
+                    </div>
+
+                    <div class="triangle-pattern">
+                        <div class="triangle-header">
+                            <span class="tag tag-warning">Pattern 3</span>
+                            Epstein → Rothschild → Barak/Israeli Surveillance
+                        </div>
+                        <div class="triangle-nodes">
+                            <div class="triangle-node">
+                                <div class="name">Southern Trust (BVI)</div>
+                                <div class="role">Epstein-controlled<br>USVI shell company<br>Fraudulent tax benefits</div>
+                            </div>
+                            <div class="triangle-node">
+                                <div class="name">Rothschild Bank</div>
+                                <div class="role">Swiss banking<br>$25M contract (Oct 2015)<br>Investment vehicle</div>
+                            </div>
+                            <div class="triangle-node">
+                                <div class="name">Ehud Barak / Carbyne</div>
+                                <div class="role">Former Israeli PM<br>911 surveillance tech<br>Unit 8200 founders</div>
+                            </div>
+                        </div>
+                        <div class="triangle-flows">
+                            Epstein via Southern Trust → Rothschild creates investment vehicle → Funds flow to Barak's cyber weapons companies<br>
+                            <strong>Question:</strong> Why route funds through Swiss bank for Israeli surveillance investment?
+                        </div>
+                    </div>
+
+                    <div class="triangle-pattern">
+                        <div class="triangle-header">
+                            <span class="tag tag-warning">Pattern 4</span>
+                            JPMorgan → Epstein → Russian Banks
+                        </div>
+                        <div class="triangle-nodes">
+                            <div class="triangle-node">
+                                <div class="name">JPMorgan Chase</div>
+                                <div class="role">US megabank<br>$1B+ transactions<br>Jes Staley relationship</div>
+                            </div>
+                            <div class="triangle-node">
+                                <div class="name">Epstein Accounts</div>
+                                <div class="role">Multiple accounts<br>Shell companies<br>Cash withdrawals</div>
+                            </div>
+                            <div class="triangle-node">
+                                <div class="name">Alfa Bank / Sberbank</div>
+                                <div class="role">Russian banks<br>Flagged in SARs<br>Vekselberg connection</div>
+                            </div>
+                        </div>
+                        <div class="triangle-flows">
+                            JPMorgan to Epstein accounts → Transactions with Russian state-linked banks → Flagged in 2019 SAR<br>
+                            <strong>Question:</strong> What was Epstein's relationship with Russian financial interests?
+                        </div>
+                    </div>
+
+                    <div class="footnote">Analysis based on: Senate Finance Committee documents, JPMorgan SARs (Sept 2019), DropSite News investigation, Bloomberg reporting</div>
+                </div>
+            </section>
+
+            <!-- BANKING NETWORK -->
+            <section class="section" id="banking">
+                <div class="section-header">
+                    <h2>Banking Network</h2>
+                </div>
+                <div class="section-content">
+                    <h3>Bank Relationships Timeline</h3>
+                    <table>
+                        <thead>
+                            <tr><th>Bank</th><th>Period</th><th>Key Contact</th><th>Red Flags</th><th>Outcome</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>JPMorgan Chase</td>
+                                <td>2003-2013</td>
+                                <td>Jes Staley (1,100+ emails)</td>
+                                <td>SARs filed 2002-2019; $1B+ flagged; Russian bank links</td>
+                                <td>$290M victim settlement; $105M USVI settlement</td>
+                            </tr>
+                            <tr>
+                                <td>Deutsche Bank</td>
+                                <td>2013-2019</td>
+                                <td>Took client after JPM exit</td>
+                                <td>Opened account despite 2008 conviction</td>
+                                <td>$75M settlement; admitted "critical mistake"</td>
+                            </tr>
+                            <tr>
+                                <td>Barclays</td>
+                                <td>Indirect</td>
+                                <td>Jes Staley (CEO 2015-21)</td>
+                                <td>Staley misled FCA about relationship</td>
+                                <td>Staley banned from banking; £1.8M fine</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Jes Staley Relationship Detail</h3>
+                    <div class="cols-2">
+                        <div>
+                            <dl class="compact-list">
+                                <dt>Email Volume</dt>
+                                <dd>1,100+ exchanges (2008-2012)</dd>
+                                <dt>Relationship Description</dt>
+                                <dd>Called Epstein "one of his most cherished friends"</dd>
+                                <dt>Initial Disclosure</dt>
+                                <dd>Claimed "no close relationship"</dd>
+                                <dt>FCA Finding</dt>
+                                <dd>"Recklessly approved" misleading letter</dd>
+                            </dl>
+                        </div>
+                        <div>
+                            <dl class="compact-list">
+                                <dt>Regulatory Action</dt>
+                                <dd>Banned from UK financial services</dd>
+                                <dt>Fine</dt>
+                                <dd>£1.8M ($2.2M)</dd>
+                                <dt>Forfeited Compensation</dt>
+                                <dd>£17.8M ($29.7M)</dd>
+                                <dt>Current Status</dt>
+                                <dd>Appealing (hearing March 2025)</dd>
+                            </dl>
+                        </div>
+                    </div>
+
+                    <h3>JPMorgan Suspicious Activity Reports</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <strong>Final SAR (September 26, 2019):</strong> Filed after Epstein's death, flagged $1B+ in transactions from 2003-2019 involving Wall Street figures, related companies, and accounts linked to Russian banks Alfa Bank and Sberbank. Bank cited: negative media about sex trafficking, allegations of misappropriation, use of multiple accounts, Russian bank connections, and relationships with two US presidents.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- POWER SPHERES -->
+            <section class="section" id="power-spheres">
+                <div class="section-header">
+                    <h2>Power Sphere Connections</h2>
+                </div>
+                <div class="section-content">
+                    <table>
+                        <thead>
+                            <tr><th>Sphere</th><th>Key Figures</th><th>Connection Type</th><th>Evidence Level</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Finance</strong></td>
+                                <td>Wexner, Black, Dubin, Staley</td>
+                                <td>Client/payments/banking</td>
+                                <td><span class="tag tag-danger">Documentary</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>US Politics</strong></td>
+                                <td>Clinton (26+ flights), Trump (14 numbers), Richardson</td>
+                                <td>Social/travel/donations</td>
+                                <td><span class="tag tag-danger">Documentary</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Foreign Govt</strong></td>
+                                <td>Prince Andrew, Ehud Barak, Alistair Darling</td>
+                                <td>Social/business/introductions</td>
+                                <td><span class="tag tag-danger">Documentary</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Intelligence</strong></td>
+                                <td>Robert Maxwell, Carbyne founders, Nicole Junkermann</td>
+                                <td>Family/investment/technology</td>
+                                <td><span class="tag tag-warning">Circumstantial</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Academia</strong></td>
+                                <td>Larry Summers, Harvard, MIT</td>
+                                <td>Donations/advisory/access</td>
+                                <td><span class="tag tag-danger">Documentary</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Media</strong></td>
+                                <td>Arianna Huffington, Charlie Rose</td>
+                                <td>Social/PR management</td>
+                                <td><span class="tag tag-info">Emails</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Legal</strong></td>
+                                <td>Dershowitz, Starr, Lefcourt, Black's lawyers</td>
+                                <td>Defense/facilitation</td>
+                                <td><span class="tag tag-danger">Documentary</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Flight Log Summary</h3>
+                    <div class="stats-row">
+                        <div class="stat-box">
+                            <div class="number">26+</div>
+                            <div class="label">Bill Clinton flights</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="number">14</div>
+                            <div class="label">Trump phone numbers</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="number">4+</div>
+                            <div class="label">Larry Summers flights</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="number">100s</div>
+                            <div class="label">Total passengers logged</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INTELLIGENCE -->
+            <section class="section" id="intelligence">
+                <div class="section-header">
+                    <h2>Intelligence Links Analysis</h2>
+                </div>
+                <div class="section-content">
+                    <h3>Evidence Chain</h3>
+                    <table>
+                        <thead>
+                            <tr><th>Evidence</th><th>Source</th><th>Implication</th><th>Confidence</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Robert Maxwell - Mossad asset allegations</td>
+                                <td>Victor Ostrovsky (former Mossad), Israeli state funeral</td>
+                                <td>Ghislaine inherited tradecraft/connections</td>
+                                <td><span class="tag tag-warning">Multiple sources</span></td>
+                            </tr>
+                            <tr>
+                                <td>Acosta "belonged to intelligence" claim</td>
+                                <td>Vicky Ward reporting (2019)</td>
+                                <td>Protected from prosecution</td>
+                                <td><span class="tag tag-warning">Single source</span></td>
+                            </tr>
+                            <tr>
+                                <td>Surveillance cameras documented</td>
+                                <td>Mail on Sunday, victim testimony</td>
+                                <td>Blackmail infrastructure</td>
+                                <td><span class="tag tag-danger">Documentary</span></td>
+                            </tr>
+                            <tr>
+                                <td>Carbyne investment with Barak</td>
+                                <td>Corporate filings, leaked emails</td>
+                                <td>Israeli surveillance tech funding</td>
+                                <td><span class="tag tag-danger">Documentary</span></td>
+                            </tr>
+                            <tr>
+                                <td>Israeli passport in false name</td>
+                                <td>2019 arrest search warrant</td>
+                                <td>Intelligence operational identity</td>
+                                <td><span class="tag tag-danger">Documentary</span></td>
+                            </tr>
+                            <tr>
+                                <td>Towers Financial escape</td>
+                                <td>DOJ records, Hoffenberg statements</td>
+                                <td>"Cooperating witness" protection</td>
+                                <td><span class="tag tag-warning">Circumstantial</span></td>
+                            </tr>
+                            <tr>
+                                <td>Donald Barr OSS background</td>
+                                <td>Public records</td>
+                                <td>Intelligence community connection via Dalton</td>
+                                <td><span class="tag tag-danger">Documentary</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Carbyne / Israeli Surveillance Investment</h3>
+                    <div class="cols-2">
+                        <div>
+                            <dl class="compact-list">
+                                <dt>Company</dt>
+                                <dd>Carbyne (formerly Reporty Homeland Security)</dd>
+                                <dt>Founded</dt>
+                                <dd>2014 by Unit 8200/81 veterans</dd>
+                                <dt>Function</dt>
+                                <dd>Emergency 911 location tracking, live video/audio from phones</dd>
+                                <dt>Chairman</dt>
+                                <dd>Ehud Barak (former Israeli PM/Defense Minister)</dd>
+                            </dl>
+                        </div>
+                        <div>
+                            <dl class="compact-list">
+                                <dt>Epstein Investment</dt>
+                                <dd>$1M+ via Southern Trust (2015-16)</dd>
+                                <dt>Additional Investment</dt>
+                                <dd>$500K via Montilla International (BVI)</dd>
+                                <dt>Other Investors</dt>
+                                <dd>Peter Thiel's Founders Fund, Nicole Junkermann</dd>
+                                <dt>Concern</dt>
+                                <dd>Sensitive location/audio data in cloud accessible to foreign actors</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROSECUTION GAPS -->
+            <section class="section" id="prosecution">
+                <div class="section-header">
+                    <h2>Prosecution Gap Analysis</h2>
+                </div>
+                <div class="section-content">
+                    <h3>Co-Conspirators: Protected vs Prosecuted</h3>
+                    <table>
+                        <thead>
+                            <tr><th>Name</th><th>Role</th><th>Evidence</th><th>Outcome</th><th>Why?</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Jeffrey Epstein</td>
+                                <td>Principal</td>
+                                <td>Overwhelming</td>
+                                <td>13mo (2008); Death (2019)</td>
+                                <td>"Intelligence" claim</td>
+                            </tr>
+                            <tr>
+                                <td>Ghislaine Maxwell</td>
+                                <td>Chief recruiter</td>
+                                <td>Overwhelming</td>
+                                <td>20 years (2022)</td>
+                                <td>Only after Epstein death</td>
+                            </tr>
+                            <tr>
+                                <td>Sarah Kellen</td>
+                                <td>Primary scheduler</td>
+                                <td>Named in indictments</td>
+                                <td><span class="tag tag-success">Immunity</span></td>
+                                <td>NPA deal (2008)</td>
+                            </tr>
+                            <tr>
+                                <td>Lesley Groff</td>
+                                <td>Executive assistant</td>
+                                <td>Named in indictments</td>
+                                <td><span class="tag tag-success">Immunity</span></td>
+                                <td>NPA deal (2008)</td>
+                            </tr>
+                            <tr>
+                                <td>Nadia Marcinkova</td>
+                                <td>Victim → participant</td>
+                                <td>Named in indictments</td>
+                                <td><span class="tag tag-success">Immunity</span></td>
+                                <td>NPA deal (2008)</td>
+                            </tr>
+                            <tr>
+                                <td>Adriana Ross</td>
+                                <td>Recruiter/assistant</td>
+                                <td>Named in indictments</td>
+                                <td><span class="tag tag-success">Immunity</span></td>
+                                <td>NPA deal (2008)</td>
+                            </tr>
+                            <tr>
+                                <td>Jean-Luc Brunel</td>
+                                <td>Model agency recruiter</td>
+                                <td>Extensive</td>
+                                <td>Death in custody (2022)</td>
+                                <td>Never tried</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Clients/Associates: None Charged</h3>
+                    <table>
+                        <thead>
+                            <tr><th>Name</th><th>Allegations</th><th>Evidence Type</th><th>Status</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Prince Andrew</td>
+                                <td>Giuffre allegations (3 occasions)</td>
+                                <td>Testimony, photograph</td>
+                                <td>Civil settlement ~£12M</td>
+                            </tr>
+                            <tr>
+                                <td>Alan Dershowitz</td>
+                                <td>Giuffre allegations</td>
+                                <td>Testimony</td>
+                                <td>Civil settlements; denies</td>
+                            </tr>
+                            <tr>
+                                <td>Glenn Dubin</td>
+                                <td>Mail on Sunday naming</td>
+                                <td>Document</td>
+                                <td>No charges; denies</td>
+                            </tr>
+                            <tr>
+                                <td>Bill Richardson</td>
+                                <td>Giuffre allegations</td>
+                                <td>Testimony</td>
+                                <td>Died 2023; denied</td>
+                            </tr>
+                            <tr>
+                                <td>Ehud Barak</td>
+                                <td>Mail on Sunday allegations</td>
+                                <td>Document</td>
+                                <td>No charges; denies</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- EVIDENCE MATRIX -->
+            <section class="section" id="evidence-matrix">
+                <div class="section-header">
+                    <h2>Evidence Confidence Matrix</h2>
+                </div>
+                <div class="section-content">
+                    <h3>Core Claims Assessment</h3>
+                    <table>
+                        <thead>
+                            <tr><th style="width:40%">Claim</th><th>Documentary</th><th>Testimony</th><th>Corroboration</th><th>Overall</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Epstein ran trafficking operation</td>
+                                <td><span class="tag tag-danger">Court conviction</span></td>
+                                <td><span class="tag tag-danger">40+ victims</span></td>
+                                <td><span class="tag tag-danger">Police files</span></td>
+                                <td><strong>Proven</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Maxwell was co-conspirator</td>
+                                <td><span class="tag tag-danger">Conviction</span></td>
+                                <td><span class="tag tag-danger">Multiple</span></td>
+                                <td><span class="tag tag-danger">Evidence</span></td>
+                                <td><strong>Proven</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Surveillance recordings existed</td>
+                                <td><span class="tag tag-danger">Mail on Sunday</span></td>
+                                <td><span class="tag tag-danger">Giuffre</span></td>
+                                <td><span class="tag tag-warning">Maria Farmer</span></td>
+                                <td><strong>High</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Blackmail was intent</td>
+                                <td><span class="tag tag-muted">None</span></td>
+                                <td><span class="tag tag-danger">Giuffre sworn</span></td>
+                                <td><span class="tag tag-warning">Pattern</span></td>
+                                <td><strong>High</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Intelligence agency connection</td>
+                                <td><span class="tag tag-warning">Circumstantial</span></td>
+                                <td><span class="tag tag-warning">Acosta claim</span></td>
+                                <td><span class="tag tag-warning">Pattern</span></td>
+                                <td><strong>Moderate</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Death was not suicide</td>
+                                <td><span class="tag tag-warning">Failures</span></td>
+                                <td><span class="tag tag-warning">Baden</span></td>
+                                <td><span class="tag tag-muted">Disputed</span></td>
+                                <td><strong>Uncertain</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Source Document Reliability</h3>
+                    <table>
+                        <thead>
+                            <tr><th>Document Type</th><th>Count</th><th>Reliability</th><th>Key Contents</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Court filings (Giuffre v. Maxwell)</td>
+                                <td>1,000+</td>
+                                <td><span class="tag tag-danger">High</span></td>
+                                <td>Depositions, flight logs, communications</td>
+                            </tr>
+                            <tr>
+                                <td>TrumpEpsteinFiles archive</td>
+                                <td>1,998</td>
+                                <td><span class="tag tag-danger">High</span></td>
+                                <td>House Oversight releases</td>
+                            </tr>
+                            <tr>
+                                <td>JPMorgan SARs</td>
+                                <td>Multiple</td>
+                                <td><span class="tag tag-danger">High</span></td>
+                                <td>$1B+ flagged transactions</td>
+                            </tr>
+                            <tr>
+                                <td>Palm Beach Police files</td>
+                                <td>Case 05-368</td>
+                                <td><span class="tag tag-danger">High</span></td>
+                                <td>40+ victim statements</td>
+                            </tr>
+                            <tr>
+                                <td>Florida Grand Jury (2024)</td>
+                                <td>Partial</td>
+                                <td><span class="tag tag-danger">High</span></td>
+                                <td>NPA analysis</td>
+                            </tr>
+                            <tr>
+                                <td>Leaked Barak-Epstein emails</td>
+                                <td>Ongoing</td>
+                                <td><span class="tag tag-warning">Medium</span></td>
+                                <td>Surveillance investments, global contacts</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- DEATH INVESTIGATION -->
+            <section class="section" id="death">
+                <div class="section-header">
+                    <h2>Death Investigation</h2>
+                </div>
+                <div class="section-content">
+                    <h3>Security Failure Checklist</h3>
+                    <div class="checklist">
+                        <div class="check-item">
+                            <span class="check-icon fail">✗</span>
+                            <span>Camera 1 outside cell functioning</span>
+                        </div>
+                        <div class="check-item">
+                            <span class="check-icon fail">✗</span>
+                            <span>Camera 2 outside cell functioning</span>
+                        </div>
+                        <div class="check-item">
+                            <span class="check-icon fail">✗</span>
+                            <span>Guards performed required 30-minute checks</span>
+                        </div>
+                        <div class="check-item">
+                            <span class="check-icon fail">✗</span>
+                            <span>Guards remained awake during shift</span>
+                        </div>
+                        <div class="check-item">
+                            <span class="check-icon fail">✗</span>
+                            <span>Cellmate present as required</span>
+                        </div>
+                        <div class="check-item">
+                            <span class="check-icon fail">✗</span>
+                            <span>Suicide watch maintained appropriately</span>
+                        </div>
+                        <div class="check-item">
+                            <span class="check-icon fail">✗</span>
+                            <span>Dangerous materials (sheets) removed</span>
+                        </div>
+                        <div class="check-item">
+                            <span class="check-icon unknown">?</span>
+                            <span>Hyoid fracture consistent with hanging (disputed)</span>
+                        </div>
+                    </div>
+
+                    <h3>Forensic Questions</h3>
+                    <div class="cols-2">
+                        <div>
+                            <dl class="compact-list">
+                                <dt>Official Ruling</dt>
+                                <dd>Suicide by hanging (NYC Medical Examiner)</dd>
+                                <dt>Hyoid Bone</dt>
+                                <dd>Broken in three places (unusual for hanging)</dd>
+                                <dt>Independent Review</dt>
+                                <dd>Dr. Michael Baden disputed suicide finding</dd>
+                            </dl>
+                        </div>
+                        <div>
+                            <dl class="compact-list">
+                                <dt>Guards Charged</dt>
+                                <dd>Noel and Thomas (falsifying records); charges dropped</dd>
+                                <dt>Warden Reassigned</dt>
+                                <dd>Lamine N'Diaye transferred after death</dd>
+                                <dt>Documents Released</dt>
+                                <dd>Major unsealing occurred day before death</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- OPEN QUESTIONS -->
+            <section class="section" id="unknowns">
+                <div class="section-header">
+                    <h2>Open Questions & Unknown Data</h2>
+                </div>
+                <div class="section-content">
+                    <h3>Information Release Status</h3>
+                    <div class="progress-row">
+                        <span class="progress-label">Flight logs</span>
+                        <div class="progress-bar"><div class="progress-fill warning" style="width: 60%"></div></div>
+                        <span class="progress-value">~60%</span>
+                    </div>
+                    <div class="progress-row">
+                        <span class="progress-label">Black book IDs</span>
+                        <div class="progress-bar"><div class="progress-fill warning" style="width: 40%"></div></div>
+                        <span class="progress-value">~40%</span>
+                    </div>
+                    <div class="progress-row">
+                        <span class="progress-label">Surveillance tapes</span>
+                        <div class="progress-bar"><div class="progress-fill danger" style="width: 0%"></div></div>
+                        <span class="progress-value">0%</span>
+                    </div>
+                    <div class="progress-row">
+                        <span class="progress-label">Client list (FTC)</span>
+                        <div class="progress-bar"><div class="progress-fill danger" style="width: 20%"></div></div>
+                        <span class="progress-value">~20%</span>
+                    </div>
+                    <div class="progress-row">
+                        <span class="progress-label">FBI files</span>
+                        <div class="progress-bar"><div class="progress-fill danger" style="width: 10%"></div></div>
+                        <span class="progress-value">~10%</span>
+                    </div>
+
+                    <h3>Critical Unanswered Questions</h3>
+                    <div class="cols-2">
+                        <div>
+                            <h4 style="font-size:12px; margin:12px 0 8px">Financial</h4>
+                            <ul>
+                                <li>Source of initial wealth (1981-1991)</li>
+                                <li>Identity of all clients besides Wexner</li>
+                                <li>Full extent of Wexner "misappropriation"</li>
+                                <li>Purpose of Black's $170M payments</li>
+                                <li>Nature of Russian bank transactions</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 style="font-size:12px; margin:12px 0 8px">Intelligence</h4>
+                            <ul>
+                                <li>Full Acosta "belonged to intelligence" context</li>
+                                <li>Purpose/recipients of surveillance recordings</li>
+                                <li>Extent of Robert Maxwell connection inheritance</li>
+                                <li>Israeli passport origin and purpose</li>
+                                <li>Why Towers Financial prosecution avoided Epstein</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Ongoing Investigations</h3>
+                    <table>
+                        <thead>
+                            <tr><th>Investigation</th><th>Authority</th><th>Focus</th><th>Status</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Leon Black payments</td>
+                                <td>Senate Finance Committee</td>
+                                <td>$170M payments, trafficking funding</td>
+                                <td><span class="tag tag-warning">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td>Bank facilitation</td>
+                                <td>House Judiciary Committee</td>
+                                <td>JPM, Deutsche, BofA, BNY Mellon</td>
+                                <td><span class="tag tag-warning">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td>Staley FCA appeal</td>
+                                <td>UK Upper Tribunal</td>
+                                <td>JPM/Barclays relationship</td>
+                                <td><span class="tag tag-info">Hearing 2025</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Navigation
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const section = item.dataset.section;
+
+                // Update nav
+                document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+                item.classList.add('active');
+
+                // Update sections
+                document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+                document.getElementById(section).classList.add('active');
+            });
+        });
+
+        // Tabs
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabId = tab.dataset.tab;
+                const parent = tab.closest('.section-content');
+
+                // Update tabs
+                parent.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                // Update content
+                parent.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                parent.querySelector(`#tab-${tabId}`).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+topic,claims_count,avg_confidence,unverified_count,unverified_ratio,investigation_priority
+fact,20798,0.85,20798,1.0,0.575
+relationship,32244,0.898,32244,1.0,0.551
+event,669,0.866,669,1.0,0.567
+evidence,18503,0.8,18503,1.0,0.6
+financial,9,0.767,9,1.0,0.617

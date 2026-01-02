@@ -1,0 +1,99 @@
+id,name,location_type,address,city,state,country,lat,lng,owner,purpose,value_usd
+loc_0001,9 East 71st Street,mansion,9 East 71st Street,New York,NY,USA,40.7715,-73.965,Jeffrey Epstein,Primary residence; surveillance documented,77000000
+loc_0002,358 El Brillo Way,mansion,358 El Brillo Way,Palm Beach,FL,USA,26.6885,-80.0384,Jeffrey Epstein,Trafficking location; 40+ victims,12000000
+loc_0003,Little St. James Island,island,Little St. James Island,St. Thomas,USVI,US Virgin Islands,18.2969,-64.8256,Jeffrey Epstein,Private island; trafficking location,63000000
+loc_0004,Great St. James Island,island,Great St. James Island,St. Thomas,USVI,US Virgin Islands,18.3178,-64.8547,Jeffrey Epstein,Second island purchase,22000000
+loc_0005,Zorro Ranch,ranch,Zorro Ranch,Stanley,NM,USA,35.0844,-106.6504,Jeffrey Epstein,"8,000 acre ranch; DNA project plans",18000000
+loc_0006,Paris Apartment,apartment,Paris Apartment,Paris,,France,48.8624,2.3308,Jeffrey Epstein,European base; Brunel connection,8700000
+loc_0007,Charlie Crist,jurisdiction,,,Florida,USA,,,Charlie Crist,Florida Governor. Autographed photo to Scott Rothstein: 'You are amazing!',0
+loc_0008,358 El Brillo Way,property,,Palm Beach,,USA,26.6885,-80.0384,358 El Brillo Way,,0
+loc_0009,Scott Rothstein,jurisdiction,,,Florida,USA,,,Scott Rothstein,"Florida attorney, Ponzi scheme operator. Photo with Governor Charlie Crist in his office.",0
+loc_0010,Regina Chacon,jurisdiction,,,New Mexico,USA,,,Regina Chacon,"Assistant Bureau Chief, Law Enforcement Record Bureau of the New Mexico Department of Public Safety",0
+loc_0011,Adam Hollander,jurisdiction,,,New York,USA,,,Adam Hollander,Associate in the New York office,0
+loc_0012,Geoffrey S. Berman,jurisdiction,,,New York,USA,,,Geoffrey S. Berman,United States Attorney for the Southern District of New York,0
+loc_0013,Haley Robson,jurisdiction,,,Florida,USA,,,Haley Robson,Recruiter for Epstein. 18-20 year old Palm Beach student at Royal Palm Beach High School. Paid $200 per underage girl brought to Epstein. Described as 'integral player in Epstein's Florida scheme'. La,0
+loc_0014,Annie Farmer,property,,"Stanley, NM",,USA,35.0844,-106.6504,Annie Farmer,Epstein accuser. Sister of Maria Farmer. Testified that Epstein sexually abused her when she was 16 years old at Zorro Ranch in New Mexico.,0
+loc_0015,Preet Bharara,jurisdiction,,,New York,USA,,,Preet Bharara,United States Attorney for the Southern District of New York,0
+loc_0016,"[b(6), b(7)(C)]",jurisdiction,,,New York,USA,,,"[b(6), b(7)(C)]",Supervisory Staff Attorney at MCC New York,0
+loc_0017,"Adam (b)(6), (b)(7)(C)",jurisdiction,,,New York,USA,,,"Adam (b)(6), (b)(7)(C)","Supervisory Staff Attorney at CLC New York, Metropolitan Correctional Center",0
+loc_0018,Jay Clayton,jurisdiction,,,New York,USA,,,Jay Clayton,United States Attorney for the Southern District of New York,0
+loc_0019,[b)(6) (b)(7)(C),jurisdiction,,,New York,USA,,,[b)(6) (b)(7)(C),Supervisory Staff Attorney at CLC New York,0
+loc_0020,[Redacted] Supervisory Staff Attorney,jurisdiction,,,New York,USA,,,[Redacted] Supervisory Staff Attorney,"CLC New York, Metropolitan Correctional Center",0
+loc_0021,"[b6, b7C]",jurisdiction,,,New York,USA,,,"[b6, b7C]",Supervisory Staff Attorney at MCC New York,0
+loc_0022,David McCraw,jurisdiction,,,New York,USA,,,David McCraw,Senior Vice President & Deputy General Counsel of The New York Times Company,0
+loc_0023,[redacted] (Supervisory Staff Attorney),jurisdiction,,,New York,USA,,,[redacted] (Supervisory Staff Attorney),handling paralegal applications at the New York Metropolitan Correctional Center,0
+loc_0024,The Warden,jurisdiction,,,New York,USA,,,The Warden,Warden of the New York Metropolitan Correctional Center,0
+loc_0025,"[(b)(6), (b)(7)(C)]",jurisdiction,,,New York,USA,,,"[(b)(6), (b)(7)(C)]","Trust Fund Supervisor at MCC New York, initiated the email thread",0
+loc_0026,Trust Fund Supervisor,jurisdiction,,,New York,USA,,,Trust Fund Supervisor,MCC New York staff member managing Epstein's trust fund,0
+loc_0027,Howard James Petrucci,jurisdiction,,,New York,USA,,,Howard James Petrucci,Warden of MCC New York,0
+loc_0028,Debbie Wasserman Schultz,jurisdiction,,,Florida,USA,,,Debbie Wasserman Schultz,Florida Representative who demanded investigation into Epstein's death,0
+loc_0029,"(b)(6), (b)(7)(C), (b)(7)(E), (b)(7)(F)",jurisdiction,,,New York,USA,,,"(b)(6), (b)(7)(C), (b)(7)(E), (b)(7)(F)","Reporter, The New York Times",0
+loc_0030,"[b6], [b7](C)",jurisdiction,,,New York,USA,,,"[b6], [b7](C)",Supervisory Staff Attorney at MCC New York,0
+loc_0031,[b(6); (b(7)(C)],jurisdiction,,,New York,USA,,,[b(6); (b(7)(C)],"Supervisory Deputy United States Marshal, Southern District of New York",0
+loc_0032,[Redacted] Psy.D.,jurisdiction,,,New York,USA,,,[Redacted] Psy.D.,"Chief Psychologist, MCC New York",0
+loc_0033,Tracy Amaladas,jurisdiction,,,New York,USA,,,Tracy Amaladas,"Supervisory Deputy United States Marshal, Southern District of New York",0
+loc_0034,Ron DeSantis,jurisdiction,,,Florida,USA,,,Ron DeSantis,Governor of Florida,0
+loc_0035,Psy.D.,jurisdiction,,,New York,USA,,,Psy.D.,"Chief Psychologist, MCC New York",0
+loc_0036,"Elissa R. Miller, Psy.D.",jurisdiction,,,New York,USA,,,"Elissa R. Miller, Psy.D.","Chief Psychologist, MCC New York",0
+loc_0037,(b)(6); (b)(7)(C) Psy.D.,jurisdiction,,,New York,USA,,,(b)(6); (b)(7)(C) Psy.D.,Chief Psychologist at MCC New York,0
+loc_0038,[redacted]@nytimes.com,jurisdiction,,,New York,USA,,,[redacted]@nytimes.com,New York Times employee or correspondent reaching out to BOP employee,0
+loc_0039,@nytimes.com,jurisdiction,,,New York,USA,,,@nytimes.com,New York Times journalist seeking information,0
+loc_0040,RN [b)(6); (b)(7)(C),jurisdiction,,,New York,USA,,,RN [b)(6); (b)(7)(C),Presumably a Registered Nurse at MCC New York,0
+loc_0041,Gerald Lefcourt,jurisdiction,,,New York,USA,,,Gerald Lefcourt,New York defense attorney. Part of Epstein legal team. Signed letter to prosecutors calling Epstein 'a committed philanthropist'.,0
+loc_0042,The Morning Watch Operations Lieutenant,jurisdiction,,,New York,USA,,,The Morning Watch Operations Lieutenant,"Operations Lieutenant at MCC New York on August 10, 2019",0
+loc_0043,Alex Acosta,jurisdiction,,,Florida,USA,,,Alex Acosta,US Attorney Southern District of Florida who approved Epstein Non Prosecution Agreement September 2008. Trump Labor Secretary 2017-2019. Resigned July 2019 after Miami Herald investigation exposed NPA,0
+loc_0044,The Evening Watch Operations Lieutenant,jurisdiction,,,New York,USA,,,The Evening Watch Operations Lieutenant,MCC New York official who discussed the significance of accurate institutional counts,0
+loc_0045,Associate Warden 1,jurisdiction,,,New York,USA,,,Associate Warden 1,Senior official at MCC New York who assisted SIS Lieutenant,0
+loc_0046,The Captain,jurisdiction,,,New York,USA,,,The Captain,MCC New York official who emphasized the importance of inmate counts,0
+loc_0047,Angela E. Noble,jurisdiction,,,Florida,USA,,,Angela E. Noble,"Clerk, U.S. District Court Southern District of Florida",0
+loc_0048,Carolyn P. Hermon-Percell,jurisdiction,,,,US Virgin Islands,,,Carolyn P. Hermon-Percell,Magistrate Judge of the Superior Court of the Virgin Islands,0
+loc_0049,(b)(6); (b)(7)(C) DDS,jurisdiction,,,New York,USA,,,(b)(6); (b)(7)(C) DDS,Dentist/Chief Dental Officer at MCC New York,0
+loc_0050,John A. Tomasino,jurisdiction,,,Florida,USA,,,John A. Tomasino,Clerk of the Supreme Court of Florida,0
+loc_0051,BRUCE H. COLTON,jurisdiction,,,Florida,USA,,,BRUCE H. COLTON,"State Attorney for the Nineteenth Judicial Circuit of Florida, accepting executive assignment for potential proceedings",0
+loc_0052,Jeffery E. Epstein,jurisdiction,,,Florida,USA,,,Jeffery E. Epstein,"Recipient of the letter, individual with a 2008 Florida conviction",0
+loc_0053,Michael I Danchuk,jurisdiction,,,Florida,USA,,,Michael I Danchuk,Notary Public in the State of Florida,0
+loc_0054,Vicky Ward,jurisdiction,,,New York,USA,,,Vicky Ward,"Journalist. Wrote 2003 Vanity Fair 'The Talented Mr. Epstein' and March 2011 follow-up 'Jeffrey and Ghislaine: Notes on New York's Oddest Alliance'. Named Wexner, Cayne, Hoffenberg as associates.",0
+loc_0055,Eric Gany,jurisdiction,,,New York,USA,,,Eric Gany,Mail recipient in New York,0
+loc_0056,Bill Maronet,jurisdiction,,,Florida,USA,,,Bill Maronet,Individual associated with Massage - Florida,0
+loc_0057,Dr. & Mrs. Singleton,jurisdiction,,,New Mexico,USA,,,Dr. & Mrs. Singleton,Mentioned in relation to a 'Massage - New Mexico' note,0
+loc_0058,R. Alexander Acosta,jurisdiction,,,Florida,USA,,,R. Alexander Acosta,U.S. Attorney for the Southern District of Florida at the time of the investigation,0
+loc_0059,Associate Warden 2,jurisdiction,,,New York,USA,,,Associate Warden 2,MCC New York personnel who received notification about Inmate 3's transfer,0
+loc_0060,"Alberto Gonzales' successor is not mentioned, but Alex Acosta",jurisdiction,,,Florida,USA,,,"Alberto Gonzales' successor is not mentioned, but Alex Acosta",U.S. Attorney for the Southern District of Florida,0
+loc_0061,Staff Psychologist,jurisdiction,,,New York,USA,,,Staff Psychologist,Psychologist at MCC New York who evaluated Epstein,0
+loc_0062,NEW YORK MCC UNIT MANAGER,jurisdiction,,,New York,USA,,,NEW YORK MCC UNIT MANAGER,Unit Manager at New York MCC,0
+loc_0063,Damian Williams,jurisdiction,,,New York,USA,,,Damian Williams,United States Attorney for the Southern District of New York,0
+loc_0064,Rick Swearingen,jurisdiction,,,Florida,USA,,,Rick Swearingen,"Commissioner, Florida Department of Law Enforcement",0
+loc_0065,Bruce Colton,jurisdiction,,,Florida,USA,,,Bruce Colton,State Attorney for the Nineteenth Judicial Circuit of Florida,0
+loc_0066,Department Heads,jurisdiction,,,New York,USA,,,Department Heads,Oversees specific departments within MCC New York,0
+loc_0067,"Captain, Associate Wardens, Warden, and Psychology Services staff",jurisdiction,,,New York,USA,,,"Captain, Associate Wardens, Warden, and Psychology Services staff",MCC New York Executive Staff involved in decision-making regarding Epstein's cellmate assignment,0
+loc_0068,TDY staff,jurisdiction,,,New York,USA,,,TDY staff,Temporary duty staff assigned to MCC New York,0
+loc_0069,M. Licon-Vitale,jurisdiction,,,New York,USA,,,M. Licon-Vitale,"Warden, MCC New York",0
+loc_0070,Physician Assistant,jurisdiction,,,New York,USA,,,Physician Assistant,Medical staff at MCC New York,0
+loc_0071,Lieutenant,jurisdiction,,,New York,USA,,,Lieutenant,Correctional officer at MCC New York,0
+loc_0072,sublimehottie,jurisdiction,,,Florida,USA,,,sublimehottie,"Myspace profile owner, likely a student at Florida State University",0
+loc_0073,[b](6); (b)(7)(C),jurisdiction,,,New York,USA,,,[b](6); (b)(7)(C),"Supervisory Deputy United States Marshal, Southern District of New York",0
+loc_0074,William J. McDonough,jurisdiction,,,New York,USA,,,William J. McDonough,"President, Federal Reserve Bank of New York",0
+loc_0075,Gratitude America Ltd,jurisdiction,,,,US Virgin Islands,,,Gratitude America Ltd,"501(c)(3) nonprofit formed in Virgin Islands in 2012, used by Epstein for financial contributions. Received $10M+ in documented transfers.",0
+loc_0076,Great St. Jim LLC,property,,,,US Virgin Islands,18.3178,-64.8547,Great St. Jim LLC,"Shell company organized by Erika Kellerhals on Oct 26, 2015 to purchase Great St. James Island for $22.5M.",0
+loc_0077,GSJ Properties Corp,property,,,,US Virgin Islands,18.3178,-64.8547,GSJ Properties Corp,Virgin Islands corporation that transferred 81.22 acres (12 parcels) on Great St. James to Great St. Jim LLC for $5M in Jan 2016.,0
+loc_0078,Poplar Inc,jurisdiction,,,,US Virgin Islands,,,Poplar Inc,"Virgin Islands corporation formed in 2011. Officers: Jeffrey Epstein (President), Darren Indyke (VP/Secretary), Richard Kahn (Treasurer). Used for island development.",0
+loc_0079,J. Epstein Virgin Islands Foundation,jurisdiction,,,,US Virgin Islands,,,J. Epstein Virgin Islands Foundation,"Defunct nonprofit foundation in Virgin Islands, run by Epstein with officers Kellerhals, Indyke, and Kahn.",0
+loc_0080,Business Basics VI LLC,jurisdiction,,,,US Virgin Islands,,,Business Basics VI LLC,Brett Geary's company serving as resident agent for Epstein entities in Virgin Islands.,0
+loc_0081,Marie Villafana,jurisdiction,,,Florida,USA,,,Marie Villafana,AUSA who handled Epstein case in Southern District of Florida.,0
+loc_0082,Mitchell Holdings LLC,jurisdiction,,,New York,USA,,,Mitchell Holdings LLC,"Company at 745 Fifth Avenue, New York. David Mitchell CEO. Sent Epstein Trump-Deutsche Bank news January 2019.",0
+loc_0083,Larry Summers,jurisdiction,,,New York,USA,,,Larry Summers,"Treasury Secretary 1999-2001, Harvard President 2001-2006. Personal email exchange with Epstein on March 17, 2019 (4 months before arrest). Subject: 'Call from New Yorker' - coordinating media respons",0
+loc_0084,Bill Richardson,jurisdiction,,,New Mexico,USA,,,Bill Richardson,"New Mexico Governor. Named in Daily Beast article as Epstein private jet passenger alongside Bill Clinton, Prince Andrew, Ehud Barak, and Larry Summers.",0
+loc_0085,Landon Thomas Jr.,jurisdiction,,,New York,USA,,,Landon Thomas Jr.,"New York Times Financial Reporter. 166 documents in Epstein email archive. May 11, 2017 asked Epstein 'How are your Trump contacts responding to Comey?' the day after Comey's firing. Regular correspon",0
+loc_0086,Glenn Dubin,jurisdiction,,,New York,USA,,,Glenn Dubin,"Highbridge Capital co-founder, hedge fund manager. Named in March 2011 Mail on Sunday victim allegations as someone victim was 'required to have sex' with. 55 documents in Epstein archive. April 2018 ",0
+loc_0087,Kenneth Marra,jurisdiction,,,Florida,USA,,,Kenneth Marra,Federal judge Southern District of Florida. February 2019 ruled government violated Crime Victims Rights Act by keeping NPA secret from victims.,0
+loc_0088,Little St. James Island,property,,,,US Virgin Islands,18.2969,-64.8256,Little St. James Island,"Epstein's 70-acre private island in US Virgin Islands, purchased 1998 for $7.95 million. Held through L.S.J. LLC. Features included main house, guest houses, mysterious temple structure, private dock.",0
+loc_0089,Great St. James Island,property,,,,US Virgin Islands,18.2969,-64.8256,Great St. James Island,"Epstein's second US Virgin Islands island, purchased 2016 for $18 million. Adjacent to Little St. James. Development was planned before Epstein's arrest.",0
+loc_0090,Zorro Ranch,property,,"Stanley, NM",,USA,35.0844,-106.6504,Zorro Ranch,"Epstein's 10,000-acre ranch in Stanley, New Mexico. Held through Zorro Trust. Features airstrip, main house, guest houses. Site of alleged abuse and Epstein's eugenics/DNA plans.",0
+loc_0091,Southern Trust Company,jurisdiction,,,,US Virgin Islands,,,Southern Trust Company,US Virgin Islands entity used by Epstein for financial operations and to take advantage of USVI tax benefits.,0
+loc_0092,L.S.J. LLC,property,,,,US Virgin Islands,18.2969,-64.8256,L.S.J. LLC,Delaware LLC that holds Little St. James Island for Jeffrey Epstein.,0
+loc_0093,Emily Steel,jurisdiction,,,New York,USA,,,Emily Steel,New York Times reporter. Covered Epstein story and connections to elite figures.,0
+loc_0094,Ronan Farrow,jurisdiction,,,New York,USA,,,Ronan Farrow,New Yorker journalist. Investigated Epstein connections. March 2019 Larry Summers-Epstein email was about 'Call from New Yorker'.,0
+loc_0095,Nicholas Confessore,jurisdiction,,,New York,USA,,,Nicholas Confessore,New York Times reporter. Co-authored 'Unease at Clinton Foundation' article referenced in Epstein emails.,0
+loc_0096,Jeffrey H. Sloman,jurisdiction,,,Florida,USA,,,Jeffrey H. Sloman,First Assistant US Attorney under Alex Acosta in Southern District of Florida. Involved in NPA negotiations. Defended plea deal in February 2019 opinion piece after Miami Herald investigation.,0
+loc_0097,Prince Andrew,jurisdiction,,,,US Virgin Islands,,,Prince Andrew,"British royal, Duke of York. Virginia Giuffre alleged she was trafficked to have sex with him at age 17 in London, New York, and Virgin Islands. Famous photo exists of Andrew with arm around Giuffre a",0
+loc_0098,Louis Freeh,property,,,,US Virgin Islands,18.2969,-64.8256,Louis Freeh,Former FBI Director (1993-2001). Appears in Epstein documents making FOIA requests to Secret Service about Clinton's travel to Little St. James. Later represented Dershowitz in disputes about Epstein ,0

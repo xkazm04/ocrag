@@ -1,0 +1,36 @@
+id,source_entity,target_entity,amount_usd,transaction_type,date,purpose,evidence_strength
+tx_0001,Leslie Wexner,Jeffrey Epstein,77000000,gift,1991-2007,NYC Mansion + POA,high
+tx_0002,Leslie Wexner Trusts,Jeffrey Epstein,1300000000,transfer,1991-2006,Stock sales under Epstein control,medium
+tx_0003,Leon Black,Jeffrey Epstein,170000000,fee,2012-2017,Claimed tax advice,high
+tx_0004,Jeffrey Epstein,Carbyne,1500000,investment,2015-2016,Israeli surveillance tech,high
+tx_0005,Southern Trust,Rothschild Bank,25000000,transfer,2015,Barak cyber weapons funding,high
+tx_0006,Steven Hoffenberg,Jeffrey Epstein,25000,salary,1987-1993,Monthly salary + $2M loan,high
+tx_0007,JPMorgan,Epstein Entities,1000000000,transfer,2003-2019,Banking services (SARs filed),high
+tx_0008,Deutsche Bank,Epstein Entities,150000000,transfer,2013-2018,Banking after JPM exit,high
+tx_0009,Prince Andrew,Virginia Giuffre,12000000,settlement,2022,Civil settlement,high
+tx_0010,Epstein Estate,Victims Compensation,125000000,settlement,2020-2021,Victim compensation fund,high
+tx_extracted_0011,Unknown,Richard D. Kahn,50000000.0,mentioned,unknown,Extracted from description,low
+tx_extracted_0012,Unknown,Seven friends and family members,5000000.0,mentioned,unknown,Extracted from description,low
+tx_extracted_0013,Unknown,Steven Hoffenberg,500000000.0,mentioned,unknown,Extracted from description,low
+tx_extracted_0014,Unknown,Gratitude America Ltd,10000000.0,mentioned,unknown,Extracted from description,low
+tx_extracted_0015,Unknown,Financial Trust Company,20000000.0,mentioned,unknown,Extracted from description,low
+tx_extracted_0016,Unknown,Great St. Jim LLC,22500000.0,mentioned,unknown,Extracted from description,low
+tx_extracted_0017,Unknown,GSJ Properties Corp,5000000.0,mentioned,unknown,Extracted from description,low
+tx_extracted_0018,Unknown,Leon Black,6000000000.0,mentioned,unknown,Extracted from description,low
+tx_extracted_0019,Unknown,Leon Black,20000000.0,mentioned,unknown,Extracted from description,low
+tx_extracted_0020,Unknown,Leon Black,600000000.0,mentioned,unknown,Extracted from description,low
+tx_extracted_0021,Unknown,Brad Karp,20000000.0,mentioned,unknown,Extracted from description,low
+tx_extracted_0022,Unknown,Phaidon Press,24000000.0,mentioned,unknown,Extracted from description,low
+tx_extracted_0023,Unknown,Phaidon Press,1800000000.0,mentioned,unknown,Extracted from description,low
+tx_extracted_0024,Unknown,Gagosian Gallery,100000000.0,mentioned,unknown,Extracted from description,low
+tx_extracted_0025,Unknown,Athene Holding,2000000000.0,mentioned,unknown,Extracted from description,low
+tx_extracted_0026,Unknown,Regan Arts,9800000.0,mentioned,unknown,Extracted from description,low
+tx_extracted_0027,Unknown,Art Space,3000000.0,mentioned,unknown,Extracted from description,low
+tx_extracted_0028,Unknown,Elysium Office,1000000.0,mentioned,unknown,Extracted from description,low
+tx_extracted_0029,Unknown,Maritza Vasquez,1000000.0,mentioned,unknown,Extracted from description,low
+tx_extracted_0030,Unknown,MC2 Modeling Agency,1000000.0,mentioned,unknown,Extracted from description,low
+tx_extracted_0031,Unknown,Tower Financial Corporation,460000000.0,mentioned,unknown,Extracted from description,low
+tx_extracted_0032,Unknown,Drysdale Securities,160000000.0,mentioned,unknown,Extracted from description,low
+tx_extracted_0033,Unknown,Little St. James Island,7950000.0,mentioned,unknown,Extracted from description,low
+tx_extracted_0034,Unknown,Great St. James Island,18000000.0,mentioned,unknown,Extracted from description,low
+tx_extracted_0035,Unknown,Towers Financial Corporation,500000000.0,mentioned,unknown,Extracted from description,low
